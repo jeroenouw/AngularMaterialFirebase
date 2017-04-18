@@ -1,0 +1,6 @@
+Here comes the header.
+<button md-button [mdMenuTriggerFor]="menu">Menu</button>
+<md-menu #menu="mdMenu">
+  <button md-menu-item routerLinkActive="active"><a [routerLink]="['/contact']">Contact</a></button>
+  <button md-menu-item routerLinkActive="active"><a [routerLink]="['/test']">Test</a></button>
+</md-menu>
