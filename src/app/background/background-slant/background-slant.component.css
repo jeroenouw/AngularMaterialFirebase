@@ -1,0 +1,11 @@
+.background-slant {
+position: absolute;
+overflow: hidden;
+background-color: #2d2d35;  
+transform: skew(0,-4deg);
+-webkit-transform: skew(0,-4deg);
+-ms-transform: skew(0,-4deg);
+left: 0px;
+right: 0px;
+height: 700px; 
+}

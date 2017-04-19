@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-     title = 'Angular 2!';
+     title = 'Angular 4 Material Design';
   public menuItems: Array<Object> = [
     {
       icon: 'dialpad',

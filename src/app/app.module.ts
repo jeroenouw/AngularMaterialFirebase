@@ -1,12 +1,15 @@
+// Modules 3rd party
 import { NgModule } from '@angular/core';
-
-// Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule, MaterialModule } from '@angular/material';
+import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule, 
+         MdToolbarModule, MaterialModule } from '@angular/material';
 import 'hammerjs';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
+// Modules 
+import { BackgroundModule } from './background/background.module' ;
 
 // Main
 import { AppComponent } from './app.component';
@@ -29,10 +32,11 @@ import { PageNotFoundComponent } from './not-found/not-found.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule, MaterialModule.forRoot(),
+    MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule, MdToolbarModule, MaterialModule.forRoot(),
     FormsModule,
     HttpModule, 
-    AppRoutingModule
+    AppRoutingModule,
+    BackgroundModule
   ],
   providers: [],
   bootstrap: [AppComponent]
