@@ -3,7 +3,7 @@
 </p>
 <form class="example-form">
   <md-input-container class="example-full-width">
-    <input mdInput placeholder="Company (disabled)" disabled value="Google">
+    <input mdInput placeholder="Company" value="Google">
   </md-input-container>
 
   <table class="example-full-width" cellspacing="0"><tr>
@@ -11,13 +11,13 @@
       <input mdInput placeholder="First name">
     </md-input-container></td>
     <td><md-input-container class="example-full-width">
-      <input mdInput placeholder="Long Last Name That Will Be Truncated">
+      <input mdInput placeholder="Last name">
     </md-input-container></td>
   </tr></table>
 
   <p>
     <md-input-container class="example-full-width">
-      <textarea mdInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
+      <textarea mdInput placeholder="Address">Voorstraat 12a</textarea>
     </md-input-container>
     <md-input-container class="example-full-width">
       <textarea mdInput placeholder="Address 2"></textarea>
@@ -29,11 +29,11 @@
       <input mdInput placeholder="City">
     </md-input-container></td>
     <td><md-input-container class="example-full-width">
-      <input mdInput placeholder="State">
+      <input mdInput placeholder="Province">
     </md-input-container></td>
     <td><md-input-container class="example-full-width">
-      <input mdInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
-      <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
+      <input mdInput #postalCode maxlength="6" placeholder="Zip Code" value="2900TY">
+      <md-hint align="end">{{postalCode.value.length}} / 6</md-hint>
     </md-input-container></td>
   </tr></table>
 </form>
