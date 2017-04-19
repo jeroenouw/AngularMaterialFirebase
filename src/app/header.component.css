@@ -1,3 +1,10 @@
-md-sidenav {
-  width: 200px;
+.app-content {
+  padding: 20px;
+}
+.app-content md-card{
+  margin: 20px;
+}
+
+#content {
+  padding: 20px;
 }

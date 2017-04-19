@@ -6,5 +6,19 @@ import {Component} from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-   
+     title = 'Angular 2!';
+  public menuItems: Array<Object> = [
+    {
+      icon: 'dialpad',
+      title: 'Telephone'
+    },
+    {
+      icon: 'voicemail',
+      title: 'Voicemail'
+    },
+    {
+      icon: 'notifications_off',
+      title: 'Notifications'
+    },
+  ];
 }
