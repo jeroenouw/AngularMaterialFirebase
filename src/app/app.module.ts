@@ -9,19 +9,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 // Modules 
-import { BackgroundModule } from './background/background.module' ;
+// import { ComponentsModule } from './components/components.module';
 
 // Main
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
+//import { AppRoutingModule } from './app-routing.module';
 
 // Components
-import { AboutMeComponent } from'./about-me/about-me.component'
-import { ContactComponent } from'./contact/contact.component'
-import { DialogComponent, DialogResultDialog } from "./dialog/dialog.component";
-import { HeaderComponent } from "./header.component";
-import { FooterComponent } from "./footer.component";
-import { PageNotFoundComponent } from './not-found/not-found.component';
+import { AboutMeComponent } from'./components/about-me/about-me.component'
+import { ContactComponent } from'./components/contact/contact.component'
+import { DialogComponent, DialogResultDialog } from "./components/dialog/dialog.component";
+import { HeaderComponent } from "./components/header/header.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { PageNotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -40,8 +40,8 @@ import { PageNotFoundComponent } from './not-found/not-found.component';
     MdToolbarModule, MdDialogModule, MaterialModule.forRoot(),
     FormsModule,
     HttpModule, 
-    AppRoutingModule,
-    BackgroundModule
+    //AppRoutingModule,
+    //ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
