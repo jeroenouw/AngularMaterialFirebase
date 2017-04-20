@@ -30,6 +30,7 @@
 npm-debug.log
 testem.log
 /typings
+src/app/components/carousel/readme.md
 readme.txt
 
 # e2e

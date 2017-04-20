@@ -10,7 +10,8 @@ import { HttpModule } from '@angular/http';
 
 // Modules 
 // import { ComponentsModule } from './components/components.module';
-// import { PipesModule } from "./pipes/pipes.module";
+// import { PipesModule } from './pipes/pipes.module';
+import { CarouselModule } from './components/carousel/carousel.module';
 
 // Main
 import { AppComponent } from './app.component';
@@ -24,7 +25,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PageNotFoundComponent } from './components/not-found/not-found.component';
 import { DatePipeComponent } from './pipes/date-pipe.component';
-import { TitleCasePipeComponent } from'./pipes/titlecase-pipe.component'
+import { TitleCasePipeComponent } from './pipes/titlecase-pipe.component'
 
 @NgModule({
   declarations: [
@@ -45,9 +46,10 @@ import { TitleCasePipeComponent } from'./pipes/titlecase-pipe.component'
     MdToolbarModule, MdDialogModule, MaterialModule.forRoot(),
     FormsModule,
     HttpModule, 
-    //AppRoutingModule,
-    //PipesModule,
-    //ComponentsModule
+    // AppRoutingModule,
+    // PipesModule,
+    // ComponentsModule
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
