@@ -10,10 +10,11 @@ import { HttpModule } from '@angular/http';
 
 // Modules 
 // import { ComponentsModule } from './components/components.module';
+// import { PipesModule } from "./pipes/pipes.module";
 
 // Main
 import { AppComponent } from './app.component';
-//import { AppRoutingModule } from './app-routing.module';
+// import { AppRoutingModule } from './app-routing.module';
 
 // Components
 import { AboutMeComponent } from './components/about-me/about-me.component';
@@ -23,6 +24,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PageNotFoundComponent } from './components/not-found/not-found.component';
 import { DatePipeComponent } from './pipes/date-pipe.component';
+import { TitleCasePipeComponent } from'./pipes/titlecase-pipe.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { DatePipeComponent } from './pipes/date-pipe.component';
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
-    DatePipeComponent
+    DatePipeComponent,
+    TitleCasePipeComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +46,7 @@ import { DatePipeComponent } from './pipes/date-pipe.component';
     FormsModule,
     HttpModule, 
     //AppRoutingModule,
+    //PipesModule,
     //ComponentsModule
   ],
   providers: [],

@@ -6,19 +6,27 @@ import {Component} from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-     title = 'Angular 4 Material Design';
+     title = '';
   public menuItems: Array<Object> = [
     {
-      icon: 'dialpad',
-      title: 'Telephone'
+      icon: 'face',
+      title: 'Profile'
     },
     {
-      icon: 'voicemail',
-      title: 'Voicemail'
+      icon: 'chat',
+      title: 'Message'
     },
     {
-      icon: 'notifications_off',
-      title: 'Notifications'
+      icon: 'refresh',
+      title: 'Refresh Page'
+    },
+    {
+      icon: 'link',
+      title: 'Link'
+    },
+    {
+      icon: 'lock',
+      title: 'Login'
     },
   ];
 }

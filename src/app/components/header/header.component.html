@@ -15,15 +15,15 @@
 
  <md-toolbar color="primary">
   <button md-icon-button [mdMenuTriggerFor]="menu">
-    <md-icon>more_vert</md-icon>
+    <md-icon>menu</md-icon>
   </button>
-  <md-menu #menu="mdMenu">
-    <button md-menu-item *ngFor="let item of menuItems">
+  <md-menu #menu="mdMenu" >
+    <button md-menu-item *ngFor="let item of menuItems" >
       <md-icon>{{item.icon}}</md-icon>
       <span>{{item.title}}</span>
     </button>
-  </md-menu>
-  <span>{{title}}</span>
+  </md-menu> 
+  <span><a href="/"><app-titlecase-pipe></app-titlecase-pipe></a></span>
   <span class="spacer"></span>
   <app-date-pipe></app-date-pipe>
 </md-toolbar>

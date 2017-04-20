@@ -1,23 +1,20 @@
-<form class="form">
+<form class="form" >
   <md-input-container class="full-width">
     <input mdInput placeholder="Company" value="Google">
   </md-input-container>
 
   <table class="full-width" cellspacing="0"><tr>
     <td><md-input-container class="full-width">
-      <input mdInput placeholder="First name">
+      <input mdInput placeholder="First name" required>
     </md-input-container></td>
     <td><md-input-container class="full-width">
-      <input mdInput placeholder="Last name">
+      <input mdInput placeholder="Last name" required>
     </md-input-container></td>
   </tr></table>
 
   <p>
     <md-input-container class="full-width">
-      <textarea mdInput placeholder="Address">Voorstraat 12a</textarea>
-    </md-input-container>
-    <md-input-container class="full-width">
-      <textarea mdInput placeholder="Address 2"></textarea>
+      <textarea mdInput placeholder="Address">Streetname 12a</textarea>
     </md-input-container>
   </p>
 
@@ -33,4 +30,7 @@
       <md-hint align="end">{{postalCode.value.length}} / 6</md-hint>
     </md-input-container></td>
   </tr></table>
+  <br />
+  <button md-button>Submit</button>
+
 </form>
