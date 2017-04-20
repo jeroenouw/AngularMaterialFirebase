@@ -22,6 +22,7 @@ import { DialogComponent, DialogResultDialog } from "./components/dialog/dialog.
 import { HeaderComponent } from "./components/header/header.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { PageNotFoundComponent } from './components/not-found/not-found.component';
+import { DatePipeComponent } from './pipes/date-pipe.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PageNotFoundComponent } from './components/not-found/not-found.componen
     DialogComponent, DialogResultDialog,
     HeaderComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DatePipeComponent
   ],
   imports: [
     BrowserModule,
