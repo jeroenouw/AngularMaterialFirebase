@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./background-normal.component.css']
 })
 export class BackgroundNormalComponent implements OnInit {
+  fullImagePath: string;
 
-  constructor() { }
+  constructor() {
+    this.fullImagePath = '/assets/img/mb-bg-01.png'; }
 
   ngOnInit() {
   }

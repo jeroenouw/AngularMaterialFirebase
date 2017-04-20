@@ -32,6 +32,7 @@ testem.log
 /typings
 src/app/components/carousel/readme.md
 readme.txt
+todo.txt
 
 # e2e
 /e2e/*.js

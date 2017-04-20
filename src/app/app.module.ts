@@ -26,6 +26,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PageNotFoundComponent } from './components/not-found/not-found.component';
 import { DatePipeComponent } from './pipes/date-pipe.component';
 import { TitleCasePipeComponent } from './pipes/titlecase-pipe.component'
+import { BackgroundNormalComponent } from './components/background/background-normal/background-normal.component'
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { TitleCasePipeComponent } from './pipes/titlecase-pipe.component'
     FooterComponent,
     PageNotFoundComponent,
     DatePipeComponent,
-    TitleCasePipeComponent
+    TitleCasePipeComponent,
+    BackgroundNormalComponent
   ],
   imports: [
     BrowserModule,
