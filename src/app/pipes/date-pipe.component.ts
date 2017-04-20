@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
       </fieldset>
   </div>
 `,  
-  //styles: ['p {font-weight: bold; }']
+  // styles: ['p {font-weight: bold; }']
 
 })
 export class DatePipeComponent {

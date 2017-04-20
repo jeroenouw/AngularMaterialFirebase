@@ -5,14 +5,14 @@ import { MdDialog, MdDialogRef } from '@angular/material';
   selector: 'app-dialog',
   templateUrl: './dialog.component.html'
 })
-export class DialogComponent{
+export class DialogComponent {
   titleTwo: string = 'What is your opinion?';
   selectedOption: string;
 
   constructor(public dialog: MdDialog) {}
 
   openDialog() {
-    let dialogRef = this.dialog.open(DialogResultDialog);
+    const dialogRef = this.dialog.open(DialogResultDialog);
     dialogRef.afterClosed().subscribe(result => {
       this.selectedOption = result;
     });

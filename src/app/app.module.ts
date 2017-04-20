@@ -16,11 +16,11 @@ import { AppComponent } from './app.component';
 //import { AppRoutingModule } from './app-routing.module';
 
 // Components
-import { AboutMeComponent } from'./components/about-me/about-me.component'
-import { ContactComponent } from'./components/contact/contact.component'
-import { DialogComponent, DialogResultDialog } from "./components/dialog/dialog.component";
-import { HeaderComponent } from "./components/header/header.component";
-import { FooterComponent } from "./components/footer/footer.component";
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { DialogComponent, DialogResultDialog } from './components/dialog/dialog.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { PageNotFoundComponent } from './components/not-found/not-found.component';
 import { DatePipeComponent } from './pipes/date-pipe.component';
 
