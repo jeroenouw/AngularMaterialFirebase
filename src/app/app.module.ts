@@ -27,6 +27,7 @@ import { PageNotFoundComponent } from './components/not-found/not-found.componen
 import { DatePipeComponent } from './pipes/date-pipe.component';
 import { TitleCasePipeComponent } from './pipes/titlecase-pipe.component'
 import { BackgroundNormalComponent } from './components/background/background-normal/background-normal.component'
+import { BackgroundEmptyComponent } from './components/background/background-empty/background-empty.component'
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { BackgroundNormalComponent } from './components/background/background-no
     PageNotFoundComponent,
     DatePipeComponent,
     TitleCasePipeComponent,
-    BackgroundNormalComponent
+    BackgroundNormalComponent,
+    BackgroundEmptyComponent
   ],
   imports: [
     BrowserModule,

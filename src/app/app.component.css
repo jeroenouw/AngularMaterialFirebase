@@ -5,6 +5,39 @@
   margin: 20px;
 }
 
-#content {
+#contentOne {
   padding: 60px 20px;
+  z-index: 1;
+  position: relative;
 } 
+
+#contentTwo {
+  width: 930px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  padding: 300px 20px 60px;
+  z-index: 3;
+  position: relative;
+} 
+
+.contentCard {
+  width: 700px;
+  height: 600px;
+  position: absolute;
+  margin: 40px auto 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.contentCard img {
+  margin: 0 auto;
+  max-width: 210px;
+  max-height: 250px;
+}
+
+.buttonCard {
+  display: grid;
+  margin: 0;
+}

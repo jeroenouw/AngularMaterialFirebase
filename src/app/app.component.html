@@ -1,21 +1,45 @@
 <app-header></app-header><br />
 
-<div id="content">
+<div id="contentOne">
   <md-card>
       <h1>{{titleOne}}</h1>
       {{contentOne}}
   </md-card>
 </div>
 
+
+<md-card class="contentCard">
+  <md-card-header>
+    <md-card-title><h1>{{titleCard}} {{numberCard}}</h1></md-card-title>
+    <md-card-subtitle>{{subTitleCard}}</md-card-subtitle>
+  </md-card-header>
+  <img md-card-image [src]="angularImage">
+  <img md-card-image [src]="angularImage">
+  <img md-card-image [src]="angularImage">
+  <md-card-content>
+    <p>
+      {{contentCard}}
+    </p>
+  </md-card-content>
+  
+  <md-card-actions class="buttonCard">
+    <a button md-raised-button href="https://github.com/jeroenouw/Angular4MaterialDesign" target="_blank"><h3>Github</h3></a>
+  </md-card-actions>
+</md-card>
+
 <app-background-normal></app-background-normal>
 <!--<app-background-slant></app-background-slant>-->
 
-<div id="content">
+<div id="contentTwo">
   <md-card>
       <h1>{{titleTwo}}</h1>
       {{contentTwo}}
   </md-card>
 </div>
+
+
+
+
 
 <app-footer></app-footer> 
 
