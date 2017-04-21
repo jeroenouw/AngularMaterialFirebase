@@ -18,10 +18,10 @@
     <md-icon>menu</md-icon>
   </button>
   <md-menu #menu="mdMenu" >
-    <button md-menu-item *ngFor="let item of menuItems" >
+    <a md-menu-item *ngFor="let item of menuItems" href="{{item.link}}">
       <md-icon>{{item.icon}}</md-icon>
       <span>{{item.title}}</span>
-    </button>
+    </a>
   </md-menu> 
   <span><a href="/"><app-titlecase-pipe></app-titlecase-pipe></a></span>
   <span class="spacer"></span>

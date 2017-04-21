@@ -6,27 +6,33 @@ import {Component} from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-     title = '';
+     title: string = '';
+
   public menuItems: Array<Object> = [
     {
       icon: 'face',
-      title: 'Profile'
+      title: 'Profile',
+      link: '#'
     },
     {
       icon: 'chat',
-      title: 'Message'
+      title: 'Message',
+      link: '#'
     },
     {
       icon: 'refresh',
-      title: 'Refresh Page'
+      title: 'Refresh Page',
+      link: '#'
     },
     {
       icon: 'link',
-      title: 'Link'
+      title: 'Link',
+      link: 'https://github.com/jeroenouw/Angular4MaterialDesign'
     },
     {
       icon: 'lock',
-      title: 'Login'
+      title: 'Login',
+      link: '#'
     },
   ];
 }
