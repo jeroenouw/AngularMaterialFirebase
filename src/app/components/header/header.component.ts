@@ -26,7 +26,7 @@ export class HeaderComponent {
     },
     {
       icon: 'link',
-      title: 'Link',
+      title: 'Sourcecode',
       link: 'https://github.com/jeroenouw/Angular4MaterialDesign'
     },
     {

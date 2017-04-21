@@ -22,6 +22,7 @@ import { AppComponent } from './app.component';
 // Components
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ContactComponent } from './components/contact/contact.component';
+import './components/contact/contact';
 import { DialogComponent, DialogResultDialog } from './components/dialog/dialog.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -55,7 +56,7 @@ import { ThirdBlockComponent } from './components/blocks/third-block/third-block
     BackgroundNormalComponent,
     BackgroundSlantComponent,
     BackgroundEmptyComponent,
-    BackgroundEmailComponent ,
+    BackgroundEmailComponent,
     CardBlockComponent,
     FirstBlockComponent,
     SecondBlockComponent,
