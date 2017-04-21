@@ -1,0 +1,12 @@
+.form {
+  width: 500px;
+  margin: 65px auto 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.full-width {
+  width: 100%;
+} 

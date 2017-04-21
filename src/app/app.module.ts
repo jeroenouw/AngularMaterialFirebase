@@ -26,8 +26,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PageNotFoundComponent } from './components/not-found/not-found.component';
 import { DatePipeComponent } from './pipes/date-pipe.component';
 import { TitleCasePipeComponent } from './pipes/titlecase-pipe.component'
+import { EmailMeComponent } from './components/email-me/email-me.component';
 import { BackgroundNormalComponent } from './components/background/background-normal/background-normal.component'
 import { BackgroundEmptyComponent } from './components/background/background-empty/background-empty.component'
+import { BackgroundEmailComponent } from './components/background/background-email/background-email.component'
 
 @NgModule({
   declarations: [
@@ -40,8 +42,10 @@ import { BackgroundEmptyComponent } from './components/background/background-emp
     PageNotFoundComponent,
     DatePipeComponent,
     TitleCasePipeComponent,
+    EmailMeComponent,
     BackgroundNormalComponent,
-    BackgroundEmptyComponent
+    BackgroundEmptyComponent,
+    BackgroundEmailComponent 
   ],
   imports: [
     BrowserModule,

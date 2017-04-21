@@ -11,19 +11,9 @@
   position: relative;
 } 
 
-#contentTwo {
-  width: 930px;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  padding: 300px 20px 60px;
-  z-index: 3;
-  position: relative;
-} 
-
 .contentCard {
   width: 700px;
-  height: 600px;
+  height: 500px;
   position: absolute;
   margin: 40px auto 0;
   left: 0;
@@ -41,3 +31,14 @@
   display: grid;
   margin: 0;
 }
+
+#contentTwo {
+  width: 930px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  padding: 200px 20px 60px;
+  z-index: 3;
+  position: relative;
+} 
+
