@@ -6,16 +6,21 @@
 }
 
 #contentOne {
+  width: 930px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
   padding: 60px 20px;
   z-index: 1;
   position: relative;
 } 
 
 .contentCard {
-  width: 700px;
+  width: 890px;
   height: 500px;
   position: absolute;
-  margin: 40px auto 0;
+  padding: 24px;
+  margin: 10px auto 0;
   left: 0;
   right: 0;
   z-index: 5;
@@ -32,12 +37,12 @@
   margin: 0;
 }
 
-#contentTwo {
+#contentTwo, #contentThree {
   width: 930px;
   margin: 0 auto;
   left: 0;
   right: 0;
-  padding: 200px 20px 60px;
+  padding: 120px 20px 120px;
   z-index: 3;
   position: relative;
 } 

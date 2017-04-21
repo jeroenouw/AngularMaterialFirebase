@@ -28,6 +28,7 @@ import { DatePipeComponent } from './pipes/date-pipe.component';
 import { TitleCasePipeComponent } from './pipes/titlecase-pipe.component'
 import { EmailMeComponent } from './components/email-me/email-me.component';
 import { BackgroundNormalComponent } from './components/background/background-normal/background-normal.component'
+import { BackgroundSlantComponent } from './components/background/background-slant/background-slant.component'
 import { BackgroundEmptyComponent } from './components/background/background-empty/background-empty.component'
 import { BackgroundEmailComponent } from './components/background/background-email/background-email.component'
 
@@ -44,6 +45,7 @@ import { BackgroundEmailComponent } from './components/background/background-ema
     TitleCasePipeComponent,
     EmailMeComponent,
     BackgroundNormalComponent,
+    BackgroundSlantComponent,
     BackgroundEmptyComponent,
     BackgroundEmailComponent 
   ],
