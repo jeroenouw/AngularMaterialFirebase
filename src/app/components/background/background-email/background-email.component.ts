@@ -9,7 +9,7 @@ export class BackgroundEmailComponent implements OnInit {
   fullImagePath: string;
 
   constructor() {
-    this.fullImagePath = '/assets/img/mb-bg-05.png'; }
+    this.fullImagePath = '/assets/img/mb-bg-01.png'; }
 
   ngOnInit() {
   }
