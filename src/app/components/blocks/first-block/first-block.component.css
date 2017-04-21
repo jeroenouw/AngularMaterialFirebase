@@ -1,0 +1,9 @@
+#contentOne {
+  width: 930px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  padding: 60px 20px;
+  z-index: 1;
+  position: relative;
+} 

@@ -1,0 +1,9 @@
+#contentTwo{
+  width: 930px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  padding: 120px 20px 120px;
+  z-index: 3;
+  position: relative;
+} 

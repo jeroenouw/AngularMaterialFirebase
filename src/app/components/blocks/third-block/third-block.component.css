@@ -1,0 +1,15 @@
+#contentThree {
+  width: 930px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  padding: 120px 20px 120px;
+  z-index: 3;
+  position: relative;
+} 
+
+#contentThree .mat-card {
+  width: 30%;
+  margin: 10px;
+  display: inline-block;
+} 

@@ -1,0 +1,25 @@
+.contentCard {
+  width: 890px;
+  height: 500px;
+  position: absolute;
+  padding: 24px;
+  margin: 10px auto 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.contentCard img {
+  margin: 0 33px;
+  max-width: 210px;
+  max-height: 250px;
+}
+
+.buttonCard {
+  display: grid;
+  margin: 0;
+}
+
+.buttonCard a {
+  text-decoration: none;
+}

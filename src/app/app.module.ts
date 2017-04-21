@@ -11,7 +11,9 @@ import { HttpModule } from '@angular/http';
 // Modules 
 // import { ComponentsModule } from './components/components.module';
 // import { PipesModule } from './pipes/pipes.module';
-import { CarouselModule } from './components/carousel/carousel.module';
+// import { CarouselModule } from './components/carousel/carousel.module';
+// import { BlocksModule } from './components/blocks/blocks.module';
+// import { BackgroundsModule } from './components/backgrounds/backgrounds.module';
 
 // Main
 import { AppComponent } from './app.component';
@@ -27,10 +29,16 @@ import { PageNotFoundComponent } from './components/not-found/not-found.componen
 import { DatePipeComponent } from './pipes/date-pipe.component';
 import { TitleCasePipeComponent } from './pipes/titlecase-pipe.component'
 import { EmailMeComponent } from './components/email-me/email-me.component';
-import { BackgroundNormalComponent } from './components/background/background-normal/background-normal.component'
-import { BackgroundSlantComponent } from './components/background/background-slant/background-slant.component'
-import { BackgroundEmptyComponent } from './components/background/background-empty/background-empty.component'
-import { BackgroundEmailComponent } from './components/background/background-email/background-email.component'
+
+import { BackgroundNormalComponent } from './components/backgrounds/background-normal/background-normal.component'
+import { BackgroundSlantComponent } from './components/backgrounds/background-slant/background-slant.component'
+import { BackgroundEmptyComponent } from './components/backgrounds/background-empty/background-empty.component'
+import { BackgroundEmailComponent } from './components/backgrounds/background-email/background-email.component'
+
+import { CardBlockComponent } from './components/blocks/card-block/card-block.component'
+import { FirstBlockComponent } from './components/blocks/first-block/first-block.component'
+import { SecondBlockComponent } from './components/blocks/second-block/second-block.component'
+import { ThirdBlockComponent } from './components/blocks/third-block/third-block.component'
 
 @NgModule({
   declarations: [
@@ -47,7 +55,11 @@ import { BackgroundEmailComponent } from './components/background/background-ema
     BackgroundNormalComponent,
     BackgroundSlantComponent,
     BackgroundEmptyComponent,
-    BackgroundEmailComponent 
+    BackgroundEmailComponent ,
+    CardBlockComponent,
+    FirstBlockComponent,
+    SecondBlockComponent,
+    ThirdBlockComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +71,7 @@ import { BackgroundEmailComponent } from './components/background/background-ema
     // AppRoutingModule,
     // PipesModule,
     // ComponentsModule
-    CarouselModule
+    // CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
