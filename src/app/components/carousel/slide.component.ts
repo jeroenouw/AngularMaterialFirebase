@@ -3,7 +3,7 @@ import { Component, HostBinding, Input, OnDestroy, OnInit } from '@angular/core'
 import { CarouselComponent, Direction } from './carousel.component';
 
 @Component({
-  selector: 'slide',
+  selector: 'app-slide',
   template: `
     <div [class.active]="active" class="item">
       <ng-content></ng-content>

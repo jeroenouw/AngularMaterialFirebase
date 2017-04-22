@@ -1,0 +1,15 @@
+<md-card class="sender">
+ <h3>Sender
+      <button md-raised-button (click)="toggleSubscribed()">
+        {{unsubscribed && 'Subscribe' || 'Unsubscribe'}}
+      </button>
+    </h3>
+    <button md-raised-button (click)="send()">Send Message</button>
+    <h4 *ngIf="messages.length">
+      Incoming Messages
+      <button md-raised-button (click)="clear()">x</button>
+    </h4>
+    <ul>
+      <li *ngFor="let message of messages">Response: {{message}}</li>
+    </ul>
+</md-card>

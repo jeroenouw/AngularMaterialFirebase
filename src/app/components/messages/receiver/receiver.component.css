@@ -1,0 +1,23 @@
+button {
+  outline: none;
+}
+
+h3 button {
+  background-color: inherit;
+  border: none;
+  text-decoration: underline;
+}
+
+h3 button:active {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 8px;
+}
+
+.receiver {
+  float: right;
+  width: 45%;
+}

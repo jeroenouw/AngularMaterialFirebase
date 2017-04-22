@@ -6,7 +6,7 @@ import { SlideComponent } from './slide.component';
 export enum Direction {UNKNOWN, NEXT, PREV}
 
 @Component({
-  selector: 'carousel',
+  selector: 'app-carousel',
   templateUrl: 'carousel.component.html'
 })
 export class CarouselComponent implements OnDestroy {

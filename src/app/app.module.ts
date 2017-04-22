@@ -15,31 +15,37 @@ import { HttpModule } from '@angular/http';
 // import { BlocksModule } from './components/blocks/blocks.module';
 // import { BackgroundsModule } from './components/backgrounds/backgrounds.module';
 
+// Services
+import { MessageService } from './components/messages/message.service';
+
 // Main
 import { AppComponent } from './app.component';
 // import { AppRoutingModule } from './app-routing.module';
 
 // Components
 import { AboutMeComponent } from './components/about-me/about-me.component';
-import { ContactComponent } from './components/contact/contact.component';
-import './components/contact/contact';
+import { ContactComponent } from './components/contact/contact.component'; 
+import './components/contact/contact'; 
 import { DialogComponent, DialogResultDialog } from './components/dialog/dialog.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PageNotFoundComponent } from './components/not-found/not-found.component';
 import { DatePipeComponent } from './pipes/date-pipe.component';
-import { TitleCasePipeComponent } from './pipes/titlecase-pipe.component'
+import { TitleCasePipeComponent } from './pipes/titlecase-pipe.component';
 import { EmailMeComponent } from './components/email-me/email-me.component';
 
-import { BackgroundNormalComponent } from './components/backgrounds/background-normal/background-normal.component'
-import { BackgroundSlantComponent } from './components/backgrounds/background-slant/background-slant.component'
-import { BackgroundEmptyComponent } from './components/backgrounds/background-empty/background-empty.component'
-import { BackgroundEmailComponent } from './components/backgrounds/background-email/background-email.component'
+import { BackgroundNormalComponent } from './components/backgrounds/background-normal/background-normal.component';
+import { BackgroundSlantComponent } from './components/backgrounds/background-slant/background-slant.component';
+import { BackgroundEmptyComponent } from './components/backgrounds/background-empty/background-empty.component';
+import { BackgroundEmailComponent } from './components/backgrounds/background-email/background-email.component';
 
-import { CardBlockComponent } from './components/blocks/card-block/card-block.component'
-import { FirstBlockComponent } from './components/blocks/first-block/first-block.component'
-import { SecondBlockComponent } from './components/blocks/second-block/second-block.component'
-import { ThirdBlockComponent } from './components/blocks/third-block/third-block.component'
+import { CardBlockComponent } from './components/blocks/card-block/card-block.component';
+import { FirstBlockComponent } from './components/blocks/first-block/first-block.component';
+import { SecondBlockComponent } from './components/blocks/second-block/second-block.component';
+import { ThirdBlockComponent } from './components/blocks/third-block/third-block.component';
+
+import { SenderComponent } from './components/messages/sender/sender.component'
+import { ReceiverComponent } from './components/messages/receiver/receiver.component'
 
 @NgModule({
   declarations: [
@@ -60,7 +66,9 @@ import { ThirdBlockComponent } from './components/blocks/third-block/third-block
     CardBlockComponent,
     FirstBlockComponent,
     SecondBlockComponent,
-    ThirdBlockComponent
+    ThirdBlockComponent,
+    SenderComponent,
+    ReceiverComponent
   ],
   imports: [
     BrowserModule,
@@ -70,12 +78,14 @@ import { ThirdBlockComponent } from './components/blocks/third-block/third-block
     FormsModule,
     HttpModule, 
     // AppRoutingModule,
-    // PipesModule,
+    // PipesModule
     // ComponentsModule
     // CarouselModule
+    // BackgroundsModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
 }
+ 
