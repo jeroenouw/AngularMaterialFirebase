@@ -26,10 +26,23 @@
   <span><a href="/"><app-titlecase-pipe></app-titlecase-pipe></a></span>
   <span class="spacer"></span>
   <app-date-pipe></app-date-pipe>
+  
+     <!-- <li><a routerLink="/signup">Register</a></li>
+          <li><a routerLink="/login">Login</a></li>-->
+    <div *ngIf="!authService.isAuthenticated(); else loggedin">
+      <a routerLink="/signup">Register</a>
+      <a routerLink="/login">Login</a>
+    </div>
+
+    <ng-template #loggedin>
+      <p>Logged in
+      <a style="cursor: pointer;" 
+      (click)="onLogout()">Logout</a></p>
+    </ng-template>
 </md-toolbar>
 
 <md-tab-group>
-  <md-tab label="Home">
+  <md-tab label="HOME">
       <div id="content">
         <md-card>
           <h1>Home</h1>
@@ -38,7 +51,7 @@
       </div>
   </md-tab>
 
-  <md-tab label="About me">
+  <md-tab label="ABOUT ME">
       <div id="content">
         <md-card>
           <h1>About me (in progress)</h1>
@@ -47,7 +60,7 @@
       </div>
   </md-tab>
 
-    <md-tab label="Messages">
+  <md-tab label="MESSAGES">
       <div id="content">
         <md-card>
           <h1>Messaging (in progress)</h1>
@@ -57,7 +70,18 @@
       </div>
   </md-tab>
 
-  <md-tab label="Contact">
+  <md-tab label="LOGIN REGISTER">
+      <div id="content">
+        <md-card>
+          <h1>Register and login (temporary till routing fixed)</h1>
+          <app-signup></app-signup>
+          <br />
+          <app-signin></app-signin>
+        </md-card>
+      </div>
+  </md-tab>
+
+  <md-tab label="CONTACT">
       <div id="content">
         <md-card>
           <h1>Contact us today (in progress)</h1>

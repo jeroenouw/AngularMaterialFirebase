@@ -1,12 +1,38 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { Response } from '@angular/http';
 
-@Component({
+//import { DataStorageService } from '../shared/data-storage.service';
+import { AuthService } from '../auth/auth.service';
+
+@Component({ 
   selector: 'app-header',
   templateUrl: 'header.component.html',
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-     title: string = '';
+  title: string = '';
+
+  constructor(//private dataStorageService: DataStorageService,
+              private authService: AuthService) {
+  }
+
+/*  onSaveData() {
+    this.dataStorageService.storeUsers()
+      .subscribe(
+        (response: Response) => {
+          console.log(response);
+        }
+      );
+  }
+
+  onFetchData() {
+    this.dataStorageService.getUsers();
+  }
+*/
+
+  onLogout() {
+    this.authService.logout();
+  }  
 
   public menuItems: Array<Object> = [
     {
@@ -32,7 +58,7 @@ export class HeaderComponent {
     {
       icon: 'lock',
       title: 'Login',
-      link: '#'
+      link: '/login'
     },
   ];
 }

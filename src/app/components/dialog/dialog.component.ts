@@ -12,7 +12,7 @@ export class DialogComponent {
   constructor(public dialog: MdDialog) {}
 
   openDialog() {
-    const dialogRef = this.dialog.open(DialogResultDialog);
+    const dialogRef = this.dialog.open(DialogResultDialogComponent);
     dialogRef.afterClosed().subscribe(result => {
       this.selectedOption = result;
     });
@@ -23,6 +23,6 @@ export class DialogComponent {
   selector: 'app-dialog-result',
   templateUrl: './dialog-result.component.html',
 })
-export class DialogResultDialog {
-  constructor(public dialogRef: MdDialogRef<DialogResultDialog>) {}
+export class DialogResultDialogComponent {
+  constructor(public dialogRef: MdDialogRef<DialogResultDialogComponent>) {}
 }

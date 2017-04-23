@@ -17,16 +17,21 @@ import { HttpModule } from '@angular/http';
 
 // Services
 import { MessageService } from './components/messages/message.service';
+import { AuthService } from './components/auth/auth.service';
+import { AuthGuard } from './components/auth/auth-guard.service';
+// import { DataStorageService } from './shared/data-storage.service';
 
 // Main
 import { AppComponent } from './app.component';
-// import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, 
+         // routingComponents 
+         } from './app.routing';
 
 // Components
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ContactComponent } from './components/contact/contact.component'; 
 import './components/contact/contact'; 
-import { DialogComponent, DialogResultDialog } from './components/dialog/dialog.component';
+import { DialogComponent, DialogResultDialogComponent } from './components/dialog/dialog.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PageNotFoundComponent } from './components/not-found/not-found.component';
@@ -47,12 +52,15 @@ import { ThirdBlockComponent } from './components/blocks/third-block/third-block
 import { SenderComponent } from './components/messages/sender/sender.component'
 import { ReceiverComponent } from './components/messages/receiver/receiver.component'
 
+import { SignupComponent } from './components/auth/signup/signup.component';
+import { SigninComponent } from './components/auth/signin/signin.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     AboutMeComponent,
     ContactComponent,
-    DialogComponent, DialogResultDialog,
+    DialogComponent, DialogResultDialogComponent,
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
@@ -68,7 +76,10 @@ import { ReceiverComponent } from './components/messages/receiver/receiver.compo
     SecondBlockComponent,
     ThirdBlockComponent,
     SenderComponent,
-    ReceiverComponent
+    ReceiverComponent,
+    SignupComponent,
+    SigninComponent,
+    // routingComponents
   ],
   imports: [
     BrowserModule,
@@ -77,13 +88,14 @@ import { ReceiverComponent } from './components/messages/receiver/receiver.compo
     MdToolbarModule, MdDialogModule, MaterialModule.forRoot(),
     FormsModule,
     HttpModule, 
-    // AppRoutingModule,
+    AppRoutingModule
     // PipesModule
     // ComponentsModule
     // CarouselModule
     // BackgroundsModule
   ],
-  providers: [MessageService],
+  providers: [MessageService, AuthService, AuthGuard// ,DataStorageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
