@@ -4,5 +4,5 @@ import { Component } from '@angular/core';
   template: '<h2>Here comes page not found</h2>'
 })
 export class PageNotFoundComponent {
-  
+
 }

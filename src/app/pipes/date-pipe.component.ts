@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
         <!--<p>A alternative, {{today | date:'medium'}}</p>-->
       </fieldset>
   </div>
-`,  
+`, 
   // styles: ['p {font-weight: bold; }']
 
 })

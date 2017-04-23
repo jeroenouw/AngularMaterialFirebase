@@ -2,13 +2,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule, 
+import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
          MdToolbarModule, MdDialogModule, MaterialModule } from '@angular/material';
 import 'hammerjs';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-// Modules 
+// Modules
 // import { ComponentsModule } from './components/components.module';
 // import { PipesModule } from './pipes/pipes.module';
 // import { CarouselModule } from './components/carousel/carousel.module';
@@ -23,14 +23,14 @@ import { AuthGuard } from './components/auth/auth-guard.service';
 
 // Main
 import { AppComponent } from './app.component';
-import { AppRoutingModule, 
-         // routingComponents 
+import { AppRoutingModule,
+         // routingComponents
          } from './app.routing';
 
 // Components
 import { AboutMeComponent } from './components/about-me/about-me.component';
-import { ContactComponent } from './components/contact/contact.component'; 
-import './components/contact/contact'; 
+import { ContactComponent } from './components/contact/contact.component';
+import './components/contact/contact';
 import { DialogComponent, DialogResultDialogComponent } from './components/dialog/dialog.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -49,8 +49,8 @@ import { FirstBlockComponent } from './components/blocks/first-block/first-block
 import { SecondBlockComponent } from './components/blocks/second-block/second-block.component';
 import { ThirdBlockComponent } from './components/blocks/third-block/third-block.component';
 
-import { SenderComponent } from './components/messages/sender/sender.component'
-import { ReceiverComponent } from './components/messages/receiver/receiver.component'
+import { SenderComponent } from './components/messages/sender/sender.component';
+import { ReceiverComponent } from './components/messages/receiver/receiver.component';
 
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { SigninComponent } from './components/auth/signin/signin.component';
@@ -84,10 +84,10 @@ import { SigninComponent } from './components/auth/signin/signin.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule, 
+    MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
     MdToolbarModule, MdDialogModule, MaterialModule.forRoot(),
     FormsModule,
-    HttpModule, 
+    HttpModule,
     AppRoutingModule
     // PipesModule
     // ComponentsModule
@@ -98,6 +98,5 @@ import { SigninComponent } from './components/auth/signin/signin.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
 }
- 

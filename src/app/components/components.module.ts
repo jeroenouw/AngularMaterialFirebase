@@ -31,5 +31,5 @@ import { PageNotFoundComponent } from './not-found/not-found.component';
     RouterModule.forChild(componentRoutes)
   ]
 })
-export class ComponentsModule { 
+export class ComponentsModule {
 }*/

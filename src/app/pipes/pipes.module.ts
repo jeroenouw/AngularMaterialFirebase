@@ -15,6 +15,6 @@ import { TitleCasePipeComponent } from'./titlecase-pipe.component'
     CommonModule
   ]
 })
-export class PipesModule { 
+export class PipesModule {
 }
 */

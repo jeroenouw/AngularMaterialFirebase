@@ -25,7 +25,7 @@ const html = `
   </div>
 `;
 
-function expectActiveSlides(nativeEl:HTMLDivElement, active:boolean[]):void {
+function expectActiveSlides(nativeEl: HTMLDivElement, active: boolean[]): void {
   const slideElms = nativeEl.querySelectorAll('.carousel-item');
   const indicatorElms = nativeEl.querySelectorAll('ol.carousel-indicators > li');
 
@@ -44,10 +44,10 @@ function expectActiveSlides(nativeEl:HTMLDivElement, active:boolean[]):void {
 }
 
 describe('Component: Carousel', () => {
-  let fixture:ComponentFixture<any>;
-  let context:TestCarouselComponent;
-  let element:any;
-  let clean:any;
+  let fixture: ComponentFixture<any>;
+  let context: TestCarouselComponent;
+  let element: any;
+  let clean: any;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -88,14 +88,14 @@ describe('Component: Carousel', () => {
   });
 
   it('should create next/prev nav button', () => {
-    let prev = element.querySelectorAll('a.left');
-    let next = element.querySelectorAll('a.right');
+    const prev = element.querySelectorAll('a.left');
+    const next = element.querySelectorAll('a.right');
     expect(prev.length).toBe(1);
     expect(next.length).toBe(1);
   });
 
   it('should display slide indicators', () => {
-    let indicators = element.querySelectorAll('ol.carousel-indicators > li');
+    const indicators = element.querySelectorAll('ol.carousel-indicators > li');
     expect(indicators.length).toBe(3);
   });
 
@@ -104,11 +104,11 @@ describe('Component: Carousel', () => {
     context.slides.splice(0, 2);
     fixture.detectChanges();
     expect(context.slides.length).toBe(1);
-    let indicators = element.querySelectorAll('ol.carousel-indicators > li');
+    const indicators = element.querySelectorAll('ol.carousel-indicators > li');
     expect(indicators.length).toBe(0);
-    let prev = element.querySelectorAll('a.left');
+    const prev = element.querySelectorAll('a.left');
     expect(prev.length).toBe(0);
-    let next = element.querySelectorAll('a.right');
+    const next = element.querySelectorAll('a.right');
     expect(next.length).toBe(0);
   });
 
@@ -116,7 +116,7 @@ describe('Component: Carousel', () => {
   xit('should disable prev button when slide index is 0 and noWrap is truthy', () => {
     context.noWrapSlides = true;
     fixture.detectChanges();
-    let prev = element.querySelector('a.left');
+    const prev = element.querySelector('a.left');
     expect(prev.classList).toContain('disabled');
   });
 
@@ -125,12 +125,12 @@ describe('Component: Carousel', () => {
     context.noWrapSlides = true;
     context.slides[2].active = true;
     fixture.detectChanges();
-    let next = element.querySelector('a.right');
+    const next = element.querySelector('a.right');
     expect(next.classList).toContain('disabled');
   });
 
   it('should change slide on indicator click', () => {
-    let indicators = element.querySelectorAll('ol.carousel-indicators > li');
+    const indicators = element.querySelectorAll('ol.carousel-indicators > li');
     expectActiveSlides(element, [true, false, false]);
     indicators[2].click();
     fixture.detectChanges();
@@ -198,14 +198,14 @@ describe('Component: Carousel', () => {
 });
 
 @Component({
-  selector: 'carousel-test',
+  selector: 'app-carousel-test',
   template: ''
 })
 
 class TestCarouselComponent {
-  public myInterval:number = 5000;
-  public noWrapSlides:boolean = false;
-  public slides:Array<any> = [
+  public myInterval: number = 5000;
+  public noWrapSlides: boolean = false;
+  public slides: Array<any> = [
     {image: '//placekitten.com/600/300', text: 'slide0'},
     {image: '//placekitten.com/600/300', text: 'slide1'},
     {image: '//placekitten.com/600/300', text: 'slide2'}

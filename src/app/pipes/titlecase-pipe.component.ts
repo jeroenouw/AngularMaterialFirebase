@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class TitleCasePipeComponent implements OnInit {
-   message: string='angular 4 material design';
+   message = 'angular 4 material design';
   constructor() { }
 
   ngOnInit() {

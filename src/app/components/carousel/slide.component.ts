@@ -11,27 +11,27 @@ import { CarouselComponent, Direction } from './carousel.component';
   `
 })
 export class SlideComponent implements OnInit, OnDestroy {
-  @Input() public index:number;
-  @Input() public direction:Direction;
+  @Input() public index: number;
+  @Input() public direction: Direction;
 
   @HostBinding('class.active')
-  @Input() public active:boolean;
+  @Input() public active: boolean;
 
   @HostBinding('class.item')
   @HostBinding('class.carousel-item')
   public addClass:boolean = true;
 
-  private carousel:CarouselComponent;
+  private carousel: CarouselComponent;
 
-  public constructor(carousel:CarouselComponent) {
+  public constructor(carousel: CarouselComponent) {
     this.carousel = carousel;
   }
 
-  public ngOnInit():void {
+  public ngOnInit(): void {
     this.carousel.addSlide(this);
   }
 
-  public ngOnDestroy():void {
+  public ngOnDestroy(): void {
     this.carousel.removeSlide(this);
   }
 }
