@@ -3,6 +3,7 @@ import { Response } from '@angular/http';
 
 // import { DataStorageService } from '../shared/data-storage.service';
 import { AuthService } from '../auth/auth.service';
+import { AlertService } from '../auth/alert.service';
 
 @Component({
   selector: 'app-header',
@@ -13,8 +14,9 @@ export class HeaderComponent {
   title: string = '';
 
   constructor(// private dataStorageService: DataStorageService,
-              private authService: AuthService) {
-  }
+    private authService: AuthService,
+    private alertService: AlertService) {
+}
 
 /*  onSaveData() {
     this.dataStorageService.storeUsers()
@@ -32,17 +34,18 @@ export class HeaderComponent {
 
   onLogout() {
     this.authService.logout();
+    this.alertService.showToaster('Logout succesful');
   }
 
   public menuItems: Array<Object> = [
     {
       icon: 'face',
-      title: 'Profile',
+      title: 'My Profile',
       link: '#'
     },
     {
       icon: 'chat',
-      title: 'Message',
+      title: 'Messages',
       link: '#'
     },
     {
@@ -52,13 +55,13 @@ export class HeaderComponent {
     },
     {
       icon: 'link',
-      title: 'Source code',
+      title: 'Fork on Github',
       link: 'https://github.com/jeroenouw/Angular4MaterialDesign'
     },
     {
-      icon: 'lock',
-      title: 'Login',
-      link: '/login'
+      icon: 'lock_outline',
+      title: 'Logout',
+      link: this.onLogout
     },
   ];
 }

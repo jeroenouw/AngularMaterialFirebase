@@ -26,3 +26,12 @@ a, a:hover {
   text-decoration: none;
   color:rgba(0,0,0,.87);
 }
+
+.mat-icon {
+  text-decoration: none;
+  color:rgba(255,255,255,.87);
+}
+
+.login {
+  color: #333;
+} 

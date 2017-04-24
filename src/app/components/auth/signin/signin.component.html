@@ -1,5 +1,5 @@
 <md-card>
-  <h3>Sign In</h3>
+  <h3>Login</h3>
   <form (ngSubmit)="onSignin(f)" #f="ngForm">
     <md-input-container class="full-width">
       <!--<label for ="email">Mail</label>-->
@@ -10,8 +10,8 @@
       <input mdInput placeholder="Password" type="password" id="password" name="password" ngModel>
     </md-input-container>
     <br />
-    <md-card-actions class="button" (click)="ngOnInit()">
-      <button md-raised-button class="primary" type="submit" [disabled]="!f.valid">Sign In</button>
+    <md-card-actions class="button">
+      <button md-raised-button class="primary" type="submit" [disabled]="!f.valid">Login</button>
     </md-card-actions>
   </form>
 </md-card>

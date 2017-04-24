@@ -16,13 +16,14 @@ export class SignupComponent implements OnInit {
 }
 
   ngOnInit() {
-    this.alertService.showToaster('Your registration is completed');
+  
   }
 
   onSignup(form: NgForm) {
     const email = form.value.email;
     const password = form.value.password;
     this.authService.signupUser(email, password);
+    this.alertService.showToaster('Your registration is completed');
   }
 
 }

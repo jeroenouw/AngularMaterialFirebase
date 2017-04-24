@@ -1,5 +1,5 @@
 <md-card>
-  <h3>Sign Up</h3>
+  <h3>Register</h3>
   <form (ngSubmit)="onSignup(f)" #f="ngForm">
     <md-input-container class="full-width">
       <!--<label for ="email">Mail</label>-->
@@ -9,9 +9,10 @@
       <!--<label for ="password">Password</label>-->
       <input mdInput placeholder="Password" type="password" id="password" name="password" ngModel>
     </md-input-container>
+    <p>Password length needs to above 6 characters.</p>
     <br />
-    <md-card-actions class="button" (click)=" ngOnInit()">
-      <button md-raised-button class="primary" type="submit" [disabled]="!f.valid">Sign Up</button>
+    <md-card-actions class="button">
+      <button md-raised-button class="primary" type="submit" [disabled]="!f.valid">Register</button>
     </md-card-actions>
   </form>
 </md-card>

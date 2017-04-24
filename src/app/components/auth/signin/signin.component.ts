@@ -16,13 +16,14 @@ export class SigninComponent implements OnInit {
 }
 
   ngOnInit() {
-    this.alertService.showToaster('Login succesful');
+    
   }
 
   onSignin(form: NgForm) {
     const email = form.value.email;
     const password = form.value.password;
     this.authService.signinUser(email, password);
+    this.alertService.showToaster('Login succesful');
   }
 
 }
