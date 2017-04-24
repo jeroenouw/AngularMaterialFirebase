@@ -18,8 +18,9 @@ import { HttpModule } from '@angular/http';
 // Services
 import { MessageService } from './components/messages/message.service';
 import { AuthService } from './components/auth/auth.service';
-import { AuthGuard } from './components/auth/auth-guard.service';
-// import { DataStorageService } from './shared/data-storage.service';
+import { AuthGuardService } from './components/auth/auth-guard.service';
+import { AlertService } from './components/auth/alert.service';
+// import { DataStorageService } from './components/shared/data-storage.service';
 
 // Main
 import { AppComponent } from './app.component';
@@ -94,8 +95,9 @@ import { SigninComponent } from './components/auth/signin/signin.component';
     // CarouselModule
     // BackgroundsModule
   ],
-  providers: [MessageService, AuthService, AuthGuard// ,DataStorageService
-  ],
+  providers: [
+    MessageService, AuthService, AuthGuardService,// ,DataStorageService
+    AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

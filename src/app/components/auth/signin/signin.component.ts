@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { AuthService } from '../auth.service'
+
+import { AuthService } from '../auth.service';
+import { AlertService } from '../alert.service';
 
 @Component({
   selector: 'app-signin',
@@ -8,10 +10,13 @@ import { AuthService } from '../auth.service'
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit {
-
-  constructor(private authService: AuthService) { }
+  constructor(
+    private authService: AuthService,
+    private alertService: AlertService) {
+}
 
   ngOnInit() {
+    this.alertService.showToaster('Login succesful');
   }
 
   onSignin(form: NgForm) {

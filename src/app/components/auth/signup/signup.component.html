@@ -10,7 +10,7 @@
       <input mdInput placeholder="Password" type="password" id="password" name="password" ngModel>
     </md-input-container>
     <br />
-    <md-card-actions class="button">
+    <md-card-actions class="button" (click)=" ngOnInit()">
       <button md-raised-button class="primary" type="submit" [disabled]="!f.valid">Sign Up</button>
     </md-card-actions>
   </form>

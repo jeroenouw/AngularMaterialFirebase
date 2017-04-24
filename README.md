@@ -16,7 +16,7 @@
 * Contact form send
 * Keep in touch send
 * Messaging layout and functionality
-* Signin, signup and logout alerts
+* Optimizing alerts
 
 ### Development
 

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { SigninComponent } from './components/auth/signin/signin.component';
 
-import { AuthGuard } from './components/auth/auth-guard.service';
+import { AuthGuardService } from './components/auth/auth-guard.service';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch : 'full' },
