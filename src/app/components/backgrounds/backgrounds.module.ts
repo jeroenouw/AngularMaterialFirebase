@@ -1,4 +1,4 @@
-/*// Modules 3rd party
+// Modules 3rd party
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -17,7 +17,14 @@ import { BackgroundEmailComponent } from './background-email/background-email.co
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    BackgroundNormalComponent,
+    BackgroundSlantComponent,
+    BackgroundEmptyComponent,
+    BackgroundEmailComponent
   ]
 })
 export class BackgroundsModule { 
-}*/
+}
+ 

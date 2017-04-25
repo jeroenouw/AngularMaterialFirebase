@@ -6,12 +6,10 @@
 * Routing
 * Reloading button
 * Profile component
-* Authenticated section
 
 ### To Finish
 * Carousel
 * Dialog component
-* All Module.ts
 * Menu
 * Contact form send
 * Keep in touch send

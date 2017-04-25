@@ -1,4 +1,4 @@
-/*// Modules 3rd party
+// Modules 3rd party
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -13,8 +13,11 @@ import { TitleCasePipeComponent } from'./titlecase-pipe.component'
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    DatePipeComponent,
+    TitleCasePipeComponent 
   ]
 })
 export class PipesModule {
 }
-*/
