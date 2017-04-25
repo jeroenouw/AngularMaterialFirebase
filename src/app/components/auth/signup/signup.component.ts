@@ -24,6 +24,11 @@ export class SignupComponent implements OnInit {
     const password = form.value.password;
     this.authService.signupUser(email, password);
     this.alertService.showToaster('Your registration is completed');
+  }  
+  
+  onSignuppopup(form: NgForm) {
+    this.authService.signUpWithPopup();
   }
+
 
 }

@@ -9,10 +9,16 @@
       <!--<label for ="password">Password</label>-->
       <input mdInput placeholder="Password" type="password" id="password" name="password" ngModel>
     </md-input-container>
-    <p>Password length needs to above 6 characters.</p>
     <br />
     <md-card-actions class="button">
       <button md-raised-button class="primary" type="submit" [disabled]="!f.valid">Register</button>
+    </md-card-actions>
+  </form>
+
+<h3>Or</h3>
+  <form (ngSubmit)="onSignuppopup(fp)" #fp="ngForm">
+  <md-card-actions class="button">
+      <button md-raised-button class="primary" type="submit" [disabled]="!f.valid">Register with Google Account</button>
     </md-card-actions>
   </form>
 </md-card>

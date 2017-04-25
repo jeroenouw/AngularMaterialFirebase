@@ -12,7 +12,9 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     firebase.initializeApp({
       apiKey: 'AIzaSyBUYZcc_HKi1TckbZPpSjSkxyFvml3Is0A',
-      authDomain: 'angular4materialdesign.firebaseapp.com'   
+      authDomain: 'angular4materialdesign.firebaseapp.com',
+      databaseURL: "https://angular4materialdesign.firebaseio.com",
+      projectId: "angular4materialdesign"
     });
   }
 }

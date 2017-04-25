@@ -15,6 +15,7 @@
 * Keep in touch send
 * Messaging layout and functionality
 * Optimizing alerts
+* Google login
 
 ### Development
 

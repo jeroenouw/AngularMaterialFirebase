@@ -11,10 +11,10 @@ import { HttpModule } from '@angular/http';
 // Modules
 import { MessagesModule } from './components/messages/messages.module';
 import { PipesModule } from './pipes/pipes.module';
-// import { CarouselModule } from './components/carousel/carousel.module';
 import { BlocksModule } from './components/blocks/blocks.module';
 import { AuthModule } from './components/auth/auth.module';
 import { BackgroundsModule } from './components/backgrounds/backgrounds.module';
+// import { CarouselModule } from './components/carousel/carousel.module';
 
 // Services
 // import { DataStorageService } from './components/shared/data-storage.service';
@@ -28,7 +28,6 @@ import { AppRoutingModule,
 // Components
 import { AboutMeComponent } from'./components/about-me/about-me.component';
 import { ContactComponent } from'./components/contact/contact.component';
-import './components/contact/contact';
 import { DialogComponent, DialogResultDialogComponent } from "./components/dialog/dialog.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { FooterComponent } from "./components/footer/footer.component";
@@ -58,9 +57,9 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     MessagesModule,
     PipesModule,
     BlocksModule,
-    // CarouselModule,
     AuthModule,
     BackgroundsModule
+    // CarouselModule
   ],
   providers: [
     // DataStorageService
