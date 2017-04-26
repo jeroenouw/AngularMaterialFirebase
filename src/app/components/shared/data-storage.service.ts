@@ -1,4 +1,4 @@
-/*import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import 'rxjs/Rx';
 
@@ -19,4 +19,4 @@ export class DataStorageService {
     const token = this.authService.getToken();
     this.http.get('https://angular4materialdesign.firebaseio.com/users.json?auth=' + token)
   }
-}*/
+}

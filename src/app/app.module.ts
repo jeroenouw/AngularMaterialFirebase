@@ -17,7 +17,7 @@ import { BackgroundsModule } from './components/backgrounds/backgrounds.module';
 // import { CarouselModule } from './components/carousel/carousel.module';
 
 // Services
-// import { DataStorageService } from './components/shared/data-storage.service';
+import { DataStorageService } from './components/shared/data-storage.service';
 
 // Main
 import { AppComponent } from './app.component';
@@ -62,7 +62,7 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     // CarouselModule
   ],
   providers: [
-    // DataStorageService
+     DataStorageService
     ],
   bootstrap: [AppComponent]
 })

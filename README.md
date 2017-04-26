@@ -1,4 +1,4 @@
-# Angular 4 Material Design
+# Angular 4 | Material Design | Firebase
 
 <p>Angular 4 application in progress.</p>
 
@@ -16,6 +16,7 @@
 * Messaging layout and functionality
 * Optimizing alerts
 * Google login
+* i18n translations
 
 ### Development
 
