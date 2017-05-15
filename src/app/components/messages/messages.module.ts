@@ -22,7 +22,7 @@ import { MessageService } from './message.service';
     CommonModule,
     BrowserModule,
     MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-    MdToolbarModule, MdDialogModule, MaterialModule.forRoot(),
+    MdToolbarModule, MdDialogModule, MaterialModule,
     FormsModule
   ],
   providers: [

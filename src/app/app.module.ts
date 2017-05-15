@@ -52,7 +52,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     BrowserModule,
     BrowserAnimationsModule,
     MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-    MdToolbarModule, MdDialogModule, MaterialModule.forRoot(),
+    MdToolbarModule, MdDialogModule, MaterialModule,
     FormsModule,
     HttpModule,
     AppRoutingModule,

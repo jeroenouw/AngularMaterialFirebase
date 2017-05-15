@@ -20,7 +20,7 @@ import { ThirdBlockComponent } from './third-block/third-block.component';
   imports: [
     CommonModule,
     MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-    MdToolbarModule, MdDialogModule, MaterialModule.forRoot(),
+    MdToolbarModule, MdDialogModule, MaterialModule,
   ],
   exports: [
     CardBlockComponent,

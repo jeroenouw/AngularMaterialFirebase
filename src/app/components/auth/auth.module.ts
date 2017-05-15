@@ -23,11 +23,11 @@ import { AlertService } from '../auth/alert.service';
   ],
   imports: [
     CommonModule,
-    BrowserModule,
+    BrowserModule, 
     FormsModule,
     HttpModule,
     MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-    MdToolbarModule, MdDialogModule, MaterialModule.forRoot(),
+    MdToolbarModule, MdDialogModule, MaterialModule,
   ],
   providers: [
     AuthService, 

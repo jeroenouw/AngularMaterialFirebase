@@ -5,7 +5,6 @@
 ### To Do
 * Routing
 * Reloading button
-* Profile component
 
 ### To Finish
 * Carousel
@@ -17,6 +16,7 @@
 * Optimizing alerts
 * Google login
 * i18n translations
+* Profile component
 
 ### Development
 
