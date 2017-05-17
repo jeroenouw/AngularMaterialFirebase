@@ -1,19 +1,31 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-// import { PageNotFoundComponent } from './components/not-found/not-found.component';
-import { HomeComponent } from'./components/home/home.component';
 import { AppComponent } from './app.component';
+
+import { PageNotFoundComponent } from './components/not-found/not-found.component';
+
+import { HomeComponent } from'./components/home/home.component';
+import { AboutMeComponent } from'./components/about-me/about-me.component';
+import { ContactComponent } from'./components/contact/contact.component';
+
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { SigninComponent } from './components/auth/signin/signin.component';
+// import { DialogComponent, DialogResultDialogComponent } from "./components/dialog/dialog.component";
+import { ProfileComponent } from './components/profile/profile.component';
 
 import { AuthGuardService } from './components/auth/auth-guard.service';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch : 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutMeComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: SigninComponent },
+  //{ path: 'dialog', component: DialogComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 // Don't declare components here
@@ -21,6 +33,7 @@ const appRoutes: Routes = [
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
 
-// export const routingComponents = [AppComponent, SignupComponent, SigninComponent]; 
+export class AppRoutingModule {
+
+}
