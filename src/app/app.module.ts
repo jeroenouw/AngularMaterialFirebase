@@ -26,6 +26,7 @@ import { AppRoutingModule,
          } from './app.routing';
 
 // Components
+import { HomeComponent } from'./components/home/home.component';
 import { AboutMeComponent } from'./components/about-me/about-me.component';
 import { ContactComponent } from'./components/contact/contact.component';
 import { DialogComponent, DialogResultDialogComponent } from "./components/dialog/dialog.component";
@@ -38,6 +39,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     AboutMeComponent,
     ContactComponent,
     DialogComponent, DialogResultDialogComponent,
