@@ -1,36 +1,41 @@
-<form class="form" >
-  <md-input-container class="full-width">
-    <input mdInput placeholder="Company" value="Google">
-  </md-input-container>
+<div id="content">
+  <md-card>
+    <h1>Contact us</h1>
+        <form class="form" >
+      <md-input-container class="full-width">
+        <input mdInput placeholder="Company" value="Google">
+      </md-input-container>
 
-  <table class="full-width" cellspacing="0"><tr>
-    <td><md-input-container class="full-width">
-      <input mdInput placeholder="First name" required>
-    </md-input-container></td>
-    <td><md-input-container class="full-width">
-      <input mdInput placeholder="Last name" required>
-    </md-input-container></td>
-  </tr></table>
+      <table class="full-width" cellspacing="0"><tr>
+        <td><md-input-container class="full-width">
+          <input mdInput placeholder="First name" required>
+        </md-input-container></td>
+        <td><md-input-container class="full-width">
+          <input mdInput placeholder="Last name" required>
+        </md-input-container></td>
+      </tr></table>
 
-  <p>
-    <md-input-container class="full-width">
-      <textarea mdInput placeholder="Address">Streetname 12a</textarea>
-    </md-input-container>
-  </p>
+      <p>
+        <md-input-container class="full-width">
+          <textarea mdInput placeholder="Address">Streetname 12a</textarea>
+        </md-input-container>
+      </p>
 
-  <table class="full-width" cellspacing="0"><tr>
-    <td><md-input-container class="full-width">
-      <input mdInput placeholder="City">
-    </md-input-container></td>
-    <td><md-input-container class="full-width">
-      <input mdInput placeholder="Province">
-    </md-input-container></td>
-    <td><md-input-container class="full-width">
-      <input mdInput #postalCode maxlength="6" placeholder="Zip Code" value="2900TY">
-      <md-hint align="end">{{postalCode.value.length}} / 6</md-hint>
-    </md-input-container></td>
-  </tr></table>
-  <br />
-  <button md-button>Submit</button>
+      <table class="full-width" cellspacing="0"><tr>
+        <td><md-input-container class="full-width">
+          <input mdInput placeholder="City">
+        </md-input-container></td>
+        <td><md-input-container class="full-width">
+          <input mdInput placeholder="Province">
+        </md-input-container></td>
+        <td><md-input-container class="full-width">
+          <input mdInput #postalCode maxlength="6" placeholder="Zip Code" value="2900TY">
+          <md-hint align="end">{{postalCode.value.length}} / 6</md-hint>
+        </md-input-container></td>
+      </tr></table>
+      <br />
+      <button md-button>Submit</button>
 
-</form>
+    </form>
+  </md-card>
+</div>

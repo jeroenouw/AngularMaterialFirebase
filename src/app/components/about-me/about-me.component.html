@@ -1,12 +1,19 @@
+<div id="content">
+  <md-card>
+    <h1>About me</h1>
     <div class="form-element">
       <label>How are you today ? <br/>
           <md-input-container class="full-width">
-        <input mdInput placeholder="I am feeling good!" type="text" [(ngModel)]="answer"/>
-        </md-input-container>
+          <input mdInput placeholder="I am feeling good!" type="text" [(ngModel)]="answer"/>
+          </md-input-container>
       </label>
-      <md-toolbar>Repeat yourself : {{answer}}</md-toolbar>
+
+    <md-toolbar>Repeat yourself : {{answer}}</md-toolbar>
     </div>
     
-<br/><br/>
+    <br/><br/>
 
-<app-dialog></app-dialog>
+    <app-dialog></app-dialog>
+  </md-card>
+</div>
+    

@@ -5,3 +5,7 @@
 .full-width {
   width: 100%;
 }
+
+#content { 
+  padding: 20px;
+}
