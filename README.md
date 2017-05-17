@@ -3,7 +3,6 @@
 <p>Angular 4 application in progress.</p>
 
 ### To Do
-* Routing
 * Reloading button
 
 ### To Finish
