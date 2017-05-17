@@ -38,7 +38,15 @@ export class AuthService {
             .then(function(result) {
                 var token = result.credential.accessToken;
                 var user = result.user;
-            })
+            },
+            /* response => {
+                    this.router.navigate(['/']);
+                    firebase.auth().currentUser.getToken()
+                    .then(
+                        (token: string) => this.token = token
+                    );
+                } */
+            )
             .catch( 
                 error => console.log(error) 
             );

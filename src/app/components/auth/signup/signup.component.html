@@ -1,9 +1,9 @@
 <md-card>
-  <h3>Sign up with your Google account</h3>
+  <h3>Sign up with Google</h3>
 
   <form (ngSubmit)="onSignuppopup(fp)" #fp="ngForm">
     <md-card-actions class="button">
-      <button md-raised-button class="primary" type="submit" [disabled]="!f.valid">Register with Google Account</button>
+      <button md-raised-button class="primary" type="submit" [disabled]="!fp.valid">Sign up with your Google Account</button>
     </md-card-actions>
   </form>
 

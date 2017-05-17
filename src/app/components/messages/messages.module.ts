@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 // Components
 import { SenderComponent } from './sender/sender.component';
 import { ReceiverComponent } from './receiver/receiver.component';
+import { MessagesComponent } from './messages.component';
 
 // Services
 import { MessageService } from './message.service';
@@ -16,7 +17,8 @@ import { MessageService } from './message.service';
 @NgModule({
   declarations: [
     SenderComponent,
-    ReceiverComponent
+    ReceiverComponent,
+    MessagesComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +32,8 @@ import { MessageService } from './message.service';
   ],
   exports: [
     SenderComponent,
-    ReceiverComponent
+    ReceiverComponent,
+    MessagesComponent
   ]
 })
 export class MessagesModule {

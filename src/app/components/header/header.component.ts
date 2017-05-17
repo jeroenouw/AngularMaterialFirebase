@@ -41,12 +41,12 @@ export class HeaderComponent {
     {
       icon: 'face',
       title: 'My Profile',
-      link: '#'
+      link: '/profile'
     },
     {
       icon: 'chat',
       title: 'Messages',
-      link: '#'
+      link: '/messages'
     },
     {
       icon: 'refresh',

@@ -28,6 +28,7 @@ export class SignupComponent implements OnInit {
   
   onSignuppopup(form: NgForm) {
     this.authService.signUpWithPopup();
+    this.alertService.showToaster('Your registration with Google is completed');
   }
 
 
