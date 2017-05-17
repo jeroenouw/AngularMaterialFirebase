@@ -1,16 +1,13 @@
-.app-content {
-  padding: 20px;
-}
-.app-content md-card{
-  margin: 20px;
-}
-
 #content {
   padding: 20px;
 }
 
 .spacer {
   flex: 1 1 auto;
+}
+
+.spacer-light {
+  margin: 0 10px;
 }
 
 .mat-toolbar.mat-primary {
@@ -20,6 +17,17 @@
 span a, span a:hover {
   text-decoration: none;
   color:rgba(255,255,255,.87);
+}
+
+.menu-link {
+  margin: 0 0 0 40px;
+}
+
+.menu-link a, .menu-link a:hover {
+  font-size: 14px;
+  text-decoration: none;
+  color:rgba(255,255,255,.87);
+  margin: 0 10px;
 }
 
 a, a:hover { 

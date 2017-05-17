@@ -1,9 +1,18 @@
 <md-toolbar color="primary">
  
   <span><a href="/"><app-titlecase-pipe></app-titlecase-pipe></a></span>
+  <div class="menu-link">
+      <a routerLink="/home">Home</a>
+      <a routerLink="/about">About</a>
+      <a routerLink="/contact">Contact</a>
+  </div>
+
   <span class="spacer"></span>
-  <app-date-pipe></app-date-pipe>
   
+  <app-date-pipe></app-date-pipe>
+
+  <span class="spacer-light"></span>
+
     <div *ngIf="!authService.isAuthenticated(); else loggedin">
       <a routerLink="/signup"><md-icon>person_add</md-icon></a>
       <a routerLink="/login"><md-icon>lock_open</md-icon></a>
@@ -43,9 +52,8 @@
       <div id="content">
         <md-card>
           <h1>Various components (in progress)</h1>
-          <h3>MESSAGES</h3>
-          <app-receiver-message></app-receiver-message>
-          <app-sender-message></app-sender-message>
+          <h3>Misc</h3>
+          Lorem ipsum dolor...
         </md-card>
       </div>
   </md-tab>
