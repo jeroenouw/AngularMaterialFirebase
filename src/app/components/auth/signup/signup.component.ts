@@ -26,10 +26,14 @@ export class SignupComponent implements OnInit {
     this.alertService.showToaster('Your registration is completed');
   }  
   
-  onSignuppopup(form: NgForm) {
-    this.authService.signUpWithPopup();
-    this.alertService.showToaster('Your registration with Google is completed');
+  onSignupGoogle(form: NgForm) {
+    this.authService.signUpWithGoogle();
+    this.alertService.showToaster('Your Google registration is completed');
   }
 
+  onSignupFacebook(form: NgForm) {
+    this.authService.signUpWithFacebook();
+    this.alertService.showToaster('Your Facebook registration is completed');
+  }
 
 }

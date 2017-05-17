@@ -61,7 +61,7 @@ export class HeaderComponent {
     {
       icon: 'lock_outline',
       title: 'Logout',
-      link: this.onLogout
+      link: '/home'
     },
   ];
 }

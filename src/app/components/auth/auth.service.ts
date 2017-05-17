@@ -8,7 +8,8 @@ export class AuthService {
     constructor(private router: Router) {
 
     }
-
+    
+    // Sign up/register section
     signupUser(email: string, password: string) {
         firebase.auth().createUserWithEmailAndPassword(email, password)
             .catch(
@@ -16,6 +17,39 @@ export class AuthService {
             );
     }
 
+    signUpWithGoogle() { 
+        var providerGoogle = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(providerGoogle)
+            .then(function(result) {
+                var token = result.credential.accessToken;
+                var user = result.user;
+            }/*,
+             response => {
+                    this.router.navigate(['/']);
+                    firebase.auth().currentUser.getToken()
+                    .then(
+                        (token: string) => this.token = token
+                    );
+                } */
+            )
+            .catch( 
+                error => console.log(error) 
+            );
+    }
+
+    signUpWithFacebook() {
+        var providerFacebook = new firebase.auth.FacebookAuthProvider();
+        firebase.auth().signInWithPopup(providerFacebook)
+            .then(function(result) {
+                var token = result.credential.accessToken;
+                var user = result.user;
+            })
+            .catch(function(error) {
+              error => console.log(error) 
+            });
+    }    
+
+    // Sign in/login section
     signinUser(email: string, password: string) {
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(
@@ -29,26 +63,6 @@ export class AuthService {
             )
             .catch( 
                 error => console.log(error)
-            );
-    }
-
-    signUpWithPopup() { 
-        var provider = new firebase.auth.GoogleAuthProvider();
-        firebase.auth().signInWithPopup(provider)
-            .then(function(result) {
-                var token = result.credential.accessToken;
-                var user = result.user;
-            },
-            /* response => {
-                    this.router.navigate(['/']);
-                    firebase.auth().currentUser.getToken()
-                    .then(
-                        (token: string) => this.token = token
-                    );
-                } */
-            )
-            .catch( 
-                error => console.log(error) 
             );
     }
 

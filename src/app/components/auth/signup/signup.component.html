@@ -1,13 +1,21 @@
 <md-card>
   <h3>Sign up with Google</h3>
-
-  <form (ngSubmit)="onSignuppopup(fp)" #fp="ngForm">
+  <form (ngSubmit)="onSignupGoogle(g)" #g="ngForm">
     <md-card-actions class="button">
-      <button md-raised-button class="primary" type="submit" [disabled]="!fp.valid">Sign up with your Google Account</button>
+      <button md-raised-button class="primary" type="submit" [disabled]="!g.valid">Sign up with your Google Account</button>
     </md-card-actions>
   </form>
 
-  <br />
+  <hr />
+
+    <h3>Sign up with Facebook</h3>
+  <form (ngSubmit)="onSignupFacebook(fb)" #fb="ngForm">
+    <md-card-actions class="button">
+      <button md-raised-button class="primary" type="submit" [disabled]="!fb.valid">Sign up with your Facebook Account</button>
+    </md-card-actions>
+  </form>
+
+  <hr />
   <h3>Or sign up here</h3>
 
   <form (ngSubmit)="onSignup(f)" #f="ngForm">

@@ -12,7 +12,6 @@ import { ContactComponent } from'./components/contact/contact.component';
 
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { SigninComponent } from './components/auth/signin/signin.component';
-// import { DialogComponent, DialogResultDialogComponent } from "./components/dialog/dialog.component";
 import { ProfileComponent } from './components/profile/profile.component';
 import { MessagesComponent } from './components/messages/messages.component';
 
@@ -25,7 +24,6 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: SigninComponent },
-  //{ path: 'dialog', component: DialogComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'messages', component: MessagesComponent },
   { path: '**', component: PageNotFoundComponent },
