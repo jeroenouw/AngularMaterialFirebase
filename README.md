@@ -8,12 +8,12 @@
 ### To Finish
 * Carousel
 * Dialog component
-* Menu
+* Auth menu
 * Contact form send
 * Keep in touch send
 * Messaging layout and functionality
 * Optimizing alerts
-* Google login
+* Google & Facebook login
 * i18n translations
 * Profile component
 
