@@ -23,5 +23,5 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 
 ### Live Demo
 
-[Live demo](http://angular4.jerouw.nl/home), project is still in progress.
+[Live demo](http://angular4.jerouw.nl), project is still in progress.
 
