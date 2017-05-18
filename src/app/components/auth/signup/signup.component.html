@@ -2,7 +2,8 @@
   <h3>Sign up with Google</h3>
   <form (ngSubmit)="onSignupGoogle(g)" #g="ngForm">
     <md-card-actions class="button">
-      <button md-raised-button class="primary" type="submit" [disabled]="!g.valid">Sign up with your Google Account</button>
+      <!-- md-raised-button class="primary" -->
+      <button class="btn btn-block btn-social btn-google" type="submit" [disabled]="!g.valid"><span class="fa fa-google"></span> Sign up with your Google Account</button>
     </md-card-actions>
   </form>
 
@@ -11,7 +12,7 @@
     <h3>Sign up with Facebook</h3>
   <form (ngSubmit)="onSignupFacebook(fb)" #fb="ngForm">
     <md-card-actions class="button">
-      <button md-raised-button class="primary" type="submit" [disabled]="!fb.valid">Sign up with your Facebook Account</button>
+      <button class="btn btn-block btn-social btn-facebook" type="submit" [disabled]="!fb.valid"><span class="fa fa-facebook"></span> Sign up with your Facebook Account</button>
     </md-card-actions>
   </form>
 
