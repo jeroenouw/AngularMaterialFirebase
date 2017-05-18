@@ -13,3 +13,11 @@
   margin: 10px;
   display: inline-block;
 } 
+
+@media only screen and (max-width: 1024px) {
+
+  #contentThree, #contentThree .mat-card {
+      width: 100%;
+  }
+
+}

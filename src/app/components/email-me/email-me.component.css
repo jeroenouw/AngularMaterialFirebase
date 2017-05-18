@@ -10,3 +10,21 @@
 .full-width {
   width: 100%;
 } 
+
+@media only screen and (max-width: 1024px) {
+
+  .form  {
+      width: 50%;
+      margin: 10% auto 0;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  
+  .form  {
+      width: 90%;
+      margin: 10% auto;
+  }
+
+}

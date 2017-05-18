@@ -1,2 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+/* Tablet format and lower */
+@media only screen and (max-width: 1024px) {
+
+}
+
+/* Mobile format and lower */
+@media only screen and (max-width: 768px) {
+
+}
+
+/* Mobile format landscape (wide) */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+}
+
+/* Mobile format portrait (small) */
+@media only screen and (max-width: 320px) {
+
+}

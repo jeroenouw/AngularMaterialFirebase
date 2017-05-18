@@ -23,3 +23,18 @@
 .buttonCard a {
   text-decoration: none;
 }
+
+@media only screen and (max-width: 1024px) {
+
+  .contentCard {
+      width: 100%;
+      height: 100%;
+  }
+
+  .contentCard img {
+  margin: 0 10px;
+  max-width: 30%;
+  max-height: 80%;
+  }
+
+}
