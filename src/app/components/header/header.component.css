@@ -40,6 +40,6 @@ a, a:hover {
   color:rgba(255,255,255,.87);
 }
 
-.login {
+.login, .logout {
   color: #333;
 } 

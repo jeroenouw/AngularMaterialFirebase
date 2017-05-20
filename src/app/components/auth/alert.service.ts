@@ -14,7 +14,7 @@ export class AlertService {
     }
 
     signUpToaster(msg: string) {
-        this.snackBar.open('Your registration is completed', null, {
+        this.snackBar.open(msg = 'Your registration is completed', null, {
             duration: 3000
         });
     }

@@ -58,10 +58,5 @@ export class HeaderComponent {
       title: 'Fork on Github',
       link: 'https://github.com/jeroenouw/Angular4MaterialDesign'
     },
-    {
-      icon: 'lock_outline',
-      title: 'Logout',
-      link: '/home'
-    },
   ];
 }

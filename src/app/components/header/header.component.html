@@ -33,6 +33,11 @@
             <md-icon class="login">{{item.icon}}</md-icon>
             <span>{{item.title}}</span>
           </a>
+
+          <a md-menu-item (click)="onLogout()">
+            <md-icon class="logout">lock_outline</md-icon>
+            <span>Logout</span>
+          </a>
         </md-menu> 
 
       </ng-template>
@@ -58,6 +63,8 @@
           <a routerLink="/profile">Profile</a> <br/>
           <a routerLink="/profile-settings">Profile settings</a> <br/>
           <a routerLink="/messages">Messages</a>
+
+          <button md-button (click)="onLogout()">Logout</button>
         </md-card>
       </div>
   </md-tab>
