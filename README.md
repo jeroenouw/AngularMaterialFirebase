@@ -22,3 +22,7 @@
 ### Development
 
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+### Live Demo
+
+[Live demo](http://angular4.jerouw.nl), project is still in progress and demo is also not up to date.
