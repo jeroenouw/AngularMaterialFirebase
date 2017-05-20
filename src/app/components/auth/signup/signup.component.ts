@@ -23,7 +23,8 @@ export class SignupComponent implements OnInit {
     const email = form.value.email;
     const password = form.value.password;
     this.authService.signupUser(email, password);
-    this.alertService.showToaster('Your registration is completed');
+    // this.alertService.showToaster('Your registration is completed');
+    this.alertService.signUpToaster;
   }  
   
   onSignupGoogle(form: NgForm) {

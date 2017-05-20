@@ -12,4 +12,10 @@ export class AlertService {
             duration: 3000,
         });
     }
+
+    signUpToaster(msg: string) {
+        this.snackBar.open('Your registration is completed', null, {
+            duration: 3000
+        });
+    }
 }

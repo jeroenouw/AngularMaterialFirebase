@@ -2,17 +2,23 @@ import * as firebase from 'firebase';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { AlertService } from './alert.service';
+
 @Injectable()
 export class AuthService {
     token: string;
-    constructor(private router: Router) {
+    constructor(private router: Router, 
+                private alertService: AlertService) {
 
     }
     
     // Sign up/register section
     signupUser(email: string, password: string) {
         firebase.auth().createUserWithEmailAndPassword(email, password)
-            .catch(
+             .then(function(result) {
+                return this.alertService.signUpToaster;
+                }
+            ).catch(
                 error => console.log(error)
             );
     }
