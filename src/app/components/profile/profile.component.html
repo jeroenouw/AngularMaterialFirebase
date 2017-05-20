@@ -1,14 +1,19 @@
 <div class="profile">
   <md-card>
-  <md-card-header>
-    <md-card-title><h3>Profile</h3></md-card-title>
-    <md-card-title><h4>{{profileUsername}}</h4></md-card-title>
-    <md-card-subtitle>{{profileBio}}</md-card-subtitle>
+    
+    <div class="avatar"><img [src]="fullImagePath"></div>
+  
+  <md-card-header>    
+    <md-card-title><h3>{{profileTitle}}</h3></md-card-title>
+    <md-card-title><h4>{{profileName}}</h4><md-card-subtitle>{{profileUsername}}</md-card-subtitle></md-card-title>
   </md-card-header>
-  <!--<a button md-raised-button [routerLink]="['/settings']"
-              [hidden]="!isUser">
-              <i class="ion-gear-a"></i> Edit Profile Settings
-  </a>-->
+
+  <hr />
+  
+  <md-card-subtitle>{{profileBio}}</md-card-subtitle>
+ 
+      <a button md-raised-button >Edit profile settings</a>
+      <!--[routerLink]="['/profile-settings']" [hidden]="!isUser" <i class="ion-gear-a"></i> -->
   </md-card>
 </div>
 

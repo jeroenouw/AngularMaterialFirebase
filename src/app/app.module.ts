@@ -14,6 +14,7 @@ import { PipesModule } from './pipes/pipes.module';
 import { BlocksModule } from './components/blocks/blocks.module';
 import { AuthModule } from './components/auth/auth.module';
 import { BackgroundsModule } from './components/backgrounds/backgrounds.module';
+import { ProfileModule } from './components/profile/profile.module';
 // import { CarouselModule } from './components/carousel/carousel.module';
 
 // Services
@@ -34,7 +35,6 @@ import { HeaderComponent } from "./components/header/header.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { PageNotFoundComponent } from './components/not-found/not-found.component';
 import { EmailMeComponent } from './components/email-me/email-me.component';
-import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -46,8 +46,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
-    EmailMeComponent,
-    ProfileComponent
+    EmailMeComponent
     // routingComponents
   ],
   imports: [
@@ -62,7 +61,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     PipesModule,
     BlocksModule,
     AuthModule,
-    BackgroundsModule
+    BackgroundsModule,
+    ProfileModule
     // CarouselModule
   ],
   providers: [

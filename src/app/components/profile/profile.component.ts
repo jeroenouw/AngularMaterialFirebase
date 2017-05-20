@@ -10,17 +10,21 @@ import { User, Profile } from '../shared/index';
 })
 export class ProfileComponent implements OnInit {
 
+  fullImagePath: string;
+  
   constructor(
     private route: ActivatedRoute) { 
-
+    this.fullImagePath = '/assets/img/mb-bg-04.png';
     }
 
   profile: Profile;
   currentUser: User;
   isUser: boolean;
 
-  profileUsername: string = 'Jeroen';
-  profileBio: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisl ligula.'; 
+  profileTitle: string = 'My profile';
+  profileName: string = 'Jeroen';
+  profileUsername: string = '(Jeroenouw)';
+  profileBio: string = 'Here you can place your own personal bio text.'; 
 
   ngOnInit() {
     this.route.data.subscribe(

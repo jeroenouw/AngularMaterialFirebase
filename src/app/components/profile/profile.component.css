@@ -1,3 +1,35 @@
 .profile { 
     padding: 20px;
 }
+
+md-card {
+    width: 400px;
+    height: 550px;
+    margin: 100px auto;
+}
+
+md-card-header {
+    width: 122px;
+    margin: 0 auto;
+}
+
+md-card-title {
+    text-align: center;
+}
+
+.avatar {
+    margin: 10px auto;
+    width: 120px;
+}
+
+.avatar img {
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+a:hover {
+    text-decoration: none;
+}

@@ -4,6 +4,7 @@
 
 ### To Do
 * Reloading button
+* Make every component responsive
 
 ### To Finish
 * Carousel
@@ -14,6 +15,7 @@
 * Messaging layout and functionality
 * Optimizing alerts
 * Google & Facebook login
+* Session fix
 * i18n translations
 * Profile component
 
