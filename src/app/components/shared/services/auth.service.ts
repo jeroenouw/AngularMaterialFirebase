@@ -15,7 +15,7 @@ export class AuthService {
     // Sign up/register section
     signupUser(email: string, password: string) {
         firebase.auth().createUserWithEmailAndPassword(email, password)
-             .then(function(result) {
+             .then((result) => {
                 return this.alertService.signUpToaster;
                 }
             ).catch(
@@ -24,12 +24,11 @@ export class AuthService {
     }
 
     signUpWithGoogle() { 
-        var providerGoogle = new firebase.auth.GoogleAuthProvider();
+        let providerGoogle = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(providerGoogle)
-            .then(function(result) {
-            // .then((result) => {
-                var token = result.credential.accessToken;
-                var user = result.user;
+            .then((result) => {
+                let token = result.credential.accessToken;
+                let user = result.user;
             }/*,
              response => {
                     this.router.navigate(['/']);
@@ -45,13 +44,13 @@ export class AuthService {
     }
 
     signUpWithFacebook() {
-        var providerFacebook = new firebase.auth.FacebookAuthProvider();
+        let providerFacebook = new firebase.auth.FacebookAuthProvider();
         firebase.auth().signInWithPopup(providerFacebook)
-            .then(function(result) {
-                var token = result.credential.accessToken;
-                var user = result.user;
+            .then((result) => {
+                let token = result.credential.accessToken;
+                let user = result.user;
             })
-            .catch(function(error) {
+            .catch((error) => {
               error => console.log(error) 
             });
     }    
