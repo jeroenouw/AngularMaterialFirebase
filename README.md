@@ -18,6 +18,7 @@
 * Session fix
 * i18n translations
 * Profile component
+* Save & fetch users
 
 ### Development
 

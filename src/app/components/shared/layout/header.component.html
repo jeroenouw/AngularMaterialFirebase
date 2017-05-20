@@ -58,13 +58,14 @@
         <md-card>
           <h1>Various components (temporary)</h1>
           <h3>Misc</h3>
-          Lorem ipsum dolor...
           Other components: <br/>
           <a routerLink="/profile">Profile</a> <br/>
           <a routerLink="/profile-settings">Profile settings</a> <br/>
           <a routerLink="/messages">Messages</a>
 
           <button md-button (click)="onLogout()">Logout</button>
+          <button md-button (click)="onFetchData()">Fetch users</button>
+          <button md-button (click)="onSaveData()">Save users</button>
         </md-card>
       </div>
   </md-tab>

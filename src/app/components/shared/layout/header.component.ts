@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Response } from '@angular/http';
 
-// import { DataStorageService } from '../shared/data-storage.service';
-import { AuthService, AlertService } from '../services';
+// import {  } from '../shared/data-storage.service';
+import { AuthService, AlertService, DataStorageService } from '../services';
 
 @Component({
   selector: 'app-header',
@@ -12,13 +12,14 @@ import { AuthService, AlertService } from '../services';
 export class HeaderComponent {
   title: string = '';
 
-  constructor(// private dataStorageService: DataStorageService,
+  constructor(
+    private dataStorageService: DataStorageService,
     private authService: AuthService,
     private alertService: AlertService) {
 }
 
-/*  onSaveData() {
-    this.dataStorageService.storeUsers()
+onSaveData() {
+    this.dataStorageService.saveUsers()
       .subscribe(
         (response: Response) => {
           console.log(response);
@@ -29,7 +30,6 @@ export class HeaderComponent {
   onFetchData() {
     this.dataStorageService.getUsers();
   }
-*/
 
   onLogout() {
     this.authService.logout();

@@ -10,7 +10,7 @@ export class DataStorageService {
               private authService: AuthService) {
 }
 
-  storeUsers() {
+  saveUsers() {
     const token = this.authService.getToken();
     return this.http.put('https://angular4materialdesign.firebaseio.com/users.json?auth=' + token, this.authService.getToken());
   }
