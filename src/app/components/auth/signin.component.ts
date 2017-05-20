@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { AuthService } from '../auth.service';
-import { AlertService } from '../alert.service';
+import { AlertService, AuthService } from '../shared';
 
 @Component({
   selector: 'app-signin',

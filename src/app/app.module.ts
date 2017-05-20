@@ -17,8 +17,15 @@ import { BackgroundsModule } from './components/backgrounds/backgrounds.module';
 import { ProfileModule } from './components/profile/profile.module';
 // import { CarouselModule } from './components/carousel/carousel.module';
 
-// Services
-import { DataStorageService } from './components/shared/data-storage.service';
+// Shared
+import {
+  FooterComponent,
+  HeaderComponent,
+  DataStorageService,
+  AlertService,
+  AuthGuardService,
+  AuthService
+} from './components/shared';
 
 // Main
 import { AppComponent } from './app.component';
@@ -31,8 +38,6 @@ import { HomeComponent } from'./components/home/home.component';
 import { AboutMeComponent } from'./components/about-me/about-me.component';
 import { ContactComponent } from'./components/contact/contact.component';
 import { DialogComponent, DialogResultDialogComponent } from "./components/dialog/dialog.component";
-import { HeaderComponent } from "./components/header/header.component";
-import { FooterComponent } from "./components/footer/footer.component";
 import { PageNotFoundComponent } from './components/not-found/not-found.component';
 import { EmailMeComponent } from './components/email-me/email-me.component';
 
@@ -66,8 +71,11 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     // CarouselModule
   ],
   providers: [
-     DataStorageService
-    ],
+    DataStorageService,
+    AlertService,
+    AuthGuardService,
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

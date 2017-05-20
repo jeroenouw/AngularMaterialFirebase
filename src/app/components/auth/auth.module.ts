@@ -8,13 +8,10 @@ import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
          MdToolbarModule, MdDialogModule, MaterialModule } from '@angular/material';
 
 // Components
-import { SignupComponent } from '../auth/signup/signup.component';
-import { SigninComponent } from '../auth/signin/signin.component';
+import { SignupComponent } from './signup.component';
+import { SigninComponent } from './signin.component';
 
 // Services
-import { AuthService } from '../auth/auth.service';
-import { AuthGuardService } from '../auth/auth-guard.service';
-import { AlertService } from '../auth/alert.service';
 
 @NgModule({
   declarations: [
@@ -30,9 +27,7 @@ import { AlertService } from '../auth/alert.service';
     MdToolbarModule, MdDialogModule, MaterialModule,
   ],
   providers: [
-    AuthService, 
-    AuthGuardService,
-    AlertService
+
   ],
   exports: [
     SignupComponent,

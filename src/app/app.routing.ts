@@ -10,13 +10,13 @@ import { AboutMeComponent } from'./components/about-me/about-me.component';
 import { ContactComponent } from'./components/contact/contact.component';
 
 
-import { SignupComponent } from './components/auth/signup/signup.component';
-import { SigninComponent } from './components/auth/signin/signin.component';
+import { SignupComponent } from './components/auth/signup.component';
+import { SigninComponent } from './components/auth/signin.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProfileSettingsComponent } from './components/profile/profile-settings/profile-settings.component';
 import { MessagesComponent } from './components/messages/messages.component';
 
-import { AuthGuardService } from './components/auth/auth-guard.service';
+import { AuthGuardService } from './components/shared';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch : 'full' },
