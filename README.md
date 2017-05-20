@@ -4,6 +4,7 @@
 
 ### To Do
 * Reloading button
+* Make every component responsive
 
 ### To Finish
 * Carousel
@@ -14,6 +15,7 @@
 * Messaging layout and functionality
 * Optimizing alerts
 * Google & Facebook login
+* Session fix
 * i18n translations
 * Profile component
 
@@ -23,5 +25,5 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 
 ### Live Demo
 
-[Live demo](http://angular4.jerouw.nl), project is still in progress.
+[Live demo](http://angular4.jerouw.nl), project is still in progress and demo is also not up to date.
 
