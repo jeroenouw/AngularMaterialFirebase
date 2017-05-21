@@ -6,7 +6,7 @@ import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
 
 // Components
 import { ProfileComponent } from './profile.component';
-import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
+import { ProfileSettingsComponent } from './profile-settings.component';
 
 @NgModule({
   declarations: [

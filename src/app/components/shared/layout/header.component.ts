@@ -18,19 +18,6 @@ export class HeaderComponent {
     private alertService: AlertService) {
 }
 
-onSaveData() {
-    this.dataStorageService.saveUsers()
-      .subscribe(
-        (response: Response) => {
-          console.log(response);
-        }
-      );
-  }
-
-  onFetchData() {
-    this.dataStorageService.getUsers();
-  }
-
   onLogout() {
     this.authService.logout();
     this.alertService.showToaster('Logout succesful');
