@@ -1,1 +1,40 @@
-Profile settings
+ <div class="profile-settings">
+    <md-card> 
+    <h3>My profile settings</h3>
+
+    <form [formGroup]="settingsForm" (ngSubmit)="onSaveData()">
+
+        <md-input-container class="form-group">
+        <input mdInput placeholder="URL of profile picture" type="text" id="image" name="image" formControlName="image">
+        </md-input-container>
+
+        <md-input-container class="form-group">
+        <input mdInput placeholder="Username" type="test" id="username" name="username" formControlName="username">
+        </md-input-container>
+
+        <md-input-container class="form-group">
+        <input mdInput placeholder="Short Bio" rows="8" id="bio" name="bio" formControlName="bio">
+        </md-input-container>
+
+        <md-input-container class="form-group">
+        <input mdInput placeholder="Email" type="email" id="email" name="email" formControlName="email">
+        </md-input-container>
+
+        <md-input-container class="form-group">
+        <input mdInput placeholder="Password" type="password" id="password" name="password" formControlName="password">
+        </md-input-container>
+
+        <hr />
+
+        <md-card-actions class="button">
+        <button md-raised-button class="primary" type="submit">Save Settings</button>
+        </md-card-actions>    
+
+        <md-card-actions class="button">
+        <button md-raised-button class="primary" (click)="onLogout()">Logout</button>
+        </md-card-actions>   
+
+    </form>
+
+    </md-card>
+ </div>

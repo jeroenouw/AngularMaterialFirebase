@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
          MdToolbarModule, MdDialogModule, MaterialModule } from '@angular/material';
 import 'hammerjs';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 // Modules
@@ -60,6 +60,7 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
     MdToolbarModule, MdDialogModule, MaterialModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     AppRoutingModule,
     MessagesModule,
@@ -67,7 +68,7 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     BlocksModule,
     AuthModule,
     BackgroundsModule,
-    ProfileModule
+    ProfileModule,
     // CarouselModule
   ],
   providers: [

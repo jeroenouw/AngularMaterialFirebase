@@ -20,10 +20,7 @@
 
     <ng-template #loggedin>
         <md-icon>verified_user</md-icon>
-        <!--<p>Logged in
-        <a style="cursor: pointer;" (click)="onLogout()">Logout</a>
-        </p>-->
-
+       
         <button md-icon-button [mdMenuTriggerFor]="menu">
         <md-icon>menu</md-icon>
         </button>
@@ -32,6 +29,11 @@
           <a md-menu-item *ngFor="let item of menuItems" href="{{item.link}}">
             <md-icon class="login">{{item.icon}}</md-icon>
             <span>{{item.title}}</span>
+          </a>
+
+           <a md-menu-item routerLink="/profile-settings">
+            <md-icon class="settings">settings</md-icon>
+            <span>Settings</span>
           </a>
 
           <a md-menu-item (click)="onLogout()">
@@ -59,13 +61,15 @@
           <h1>Various components (temporary)</h1>
           <h3>Misc</h3>
           Other components: <br/>
+          <b>
           <a routerLink="/profile">Profile</a> <br/>
           <a routerLink="/profile-settings">Profile settings</a> <br/>
-          <a routerLink="/messages">Messages</a>
+          <a routerLink="/messages">Messages</a> <br/><br/>
+          </b>
 
-          <button md-button (click)="onLogout()">Logout</button>
-          <button md-button (click)="onFetchData()">Fetch users</button>
-          <button md-button (click)="onSaveData()">Save users</button>
+          <button md-raised-button (click)="onLogout()">Logout</button>
+          <!-- <button md-button (click)="onFetchData()">Fetch users</button>
+          <button md-button (click)="onSaveData()">Save users</button> -->
         </md-card>
       </div>
   </md-tab>

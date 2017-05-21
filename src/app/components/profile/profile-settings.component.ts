@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NgForm, FormBuilder, FormGroup } from '@angular/forms';
+import { FormsModule, FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Response } from '@angular/http';
 
 import { User, Profile, DataStorageService, AuthService, AlertService } from '../shared';
@@ -34,20 +34,32 @@ export class ProfileSettingsComponent implements OnInit {
     }
 
   ngOnInit() {
+    (<any>Object).assign(this.user, this.dataStorageService.getUser());
+    this.settingsForm.patchValue(this.user);
+  }
+
+  onUpdateUser(values: Object) {
+    (<any>Object).assign(this.user, values);
   }
   
   onSaveData() {
-      this.dataStorageService.saveUsers()
+      this.onUpdateUser(this.settingsForm.value);
+
+      this.dataStorageService.saveUser()
         .subscribe(
           (response: Response) => {
-            console.log(response);
+            console.log(response),
+            err => {
+        this.errors = err;
+      };
           }
         );
-        this.alertService.showToaster('Your settings are saved');
+      
+      this.alertService.showToaster('Your settings are saved');
   }
   
   onFetchData() {
-    this.dataStorageService.getUsers();
+    this.dataStorageService.getUser();
     this.alertService.showToaster('Data is refreshed');
   }
   

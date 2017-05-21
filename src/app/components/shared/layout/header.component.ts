@@ -35,11 +35,6 @@ export class HeaderComponent {
       link: '/messages'
     },
     {
-      icon: 'refresh',
-      title: 'Refresh Page',
-      link: '#'
-    },
-    {
       icon: 'link',
       title: 'Fork on Github',
       link: 'https://github.com/jeroenouw/Angular4MaterialDesign'

@@ -1,0 +1,27 @@
+.profile-settings { 
+    padding: 20px;
+}
+
+
+form {
+    text-align: center;
+}
+
+md-card {
+    width: 400px;
+    height: 550px;
+    margin: 100px auto;
+}
+
+md-input-container {
+    width: 100%;
+}
+
+.avatar {
+    margin: 10px auto;
+    width: 120px;
+}
+
+a:hover {
+    text-decoration: none;
+}
