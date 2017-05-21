@@ -3,7 +3,6 @@
 <p>Angular 4 application in progress.</p>
 
 ### To Do
-* Reloading button
 * Make every component responsive
 
 ### To Finish
@@ -17,7 +16,7 @@
 * Google & Facebook login
 * Session fix
 * i18n translations
-* Profile component
+* Profile & profile-settings component
 * Save & fetch users
 
 ### Development

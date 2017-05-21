@@ -11,9 +11,12 @@
   <hr />
   
   <md-card-subtitle>{{profileBio}}</md-card-subtitle>
- 
-      <a button md-raised-button >Edit profile settings</a>
-      <!--[routerLink]="['/profile-settings']" [hidden]="!isUser" <i class="ion-gear-a"></i> -->
+
+      <a md-raised-button routerLink="/profile-settings">
+      <md-icon class="settings">settings</md-icon>
+      Edit profile settings
+      </a>
+      <!--[routerLink]="['/profile-settings']" [hidden]="!isUser" -->
   </md-card>
 </div>
 
