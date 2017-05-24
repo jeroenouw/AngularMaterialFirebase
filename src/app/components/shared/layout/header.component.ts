@@ -11,11 +11,13 @@ import { AuthService, AlertService, DataStorageService } from '../services';
 })
 export class HeaderComponent {
   title: string = '';
+  isAuthenticated = false;
 
   constructor(
     private dataStorageService: DataStorageService,
     private authService: AuthService,
     private alertService: AlertService) {
+      this.isAuthenticated = this.authService.isAuthenticated();
 }
 
   onLogout() {

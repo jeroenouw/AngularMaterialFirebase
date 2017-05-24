@@ -14,7 +14,9 @@ export class AppComponent implements OnInit {
       apiKey: 'AIzaSyBUYZcc_HKi1TckbZPpSjSkxyFvml3Is0A',
       authDomain: 'angular4materialdesign.firebaseapp.com',
       databaseURL: "https://angular4materialdesign.firebaseio.com",
-      projectId: "angular4materialdesign"
+      projectId: "angular4materialdesign",
+      storageBucket: "angular4materialdesign.appspot.com",
+      messagingSenderId: "136985605193"
     });
   }
 }

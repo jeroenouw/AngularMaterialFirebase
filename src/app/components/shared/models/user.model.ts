@@ -1,8 +1,8 @@
 export class User {
-  email: string;
-  token: string;
-  name: string;
-  username: string;
-  bio: string;
-  image: string;
+  public email: string;
+  public token: string;
+  public name: string;
+  public username: string;
+  public bio: string;
+  public image: string;
 }
