@@ -8,13 +8,12 @@
 ### To Finish
 * Carousel
 * Dialog component
-* Auth menu
 * Contact form send
 * Keep in touch send
 * Messaging layout and functionality
 * Optimizing alerts
 * Google & Facebook login
-* Session fix
+* Authenticated pages
 * i18n translations
 * Profile & profile-settings component
 * Save & fetch users

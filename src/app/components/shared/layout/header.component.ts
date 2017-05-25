@@ -27,14 +27,9 @@ export class HeaderComponent {
 
   public menuItems: Array<Object> = [
     {
-      icon: 'face',
-      title: 'My Profile',
-      link: '/profile'
-    },
-    {
-      icon: 'chat',
-      title: 'Messages',
-      link: '/messages'
+      icon: 'photo_library',
+      title: 'Portfolio',
+      link: 'https://jerouw.nl'
     },
     {
       icon: 'link',
