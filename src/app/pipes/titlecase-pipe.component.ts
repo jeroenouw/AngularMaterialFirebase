@@ -3,11 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-titlecase-pipe',
   template: `
-    <div>
-      <fieldset>
-          {{message|titlecase}}
-      </fieldset>
-    </div>
+          {{message | titlecase}}
   `,
   styles: []
 })
