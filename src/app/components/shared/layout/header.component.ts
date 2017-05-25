@@ -20,6 +20,8 @@ export class HeaderComponent {
       this.isAuthenticated = this.authService.isAuthenticated();
   }
 
+  profileUsername: string = 'Jeroenouw';
+
   onLogout() {
     this.authService.logout();
     this.alertService.showToaster('Logout succesful');
