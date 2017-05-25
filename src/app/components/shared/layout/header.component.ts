@@ -18,7 +18,7 @@ export class HeaderComponent {
     private authService: AuthService,
     private alertService: AlertService) {
       this.isAuthenticated = this.authService.isAuthenticated();
-}
+  }
 
   onLogout() {
     this.authService.logout();
