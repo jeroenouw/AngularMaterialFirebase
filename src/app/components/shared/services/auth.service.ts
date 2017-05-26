@@ -12,7 +12,7 @@ export class AuthService {
 
     }
     
-    // Sign up/register section
+    // Start signup/register
     signupUser(email: string, password: string) {
         firebase.auth().createUserWithEmailAndPassword(email, password)
              .then((result) => {
@@ -29,6 +29,10 @@ export class AuthService {
             .then((result) => {
                 let token = result.credential.accessToken;
                 let user = result.user;
+                /*firebase.auth().currentUser.getIdToken()
+                    .then(
+                        (token: string) => this.token = token
+                    ); */
             }/*,
              response => {
                     this.router.navigate(['/']);
@@ -55,7 +59,9 @@ export class AuthService {
             });
     }    
 
-    // Sign in/login section
+    // End signup/register
+
+    // Start signin/login
     signinUser(email: string, password: string) {
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(
@@ -72,12 +78,35 @@ export class AuthService {
             );
     }
 
+    signInAnonymous() {
+        firebase.auth().signInAnonymously()
+        .then(
+            response => {
+                this.router.navigate(['/'])
+                firebase.auth().onAuthStateChanged(currentUser => {
+                    console.log(currentUser);
+                })                    
+            }
+        )
+        .then(
+            (token: string) => this.token = token
+        )
+        .catch( 
+            error => console.log(error)
+        );
+    }
+    
+    // End signin/login
+
     logout() {
         firebase.auth().signOut()
         .then(
                 response => {
                     this.router.navigate(['/home']);
-                }
+                } 
+        )
+        .catch( 
+             error => console.log(error)
         );
         this.token = null;
     }

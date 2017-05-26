@@ -18,5 +18,16 @@ export class AppComponent implements OnInit {
       storageBucket: "angular4materialdesign.appspot.com",
       messagingSenderId: "136985605193"
     });
+
+      // start test
+      const preUsers = document.getElementById('users')
+      const dbRefUsers = firebase.database().ref().child('users');
+
+      dbRefUsers.on('value', snap => console.log(snap.val()));
+      // end test  
   }
+
+  
+
+
 }

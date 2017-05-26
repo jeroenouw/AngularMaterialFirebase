@@ -2,21 +2,30 @@
 
 <p>Angular 4 application in progress.</p>
 
-### To Do
+## To Do
 * Make every component responsive
 
-### To Finish
-* Carousel
-* Dialog component
-* Contact form send
-* Keep in touch send
-* Messaging layout and functionality
+## To Finish
+### Auth
 * Optimizing alerts
 * Google & Facebook login
 * Authenticated pages
-* i18n translations
-* Profile & profile-settings component
 * Save & fetch users
+* Send password reset email, reset password
+* Anonymous signin
+
+### Sending
+* Contact form send
+* Keep in touch send
+
+### Profile
+* Dialog component
+* Messaging layout and functionality
+* Profile & profile-settings component
+
+### Other
+* Carousel
+* i18n translations
 
 ### Development
 

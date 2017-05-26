@@ -25,4 +25,9 @@ export class SigninComponent implements OnInit {
     this.alertService.showToaster('Login succesful');
   }
 
+  onSigninAnonymous(form: NgForm) {
+    this.authService.signInAnonymous();
+    this.alertService.showToaster('Anonymous login succesful');
+  }
+
 }
