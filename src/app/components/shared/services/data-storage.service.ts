@@ -19,12 +19,12 @@ export class DataStorageService {
 
   saveUser() {
     const body = JSON.stringify(this.users);
-    const token = this.authService.getToken();
-    return this.http.put('https://angular4materialdesign.firebaseio.com/users.json?auth=' + token, body, this.authService.getToken());
+    const token = this.authService.getIdToken();
+    return this.http.put('https://angular4materialdesign.firebaseio.com/users.json?auth=' + token, body, this.authService.getIdToken());
   }
 
   getUser() {
-    const token = this.authService.getToken();
+    const token = this.authService.getIdToken();
     return this.http.get('https://angular4materialdesign.firebaseio.com/users.json?auth=' + token)
       .map((response: Response) => response.json())
       .subscribe(

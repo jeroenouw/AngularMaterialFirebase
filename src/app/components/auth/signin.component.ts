@@ -17,6 +17,16 @@ export class SigninComponent implements OnInit {
   ngOnInit() {
     
   }
+  
+  onSignupGoogle(form: NgForm) {
+    this.authService.signUpWithGoogle();
+    this.alertService.showToaster('Google login succesful');
+  }
+
+  onSignupFacebook(form: NgForm) {
+    this.authService.signUpWithFacebook();
+    this.alertService.showToaster('Facebook login succesful');
+  }
 
   onSignin(form: NgForm) {
     const email = form.value.email;

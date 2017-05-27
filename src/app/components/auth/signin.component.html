@@ -1,4 +1,19 @@
-<md-card>
+<md-card>  
+  <h3>Social login</h3>
+  <form (ngSubmit)="onSignupGoogle(g)" #g="ngForm">
+    <md-card-actions class="button">
+      <!-- md-raised-button class="primary" -->
+      <button class="btn btn-block btn-social btn-google" type="submit" [disabled]="!g.valid"><span class="fa fa-google"></span> Login with your Google Account</button>
+    </md-card-actions>
+  </form>
+  <form (ngSubmit)="onSignupFacebook(fb)" #fb="ngForm">
+    <md-card-actions class="button">
+      <button class="btn btn-block btn-social btn-facebook" type="submit" [disabled]="!fb.valid"><span class="fa fa-facebook"></span> Login with your Facebook Account</button>
+    </md-card-actions>
+  </form>
+  
+  <hr />
+
   <h3>Login</h3>
   <form (ngSubmit)="onSignin(f)" #f="ngForm">
     <md-input-container class="full-width">
@@ -9,14 +24,13 @@
       <!--<label for ="password">Password</label>-->
       <input mdInput placeholder="Password" type="password" id="password" name="password" ngModel>
     </md-input-container>
-    <br />
     <md-card-actions class="button">
       <button md-raised-button class="primary" type="submit" [disabled]="!f.valid">Login</button>
     </md-card-actions>
-    
   </form>
 
   <hr />
+
   <h3>Anonymous login</h3>
 
   <md-card-actions class="button">

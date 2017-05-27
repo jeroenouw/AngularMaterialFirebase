@@ -28,19 +28,15 @@ export class AuthService {
         firebase.auth().signInWithPopup(providerGoogle)
             .then((result) => {
                 let token = result.credential.accessToken;
-                let user = result.user;
-                /*firebase.auth().currentUser.getIdToken()
-                    .then(
-                        (token: string) => this.token = token
-                    ); */
-            }/*,
-             response => {
+                let currentUser = result.user;
+            })
+            .then(response => {
                     this.router.navigate(['/']);
                     firebase.auth().currentUser.getIdToken()
                     .then(
                         (token: string) => this.token = token
                     );
-                } */
+                } 
             )
             .catch( 
                 error => console.log(error) 
@@ -50,10 +46,15 @@ export class AuthService {
     signUpWithFacebook() {
         let providerFacebook = new firebase.auth.FacebookAuthProvider();
         firebase.auth().signInWithPopup(providerFacebook)
-            .then((result) => {
-                let token = result.credential.accessToken;
-                let user = result.user;
-            })
+            .then(
+                response => {
+                    this.router.navigate(['/']);
+                    firebase.auth().currentUser.getIdToken()
+                    .then(
+                        (token: string) => this.token = token
+                    );
+                }
+            )
             .catch((error) => {
               error => console.log(error) 
             });
@@ -67,6 +68,7 @@ export class AuthService {
             .then(
                 response => {
                     this.router.navigate(['/']);
+                    // firebase.auth().currentUser.getToken()
                     firebase.auth().currentUser.getIdToken()
                     .then(
                         (token: string) => this.token = token
@@ -111,7 +113,7 @@ export class AuthService {
         this.token = null;
     }
 
-    getToken() {
+    getIdToken() {
         firebase.auth().currentUser.getIdToken()
             .then(
                 (token: string) => this.token = token
