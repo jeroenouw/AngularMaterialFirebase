@@ -36,4 +36,9 @@ export class SignupComponent implements OnInit {
     this.alertService.showToaster('Your Facebook registration is completed.');
   }
 
+  onSignupGithub(form: NgForm) {
+    this.authService.signUpWithGithub();
+    this.alertService.showToaster('Your Github registration is completed.');
+  }
+
 }

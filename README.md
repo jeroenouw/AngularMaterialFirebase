@@ -8,7 +8,7 @@
 ## To Finish
 ### Auth
 * Optimizing alerts
-* Google & Facebook login
+* Google, Facebook & Github signin/signup
 * Save & fetch users
 * Send password reset email, reset password
 * Anonymous signin

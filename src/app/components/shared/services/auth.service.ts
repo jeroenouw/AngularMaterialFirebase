@@ -63,7 +63,24 @@ export class AuthService {
             .catch((error) => {
               error => console.log(error) 
             });
-    }    
+    }   
+
+    signUpWithGithub() {
+        let providerGithub = new firebase.auth.GithubAuthProvider();
+        firebase.auth().signInWithPopup(providerGithub)
+            .then(
+                response => {
+                    this.router.navigate(['/']);
+                    firebase.auth().currentUser.getIdToken()
+                    .then(
+                        (token: string) => this.token = token
+                    );
+                }
+            )
+            .catch((error) => {
+              error => console.log(error) 
+            });
+    }     
 
     // End signup/register
 

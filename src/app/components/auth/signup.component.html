@@ -1,18 +1,19 @@
 <md-card>
-  <h3>Sign up with Google</h3>
+  <h3>Social Sign up</h3>
   <form (ngSubmit)="onSignupGoogle(g)" #g="ngForm">
     <md-card-actions class="button">
       <!-- md-raised-button class="primary" -->
       <button class="btn btn-block btn-social btn-google" type="submit" [disabled]="!g.valid"><span class="fa fa-google"></span> Sign up with your Google Account</button>
     </md-card-actions>
-  </form>
-
-  <hr />
-
-    <h3>Sign up with Facebook</h3>
+  </form> 
   <form (ngSubmit)="onSignupFacebook(fb)" #fb="ngForm">
     <md-card-actions class="button">
       <button class="btn btn-block btn-social btn-facebook" type="submit" [disabled]="!fb.valid"><span class="fa fa-facebook"></span> Sign up with your Facebook Account</button>
+    </md-card-actions>
+  </form>
+  <form (ngSubmit)="onSignupGithub(gh)" #gh="ngForm">
+    <md-card-actions class="button">
+      <button class="btn btn-block btn-social btn-github" type="submit" [disabled]="!gh.valid"><span class="fa fa-github"></span> Sign up with your Github Account</button>
     </md-card-actions>
   </form>
 
