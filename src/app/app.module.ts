@@ -21,6 +21,7 @@ import { ProfileModule } from './components/profile/profile.module';
 import {
   FooterComponent,
   HeaderComponent,
+  UserService,
   DataStorageService,
   AlertService,
   AuthGuardService,
@@ -72,6 +73,7 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     // CarouselModule
   ],
   providers: [
+    UserService,
     DataStorageService,
     AlertService,
     AuthGuardService,

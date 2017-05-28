@@ -23,6 +23,10 @@
 * Messaging layout and functionality
 * Profile & profile-settings component
 
+### Tests
+* Unit
+* e2e
+
 ### Other
 * Carousel
 * i18n translations

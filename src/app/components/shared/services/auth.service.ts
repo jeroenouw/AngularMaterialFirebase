@@ -86,12 +86,15 @@ export class AuthService {
             response => {
                 this.router.navigate(['/'])
                 firebase.auth().onAuthStateChanged(currentUser => {
+                    let isAnonymous = currentUser.isAnonymous;
+                    let uid = currentUser.uid;
+                    firebase.auth().currentUser.getIdToken()
+                    .then(
+                        (token: string) => this.token = token
+                    ),
                     console.log(currentUser);
                 })                    
             }
-        )
-        .then(
-            (token: string) => this.token = token
         )
         .catch( 
             error => console.log(error)

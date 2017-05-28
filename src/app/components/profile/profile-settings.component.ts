@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { FormsModule, FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Response } from '@angular/http';
 
-import { User, Profile, DataStorageService, AuthService, AlertService } from '../shared';
+import { User, Profile, DataStorageService, AuthService, AlertService, UserService } from '../shared';
 
 @Component({
   selector: 'app-profile-settings',
@@ -21,6 +21,7 @@ export class ProfileSettingsComponent implements OnInit {
     private dataStorageService: DataStorageService,
     private authService: AuthService,
     private alertService: AlertService,
+    private userService: UserService,
     private fb: FormBuilder) { 
 
       this.settingsForm = this.fb.group({
