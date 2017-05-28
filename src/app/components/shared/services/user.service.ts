@@ -14,6 +14,7 @@ export class UserService {
     }
 
     // Profile
+    /*
     userProfile() {
 
     }
@@ -41,7 +42,7 @@ export class UserService {
         });
     }  
 
-    getUserProfileInformation() { 
+    getUserProfileInformation() {
         let name, email, photoUrl, uid, emailVerified;
         if (firebase.auth().currentUser != null) {
           name = firebase.auth().currentUser.displayName;
@@ -70,7 +71,7 @@ export class UserService {
           // An error happened.
         });
     }  
-
+    
     // Email
     updateUserEmail() {
         firebase.auth().currentUser.updateEmail("test@test.nl")
@@ -80,7 +81,7 @@ export class UserService {
               // An error happened.
             });        
     }    
-    
+    */
     verificationUserEmail() {
         firebase.auth().currentUser.sendEmailVerification().then(() => {
           // Email sent.
@@ -100,7 +101,7 @@ export class UserService {
           // An error happened.
         });
     } 
-    */  
+     
     
     sendUserPasswordResetEmail() {
         firebase.auth().sendPasswordResetEmail(firebase.auth().currentUser.email).then(() => {
@@ -109,6 +110,6 @@ export class UserService {
           // An error happened.
         });
     } 
-
+    */ 
        
 }

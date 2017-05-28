@@ -3,12 +3,15 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AlertService } from './alert.service';
+import { UserService } from './user.service';
 
 @Injectable()
 export class AuthService {
     token: string;
     constructor(private router: Router, 
-                private alertService: AlertService) {
+                private alertService: AlertService,
+                //private userService: UserService
+                ) {
 
     }
     
@@ -16,7 +19,9 @@ export class AuthService {
     signupUser(email: string, password: string) {
         firebase.auth().createUserWithEmailAndPassword(email, password)
              .then((result) => {
-                return this.alertService.signUpToaster;
+                // this.alertService.signUpToaster,
+                firebase.auth().currentUser.sendEmailVerification()
+                // this.userService.verificationUserEmail();
                 }
             ).catch(
                 error => console.log(error)

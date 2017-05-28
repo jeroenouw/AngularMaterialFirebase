@@ -14,4 +14,14 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
+  contact = new Contact('Google', 'Bob', 'David', 'Angularlane 4', 'LA', 'California', '3221HB');
+  submitted = false;
+  onSubmit() { this.submitted = true; }
+  active = true;
+  newContact() {
+    this.contact = new Contact('', '', '', '', '', '', '');
+    this.active = false;
+    setTimeout(()=> this.active=true, 0);
+  }
+  
 }

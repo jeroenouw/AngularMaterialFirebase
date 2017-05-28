@@ -22,18 +22,18 @@ export class SignupComponent implements OnInit {
     const email = form.value.email;
     const password = form.value.password;
     this.authService.signupUser(email, password);
-    // this.alertService.showToaster('Your registration is completed');
-    this.alertService.signUpToaster;
+    this.alertService.showToaster('Verification email is sent to you.');
+    // this.alertService.signUpToaster;
   }  
   
   onSignupGoogle(form: NgForm) {
     this.authService.signUpWithGoogle();
-    this.alertService.showToaster('Your Google registration is completed');
+    this.alertService.showToaster('Your Google registration is completed.');
   }
 
   onSignupFacebook(form: NgForm) {
     this.authService.signUpWithFacebook();
-    this.alertService.showToaster('Your Facebook registration is completed');
+    this.alertService.showToaster('Your Facebook registration is completed.');
   }
 
 }
