@@ -19,16 +19,21 @@ import { MessagesComponent } from './components/messages/messages.component';
 import { AuthGuardService } from './components/shared';
 
 const appRoutes: Routes = [
+  
+  // Public pages
   { path: '', redirectTo: '/home', pathMatch : 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutMeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: SigninComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'profile-settings', component: ProfileSettingsComponent },
-  { path: 'messages', component: MessagesComponent },
-  { path: '**', component: PageNotFoundComponent },
+
+  // Protected pages
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService] },
+  { path: 'profile-settings', component: ProfileSettingsComponent, canActivate: [AuthGuardService] },
+  { path: 'messages', component: MessagesComponent, canActivate: [AuthGuardService] },
+
+  { path: '**', component: PageNotFoundComponent } 
 ];
 
 // Don't declare components here

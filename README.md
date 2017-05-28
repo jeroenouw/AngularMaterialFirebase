@@ -9,7 +9,6 @@
 ### Auth
 * Optimizing alerts
 * Google & Facebook login
-* Authenticated pages
 * Save & fetch users
 * Send password reset email, reset password
 * Anonymous signin
