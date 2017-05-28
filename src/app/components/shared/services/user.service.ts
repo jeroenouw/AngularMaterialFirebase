@@ -101,7 +101,7 @@ export class UserService {
           // An error happened.
         });
     } 
-     
+    */ 
     
     sendUserPasswordResetEmail() {
         firebase.auth().sendPasswordResetEmail(firebase.auth().currentUser.email).then(() => {
@@ -110,6 +110,6 @@ export class UserService {
           // An error happened.
         });
     } 
-    */ 
+    
        
 }

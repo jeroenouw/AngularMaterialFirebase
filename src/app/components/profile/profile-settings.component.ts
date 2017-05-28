@@ -39,8 +39,14 @@ export class ProfileSettingsComponent implements OnInit {
     this.settingsForm.patchValue(this.user);
   }
 
+
   onUpdateUser(values: Object) {
     (<any>Object).assign(this.user, values);
+  }
+  
+  onPasswordReset() {
+    this.userService.sendUserPasswordResetEmail();
+    this.alertService.showToaster('Reset password is sent to your email');
   }
   
   onSaveData() {
