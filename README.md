@@ -1,8 +1,9 @@
 # Angular 4 | Material Design | Firebase
 ![alt text](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmd.png "Logo")
-<p>Project is still in progress</p>
 
-### Quick start
+### Project is still in progress
+
+## Quick start
 
 First clone this repo: `git clone https://github.com/jeroenouw/Angular4MaterialDesign.git`.  
 Change directory to this project  
@@ -12,16 +13,32 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 
 To build the project run `npm run dist`.
 
-### Development
+## Development
 
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-### Live Demo
+## Live Demo
 
-[Live demo](http://angular4.jerouw.nl), project is still in progress and demo is also not up to date.
-
+[Live demo](http://angular4.jerouw.nl), project is still in progress and demo is also not up to date.  
+![alt text](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmdprintscreen.png "Logo")
 ### Including in this project:
-
+* Angular 4 front-end with Material Design
+* Firebase back-end (Authentication and Database)
+* Home page
+* About page
+* Contact page
+* 404 page
+* Authentication (Email, Google, Facebook and Github)
+* Auth Guard
+* Save email
+* Profile
+* Profile settings
+* Messaging system
+* Alerts
+* Multiple pipes
+* Carousel
+* Translatations
+* Tests
 
 ## To Do List
 * Make every component responsive
