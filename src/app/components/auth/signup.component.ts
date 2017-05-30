@@ -41,4 +41,12 @@ export class SignupComponent implements OnInit {
     this.alertService.showToaster('Your Github registration is completed.');
   }
 
+  /* onSignupCellphone(form: NgForm) {
+    const phoneNumber = form.value.phoneNumber;
+    const appVerifier = form.value.appVerifier;
+    const code = form.value.code;
+    this.authService.signUpWithCellPhone(phoneNumber, appVerifier, code);
+    this.alertService.showToaster('Verification SMS is sent to you.');
+  }*/
+
 }

@@ -15,7 +15,7 @@ export class AuthService {
 
     }
     
-    // Start signup/register
+    // Signup/register
     signupUser(email: string, password: string) {
         firebase.auth().createUserWithEmailAndPassword(email, password)
              .then((result) => {
@@ -91,9 +91,31 @@ export class AuthService {
             );
     } 
 
-    // End signup/register
+    /* signUpWithCellPhone(phoneNumber: any, appVerifier: any, code: any) {
+        let cellphoneVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+          'size': 'invisible',
+          'callback': (response) => { 
+          },
+          'expired-callback': () => {
+          }
+        });
+            firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
+                .then((confirmationResult) => {
+                    confirmationResult.confirm(code).then((result) => {
+                      // User signed in successfully.
+                      var user = result.user;
+                      // ...
+                    })
+                  // SMS sent. Prompt user to type the code from the message, then sign the
+                  // user in with confirmationResult.confirm(code).
+                  confirmationResult = confirmationResult;
+                }).catch((error) => {
+                    this.router.navigate(['/login']);
+                });
+    }
+    */
 
-    // Start signin/login
+    // Signin/login
     signinUser(email: string, password: string) {
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(
@@ -131,9 +153,8 @@ export class AuthService {
             error => console.log(error)
         );
     }
-    
-    // End signin/login
 
+    // Other
     logout() {
         firebase.auth().signOut()
         .then(
