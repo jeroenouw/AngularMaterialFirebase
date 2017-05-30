@@ -41,6 +41,8 @@ export class AuthService {
                     .then(
                         (token: string) => this.token = token
                     );
+                this.userService.verificationUserEmail();
+                this.userService.saveUserInfo(firebase.auth().currentUser.uid, name, firebase.auth().currentUser.email);
                 } 
             )
             .catch( 
@@ -58,6 +60,8 @@ export class AuthService {
                     .then(
                         (token: string) => this.token = token
                     );
+                this.userService.verificationUserEmail();
+                this.userService.saveUserInfo(firebase.auth().currentUser.uid, name, firebase.auth().currentUser.email);
                 }
             )
             .catch((error) => {
@@ -71,6 +75,8 @@ export class AuthService {
             .then((result) => {
                 let token = result.credential.accessToken;
                 let currentUser = result.user;
+                this.userService.verificationUserEmail();
+                this.userService.saveUserInfo(firebase.auth().currentUser.uid, name, firebase.auth().currentUser.email);
             })
             .then(response => {
                     this.router.navigate(['/']);
