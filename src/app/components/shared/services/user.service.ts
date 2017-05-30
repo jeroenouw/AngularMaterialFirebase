@@ -12,12 +12,20 @@ export class UserService {
 
     }
 
-    saveUserInfoFromForm(uid, name, email) {
-    return firebase.database().ref().child('users/' + uid).set({
-      name: name,
-      email: email,
-    });
+    saveUserInfo(uid, name, email
+    //uid, token, image, name, username, bio, email, password
+    ) {
+      return firebase.database().ref().child('users/' + uid).set({
+        name: name,
+        email: email,
+        /* token: token,
+        image: image,
+        username: username,
+        bio: bio,
+        password: password*/
+      });   
     }
+
     // Profile
     /*
     userProfile() {

@@ -8,7 +8,6 @@ import { UserService } from './user.service';
 @Injectable()
 export class AuthService {
     token: string;
-    
     constructor(private router: Router, 
                 private alertService: AlertService,
                 private userService: UserService
@@ -19,10 +18,10 @@ export class AuthService {
     // Start signup/register
     signupUser(email: string, password: string) {
         firebase.auth().createUserWithEmailAndPassword(email, password)
-             .then((result) => { 
+             .then((result) => {
                 // this.alertService.signUpToaster,
                 this.userService.verificationUserEmail();
-                this.userService.saveUserInfoFromForm(firebase.auth().currentUser.uid, name, email);
+                this.userService.saveUserInfo(firebase.auth().currentUser.uid, name, email);
                 }
             ).catch(
                 error => console.log(error)
