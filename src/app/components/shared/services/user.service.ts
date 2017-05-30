@@ -41,18 +41,18 @@ export class UserService {
           }
         });
     }  
-
+    */
     getUserProfileInformation() {
         let name, email, photoUrl, uid, emailVerified;
         if (firebase.auth().currentUser != null) {
-          name = firebase.auth().currentUser.displayName;
+          //name = firebase.auth().currentUser.displayName;
           email = firebase.auth().currentUser.email;
-          photoUrl = firebase.auth().currentUser.photoURL;
-          emailVerified = firebase.auth().currentUser.emailVerified;
-          uid = firebase.auth().currentUser.uid;
+          //photoUrl = firebase.auth().currentUser.photoURL;
+          //emailVerified = firebase.auth().currentUser.emailVerified;
+          //uid = firebase.auth().currentUser.uid;
         }
     }
-
+    /*
     updateUserProfile() {
         firebase.auth().currentUser.updateProfile({
           displayName: "Jeroenouw",

@@ -28,9 +28,11 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * About page
 * Contact page
 * 404 page
-* Authentication (Email, Google, Facebook and Github)
-* Auth Guard
 * Save email
+* Authentication (Email, Google, Facebook, Github and Anonymous)
+* Verification email after signup
+* Password reset
+* Auth Guard
 * Profile
 * Profile settings
 * Messaging system
@@ -48,7 +50,6 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * Optimizing alerts
 * Google, Facebook & Github signin/signup
 * Save & fetch users
-* Send password reset email, reset password
 * Anonymous signin
 
 ### Sending
