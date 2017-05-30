@@ -1,9 +1,24 @@
 <div id="content">
   <md-card>
     <h1>Messages</h1>
-    <app-receiver-message></app-receiver-message>
-
-    <app-sender-message></app-sender-message>
-    </md-card>
+        <div class="bs-example" id="messages">
+          
+          <div *ngFor="let message of messages | async">
+            
+            <div class="bubble" [class.you]="isYou(message.email)" [class.me]="isMe(message.email)">
+              <p>{{ message.message }}</p>
+              <div class="author">
+                {{ message.userName }} | {{ message.timestamp | date:"MM/dd/yy hh:mm a" }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="highlight">
+          <md-input-container class="full-width">
+            <textarea mdInput type="textarea" placeholder="Message here:" [(ngModel)]="newMessage" (keyup.enter)="sendMessage()"></textarea>
+          </md-input-container>
+          <br />
+          <a md-raised-button class="send-message" (click)="sendMessage()">Send</a>
+        </div>  
+  </md-card>
 </div>
-    

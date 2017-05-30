@@ -7,8 +7,6 @@ import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
 import { FormsModule } from '@angular/forms';
 
 // Components
-import { SenderComponent } from './sender/sender.component';
-import { ReceiverComponent } from './receiver/receiver.component';
 import { MessagesComponent } from './messages.component';
 
 // Services
@@ -16,8 +14,6 @@ import { MessageService } from './message.service';
 
 @NgModule({
   declarations: [
-    SenderComponent,
-    ReceiverComponent,
     MessagesComponent
   ],
   imports: [
@@ -31,8 +27,6 @@ import { MessageService } from './message.service';
     MessageService
   ],
   exports: [
-    SenderComponent,
-    ReceiverComponent,
     MessagesComponent
   ]
 })

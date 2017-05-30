@@ -25,6 +25,12 @@ export class AppComponent implements OnInit {
       const dbRefUsers = firebase.database().ref().child('users');
 
       dbRefUsers.on('value', snap => console.log(snap.val()));
+
+
+      const preMessages = document.getElementById('messages')
+      const dbRefMessages = firebase.database().ref().child('messages');
+
+      dbRefMessages.on('value', snap => console.log(snap.val()));
       // end test  
   }
 

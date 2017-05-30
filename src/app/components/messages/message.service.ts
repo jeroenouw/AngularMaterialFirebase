@@ -1,28 +1,30 @@
 import { Injectable } from '@angular/core';
+import { FirebaseListObservable } from "angularfire2/database";
 import { Subject } from 'rxjs/Subject';
 import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
+import * as firebase from 'firebase';
 
-interface Message {
-  type: string;
-  payload: any;
-}
-
-type MessageCallback = (payload: any) => void;
 
 @Injectable()
 export class MessageService {
-  private handler = new Subject<Message>();
+  public messages: FirebaseListObservable<any>;
+  public users: FirebaseListObservable<any>;
+  public userName: string;
+  public email: string;
 
-  broadcast(type: string, payload: any) {
-    this.handler.next({ type, payload });
+  constructor() {
+    // this.messages = this.firebase.database.list('messages');
+    let messages = firebase.database().ref().child('messages');
   }
-
-  subscribe(type: string, callback: MessageCallback): Subscription {
-    return this.handler
-      .filter(message => message.type === type)
-      .map(message => message.payload)
-      .subscribe(callback);
+  
+  sendMessage(message, text) {
+      return firebase.database().ref().child('messages/' + message).push({
+      message: text,
+      userName: this.userName,
+      email: this.email,
+      timestamp: Date.now()
+    });  
   }
 }
