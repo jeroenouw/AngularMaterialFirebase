@@ -18,18 +18,18 @@ export class SigninComponent implements OnInit {
     
   }
   
-  onSignupGoogle(form: NgForm) {
-    this.authService.signUpWithGoogle();
+  onSignInGoogle(form: NgForm) {
+    this.authService.signInWithGoogle();
     this.alertService.showToaster('Google login succesful');
   }
 
-  onSignupFacebook(form: NgForm) {
-    this.authService.signUpWithFacebook();
+  onSignInFacebook(form: NgForm) {
+    this.authService.signInWithFacebook();
     this.alertService.showToaster('Facebook login succesful');
   }
 
-  onSignupGithub(form: NgForm) {
-    this.authService.signUpWithGithub();
+  onSignInGithub(form: NgForm) {
+    this.authService.signInWithGithub();
     this.alertService.showToaster('Github login succesful');
   }
 

@@ -16,18 +16,6 @@ export class AuthService {
     }
     
     // Signup/register
-    signupUser(email: string, password: string) {
-        firebase.auth().createUserWithEmailAndPassword(email, password)
-             .then((result) => {
-                // this.alertService.signUpToaster,
-                this.userService.verificationUserEmail();
-                this.userService.saveUserInfo(firebase.auth().currentUser.uid, name, email);
-                }
-            ).catch(
-                error => console.log(error)
-            );
-    }
-
     signUpWithGoogle() { 
         let providerGoogle = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(providerGoogle)
@@ -90,6 +78,18 @@ export class AuthService {
                 error => console.log(error) 
             );
     } 
+    
+    signupUser(email: string, password: string) {
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+             .then((result) => {
+                // this.alertService.signUpToaster,
+                this.userService.verificationUserEmail();
+                this.userService.saveUserInfo(firebase.auth().currentUser.uid, name, email);
+                }
+            ).catch(
+                error => console.log(error)
+            );
+    }
 
     /* signUpWithCellPhone(phoneNumber: any, appVerifier: any, code: any) {
         let cellphoneVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
@@ -116,6 +116,63 @@ export class AuthService {
     */
 
     // Signin/login
+    signInWithGoogle() { 
+        let providerGoogle = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(providerGoogle)
+            .then((result) => {
+                let token = result.credential.accessToken;
+                let currentUser = result.user;
+            })
+            .then(response => {
+                    this.router.navigate(['/']);
+                    firebase.auth().currentUser.getIdToken()
+                    .then(
+                        (token: string) => this.token = token
+                    );
+                } 
+            )
+            .catch( 
+                error => console.log(error) 
+            );
+    }
+
+    signInWithFacebook() {
+        let providerFacebook = new firebase.auth.FacebookAuthProvider();
+        firebase.auth().signInWithPopup(providerFacebook)
+            .then(
+                response => {
+                    this.router.navigate(['/']);
+                    firebase.auth().currentUser.getIdToken()
+                    .then(
+                        (token: string) => this.token = token
+                    );
+                }
+            )
+            .catch((error) => {
+              error => console.log(error) 
+            });
+    } 
+
+    signInWithGithub() {
+        let providerGithub = new firebase.auth.GithubAuthProvider();
+        firebase.auth().signInWithPopup(providerGithub)
+            .then((result) => {
+                let token = result.credential.accessToken;
+                let currentUser = result.user;
+            })
+            .then(response => {
+                    this.router.navigate(['/']);
+                    firebase.auth().currentUser.getIdToken()
+                    .then(
+                        (token: string) => this.token = token
+                    );
+                } 
+            )
+            .catch( 
+                error => console.log(error) 
+            );
+    } 
+
     signinUser(email: string, password: string) {
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(
