@@ -68,19 +68,22 @@ export class AuthService {
     signUpWithGithub() {
         let providerGithub = new firebase.auth.GithubAuthProvider();
         firebase.auth().signInWithPopup(providerGithub)
-            .then(
-                response => {
+            .then((result) => {
+                let token = result.credential.accessToken;
+                let currentUser = result.user;
+            })
+            .then(response => {
                     this.router.navigate(['/']);
                     firebase.auth().currentUser.getIdToken()
                     .then(
                         (token: string) => this.token = token
                     );
-                }
+                } 
             )
-            .catch((error) => {
-              error => console.log(error) 
-            });
-    }     
+            .catch( 
+                error => console.log(error) 
+            );
+    } 
 
     // End signup/register
 

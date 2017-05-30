@@ -51,6 +51,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * Google, Facebook & Github signin/signup
 * Save & fetch users
 * Anonymous signin
+* Error messages: Email already exists, login failed, registration failed
 
 ### Sending
 * Contact form send

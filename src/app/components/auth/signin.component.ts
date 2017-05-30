@@ -28,6 +28,11 @@ export class SigninComponent implements OnInit {
     this.alertService.showToaster('Facebook login succesful');
   }
 
+  onSignupGithub(form: NgForm) {
+    this.authService.signUpWithGithub();
+    this.alertService.showToaster('Github login succesful');
+  }
+
   onSignin(form: NgForm) {
     const email = form.value.email;
     const password = form.value.password;
