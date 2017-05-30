@@ -1,7 +1,6 @@
 import * as firebase from 'firebase';
 import { Injectable } from '@angular/core';
 
-import { AuthService } from './auth.service';
 import { User, Profile } from '../models';
 
 // const currentUser = firebase.auth().currentUser;
@@ -9,10 +8,16 @@ import { User, Profile } from '../models';
 @Injectable()
 export class UserService {
 
-    constructor(private authService: AuthService) {
+    constructor() {
 
     }
 
+    saveUserInfoFromForm(uid, name, email) {
+    return firebase.database().ref().child('users/' + uid).set({
+      name: name,
+      email: email,
+    });
+    }
     // Profile
     /*
     userProfile() {
@@ -41,7 +46,7 @@ export class UserService {
           }
         });
     }  
-    */
+    
     getUserProfileInformation() {
         let name, email, photoUrl, uid, emailVerified;
         if (firebase.auth().currentUser != null) {
@@ -51,7 +56,7 @@ export class UserService {
           //emailVerified = firebase.auth().currentUser.emailVerified;
           //uid = firebase.auth().currentUser.uid;
         }
-    }
+    }*/
     /*
     updateUserProfile() {
         firebase.auth().currentUser.updateProfile({
@@ -89,7 +94,7 @@ export class UserService {
           // An error happened.
         });
     }
-
+    
     // Password
     /*
     updateUserPassword() {

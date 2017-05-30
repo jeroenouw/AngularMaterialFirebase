@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
          MdToolbarModule, MdDialogModule, MaterialModule } from '@angular/material';
+import { UsersRouting } from './users.routing'
 
 // Components
 import { SignupComponent } from './signup.component';
@@ -25,6 +26,7 @@ import { SigninComponent } from './signin.component';
     HttpModule,
     MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
     MdToolbarModule, MdDialogModule, MaterialModule,
+    UsersRouting
   ],
   providers: [
 

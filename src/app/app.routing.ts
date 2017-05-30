@@ -32,7 +32,7 @@ const appRoutes: Routes = [
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService] },
   { path: 'profile-settings', component: ProfileSettingsComponent, canActivate: [AuthGuardService] },
   { path: 'messages', component: MessagesComponent, canActivate: [AuthGuardService] },
-
+  // { path: 'lazy-loading-in-progress', loadChildren: './components/auth/auth.moduleh#AuthModule' },
   { path: '**', component: PageNotFoundComponent } 
 ];
 
