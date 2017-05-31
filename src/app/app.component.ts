@@ -14,10 +14,10 @@ export class AppComponent implements OnInit {
       // For other projects use different keys
       apiKey: 'AIzaSyBUYZcc_HKi1TckbZPpSjSkxyFvml3Is0A',
       authDomain: 'angular4materialdesign.firebaseapp.com',
-      databaseURL: "https://angular4materialdesign.firebaseio.com",
-      projectId: "angular4materialdesign",
-      storageBucket: "angular4materialdesign.appspot.com",
-      messagingSenderId: "136985605193"
+      databaseURL: 'https://angular4materialdesign.firebaseio.com',
+      projectId: 'angular4materialdesign',
+      storageBucket: 'angular4materialdesign.appspot.com',
+      messagingSenderId: '136985605193'
     });
 
       // start test
@@ -33,8 +33,4 @@ export class AppComponent implements OnInit {
       dbRefMessages.on('value', snap => console.log(snap.val()));
       // end test  
   }
-
-  
-
-
 }

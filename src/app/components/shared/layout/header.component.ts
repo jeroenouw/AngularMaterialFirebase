@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Response } from '@angular/http';
+import * as firebase from 'firebase';
 
-// import {  } from '../shared/data-storage.service';
-import { AuthService, AlertService, DataStorageService } from '../services';
+import { AuthService, AlertService, DataStorageService, UserService } from '../services';
 
 @Component({
   selector: 'app-header',
@@ -16,10 +16,17 @@ export class HeaderComponent {
   constructor(
     private dataStorageService: DataStorageService,
     private authService: AuthService,
-    private alertService: AlertService) {
+    private alertService: AlertService,
+    //public userService: UserService
+    ) {
       this.isAuthenticated = this.authService.isAuthenticated();
+     // this.userService.email = firebase.auth().currentUser.email;
   }
 
+  // profileUserInformation() {
+  //  let email = this.userService.userEmail();
+  //}
+  
   profileUsername: string = 'Jeroenouw';
 
   onLogout() {

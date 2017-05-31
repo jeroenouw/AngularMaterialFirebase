@@ -5,9 +5,9 @@ import { AppComponent } from './app.component';
 
 import { PageNotFoundComponent } from './components/not-found/not-found.component';
 
-import { HomeComponent } from'./components/home/home.component';
-import { AboutMeComponent } from'./components/about-me/about-me.component';
-import { ContactComponent } from'./components/contact/contact.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 import { SignupComponent } from './components/auth/signup.component';

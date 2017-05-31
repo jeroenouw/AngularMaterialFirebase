@@ -21,7 +21,7 @@ import { SigninComponent } from './signin.component';
   ],
   imports: [
     CommonModule,
-    BrowserModule, 
+    BrowserModule,
     FormsModule,
     HttpModule,
     MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
@@ -36,6 +36,5 @@ import { SigninComponent } from './signin.component';
     SigninComponent
   ]
 })
-export class AuthModule { 
+export class AuthModule {
 }
- 

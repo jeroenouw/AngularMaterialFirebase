@@ -7,6 +7,8 @@ import { User, Profile } from '../models';
 
 @Injectable()
 export class UserService {
+  public userName: string;
+  public email: string;
 
     constructor() {
 
@@ -27,11 +29,14 @@ export class UserService {
     }
 
     // Profile
-    /*
-    userProfile() {
-
+    
+    userEmail() {
+      let profile = {
+        email: this.email
+      };
     }
 
+    /*
     specificUserProfile() {
         
         if (firebase.auth().currentUser != null) {
@@ -64,8 +69,8 @@ export class UserService {
           //emailVerified = firebase.auth().currentUser.emailVerified;
           //uid = firebase.auth().currentUser.uid;
         }
-    }*/
-    /*
+    }
+    
     updateUserProfile() {
         firebase.auth().currentUser.updateProfile({
           displayName: "Jeroenouw",

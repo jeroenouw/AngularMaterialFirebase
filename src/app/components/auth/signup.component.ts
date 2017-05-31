@@ -15,7 +15,7 @@ export class SignupComponent implements OnInit {
 }
 
   ngOnInit() {
-  
+
   }
 
   onSignup(form: NgForm) {
@@ -24,8 +24,8 @@ export class SignupComponent implements OnInit {
     this.authService.signupUser(email, password);
     this.alertService.showToaster('Verification email is sent to you.');
     // this.alertService.signUpToaster;
-  }  
-  
+  }
+
   onSignupGoogle(form: NgForm) {
     this.authService.signUpWithGoogle();
     this.alertService.showToaster('Your Google registration is completed.');

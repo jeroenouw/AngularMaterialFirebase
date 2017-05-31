@@ -1,7 +1,7 @@
 import * as firebase from 'firebase';
 import { Component, OnInit, AfterViewChecked, ElementRef, ViewChild } from '@angular/core';
-import { FirebaseListObservable } from "angularfire2/database";
-import { FormsModule } from "@angular/forms";
+import { FirebaseListObservable } from 'angularfire2/database';
+import { FormsModule } from '@angular/forms';
 
 import { MessageService } from './message.service';
 
@@ -23,13 +23,13 @@ export class MessagesComponent implements OnInit, AfterViewChecked {
   }
   
   isYou(email) {
-    if(email == this.messageService.email)
+    if (email = this.messageService.email)
       return true;
     else
       return false;
   }
   isMe(email) {
-    if(email == this.messageService.email)
+    if(email = this.messageService.email)
       return false;
     else
       return true;
@@ -49,9 +49,10 @@ export class MessagesComponent implements OnInit, AfterViewChecked {
     } catch(err) { console.log('Scroll to bottom failed') }
   }*/
   
-  sendMessage(){
+  sendMessage() {
     console.log('new message: ', this.newMessage);
-    this.messageService.sendMessage('', this.newMessage);
+    // this.messageService.sendMessage('', this.newMessage);
+    this.messageService.sendMessage(this.newMessage);
     this.newMessage = '';
   }
        

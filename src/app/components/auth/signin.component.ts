@@ -15,9 +15,9 @@ export class SigninComponent implements OnInit {
 }
 
   ngOnInit() {
-    
-  }
   
+  }
+
   onSignInGoogle(form: NgForm) {
     this.authService.signInWithGoogle();
     this.alertService.showToaster('Google login succesful');

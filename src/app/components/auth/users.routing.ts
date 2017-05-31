@@ -1,10 +1,10 @@
 import { Routes, RouterModule } from "@angular/router";
 
 /*
-import { TestComponent } from "./test.component";
-import { TestComponent } from "./test/test.component";
-import { TestComponent } from "./test";
-import { TestComponent } from "./test";
+import { TestComponent } from './test';
+import { TestComponent } from './test';
+import { TestComponent } from './test';
+import { TestComponent } from './test';
 */
 const usersRoutes: Routes = [
     /*{ path: '', component: TestComponent, children: [

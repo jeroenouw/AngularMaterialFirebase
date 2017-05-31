@@ -25,6 +25,5 @@ import { ProfileSettingsComponent } from './profile-settings.component';
     ProfileSettingsComponent
   ]
 })
-export class ProfileModule { 
+export class ProfileModule {
 }
- 

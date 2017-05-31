@@ -22,7 +22,7 @@ export class ProfileSettingsComponent implements OnInit {
     private authService: AuthService,
     private alertService: AlertService,
     private userService: UserService,
-    private fb: FormBuilder) { 
+    private fb: FormBuilder) {
 
       this.settingsForm = this.fb.group({
           image: '',
@@ -43,12 +43,12 @@ export class ProfileSettingsComponent implements OnInit {
   onUpdateUser(values: Object) {
     (<any>Object).assign(this.user, values);
   }
-  
+
   onPasswordReset() {
     this.userService.sendUserPasswordResetEmail();
     this.alertService.showToaster('Reset password is sent to your email');
   }
-  
+
   onSaveData() {
       this.onUpdateUser(this.settingsForm.value);
 
@@ -61,15 +61,15 @@ export class ProfileSettingsComponent implements OnInit {
       };
           }
         );
-      
+    
       this.alertService.showToaster('Your settings are saved');
   }
-  
+
   onFetchData() {
     this.dataStorageService.getUser();
     this.alertService.showToaster('Data is refreshed');
   }
-  
+
   onLogout() {
     this.authService.logout();
     this.alertService.showToaster('Logout succesful');

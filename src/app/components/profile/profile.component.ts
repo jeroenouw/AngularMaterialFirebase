@@ -9,14 +9,6 @@ import { User, Profile } from '../shared';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-
-  fullImagePath: string;
-  
-  constructor(
-    private route: ActivatedRoute) { 
-    this.fullImagePath = '/assets/img/mb-bg-04.png';
-    }
-
   profile: Profile;
   currentUser: User;
   isUser: boolean;
@@ -25,6 +17,13 @@ export class ProfileComponent implements OnInit {
   profileName: string = 'Jeroen';
   profileUsername: string = '(Jeroenouw)';
   profileBio: string = 'Here you can place your own personal bio text.'; 
+  fullImagePath: string;
+  
+  constructor(
+    private route: ActivatedRoute) { 
+    this.fullImagePath = '/assets/img/mb-bg-04.png';
+    }
+
 
   ngOnInit() {
     this.route.data.subscribe(
@@ -33,6 +32,4 @@ export class ProfileComponent implements OnInit {
       }
     );
   }
-
-
 }

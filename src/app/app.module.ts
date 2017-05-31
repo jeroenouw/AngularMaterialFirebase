@@ -35,10 +35,10 @@ import { AppRoutingModule,
          } from './app.routing';
 
 // Components
-import { HomeComponent } from'./components/home/home.component';
-import { AboutMeComponent } from'./components/about-me/about-me.component';
-import { ContactComponent } from'./components/contact/contact.component';
-import { DialogComponent, DialogResultDialogComponent } from "./components/dialog/dialog.component";
+import { HomeComponent } from './components/home/home.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { DialogComponent, DialogResultDialogComponent } from './components/dialog/dialog.component';
 import { PageNotFoundComponent } from './components/not-found/not-found.component';
 import { EmailMeComponent } from './components/email-me/email-me.component';
 

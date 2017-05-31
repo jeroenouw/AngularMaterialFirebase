@@ -8,15 +8,15 @@ import { UserService } from './user.service';
 @Injectable()
 export class AuthService {
     token: string;
-    constructor(private router: Router, 
+    constructor(private router: Router,
                 private alertService: AlertService,
                 private userService: UserService
                 ) {
 
     }
-    
+
     // Signup/register
-    signUpWithGoogle() { 
+    signUpWithGoogle() {
         let providerGoogle = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(providerGoogle)
             .then((result) => {
@@ -31,10 +31,10 @@ export class AuthService {
                     );
                 this.userService.verificationUserEmail();
                 this.userService.saveUserInfo(firebase.auth().currentUser.uid, name, firebase.auth().currentUser.email);
-                } 
+                }
             )
-            .catch( 
-                error => console.log(error) 
+            .catch(
+                error => console.log(error)
             );
     }
 
@@ -53,9 +53,9 @@ export class AuthService {
                 }
             )
             .catch((error) => {
-              error => console.log(error) 
+              error => console.log(error)
             });
-    }   
+    }
 
     signUpWithGithub() {
         let providerGithub = new firebase.auth.GithubAuthProvider();
@@ -72,13 +72,13 @@ export class AuthService {
                     .then(
                         (token: string) => this.token = token
                     );
-                } 
+                }
             )
-            .catch( 
-                error => console.log(error) 
+            .catch(
+                error => console.log(error)
             );
-    } 
-    
+    }
+
     signupUser(email: string, password: string) {
         firebase.auth().createUserWithEmailAndPassword(email, password)
              .then((result) => {
@@ -94,7 +94,7 @@ export class AuthService {
     /* signUpWithCellPhone(phoneNumber: any, appVerifier: any, code: any) {
         let cellphoneVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
           'size': 'invisible',
-          'callback': (response) => { 
+          'callback': (response) => {
           },
           'expired-callback': () => {
           }
@@ -116,7 +116,7 @@ export class AuthService {
     */
 
     // Signin/login
-    signInWithGoogle() { 
+    signInWithGoogle() {
         let providerGoogle = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(providerGoogle)
             .then((result) => {
@@ -129,10 +129,10 @@ export class AuthService {
                     .then(
                         (token: string) => this.token = token
                     );
-                } 
+                }
             )
-            .catch( 
-                error => console.log(error) 
+            .catch(
+                error => console.log(error)
             );
     }
 
@@ -149,9 +149,9 @@ export class AuthService {
                 }
             )
             .catch((error) => {
-              error => console.log(error) 
+              error => console.log(error)
             });
-    } 
+    }
 
     signInWithGithub() {
         let providerGithub = new firebase.auth.GithubAuthProvider();
@@ -166,12 +166,12 @@ export class AuthService {
                     .then(
                         (token: string) => this.token = token
                     );
-                } 
+                }
             )
-            .catch( 
-                error => console.log(error) 
+            .catch(
+                error => console.log(error)
             );
-    } 
+    }
 
     signinUser(email: string, password: string) {
         firebase.auth().signInWithEmailAndPassword(email, password)
@@ -185,7 +185,7 @@ export class AuthService {
                     );
                 }
             )
-            .catch( 
+            .catch(
                 error => console.log(error)
             );
     }
@@ -203,10 +203,10 @@ export class AuthService {
                         (token: string) => this.token = token
                     ),
                     console.log(currentUser);
-                })                    
+                })                
             }
         )
-        .catch( 
+        .catch(
             error => console.log(error)
         );
     }
@@ -217,9 +217,9 @@ export class AuthService {
         .then(
                 response => {
                     this.router.navigate(['/home']);
-                } 
+                }
         )
-        .catch( 
+        .catch(
              error => console.log(error)
         );
         this.token = null;
