@@ -1,7 +1,14 @@
 md-card {
-    width: 400px;
-    height: 600px;
-    margin: 100px auto;
+  width: 400px;
+  height: 600px;
+  margin: 100px auto;
+}
+
+md-spinner {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto 0 auto;
+  z-index: 5;
 }
 
 .button {

@@ -1,3 +1,5 @@
+<md-spinner *ngIf="authService.isAuthenticated()" mode="indeterminate"></md-spinner>
+
 <md-card>  
   <h3>Social login</h3>
   <form (ngSubmit)="onSignInGoogle(g)" #g="ngForm">
@@ -7,6 +9,7 @@
     </md-card-actions>
   </form>
   <form (ngSubmit)="onSignInFacebook(fb)" #fb="ngForm">
+
     <md-card-actions class="button">
       <button class="btn btn-block btn-social btn-facebook" type="submit" [disabled]="!fb.valid"><span class="fa fa-facebook"></span> Login with your Facebook Account</button>
     </md-card-actions>
@@ -40,5 +43,5 @@
 
   <md-card-actions class="button">
   <button md-raised-button class="primary" (click)="onSigninAnonymous()">Login anonymously</button>
-  </md-card-actions>   
+  </md-card-actions>  
 </md-card>
