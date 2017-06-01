@@ -1,7 +1,19 @@
+[![demolive](https://img.shields.io/badge/demo-live-green.svg)](http://angular4.jerouw.nl/)
+[![license](https://img.shields.io/npm/l/express.svg)](https://github.com/jeroenouw/Angular4MaterialDesign/blob/master/LICENSE/)
+[![dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)](https://github.com/jeroenouw/Angular4MaterialDesign/blob/master/package.json)
+[![updates](https://img.shields.io/badge/updates-weekly-yellowgreen.svg)](https://github.com/jeroenouw/Angular4MaterialDesign/commits/master)
+
+![logo](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmd.png "Logo")  
+
 # Angular 4 | Material Design | Firebase
-![alt text](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmd.png "Logo")
+A full stack starter app containing [Angular 4](https://angular.io), [Material](https://material.io/) and [Firebase](https://firebase.google.com/)  
 
 ### Project is still in progress
+
+## Live Demo
+
+[Live demo](http://angular4.jerouw.nl), project is still in progress and demo is also not up to date.  
+![alt text](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmdprintscreen.png "Logo")
 
 ## Quick start
 
@@ -27,10 +39,6 @@ For own projects please use different keys in app.component.ts:
 ```    });``` 
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Live Demo
-
-[Live demo](http://angular4.jerouw.nl), project is still in progress and demo is also not up to date.  
-![alt text](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmdprintscreen.png "Logo")
 ### Including in this project:
 * Angular 4 front-end with Material Design
 * Firebase back-end (Authentication and Database)
