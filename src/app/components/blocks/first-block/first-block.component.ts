@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-first-block',
   templateUrl: './first-block.component.html',
-  styleUrls: ['./first-block.component.css']
+  styleUrls: ['./first-block.component.scss']
 })
 export class FirstBlockComponent {
   titleOne: string = 'First Content Title';

@@ -6,7 +6,7 @@ import { AlertService } from '../shared';
 @Component({
   selector: 'app-email-me',
   templateUrl: './email-me.component.html',
-  styleUrls: ['./email-me.component.css']
+  styleUrls: ['./email-me.component.scss']
 })
 export class EmailMeComponent implements OnInit {
   constructor(

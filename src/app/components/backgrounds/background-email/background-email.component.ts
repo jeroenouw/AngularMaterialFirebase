@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-background-email',
   templateUrl: './background-email.component.html',
-  styleUrls: ['./background-email.component.css']
+  styleUrls: ['./background-email.component.scss']
 })
 export class BackgroundEmailComponent implements OnInit {
   fullImagePath: string;

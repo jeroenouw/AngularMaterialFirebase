@@ -11,7 +11,7 @@ import { User, Profile, DataStorageService, AuthService, AlertService, UserServi
 @Component({
   selector: 'app-profile-settings',
   templateUrl: './profile-settings.component.html',
-  styleUrls: ['./profile-settings.component.css']
+  styleUrls: ['./profile-settings.component.scss']
 })
 export class ProfileSettingsComponent implements OnInit {
   user: User = new User();

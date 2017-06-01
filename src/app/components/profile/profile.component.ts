@@ -7,7 +7,7 @@ import { User, Profile } from '../shared';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css'],
+  styleUrls: ['./profile.component.scss'],
   animations: [
     trigger('imageAnimation', [
 
