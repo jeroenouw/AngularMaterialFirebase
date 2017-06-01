@@ -12,7 +12,8 @@
     "e2e": "protractor",
     "lint": "ng lint",
     "dist": "ng build",
-    "prod": "ng build --prod"
+    "prod": "ng build --prod",
+    "i18n": "ng-xi18n"
   },
   "private": true,
   "dependencies": {
