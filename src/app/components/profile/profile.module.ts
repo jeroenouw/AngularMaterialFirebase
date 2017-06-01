@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
          MdToolbarModule, MdDialogModule, MaterialModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FileUploadModule } from 'primeng/primeng';
 
 // Components
 import { ProfileComponent } from './profile.component';
@@ -18,7 +19,8 @@ import { ProfileSettingsComponent } from './profile-settings.component';
     CommonModule,
     MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
     MdToolbarModule, MdDialogModule, MaterialModule,
-    FormsModule, ReactiveFormsModule
+    FormsModule, ReactiveFormsModule,
+    FileUploadModule
   ],
   exports: [
     ProfileComponent,

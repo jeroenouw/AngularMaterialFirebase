@@ -72,8 +72,10 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 
 ### Profile
 * Dialog component
+* File uploading
+* Change settings
 * Messaging layout and functionality
-* Profile & profile-settings component
+* Profile information connection with Firebase
 
 ### Tests
 * Unit

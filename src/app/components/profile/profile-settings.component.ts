@@ -3,6 +3,9 @@ import { Router } from '@angular/router';
 import { FormsModule, FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Response } from '@angular/http';
 
+import * as firebase from 'firebase';
+import { FileUploadModule } from 'primeng/primeng';
+
 import { User, Profile, DataStorageService, AuthService, AlertService, UserService } from '../shared';
 
 @Component({
@@ -31,8 +34,18 @@ export class ProfileSettingsComponent implements OnInit {
           email: '',
           password: ''
       });
-
+    
     }
+
+    uploadedFiles: any[] = [];
+
+  // Upload files in progress
+  onUpload(event) {
+      for(let file of event.files) {
+        let uid = firebase.auth().currentUser.uid;
+        firebase.database().ref().child('users/' + uid + '/image/').push();
+      }
+  }
 
   ngOnInit() {
     (<any>Object).assign(this.user, this.dataStorageService.getUser());
