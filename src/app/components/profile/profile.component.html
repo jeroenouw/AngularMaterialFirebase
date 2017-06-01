@@ -1,7 +1,7 @@
 <div class="profile">
   <md-card>
     
-    <div class="avatar"><img [src]="fullImagePath"></div>
+    <div [@imageAnimation]='state' (click)="animateImage()" class="avatar"><img [src]="fullImagePath"></div>
   
   <md-card-header>    
     <md-card-title><h3>{{profileTitle}}</h3></md-card-title>
