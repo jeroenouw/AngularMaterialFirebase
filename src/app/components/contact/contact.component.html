@@ -1,7 +1,7 @@
 <div id="content">
   <md-card>
     <h1>Contact us</h1>
-        <form class="form" >
+      <form class="form" >
       <md-input-container class="full-width">
         <input mdInput placeholder="Company" value="Google">
       </md-input-container>
@@ -17,7 +17,7 @@
 
       <p>
         <md-input-container class="full-width">
-          <textarea mdInput placeholder="Address">Streetname 12a</textarea>
+          <textarea mdInput placeholder="Address" value="Streetname 12a"></textarea>
         </md-input-container>
       </p>
 
@@ -26,15 +26,17 @@
           <input mdInput placeholder="City">
         </md-input-container></td>
         <td><md-input-container class="full-width">
-          <input mdInput placeholder="Province">
-        </md-input-container></td>
-        <td><md-input-container class="full-width">
           <input mdInput #postalCode maxlength="6" placeholder="Zip Code" value="2900TY">
           <md-hint align="end">{{postalCode.value.length}} / 6</md-hint>
         </md-input-container></td>
-      </tr></table>
+      </tr></table>      
+      <p>
+        <md-input-container class="full-width">
+          <textarea mdInput placeholder="Your message" required></textarea>
+        </md-input-container>
+      </p>
       <br />
-      <button md-button>Submit</button>
+      <button md-raised-button action="mailto:angular4materialdesign@mailinator.com">Submit</button>
 
     </form>
   </md-card>
