@@ -60,6 +60,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * Carousel
 * Translatations
 * Tests
+* Back to top button
 
 ## To Do List
 * Make every component responsive

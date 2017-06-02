@@ -33,4 +33,9 @@ export class AppComponent implements OnInit {
       dbRefMessages.on('value', snap => console.log(snap.val()));
       // end test  
   }
+
+  onToTop(){
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }
+
 }
