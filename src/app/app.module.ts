@@ -44,6 +44,7 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
 import { MiscComponent } from './components/misc/misc.component';
 import { ChangeDetectionComponent } from './components/misc/change-detection.component';
 import { ChangeDetailComponent } from './components/misc/change-detail.component';
+import { VirtRealComponent } from './components/misc/virtual-reality/virtreal.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { ChangeDetailComponent } from './components/misc/change-detail.component
     EmailMeComponent,
     MiscComponent,
     ChangeDetectionComponent,
-    ChangeDetailComponent
+    ChangeDetailComponent,
+    VirtRealComponent
     // routingComponents
   ],
   imports: [

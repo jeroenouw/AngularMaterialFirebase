@@ -57,6 +57,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * Profile settings
 * Messaging system
 * Alerts
+* 360 view
 * Multiple pipes
 * Carousel
 * Translatations
