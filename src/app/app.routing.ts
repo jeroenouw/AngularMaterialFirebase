@@ -8,7 +8,7 @@ import { PageNotFoundComponent } from './components/not-found/not-found.componen
 import { HomeComponent } from './components/home/home.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ContactComponent } from './components/contact/contact.component';
-
+import { MiscComponent } from './components/misc/misc.component';
 
 import { SignupComponent } from './components/auth/signup.component';
 import { SigninComponent } from './components/auth/signin.component';
@@ -25,6 +25,7 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutMeComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'misc', component: MiscComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: SigninComponent },
 

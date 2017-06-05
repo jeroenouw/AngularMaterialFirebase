@@ -38,9 +38,12 @@ import { AppRoutingModule,
 import { HomeComponent } from './components/home/home.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { DialogComponent, DialogResultDialogComponent } from './components/dialog/dialog.component';
+import { DialogComponent, DialogResultDialogComponent } from './components/misc/dialog.component';
 import { PageNotFoundComponent } from './components/not-found/not-found.component';
 import { EmailMeComponent } from './components/email-me/email-me.component';
+import { MiscComponent } from './components/misc/misc.component';
+import { ChangeDetectionComponent } from './components/misc/change-detection.component';
+import { ChangeDetailComponent } from './components/misc/change-detail.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,10 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
-    EmailMeComponent
+    EmailMeComponent,
+    MiscComponent,
+    ChangeDetectionComponent,
+    ChangeDetailComponent
     // routingComponents
   ],
   imports: [
@@ -69,7 +75,7 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     BlocksModule,
     AuthModule,
     BackgroundsModule,
-    ProfileModule,
+    ProfileModule
     // CarouselModule
   ],
   providers: [

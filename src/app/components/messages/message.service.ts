@@ -16,7 +16,7 @@ export class MessageService {
 
   constructor() {
     // this.messages = this.firebase.database.list('messages');
-    const messages = firebase.database().ref().child('messages/');
+    let messages = firebase.database().ref().child('messages/');
   }
  /*
   sendMessage(message, text) {

@@ -45,6 +45,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * Home page
 * About page
 * Contact page
+* Misc page
 * 404 page
 * Save email
 * Authentication (Email, Google, Facebook, Github and Anonymous)
@@ -65,7 +66,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 ## To Do List
 * Make every component responsive
 
-## To Finish List
+## To Finish List (known issues)
 ### Auth
 * Cellphone authentication
 * Optimizing alerts
@@ -93,5 +94,6 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 ### Other
 * Carousel
 * i18n translations
+* Internal server error 500
 
 
