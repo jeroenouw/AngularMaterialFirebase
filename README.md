@@ -6,7 +6,7 @@
 ![logo](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmd.png "Logo")  
 
 # Angular 4 | Material Design | Firebase
-A full stack starter app containing [Angular 4](https://angular.io), [Material](https://material.io/) and [Firebase](https://firebase.google.com/)  
+A full stack starter app containing [Angular 4](https://angular.io), [Material](https://material.io/) and [Firebase](https://firebase.google.com/).
 
 ### Project is still in progress
 
@@ -36,7 +36,7 @@ For own projects please use different keys in app.component.ts:
 ```    projectId: '[YOUR_KEY]',```  
 ```   storageBucket: '[YOUR_KEY]',```    
 ```  messagingSenderId: '[YOUR_KEY]'```  
-```    });``` 
+```    });```  
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ### Including in this project:
@@ -72,8 +72,6 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * Cellphone authentication
 * Optimizing alerts
 * Google, Facebook & Github signin/signup
-* Save & fetch users
-* Anonymous signin
 * Error messages: Email already exists, login failed, registration failed
 * Loading animation
 
