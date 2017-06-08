@@ -4,6 +4,13 @@ md-card {
     margin: 100px auto;
 }
 
+md-spinner {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto 0 auto;
+  z-index: 5;
+}
+
 .button {
   display: grid;
   margin-top: 0px;

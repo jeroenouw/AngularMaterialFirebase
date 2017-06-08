@@ -1,3 +1,5 @@
+<md-spinner *ngIf="loading" mode="indeterminate"></md-spinner>
+
 <md-card>
   <h3>Social Sign up</h3>
   <form (ngSubmit)="onSignupGoogle(g)" #g="ngForm">

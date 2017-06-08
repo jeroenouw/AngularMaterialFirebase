@@ -5,7 +5,7 @@
 
 ![logo](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmd.png "Logo")  
 
-# Angular 4 | Material Design | Firebase
+# Angular 4 | Material Design | Firebase - Starter kit
 A full stack starter app containing [Angular 4](https://angular.io), [Material](https://material.io/) and [Firebase](https://firebase.google.com/).
 
 ### Project is still in progress
@@ -63,6 +63,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * Translatations
 * Tests
 * Back to top button
+* Loading animation
 
 ## To Do List
 * Make every component responsive
@@ -73,7 +74,6 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * Optimizing alerts
 * Google, Facebook & Github signin/signup
 * Error messages: Email already exists, login failed, registration failed
-* Loading animation
 
 ### Sending
 * Contact form send

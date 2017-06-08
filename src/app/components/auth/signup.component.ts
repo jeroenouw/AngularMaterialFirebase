@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 import { AlertService, AuthService } from '../shared';
@@ -9,6 +9,8 @@ import { AlertService, AuthService } from '../shared';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
+  @Input() loading: boolean = false;
+
   constructor(
     private authService: AuthService,
     private alertService: AlertService) {
@@ -19,6 +21,7 @@ export class SignupComponent implements OnInit {
   }
 
   onSignup(form: NgForm) {
+    this.loading = true;
     const email = form.value.email;
     const password = form.value.password;
     this.authService.signupUser(email, password);
@@ -27,16 +30,19 @@ export class SignupComponent implements OnInit {
   }
 
   onSignupGoogle(form: NgForm) {
+    this.loading = true;
     this.authService.signUpWithGoogle();
     this.alertService.showToaster('Your Google registration is completed.');
   }
 
   onSignupFacebook(form: NgForm) {
+    this.loading = true;
     this.authService.signUpWithFacebook();
     this.alertService.showToaster('Your Facebook registration is completed.');
   }
 
   onSignupGithub(form: NgForm) {
+    this.loading = true;
     this.authService.signUpWithGithub();
     this.alertService.showToaster('Your Github registration is completed.');
   }
