@@ -63,7 +63,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * Translatations
 * Tests
 * Back to top button
-* Loading animation
+* Loading spinner and progress bar
 
 ## To Do List
 * Make every component responsive

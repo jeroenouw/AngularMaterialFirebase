@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-         MdToolbarModule, MdDialogModule, MaterialModule } from '@angular/material';
+         MdToolbarModule, MdDialogModule, MdProgressBarModule, MaterialModule } from '@angular/material';
 import { UsersRouting } from './users.routing'
 
 // Components
@@ -25,7 +25,7 @@ import { SigninComponent } from './signin.component';
     FormsModule,
     HttpModule,
     MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-    MdToolbarModule, MdDialogModule, MaterialModule,
+    MdToolbarModule, MdDialogModule, MdProgressBarModule, MaterialModule,
     UsersRouting
   ],
   providers: [
