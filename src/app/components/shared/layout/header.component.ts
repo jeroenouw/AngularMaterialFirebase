@@ -17,15 +17,24 @@ export class HeaderComponent {
     private dataStorageService: DataStorageService,
     private authService: AuthService,
     private alertService: AlertService,
-    //public userService: UserService
+    // private userService: UserService
     ) {
       this.isAuthenticated = this.authService.isAuthenticated();
      // this.userService.email = firebase.auth().currentUser.email;
   }
 
-  // profileUserInformation() {
-  //  let email = this.userService.userEmail();
-  //}
+  user() {
+    var user = firebase.auth().currentUser;
+    var name, email, photoUrl, uid, emailVerified;
+    
+    if (user != null) {
+      name = user.displayName;
+      email = user.email;
+      photoUrl = user.photoURL;
+      emailVerified = user.emailVerified;
+      uid = user.uid; 
+     }
+  }
   
   profileUsername: string = '';
 
