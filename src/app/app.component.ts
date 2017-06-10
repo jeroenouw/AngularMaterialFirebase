@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
       messagingSenderId: '136985605193'
     });
       
-      // start test
+      // See users and messages in console log
       const preUsers = document.getElementById('users')
       const dbRefUsers = firebase.database().ref().child('users');
 
@@ -31,11 +31,6 @@ export class AppComponent implements OnInit {
       const dbRefMessages = firebase.database().ref().child('messages');
 
       dbRefMessages.on('value', snap => console.log(snap.val()));
-      // end test  
-  }
-
-  onToTop(){
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
   }
 
 }

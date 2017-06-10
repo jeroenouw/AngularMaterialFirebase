@@ -6,7 +6,6 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import * as firebase from 'firebase';
 
-
 @Injectable()
 export class MessageService {
   public messages: FirebaseListObservable<any>;

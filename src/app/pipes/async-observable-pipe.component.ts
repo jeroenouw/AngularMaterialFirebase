@@ -22,5 +22,4 @@ export class AsyncObservablePipeComponent {
       .interval(1000);
   }
 
-
 }

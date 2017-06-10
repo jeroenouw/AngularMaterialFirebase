@@ -12,8 +12,6 @@ import { UsersRouting } from './users.routing'
 import { SignupComponent } from './signup.component';
 import { SigninComponent } from './signin.component';
 
-// Services
-
 @NgModule({
   declarations: [
     SignupComponent,

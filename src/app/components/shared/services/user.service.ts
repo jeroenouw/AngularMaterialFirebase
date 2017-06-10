@@ -3,8 +3,6 @@ import { Injectable } from '@angular/core';
 
 import { User, Profile } from '../models';
 
-// const currentUser = firebase.auth().currentUser;
-
 @Injectable()
 export class UserService {
   public userName: string;

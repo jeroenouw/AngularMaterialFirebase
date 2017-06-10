@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
       {{today | date:'y'}}
 `, 
   // styles: ['']
-
 })
 export class YearPipeComponent {
   today: number = Date.now();
