@@ -27,7 +27,7 @@ export class HeaderComponent {
   //  let email = this.userService.userEmail();
   //}
   
-  profileUsername: string = 'Jeroenouw';
+  profileUsername: string = '';
 
   onLogout() {
     this.authService.logout();

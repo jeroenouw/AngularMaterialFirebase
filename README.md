@@ -94,5 +94,6 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * Carousel
 * i18n translations
 * Internal server error 500
+* 360 view only working on localhost
 
 

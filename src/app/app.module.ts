@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-         MdToolbarModule, MdDialogModule, MaterialModule } from '@angular/material';
+         MdToolbarModule, MdDialogModule, MdNativeDateModule, MaterialModule } from '@angular/material';
 import 'hammerjs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -67,7 +67,7 @@ import { VirtRealComponent } from './components/misc/virtual-reality/virtreal.co
     BrowserModule,
     BrowserAnimationsModule,
     MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-    MdToolbarModule, MdDialogModule, MaterialModule,
+    MdToolbarModule, MdDialogModule, MdNativeDateModule, MaterialModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
