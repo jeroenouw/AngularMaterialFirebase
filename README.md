@@ -48,13 +48,13 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * Misc page
 * 404 page
 * Save email
-* Authentication (Email, Google, Facebook, Github and Anonymous)
+* Authentication (Email, Google, Twitter, Facebook, Github and Anonymous)
 * Verification email after signup
-* Password reset
 * Auth Guard
 * Profile
 * Profile image animation
 * Profile settings
+* Password reset
 * Messaging system
 * Alerts
 * 360 view
@@ -72,7 +72,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 ### Auth
 * Cellphone authentication
 * Optimizing alerts
-* Google, Facebook & Github signin/signup
+* Google, Facebook, Twitter & Github signin/signup
 * Error messages: Email already exists, login failed, registration failed
 
 ### Sending

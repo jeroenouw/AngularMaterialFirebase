@@ -9,6 +9,11 @@
       <!-- md-raised-button class="primary" -->
       <button class="btn btn-block btn-social btn-google" type="submit" [disabled]="!g.valid"><span class="fa fa-google"></span> Sign up with your Google Account</button>
     </md-card-actions>
+  </form>
+  <form (ngSubmit)="onSignupTwitter(t)" #t="ngForm">
+    <md-card-actions class="button">
+      <button class="btn btn-block btn-social btn-twitter" type="submit" [disabled]="!t.valid"><span class="fa fa-twitter"></span> Sign up with your Twitter Account</button>
+    </md-card-actions>
   </form> 
   <form (ngSubmit)="onSignupFacebook(fb)" #fb="ngForm">
     <md-card-actions class="button">

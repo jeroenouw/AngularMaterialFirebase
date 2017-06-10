@@ -10,8 +10,12 @@
       <button class="btn btn-block btn-social btn-google" type="submit" [disabled]="!g.valid"><span class="fa fa-google"></span> Login with your Google Account</button>
     </md-card-actions>
   </form>
+  <form (ngSubmit)="onSignInTwitter(t)" #t="ngForm">
+    <md-card-actions class="button">
+      <button class="btn btn-block btn-social btn-twitter" type="submit" [disabled]="!t.valid"><span class="fa fa-twitter"></span> Login with your Twitter Account</button>
+    </md-card-actions>
+  </form>
   <form (ngSubmit)="onSignInFacebook(fb)" #fb="ngForm">
-
     <md-card-actions class="button">
       <button class="btn btn-block btn-social btn-facebook" type="submit" [disabled]="!fb.valid"><span class="fa fa-facebook"></span> Login with your Facebook Account</button>
     </md-card-actions>

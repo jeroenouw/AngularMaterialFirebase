@@ -26,6 +26,12 @@ export class SigninComponent implements OnInit {
     this.alertService.showToaster('Google login succesful');
   }
 
+  onSignInTwitter(form: NgForm) {
+    this.loading = true;
+    this.authService.signInWithTwitter();
+    this.alertService.showToaster('Twitter login succesful');
+  }
+
   onSignInFacebook(form: NgForm) {
     this.loading = true;
     this.authService.signInWithFacebook();

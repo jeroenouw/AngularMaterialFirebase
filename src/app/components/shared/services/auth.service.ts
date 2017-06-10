@@ -38,6 +38,29 @@ export class AuthService {
             );
     }
 
+    signUpWithTwitter() {
+        let providerTwitter = new firebase.auth.TwitterAuthProvider();
+        firebase.auth().signInWithPopup(providerTwitter)
+            .then((result) => {
+                let token = result.credential.accessToken;
+                let currentUser = result.user;
+                let secret = result.credential.secret;
+            })
+            .then(response => {
+                    this.router.navigate(['/']);
+                    firebase.auth().currentUser.getIdToken()
+                    .then(
+                        (token: string) => this.token = token
+                    );
+                this.userService.verificationUserEmail();
+                this.userService.saveUserInfo(firebase.auth().currentUser.uid, name, firebase.auth().currentUser.email);
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+    }
+
     signUpWithFacebook() {
         let providerFacebook = new firebase.auth.FacebookAuthProvider();
         firebase.auth().signInWithPopup(providerFacebook)
@@ -123,6 +146,22 @@ export class AuthService {
                 let token = result.credential.accessToken;
                 let currentUser = result.user;
             })
+            .then(response => {
+                    this.router.navigate(['/']);
+                    firebase.auth().currentUser.getIdToken()
+                    .then(
+                        (token: string) => this.token = token
+                    );
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+    }
+
+    signInWithTwitter() {
+        let providerTwitter = new firebase.auth.TwitterAuthProvider();
+        firebase.auth().signInWithPopup(providerTwitter)
             .then(response => {
                     this.router.navigate(['/']);
                     firebase.auth().currentUser.getIdToken()

@@ -34,6 +34,12 @@ export class SignupComponent implements OnInit {
     this.alertService.showToaster('Your Google registration is completed.');
   }
 
+  onSignupTwitter(form: NgForm) {
+    this.loading = true;
+    this.authService.signUpWithTwitter();
+    this.alertService.showToaster('Your Twitter registration is completed.');
+  }
+
   onSignupFacebook(form: NgForm) {
     this.loading = true;
     this.authService.signUpWithFacebook();
