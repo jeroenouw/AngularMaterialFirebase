@@ -33,6 +33,7 @@ const appRoutes: Routes = [
   { path: 'about', component: AboutMeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'misc', component: MiscComponent },
+  // { path: 'misc', loadChildren: './components/misc/misc.module#MiscModule' }, 
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: SigninComponent },
 
@@ -40,7 +41,6 @@ const appRoutes: Routes = [
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService] },
   { path: 'profile-settings', component: ProfileSettingsComponent, canActivate: [AuthGuardService] },
   { path: 'messages', component: MessagesComponent, canActivate: [AuthGuardService] },
-  // { path: 'lazy-loading-in-progress', loadChildren: './components/auth/auth.moduleh#AuthModule' },
   { path: '**', component: PageNotFoundComponent } 
 ];
 

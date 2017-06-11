@@ -5,6 +5,8 @@ import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PipesModule } from '../../pipes/pipes.module';
 
+// import { MiscRoutingModule } from './misc.routing';
+
 import { CarouselComponent } from './carousel/carousel.component';
 import { MiscComponent } from './misc.component';
 import { ChangeDetectionComponent } from './change/change-detection.component';
@@ -26,7 +28,8 @@ import { DialogComponent, DialogResultDialogComponent } from './dialog/dialog.co
     MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
     MdToolbarModule, MdDialogModule, MdNativeDateModule, MaterialModule,
     FormsModule, ReactiveFormsModule,
-    PipesModule
+    PipesModule,
+    // MiscRoutingModule
   ],
   exports: [
     CarouselComponent,
