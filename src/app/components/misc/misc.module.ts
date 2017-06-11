@@ -1,0 +1,42 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
+         MdToolbarModule, MdDialogModule, MdNativeDateModule, MaterialModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PipesModule } from '../../pipes/pipes.module';
+
+import { CarouselComponent } from './carousel/carousel.component';
+import { MiscComponent } from './misc.component';
+import { ChangeDetectionComponent } from './change/change-detection.component';
+import { ChangeDetailComponent } from './change/change-detail.component';
+import { VirtRealComponent } from './virtual-reality/virtreal.component';
+import { DialogComponent, DialogResultDialogComponent } from './dialog/dialog.component';
+
+@NgModule({
+  declarations: [
+    CarouselComponent,
+    MiscComponent,
+    ChangeDetectionComponent,
+    ChangeDetailComponent,
+    VirtRealComponent,
+    DialogComponent, DialogResultDialogComponent
+  ],
+  imports: [
+    CommonModule,
+    MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
+    MdToolbarModule, MdDialogModule, MdNativeDateModule, MaterialModule,
+    FormsModule, ReactiveFormsModule,
+    PipesModule
+  ],
+  exports: [
+    CarouselComponent,
+    MiscComponent,
+    ChangeDetectionComponent,
+    ChangeDetailComponent,
+    VirtRealComponent,
+    DialogComponent, DialogResultDialogComponent
+  ]
+})
+
+export class MiscModule {
+}

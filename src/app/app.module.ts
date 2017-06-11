@@ -15,7 +15,7 @@ import { BlocksModule } from './components/blocks/blocks.module';
 import { AuthModule } from './components/auth/auth.module';
 import { BackgroundsModule } from './components/backgrounds/backgrounds.module';
 import { ProfileModule } from './components/profile/profile.module';
-// import { CarouselModule } from './components/carousel/carousel.module';
+import { MiscModule } from './components/misc/misc.module';
 
 // Shared
 import {
@@ -38,13 +38,8 @@ import { AppRoutingModule,
 import { HomeComponent } from './components/home/home.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { DialogComponent, DialogResultDialogComponent } from './components/misc/dialog.component';
 import { PageNotFoundComponent } from './components/not-found/not-found.component';
 import { EmailMeComponent } from './components/email-me/email-me.component';
-import { MiscComponent } from './components/misc/misc.component';
-import { ChangeDetectionComponent } from './components/misc/change-detection.component';
-import { ChangeDetailComponent } from './components/misc/change-detail.component';
-import { VirtRealComponent } from './components/misc/virtual-reality/virtreal.component';
 
 @NgModule({
   declarations: [
@@ -52,15 +47,10 @@ import { VirtRealComponent } from './components/misc/virtual-reality/virtreal.co
     HomeComponent,
     AboutMeComponent,
     ContactComponent,
-    DialogComponent, DialogResultDialogComponent,
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
-    EmailMeComponent,
-    MiscComponent,
-    ChangeDetectionComponent,
-    ChangeDetailComponent,
-    VirtRealComponent
+    EmailMeComponent
     // routingComponents
   ],
   imports: [
@@ -77,8 +67,8 @@ import { VirtRealComponent } from './components/misc/virtual-reality/virtreal.co
     BlocksModule,
     AuthModule,
     BackgroundsModule,
-    ProfileModule
-    // CarouselModule
+    ProfileModule,
+    MiscModule
   ],
   providers: [
     UserService,
