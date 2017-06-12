@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
+import * as firebase from 'firebase';
 
-import { User, Profile } from '../shared';
+import { User, Profile, UserService } from '../shared';
 
 @Component({
   selector: 'app-profile',
@@ -39,12 +40,24 @@ export class ProfileComponent implements OnInit {
   state: string = 'small';
   
   constructor(
-    private route: ActivatedRoute) { 
+    private route: ActivatedRoute,
+    private userService: UserService
+    ) { 
     this.fullImagePath = '/assets/img/mb-bg-04.png';
     }
 
   animateImage() {
     this.state = (this.state === 'small' ? 'large' : 'small');
+  }
+
+  userEmail() {
+    this.userService.getUserProfileInformation();
+    return firebase.auth().currentUser.email;
+  }
+
+  userName() {
+    this.userService.getUserProfileInformation();
+    return firebase.auth().currentUser.displayName;
   }
 
   ngOnInit() {

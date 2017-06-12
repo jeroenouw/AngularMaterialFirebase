@@ -13,7 +13,8 @@ A full stack starter app containing [Angular 4](https://angular.io), [Material](
 ## [Live demo](http://angular4.jerouw.nl)
 
 [Live demo](http://angular4.jerouw.nl), project is still in progress and demo is also not up to date.  
-![alt text](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmdprintscreen.png "Logo")
+![loginpage](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmdprintscreen.png "Logo")
+![githubauth](https://jerouw.nl/wp-content/uploads/2017/06/ng4githubauth.png "Logo")
 
 ## Quick start
 First clone this repo: `git clone https://github.com/jeroenouw/Angular4MaterialDesign.git`.  
@@ -88,7 +89,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * File uploading
 * Change settings
 * Messaging layout and functionality
-* Profile information connection with Firebase
+* Profile bio
 
 ### Tests
 * Unit

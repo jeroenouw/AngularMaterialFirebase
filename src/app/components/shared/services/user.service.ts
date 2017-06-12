@@ -5,7 +5,7 @@ import { User, Profile } from '../models';
 
 @Injectable()
 export class UserService {
-  public userName: string;
+  public displayName: string;
   public email: string;
 
     constructor() {

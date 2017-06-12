@@ -8,8 +8,11 @@ md-card {
     margin: 100px auto;
 }
 
-md-card-header {
-    width: 122px;
+md-card-header{
+    display: inline;
+}
+
+md-card-header-text {
     margin: 0 auto;
 }
 
