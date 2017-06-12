@@ -9,8 +9,10 @@
   </div>
 
   <span class="spacer"></span>
-  
+
+  <div *ngIf="!authService.isAuthenticated();">
   <app-date-pipe></app-date-pipe>
+  </div>
 
   <span class="spacer-light"></span>
 
