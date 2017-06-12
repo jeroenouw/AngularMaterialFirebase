@@ -20,8 +20,7 @@
     </div>
 
     <ng-template #loggedin>
-        <!--(User: {{ profile.email }})-->
-        (User: {{user.email}})
+        (User: {{userEmail()}})
         <!-- <md-icon>verified_user</md-icon> -->
        
         <button md-icon-button [mdMenuTriggerFor]="menu">

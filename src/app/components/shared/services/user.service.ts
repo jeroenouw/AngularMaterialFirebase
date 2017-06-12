@@ -33,10 +33,8 @@ export class UserService {
         email: this.email
       };
     }
-
-    /*
+    
     specificUserProfile() {
-        
         if (firebase.auth().currentUser != null) {
           firebase.auth().currentUser.providerData.forEach((profile) => {
             console.log("Sign-in provider: "+profile.providerId);
@@ -44,10 +42,12 @@ export class UserService {
             console.log("  Name: "+profile.displayName);
             console.log("  Email: "+profile.email);
             console.log("  Photo URL: "+profile.photoURL);
+            return "  Email: "+profile.email;
           });
         }
     }
-    
+
+    /*
     getUserProfile() {
         firebase.auth().onAuthStateChanged((currentUser) => {
           if (currentUser = this.authService.isAuthenticated) {
@@ -57,18 +57,22 @@ export class UserService {
           }
         });
     }  
-    
+    */
+
     getUserProfileInformation() {
-        let name, email, photoUrl, uid, emailVerified;
-        if (firebase.auth().currentUser != null) {
-          //name = firebase.auth().currentUser.displayName;
-          email = firebase.auth().currentUser.email;
-          //photoUrl = firebase.auth().currentUser.photoURL;
-          //emailVerified = firebase.auth().currentUser.emailVerified;
-          //uid = firebase.auth().currentUser.uid;
-        }
+      let user = firebase.auth().currentUser;
+      let name, email, photoUrl, uid, emailVerified;
+      
+      if (user != null) {
+        name = user.displayName;
+        email = user.email;
+        photoUrl = user.photoURL;
+        emailVerified = user.emailVerified;
+        uid = user.uid;
+      }
     }
-    
+
+    /*
     updateUserProfile() {
         firebase.auth().currentUser.updateProfile({
           displayName: "Jeroenouw",
@@ -98,6 +102,7 @@ export class UserService {
             });        
     }    
     */
+
     verificationUserEmail() {
         firebase.auth().currentUser.sendEmailVerification().then(() => {
           // Email sent.
@@ -126,6 +131,5 @@ export class UserService {
           // An error happened.
         });
     } 
-    
-       
+      
 }
