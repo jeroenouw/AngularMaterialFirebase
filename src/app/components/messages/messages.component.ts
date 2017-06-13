@@ -17,7 +17,7 @@ export class MessagesComponent implements OnInit, AfterViewChecked {
   public messages: FirebaseListObservable<any>;
     
   constructor(public messageService: MessageService) {
-     this.messageService.userName = firebase.auth().currentUser.displayName;
+     this.messageService.displayName = firebase.auth().currentUser.displayName;
      this.messageService.email = firebase.auth().currentUser.email;
      this.messages = this.messageService.messages;
   }
@@ -51,8 +51,8 @@ export class MessagesComponent implements OnInit, AfterViewChecked {
   
   sendMessage() {
     console.log('new message: ', this.newMessage);
-    // this.messageService.sendMessage('', this.newMessage);
-    this.messageService.sendMessage(this.newMessage);
+    // this.messageService.sendMessage(this.newMessage);
+    this.messageService.sendMessage('', this.newMessage);
     this.newMessage = '';
   }
        

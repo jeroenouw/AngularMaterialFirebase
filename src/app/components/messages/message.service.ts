@@ -10,30 +10,30 @@ import * as firebase from 'firebase';
 export class MessageService {
   public messages: FirebaseListObservable<any>;
   public users: FirebaseListObservable<any>;
-  public userName: string;
+  public displayName: string;
   public email: string;
 
   constructor() {
     // this.messages = this.firebase.database.list('messages');
-    let messages = firebase.database().ref().child('messages/');
+    // let messages = firebase.database().ref().child('messages/');
   }
- /*
+ 
   sendMessage(message, text) {
       return firebase.database().ref().child('messages/' + message).push({
       message: text,
-      userName: this.userName,
+      displayName: this.displayName,
       email: this.email,
       timestamp: Date.now()
     });
   }
-  */
+  /*
   sendMessage(text) {
       let message = {
       message: text,
-      userName: this.userName,
+      displayName: this.displayName,
       email: this.email,
       timestamp: Date.now()
     };
-    firebase.database().ref().child('messages/' + message).push();
-  }
+    return firebase.database().ref().child('messages/' + message).push();
+  }*/
 }

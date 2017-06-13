@@ -8,7 +8,7 @@
             <div class="bubble" [class.you]="isYou(message.email)" [class.me]="isMe(message.email)">
               <p>{{ message.message }}</p>
               <div class="author">
-                {{ message.userName }} | {{ message.timestamp | date:"MM/dd/yy hh:mm a" }}
+                {{ message.displayName }} | {{ message.timestamp | date:"MM/dd/yy hh:mm a" }}
               </div>
             </div>
           </div>
