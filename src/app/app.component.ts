@@ -23,14 +23,10 @@ export class AppComponent implements OnInit {
       // See users and messages in console log
       const preUsers = document.getElementById('users')
       const dbRefUsers = firebase.database().ref().child('users');
-
       dbRefUsers.on('value', snap => console.log(snap.val()));
-
 
       const preMessages = document.getElementById('messages')
       const dbRefMessages = firebase.database().ref().child('messages');
-
       dbRefMessages.on('value', snap => console.log(snap.val()));
   }
-
 }

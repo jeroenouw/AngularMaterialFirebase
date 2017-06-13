@@ -11,7 +11,7 @@
   <span class="spacer"></span>
 
   <div *ngIf="!authService.isAuthenticated();">
-  <app-date-pipe></app-date-pipe>
+    <app-date-pipe></app-date-pipe>
   </div>
 
   <span class="spacer-light"></span>
@@ -29,7 +29,6 @@
         <md-icon>menu</md-icon>
         </button>
         
-
         <md-menu #menu="mdMenu" >
           <a md-menu-item routerLink="/profile">
             <md-icon class="profile">face</md-icon>
@@ -90,4 +89,3 @@
   </md-tab>
 
 </md-tab-group>
-

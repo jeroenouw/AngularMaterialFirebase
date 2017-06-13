@@ -46,7 +46,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 
 ### Including in this project:
 * Angular 4 front-end with Material Design
-* Firebase back-end (Authentication and NoSQL database)
+* Firebase back-end (0Auth authentication and NoSQL database)
 * Home page
 * About page
 * Contact page
