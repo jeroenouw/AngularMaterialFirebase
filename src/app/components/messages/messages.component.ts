@@ -1,6 +1,6 @@
 import * as firebase from 'firebase';
 import { Component, OnInit, AfterViewChecked, ElementRef, ViewChild } from '@angular/core';
-import { FirebaseListObservable } from 'angularfire2/database';
+import { Observable } from 'rxjs/observable';
 import { FormsModule } from '@angular/forms';
 
 import { MessageService } from './message.service';
@@ -14,7 +14,7 @@ import { MessageService } from './message.service';
 export class MessagesComponent implements OnInit, AfterViewChecked {
    @ViewChild('scrollMe') private myScrollContainer: ElementRef;
   public newMessage: string;
-  public messages: FirebaseListObservable<any>;
+  public messages: Observable<any>;
     
   constructor(public messageService: MessageService) {
      this.messageService.displayName = firebase.auth().currentUser.displayName;

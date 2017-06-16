@@ -1,15 +1,13 @@
+import * as firebase from 'firebase';
 import { Injectable } from '@angular/core';
-import { FirebaseListObservable } from 'angularfire2/database';
+import { Observable } from 'rxjs/observable';
 import { Subject } from 'rxjs/Subject';
 import { Subscription } from 'rxjs/Subscription';
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/map';
-import * as firebase from 'firebase';
 
 @Injectable()
 export class MessageService {
-  public messages: FirebaseListObservable<any>;
-  public users: FirebaseListObservable<any>;
+  public messages: Observable<any>;
+  public users: Observable<any>;
   public displayName: string;
   public email: string;
 
