@@ -1,5 +1,6 @@
 export class Profile {
-  username: string;
+  displayName: string;
+  email: string;
   bio: string;
-  image: string;
+  photoUrl: string;
 }
