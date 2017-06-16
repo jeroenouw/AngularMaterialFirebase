@@ -52,6 +52,7 @@
     "karma-remap-istanbul": "^0.6.0",
     "protractor": "^5.1.2",
     "ts-node": "^3.0.6",
-    "tslint": "^5.4.3"
+    "tslint": "^5.4.3",
+    "webpack": "^2.6.1"
   }
 }
