@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./third-block.component.scss']
 })
 export class ThirdBlockComponent  {
-  titleThree: string = 'Third Content Title';
-  contentThree: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisl ligula.';
+  titleThree: string = 'Angular 4';
+  contentThree: string = 'Angular is a framework for building client applications in HTML and TypeScript that compiles to JavaScript.';
   
-  titleFour: string = 'Fourth Content Title';
-  contentFour: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisl ligula.';
+  titleFour: string = 'Material 2';
+  contentFour: string = 'Material Design is a unified system that combines theory, resources, and tools for crafting digital experiences.';
 
-  titleFive: string = 'Fifth Content Title';
-  contentFive: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisl ligula.';
+  titleFive: string = 'Firebase';
+  contentFive: string = 'Firebase is built on Google infrastructure and scales automatically, for even the largest apps.';
 
 
 }

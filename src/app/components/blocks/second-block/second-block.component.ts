@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./second-block.component.scss']
 })
 export class SecondBlockComponent {
-  titleTwo: string = 'Second Content Title';
-  contentTwo: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisl ligula.';
+  titleTwo: string = 'Authentication and Database';
+  contentTwo: string = 'Provided by Firebase';
     
 }
