@@ -38,12 +38,6 @@ For own projects please use different keys in app.component.ts:
 ```    });```  
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-### Specific Angular 4 usage in this project:
-* Animations (@angular/platform-browser/animations)
-* ng-template
-* ngIf else
-* Titlecase pipe
-
 ### Including in this project:
 * Angular 4 front-end with Material Design
 * Firebase back-end (0Auth authentication and NoSQL database)
@@ -69,6 +63,28 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * Tests
 * Back to top button
 * Loading spinner and progress bar
+
+### Specific Angular 4 usage in this project:
+* Animations (@angular/platform-browser/animations)
+* ng-template
+* ngIf else
+* Titlecase pipe
+
+### Specific Material Design usage in this project:
+* MD Datepicker
+* MD Input
+* MD Slide toggle
+* MD Menu
+* MD Toolbar
+* MD Card
+* MD Tabs
+* MD Buttons
+* MD Icon
+* MD Progress spinner
+* MD Progress bar
+* MD Dialog
+* MD Tooltip
+* MD Snackbar
 
 ## To Do List
 * Make every component responsive

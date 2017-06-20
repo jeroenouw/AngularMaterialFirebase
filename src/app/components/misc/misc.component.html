@@ -1,15 +1,21 @@
+<!-- Carousel -->
 <app-carousel></app-carousel>
 
 <div id="content">
   <md-card>
     <h1>Misc</h1>
-    <div class="form-element">
-      <label>How are you today ? <br/>
-          <md-input-container class="full-width">
-          <input mdInput placeholder="I am feeling good!" type="text" [(ngModel)]="answer"/>
-          </md-input-container>
-      </label>
+    
+    <!-- Miscellaneous material components -->
+    <h3>Two-way data binding :</h3>
+    <md-input-container class="full-width">
+    <input mdInput placeholder="I am feeling good!" type="text" [(ngModel)]="answer"/>
+    </md-input-container>
 
+    <md-toolbar>Repeat yourself : {{answer}}</md-toolbar>
+
+    <br/>
+
+    <h3>MD Datepicker : </h3>
     <md-input-container>
       <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
       <button mdSuffix [mdDatepickerToggle]="picker"></button>
@@ -17,15 +23,26 @@
 
     <md-datepicker #picker></md-datepicker>
 
-    <md-toolbar>Repeat yourself : {{answer}}</md-toolbar>
-    </div>
-    
     <br/>
+    
+    <h3>MD Tooltip : </h3>
+    <span mdTooltip="This is a tooltip">Hover me!</span>
 
+    <br/><br/>
+
+    <h3>MD Slide toggle : </h3>
+    <md-slide-toggle class="margin">
+      Click me!
+    </md-slide-toggle>
+
+    <br/><br/>
+        
+    <h3>MD Dialog (in progress) : </h3>
     <app-dialog></app-dialog>
 
     <br/>
 
+    <!-- Pipes -->
     <app-change-detection></app-change-detection>
 
     <br/>
@@ -44,4 +61,5 @@
   </md-card>
 </div>
 
+<!-- 360 virtual reality component -->
 <app-virtreal></app-virtreal>

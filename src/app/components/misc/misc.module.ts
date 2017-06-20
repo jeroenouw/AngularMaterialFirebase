@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-         MdToolbarModule, MdDialogModule, MdNativeDateModule, MaterialModule } from '@angular/material';
+         MdToolbarModule, MdDialogModule, MdNativeDateModule, MdSlideToggleModule,
+         MdTooltipModule, MdSidenavModule, MaterialModule } from '@angular/material';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PipesModule } from '../../pipes/pipes.module';
 
@@ -26,7 +29,8 @@ import { DialogComponent, DialogResultDialogComponent } from './dialog/dialog.co
   imports: [
     CommonModule,
     MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-    MdToolbarModule, MdDialogModule, MdNativeDateModule, MaterialModule,
+    MdToolbarModule, MdDialogModule, MdNativeDateModule, MdSlideToggleModule, 
+    MdTooltipModule, MdSidenavModule, MaterialModule,
     FormsModule, ReactiveFormsModule,
     PipesModule,
     // MiscRoutingModule
