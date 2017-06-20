@@ -33,6 +33,7 @@ testem.log
 src/app/components/carousel/readme.md
 readme.txt
 todo.txt
+package-lock.json
 
 # e2e
 /e2e/*.js
