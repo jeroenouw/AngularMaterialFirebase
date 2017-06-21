@@ -75,6 +75,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * MD Input
 * MD Slide toggle
 * MD Menu
+* MD Sidenav
 * MD Toolbar
 * MD Card
 * MD Tabs

@@ -1,3 +1,19 @@
 #content { 
     padding: 20px;
 }
+
+.container {
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav {
+  padding: 25px;
+}
