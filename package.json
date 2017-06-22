@@ -18,17 +18,17 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^4.2.3",
-    "@angular/common": "^4.2.3",
-    "@angular/compiler": "^4.2.3",
-    "@angular/core": "^4.2.3",
-    "@angular/forms": "^4.2.3",
-    "@angular/http": "^4.2.3",
-    "@angular/material": "^2.0.0-beta.6",
-    "@angular/platform-browser": "^4.2.3",
-    "@angular/platform-browser-dynamic": "^4.2.3",
-    "@angular/platform-server": "^4.2.3",
-    "@angular/router": "^4.2.3",
+    "@angular/animations": "^4.2.4",
+    "@angular/common": "^4.2.4",
+    "@angular/compiler": "^4.2.4",
+    "@angular/core": "^4.2.4",
+    "@angular/forms": "^4.2.4",
+    "@angular/http": "^4.2.4",
+    "@angular/material": "^2.0.0-beta.7",
+    "@angular/platform-browser": "^4.2.4",
+    "@angular/platform-browser-dynamic": "^4.2.4",
+    "@angular/platform-server": "^4.2.4",
+    "@angular/router": "^4.2.4",
     "core-js": "^2.4.1",
     "firebase": "^4.1.2",
     "hammerjs": "^2.0.8",
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@angular/cli": "^1.1.2",
-    "@angular/compiler-cli": "^4.2.3",
+    "@angular/compiler-cli": "^4.2.4",
     "@types/jasmine": "^2.5.52",
     "@types/node": "^7.0.31",
     "codelyzer": "^3.0.1",
@@ -55,6 +55,6 @@
     "ts-node": "^3.0.6",
     "tslint": "^5.4.3",
     "typescript": "^2.3.4",
-    "webpack": "^2.6.1"
+    "webpack": "^3.0.0"
   }
 }
