@@ -10,9 +10,7 @@ A full stack starter app containing [Angular 4](https://angular.io), [Material](
 
 ### Project is still in progress
 
-## [Live demo](http://angular4.jerouw.nl)
-
-[Live demo](http://angular4.jerouw.nl), project is still in progress and demo is also not up to date.  
+## [Live demo](http://angular4.jerouw.nl) 
 ![loginpage](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmdprintscreen.png "Logo")
 ![githubauth](https://jerouw.nl/wp-content/uploads/2017/06/ng4githubauth.png "Logo")
 
