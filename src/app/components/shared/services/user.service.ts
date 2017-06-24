@@ -25,15 +25,14 @@ export class UserService {
         password: password*/
       });   
     }
-
-    // Profile
     
-    userEmail() {
-      let profile = {
-        email: this.email
-      };
+    keepInTouch(email) {
+     return firebase.database().ref().child('touch/').push({
+        email: email
+      });   
     }
-    
+
+    /*
     specificUserProfile() {
         if (firebase.auth().currentUser != null) {
           firebase.auth().currentUser.providerData.forEach((profile) => {
@@ -47,7 +46,7 @@ export class UserService {
         }
     }
 
-    /*
+    
     getUserProfile() {
         firebase.auth().onAuthStateChanged((currentUser) => {
           if (currentUser = this.authService.isAuthenticated) {

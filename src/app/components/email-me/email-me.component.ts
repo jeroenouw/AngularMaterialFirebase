@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { AlertService } from '../shared';
+import { AlertService, UserService } from '../shared';
 
 @Component({
   selector: 'app-email-me',
@@ -10,7 +10,8 @@ import { AlertService } from '../shared';
 })
 export class EmailMeComponent implements OnInit {
   constructor(
-    private alertService: AlertService) { 
+    private alertService: AlertService,
+    private userService: UserService) { 
 
     }
 
@@ -19,6 +20,7 @@ export class EmailMeComponent implements OnInit {
 
   onSubmit(form: NgForm) {
    const email = form.value.email;
+   this.userService.keepInTouch(email);
    this.alertService.showToaster('Your email is saved');
   }  
 

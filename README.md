@@ -44,7 +44,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * Contact page
 * Misc page
 * 404 page
-* Save email
+* Save email (keep in touch)
 * Authentication (Email, Google, Twitter, Facebook, Github and Anonymous)
 * Verification email after signup
 * Auth Guard
@@ -97,7 +97,6 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 
 ### Sending
 * Contact form send
-* Keep in touch send
 
 ### Profile
 * Dialog component
