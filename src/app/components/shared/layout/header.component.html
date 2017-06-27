@@ -30,7 +30,10 @@
         </button>
         
         <md-menu #menu="mdMenu" >
-          <a md-menu-item routerLink="/profile">
+          <a 
+            md-menu-item 
+            [routerLink]="['/profile', userUid(), userName()]" 
+            [queryParams]="{profile: '1'}" >
             <md-icon class="profile">face</md-icon>
             <span>Profile</span>
           </a>
@@ -45,7 +48,11 @@
             <span>{{item.title}}</span>
           </a>
 
-          <a md-menu-item routerLink="/profile-settings">
+          <a 
+            md-menu-item 
+            routerLink="/profile-settings" 
+            [queryParams]="{profile: '1'}" 
+            fragment="editProfile">
             <md-icon class="settings">settings</md-icon>
             <span>Settings</span>
           </a>

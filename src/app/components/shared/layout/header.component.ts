@@ -21,9 +21,19 @@ export class HeaderComponent {
       this.isAuthenticated = this.authService.isAuthenticated();
   }
 
+  userUid() {
+    this.userService.getUserProfileInformation();
+    return firebase.auth().currentUser.uid;
+  }
+
   userEmail() {
     this.userService.getUserProfileInformation();
     return firebase.auth().currentUser.email;
+  }
+
+  userName() {
+    this.userService.getUserProfileInformation();
+    return firebase.auth().currentUser.displayName;
   }
 
   onLogout() {

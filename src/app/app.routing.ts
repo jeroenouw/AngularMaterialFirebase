@@ -38,7 +38,7 @@ const appRoutes: Routes = [
   { path: 'login', component: SigninComponent },
 
   // Protected pages
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService] },
+  { path: 'profile/:uid/:name', component: ProfileComponent, canActivate: [AuthGuardService] },
   { path: 'profile-settings', component: ProfileSettingsComponent, canActivate: [AuthGuardService] },
   { path: 'messages', component: MessagesComponent, canActivate: [AuthGuardService] },
   { path: '**', component: PageNotFoundComponent } 
