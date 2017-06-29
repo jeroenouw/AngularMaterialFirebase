@@ -25,7 +25,12 @@ export class UserService {
         password: password*/
       });   
     }
-    
+   
+    getAdmin() {
+      return firebase.database().ref().child('users/' + 'RA21zYtgPHbvG764Ehn3ch8NEHP2').on('value', (snapshot) => {
+      });   
+    }
+
     keepInTouch(email) {
      return firebase.database().ref().child('touch/').push({
         email: email

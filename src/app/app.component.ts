@@ -31,6 +31,6 @@ export class AppComponent implements OnInit {
 
       const preTouch = document.getElementById('touch')
       const dbRefTouch = firebase.database().ref().child('touch');
-      dbRefMessages.on('value', snap => console.log(snap.val()));
+      dbRefTouch.on('value', snap => console.log(snap.val()));
   }
 }
