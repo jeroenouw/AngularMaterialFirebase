@@ -2,12 +2,12 @@
     <md-card> 
     <h3>My profile settings</h3>
 
-    <form [formGroup]="settingsForm" (ngSubmit)="onSaveData()">
+    <form class="form" (ngSubmit)="onUpdateUserInfo(sv)" #sv="ngForm">
 
-        <div class="form-group">
+        <!-- <div class="form-group"> -->
             <!-- <input mdInput placeholder="URL of profile picture" type="text" id="image" name="image" formControlName="image"> -->
             <!-- Upload files in progress -->
-            <p-fileUpload md-raised-button name="users[]" id="image" formControlName="image" 
+            <!-- <p-fileUpload md-raised-button name="users[]" id="image" formControlName="image" 
             url="https://angular4materialdesign.firebaseio.com/users/' + uid + '/image" 
             (onUpload)="onUpload($event)" accept="image/*" maxFileSize="1000000">
                 <ng-template pTemplate type="content">
@@ -15,24 +15,24 @@
                         <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
                     </ul>
                 </ng-template>        
-            </p-fileUpload>
+            </p-fileUpload> -->
             <!-- Upload files in progress -->
-        </div>
+        <!-- </div> -->
 
         <md-input-container class="form-group">
-            <input mdInput placeholder="Username" type="test" id="username" name="username" formControlName="username">
+            <input mdInput placeholder="Username" type="displayName" id="displayName" name="displayName" ngModel>
         </md-input-container>
 
         <md-input-container class="form-group">
-            <textarea mdInput placeholder="Short Bio" rows="8" id="bio" name="bio" formControlName="bio"></textarea>
+            <textarea mdInput placeholder="Short Bio" rows="8" id="bio" name="bio" ngModel></textarea>
         </md-input-container>
 
         <!-- <md-input-container class="form-group">
-            <input mdInput placeholder="Email" type="email" id="email" name="email" formControlName="email">
+            <input mdInput placeholder="Email" type="email" id="email" name="email" ngModel>
         </md-input-container>
 
         <md-input-container class="form-group">
-            <input mdInput placeholder="Password" type="password" id="password" name="password" formControlName="password">
+            <input mdInput placeholder="Password" type="password" id="password" name="password" ngModel>
         </md-input-container> -->
 
         <hr />

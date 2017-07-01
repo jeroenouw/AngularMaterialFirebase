@@ -7,6 +7,9 @@ import { User, Profile } from '../models';
 export class UserService {
   public displayName: string;
   public email: string;
+  public bio: any;
+  public image: any;
+  public uid: any;
 
     constructor() {
 
@@ -17,13 +20,18 @@ export class UserService {
     ) {
       return firebase.database().ref().child('users/' + uid).set({
         name: name,
-        email: email,
-        /* token: token,
-        image: image,
-        username: username,
-        bio: bio,
-        password: password*/
+        email: email
       });   
+    }
+
+    updateUserInfo(uid, displayName, bio) {
+      return firebase.database().ref().child('users/' + uid).update({
+        // token: token,
+        // image: this.image,
+        displayName: displayName,
+        bio: bio
+        // password: password
+      })
     }
    
     getAdmin() {

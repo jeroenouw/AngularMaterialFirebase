@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule, FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Response } from '@angular/http';
+import { NgForm } from '@angular/forms';
 
 import * as firebase from 'firebase';
 import { FileUploadModule } from 'primeng/primeng';
@@ -27,13 +28,13 @@ export class ProfileSettingsComponent implements OnInit {
     private userService: UserService,
     private fb: FormBuilder) {
 
-      this.settingsForm = this.fb.group({
+      /*this.settingsForm = this.fb.group({
           image: '',
           username: '',
           bio: '',
           email: '',
           password: ''
-      });
+      });*/
     
     }
 
@@ -48,13 +49,8 @@ export class ProfileSettingsComponent implements OnInit {
   }
 
   ngOnInit() {
-    (<any>Object).assign(this.user, this.dataStorageService.getUser());
-    this.settingsForm.patchValue(this.user);
-  }
-
-
-  onUpdateUser(values: Object) {
-    (<any>Object).assign(this.user, values);
+    /*(<any>Object).assign(this.user, this.dataStorageService.getUser());
+    this.settingsForm.patchValue(this.user);*/
   }
 
   onPasswordReset() {
@@ -62,9 +58,13 @@ export class ProfileSettingsComponent implements OnInit {
     this.alertService.showToaster('Reset password is sent to your email');
   }
 
-  onSaveData() {
+  onUpdateUserInfo(form: NgForm) {
+    const displayName = form.value.displayName;
+    const bio = form.value.bio;
+    this.userService.updateUserInfo(firebase.auth().currentUser.uid, displayName, bio);
+    this.alertService.showToaster('Your settings are saved');
+    /*
       this.onUpdateUser(this.settingsForm.value);
-
       this.dataStorageService.saveUser()
         .subscribe(
           (response: Response) => {
@@ -74,8 +74,7 @@ export class ProfileSettingsComponent implements OnInit {
       };
           }
         );
-    
-      this.alertService.showToaster('Your settings are saved');
+    */
   }
 
   onFetchData() {
