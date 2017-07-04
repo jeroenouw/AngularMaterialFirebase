@@ -1,10 +1,15 @@
-<app-header></app-header><br />
+<md-sidenav-container class="container">
 
-<router-outlet></router-outlet>
+    
+    <app-header></app-header><br />
+    <app-sidenav></app-sidenav>
+    <router-outlet></router-outlet>
 
-<!-- See users and messages in console log -->
-<div id="messages"> </div>
-<div id="users"> </div>
-<div id="touch"> </div>
+    <!-- See messages, users and stay in touch in console log -->
+    <div id="messages"> </div>
+    <div id="users"> </div>
+    <div id="touch"> </div>
 
-<app-footer></app-footer> 
+    <app-footer></app-footer> 
+
+</md-sidenav-container>

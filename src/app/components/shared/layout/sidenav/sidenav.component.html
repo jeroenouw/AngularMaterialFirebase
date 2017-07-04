@@ -1,0 +1,45 @@
+<md-sidenav mode="over" opened="false" #sidenav class="sidenav">
+
+  <img [src]="angularImage">
+  
+  <div class="menu-link">
+    <button md-button routerLink="/home">
+      <md-icon class="home">home</md-icon>
+      <span>Home</span>
+    </button>
+
+    <button md-button routerLink="/about">
+      <md-icon class="about">pageview</md-icon>
+      <span>About</span>
+    </button>
+
+    <button md-button routerLink="/contact">
+      <md-icon class="contact">email</md-icon>
+      <span>Contact</span>
+    </button>
+
+    <button md-button routerLink="/misc">
+      <md-icon class="misc">burst_mode</md-icon>
+      <span>Misc</span>
+    </button>
+
+    <hr>
+
+    <button md-button routerLink="/signup">
+      <md-icon class="signup">person_add</md-icon>
+      <span>Signup</span>
+    </button>
+
+    <button md-button routerLink="/login">
+      <md-icon class="login">lock_open</md-icon>
+      <span>Login</span>
+    </button>
+  </div>
+
+</md-sidenav>
+
+<div class="sidenav-content">
+  <button type="button" md-raised-button (click)="sidenav.toggle()">
+    Menu
+  </button>
+</div>

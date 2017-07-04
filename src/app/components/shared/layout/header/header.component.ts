@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import * as firebase from 'firebase';
 
-import { AuthService, AlertService, DataStorageService, UserService } from '../services';
+import { AuthService, AlertService, DataStorageService, UserService } from '../../services';
 
 @Component({
   selector: 'app-header',
