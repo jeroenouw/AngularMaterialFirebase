@@ -20,7 +20,6 @@ import { MiscModule } from './components/misc/misc.module';
 
 // Shared
 import {
-  SidenavComponent,
   FooterComponent,
   HeaderComponent,
   UserService,
@@ -52,8 +51,7 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
-    EmailMeComponent,
-    SidenavComponent
+    EmailMeComponent
     // routingComponents
   ],
   imports: [

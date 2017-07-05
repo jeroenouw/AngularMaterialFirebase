@@ -11,14 +11,16 @@ import { AuthService, AlertService, DataStorageService, UserService } from '../.
 export class HeaderComponent {
   title: string = '';
   isAuthenticated = false;
-
+  angularImage: string;
+  
   constructor(
     private dataStorageService: DataStorageService,
     private authService: AuthService,
     private alertService: AlertService,
     private userService: UserService
     ) {
-      this.isAuthenticated = this.authService.isAuthenticated();
+      this.isAuthenticated = this.authService.isAuthenticated(),
+      this.angularImage = '/assets/img/angular2.png';;
   }
 
   userUid() {

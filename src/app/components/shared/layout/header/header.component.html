@@ -1,15 +1,57 @@
+<!-- Sidenav -->
+  <md-sidenav mode="over" opened="false" #sidenav class="sidenav">
+
+  <img [src]="angularImage">
+  
+  <div class="menu-link">
+    <button md-button routerLink="/home" (click)="sidenav.close()">
+      <md-icon class="home">home</md-icon>
+      <span>Home</span>
+    </button>
+
+    <button md-button routerLink="/about" (click)="sidenav.close()">
+      <md-icon class="about">pageview</md-icon>
+      <span>About</span>
+    </button>
+
+    <button md-button routerLink="/contact" (click)="sidenav.close()">
+      <md-icon class="contact">email</md-icon>
+      <span>Contact</span>
+    </button>
+
+    <button md-button routerLink="/misc" (click)="sidenav.close()">
+      <md-icon class="misc">burst_mode</md-icon>
+      <span>Misc</span>
+    </button>
+
+    <hr>
+
+    <button md-button routerLink="/signup" (click)="sidenav.close()">
+      <md-icon class="signup">person_add</md-icon>
+      <span>Signup</span>
+    </button>
+
+    <button md-button routerLink="/login" (click)="sidenav.close()">
+      <md-icon class="login">lock_open</md-icon>
+      <span>Login</span>
+    </button>
+  </div>
+
+</md-sidenav>
+
+<!-- Header -->
 <md-toolbar color="primary">
  
   <span><a href="/"><app-titlecase-pipe></app-titlecase-pipe></a></span>
-  <!--
-  <div class="menu-link">
-      <a routerLink="/home">Home</a>
-      <a routerLink="/about">About</a>
-      <a routerLink="/contact">Contact</a>
-      <a routerLink="/misc">Misc</a>
-  </div>
-  -->
+  
+  <!-- Sidenav activate -->
+  <div class="sidenav-content">
+    <button type="button" md-icon-button (click)="sidenav.toggle()">
+        <md-icon>menu</md-icon>
+    </button>
+  </div>     
 
+  <!-- Menu -->
   <span class="spacer"></span>
 
   <div *ngIf="!authService.isAuthenticated();">
