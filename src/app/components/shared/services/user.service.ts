@@ -16,12 +16,12 @@ export class UserService {
     }
 
     saveUserInfo(uid, name, email
-    //uid, token, image, name, username, bio, email, password
+    // uid, token, image, name, username, bio, email, password
     ) {
       return firebase.database().ref().child('users/' + uid).set({
         name: name,
         email: email
-      });   
+      });
     }
 
     updateUserInfo(uid, displayName, bio) {
@@ -33,16 +33,16 @@ export class UserService {
         // password: password
       })
     }
-   
+
     getAdmin() {
       return firebase.database().ref().child('users/' + 'RA21zYtgPHbvG764Ehn3ch8NEHP2').on('value', (snapshot) => {
-      });   
+      });
     }
 
     keepInTouch(email) {
      return firebase.database().ref().child('touch/').push({
         email: email
-      });   
+      });
     }
 
     /*
@@ -59,7 +59,6 @@ export class UserService {
         }
     }
 
-    
     getUserProfile() {
         firebase.auth().onAuthStateChanged((currentUser) => {
           if (currentUser = this.authService.isAuthenticated) {
@@ -68,13 +67,13 @@ export class UserService {
 
           }
         });
-    }  
+    }
     */
 
     getUserProfileInformation() {
-      let user = firebase.auth().currentUser;
+      const user = firebase.auth().currentUser;
       let name, email, photoUrl, uid, emailVerified;
-      
+
       if (user != null) {
         name = user.displayName;
         email = user.email;
@@ -94,16 +93,16 @@ export class UserService {
         }, (error) => {
           // An error happened.
         });
-    }    
-    
+    }
+
     deleteUserProfile() {
         firebase.auth().currentUser.delete().then(() => {
           // User deleted.
         }, (error) => {
           // An error happened.
         });
-    }  
-    
+    }
+
     // Email
     updateUserEmail() {
         firebase.auth().currentUser.updateEmail("test@test.nl")
@@ -111,8 +110,8 @@ export class UserService {
               // Update successful.
             }, (error) => {
               // An error happened.
-            });        
-    }    
+            });   
+    }
     */
 
     verificationUserEmail() {
@@ -122,7 +121,7 @@ export class UserService {
           // An error happened.
         });
     }
-    
+
     // Password
     /*
     updateUserPassword() {
@@ -133,15 +132,15 @@ export class UserService {
         }, (error) => {
           // An error happened.
         });
-    } 
+    }
     */ 
-    
+
     sendUserPasswordResetEmail() {
         firebase.auth().sendPasswordResetEmail(firebase.auth().currentUser.email).then(() => {
           // Email sent.
         }, (error) => {
           // An error happened.
         });
-    } 
-      
+    }
+
 }

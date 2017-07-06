@@ -26,14 +26,14 @@ import { AuthGuardService } from './components/shared';
 
 // Routing
 const appRoutes: Routes = [
-  
+
   // Public pages
   { path: '', redirectTo: '/home', pathMatch : 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutMeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'misc', component: MiscComponent },
-  // { path: 'misc', loadChildren: './components/misc/misc.module#MiscModule' }, 
+  // { path: 'misc', loadChildren: './components/misc/misc.module#MiscModule' },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: SigninComponent },
 
@@ -41,7 +41,7 @@ const appRoutes: Routes = [
   { path: 'profile/:uid/:name', component: ProfileComponent, canActivate: [AuthGuardService] },
   { path: 'profile-settings', component: ProfileSettingsComponent, canActivate: [AuthGuardService] },
   { path: 'messages', component: MessagesComponent, canActivate: [AuthGuardService] },
-  { path: '**', component: PageNotFoundComponent } 
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 // Don't declare components here

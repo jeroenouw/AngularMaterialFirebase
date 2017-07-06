@@ -29,7 +29,7 @@ import { DialogComponent, DialogResultDialogComponent } from './dialog/dialog.co
   imports: [
     CommonModule,
     MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-    MdToolbarModule, MdDialogModule, MdNativeDateModule, MdSlideToggleModule, 
+    MdToolbarModule, MdDialogModule, MdNativeDateModule, MdSlideToggleModule,
     MdTooltipModule, MdSidenavModule, MaterialModule,
     FormsModule, ReactiveFormsModule,
     PipesModule,

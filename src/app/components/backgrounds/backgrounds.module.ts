@@ -25,6 +25,5 @@ import { BackgroundEmailComponent } from './background-email/background-email.co
     BackgroundEmailComponent
   ]
 })
-export class BackgroundsModule { 
+export class BackgroundsModule {
 }
- 

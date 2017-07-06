@@ -17,7 +17,7 @@ export class SigninComponent implements OnInit {
   }
 
   ngOnInit() {
-  
+
   }
 
   onSignInGoogle(form: NgForm) {

@@ -13,8 +13,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CurrencyPipeComponent implements OnInit {
 
-  angularPrice: number = 0.567;
-  angular4Price: number = 1.3743;
+  angularPrice = 0.567;
+  angular4Price = 1.3743;
 
   constructor() {
   }

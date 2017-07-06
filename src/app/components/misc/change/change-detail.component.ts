@@ -39,7 +39,7 @@ export class ChangeDetailComponent implements OnInit, DoCheck {
   ngDoCheck(): void {
     console.log(this.course);
 
-    var changes = this.differ.diff(this.course);
+    const changes = this.differ.diff(this.course);
 
     if (changes) {
       console.log('changes detected');

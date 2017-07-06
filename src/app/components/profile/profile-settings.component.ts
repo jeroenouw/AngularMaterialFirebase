@@ -35,15 +35,15 @@ export class ProfileSettingsComponent implements OnInit {
           email: '',
           password: ''
       });*/
-    
-    }
 
-    uploadedFiles: any[] = [];
+  }
+
+  uploadedFiles: any[] = [];
 
   // Upload files in progress
   onUpload(event) {
-      for(let file of event.files) {
-        let uid = firebase.auth().currentUser.uid;
+      for (const file of event.files) {
+        const uid = firebase.auth().currentUser.uid;
         firebase.database().ref().child('users/' + uid + '/image/').push();
       }
   }

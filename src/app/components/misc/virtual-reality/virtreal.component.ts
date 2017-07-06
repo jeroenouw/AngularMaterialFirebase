@@ -27,10 +27,10 @@ export class VirtRealComponent implements AfterViewInit {
       height: 250
     });
 
-    this.viewer.on('ready',() => {
-      
+    this.viewer.on('ready', () => {
+
       this.loadScene('world');
-      this.viewer.on('click', (event) => event.id ? this.loadScene(event.id) : "");
+      this.viewer.on('click', (event) => event.id ? this.loadScene(event.id) : '');
     });
   }
 
@@ -39,14 +39,14 @@ export class VirtRealComponent implements AfterViewInit {
     // Set the image
     this.viewer.setContent({
       image: this.scenes[id].image,
-      //preview: this.scenes[id].preview,
+      // preview: this.scenes[id].preview,
     });
     // Add all the hotspots for the scene
-    let newScene = this.scenes[id];
-    let sceneHotspots = Object.keys(newScene.hotspots);
+    const newScene = this.scenes[id];
+    const sceneHotspots = Object.keys(newScene.hotspots);
     for (let i = 0; i < sceneHotspots.length; i++) {
-      let hotspotKey = sceneHotspots[i];
-      let hotspot = newScene.hotspots[hotspotKey];
+      const hotspotKey = sceneHotspots[i];
+      const hotspot = newScene.hotspots[hotspotKey];
 
       this.viewer.addHotspot(hotspotKey, {
         pitch: hotspot.pitch,
@@ -59,8 +59,8 @@ export class VirtRealComponent implements AfterViewInit {
   }
 
   getFirstScene() {
-    for(let key in this.scenes) {
-        if(this.scenes.hasOwnProperty(key)) {
+    for (const key in this.scenes) {
+        if (this.scenes.hasOwnProperty(key)) {
             return key;
         }
     }

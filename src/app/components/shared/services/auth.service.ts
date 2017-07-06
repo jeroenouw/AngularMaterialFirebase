@@ -17,11 +17,11 @@ export class AuthService {
 
     // Signup/register
     signUpWithGoogle() {
-        let providerGoogle = new firebase.auth.GoogleAuthProvider();
+        const providerGoogle = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(providerGoogle)
             .then((result) => {
-                let token = result.credential.accessToken;
-                let currentUser = result.user;
+                const token = result.credential.accessToken;
+                const currentUser = result.user;
             })
             .then(response => {
                     this.router.navigate(['/']);
@@ -39,12 +39,12 @@ export class AuthService {
     }
 
     signUpWithTwitter() {
-        let providerTwitter = new firebase.auth.TwitterAuthProvider();
+        const providerTwitter = new firebase.auth.TwitterAuthProvider();
         firebase.auth().signInWithPopup(providerTwitter)
             .then((result) => {
-                let token = result.credential.accessToken;
-                let currentUser = result.user;
-                let secret = result.credential.secret;
+                const token = result.credential.accessToken;
+                const currentUser = result.user;
+                const secret = result.credential.secret;
             })
             .then(response => {
                     this.router.navigate(['/']);
@@ -62,7 +62,7 @@ export class AuthService {
     }
 
     signUpWithFacebook() {
-        let providerFacebook = new firebase.auth.FacebookAuthProvider();
+        const providerFacebook = new firebase.auth.FacebookAuthProvider();
         firebase.auth().signInWithPopup(providerFacebook)
             .then(
                 response => {
@@ -81,11 +81,11 @@ export class AuthService {
     }
 
     signUpWithGithub() {
-        let providerGithub = new firebase.auth.GithubAuthProvider();
+        const providerGithub = new firebase.auth.GithubAuthProvider();
         firebase.auth().signInWithPopup(providerGithub)
             .then((result) => {
-                let token = result.credential.accessToken;
-                let currentUser = result.user;
+                const token = result.credential.accessToken;
+                const currentUser = result.user;
                 this.userService.verificationUserEmail();
                 this.userService.saveUserInfo(firebase.auth().currentUser.uid, name, firebase.auth().currentUser.email);
             })
@@ -140,11 +140,11 @@ export class AuthService {
 
     // Signin/login
     signInWithGoogle() {
-        let providerGoogle = new firebase.auth.GoogleAuthProvider();
+        const providerGoogle = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(providerGoogle)
             .then((result) => {
-                let token = result.credential.accessToken;
-                let currentUser = result.user;
+                const token = result.credential.accessToken;
+                const currentUser = result.user;
             })
             .then(response => {
                     this.router.navigate(['/']);
@@ -160,7 +160,7 @@ export class AuthService {
     }
 
     signInWithTwitter() {
-        let providerTwitter = new firebase.auth.TwitterAuthProvider();
+        const providerTwitter = new firebase.auth.TwitterAuthProvider();
         firebase.auth().signInWithPopup(providerTwitter)
             .then(response => {
                     this.router.navigate(['/']);
@@ -176,7 +176,7 @@ export class AuthService {
     }
 
     signInWithFacebook() {
-        let providerFacebook = new firebase.auth.FacebookAuthProvider();
+        const providerFacebook = new firebase.auth.FacebookAuthProvider();
         firebase.auth().signInWithPopup(providerFacebook)
             .then(
                 response => {
@@ -193,11 +193,11 @@ export class AuthService {
     }
 
     signInWithGithub() {
-        let providerGithub = new firebase.auth.GithubAuthProvider();
+        const providerGithub = new firebase.auth.GithubAuthProvider();
         firebase.auth().signInWithPopup(providerGithub)
             .then((result) => {
-                let token = result.credential.accessToken;
-                let currentUser = result.user;
+                const token = result.credential.accessToken;
+                const currentUser = result.user;
             })
             .then(response => {
                     this.router.navigate(['/']);
@@ -235,14 +235,14 @@ export class AuthService {
             response => {
                 this.router.navigate(['/'])
                 firebase.auth().onAuthStateChanged(currentUser => {
-                    let isAnonymous = currentUser.isAnonymous;
-                    let uid = currentUser.uid;
+                    const isAnonymous = currentUser.isAnonymous;
+                    const uid = currentUser.uid;
                     firebase.auth().currentUser.getIdToken()
                     .then(
                         (token: string) => this.token = token
                     ),
                     console.log(currentUser);
-                })                
+                })     
             }
         )
         .catch(

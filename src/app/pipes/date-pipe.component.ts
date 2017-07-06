@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
         {{today | date:'d'}}-{{today | date:'M'}}-{{today | date:'y'}}
         <!--<p>A alternative, {{today | date:'medium'}}</p>-->
-`, 
+`,
   // styles: ['p {font-weight: bold; }']
 
 })

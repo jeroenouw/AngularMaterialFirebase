@@ -58,7 +58,7 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     BrowserModule,
     BrowserAnimationsModule,
     MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-    MdToolbarModule, MdDialogModule, MdSidenavModule, MdNativeDateModule, 
+    MdToolbarModule, MdDialogModule, MdSidenavModule, MdNativeDateModule,
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,

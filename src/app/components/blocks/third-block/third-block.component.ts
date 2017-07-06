@@ -8,12 +8,10 @@ import { Component } from '@angular/core';
 export class ThirdBlockComponent  {
   titleThree: string = 'Angular 4';
   contentThree: string = 'Angular is a framework for building client applications in HTML and TypeScript that compiles to JavaScript.';
-  
+
   titleFour: string = 'Material 2';
   contentFour: string = 'Material Design is a unified system that combines theory, resources, and tools for crafting digital experiences.';
 
   titleFive: string = 'Firebase';
   contentFive: string = 'Firebase is built on Google infrastructure and scales automatically, for even the largest apps.';
-
-
 }

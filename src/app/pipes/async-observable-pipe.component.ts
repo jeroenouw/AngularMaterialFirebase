@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from "rxjs/Rx"
+import { Observable } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-async-observable-pipe',

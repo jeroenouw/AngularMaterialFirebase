@@ -9,11 +9,11 @@ import { Image } from '../../shared';
 
 export class CarouselComponent {
   public images = IMAGES;
-  constructor() {  
+  constructor() {
   }
 }
 
-let IMAGES: Image[] = [
+const IMAGES: Image[] = [
   { 'title': 'Carousel slide nr 1', 'url': '/assets/img/mb-bg-06.png' },
   { 'title': 'Carousel slide nr 2', 'url': '/assets/img/mb-bg-05.png' },
   { 'title': 'Carousel slide nr 3', 'url': '/assets/img/mb-bg-06.png' },

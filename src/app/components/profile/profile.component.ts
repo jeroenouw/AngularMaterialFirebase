@@ -32,20 +32,19 @@ export class ProfileComponent implements OnInit {
   user: {uid: any};
 
   profileTitle: string = 'My profile';
-  profileBio: string = 'Here you can place your own personal bio text.'; 
+  profileBio: string = 'Here you can place your own personal bio text.';
   fullImagePath: string;
 
   state: string = 'small';
-  
+
   constructor(private route: ActivatedRoute,
-              private userService: UserService) 
-              { 
-                this.fullImagePath = '/assets/img/mb-bg-04.png';
-              }
-  
+              private userService: UserService) { 
+              this.fullImagePath = '/assets/img/mb-bg-04.png';
+  }
+
   ngOnInit() {
     this.user = {
-      uid: this.route.snapshot.params['uid']                 
+      uid: this.route.snapshot.params['uid']       
     };
     this.route.params
       .subscribe(

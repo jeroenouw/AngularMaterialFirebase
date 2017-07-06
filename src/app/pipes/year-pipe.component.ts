@@ -4,8 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-year-pipe',
   template: `
       {{today | date:'y'}}
-`, 
-  // styles: ['']
+`,
+// styles: ['']
 })
 export class YearPipeComponent {
   today: number = Date.now();

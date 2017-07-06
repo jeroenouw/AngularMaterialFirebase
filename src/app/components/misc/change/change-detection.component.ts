@@ -12,7 +12,7 @@ import { Component, OnInit, KeyValueDiffers } from '@angular/core';
     <pre class="source">{{change2 | json}}</pre>
     <app-change-detail [course]="change1"></app-change-detail>
   `,
-  styles: [`.source { 
+  styles: [`.source {
       background-color: #ccc
       }`]
 })

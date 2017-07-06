@@ -29,6 +29,5 @@ import { ThirdBlockComponent } from './third-block/third-block.component';
     ThirdBlockComponent
   ]
 })
-export class BlocksModule { 
+export class BlocksModule {
 }
- 

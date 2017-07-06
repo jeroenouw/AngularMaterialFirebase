@@ -14,8 +14,8 @@ import { Component } from '@angular/core';
 })
 
 export class HomeComponent {
- 
-  onToTop(){
+
+  onToTop() {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   }
 
