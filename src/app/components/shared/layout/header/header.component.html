@@ -26,15 +26,24 @@
 
     <hr>
 
-    <button md-button routerLink="/signup" (click)="sidenav.close()">
-      <md-icon class="signup">person_add</md-icon>
-      <span>Signup</span>
-    </button>
+    <div *ngIf="!authService.isAuthenticated(); else logout">
+      <button md-button routerLink="/signup" (click)="sidenav.close()">
+        <md-icon class="signup">person_add</md-icon>
+        <span>Signup</span>
+      </button>
 
-    <button md-button routerLink="/login" (click)="sidenav.close()">
-      <md-icon class="login">lock_open</md-icon>
-      <span>Login</span>
-    </button>
+      <button md-button routerLink="/login" (click)="sidenav.close()">
+        <md-icon class="login">lock_open</md-icon>
+        <span>Login</span>
+      </button>
+    </div>
+
+    <ng-template #logout>          
+      <button md-button (click)="onLogout()" (click)="sidenav.close()">
+        <md-icon class="logout">lock_outline</md-icon>
+        <span>Logout</span>
+      </button>
+    </ng-template>
   </div>
 
 </md-sidenav>
