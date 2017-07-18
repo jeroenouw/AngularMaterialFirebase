@@ -1,0 +1,29 @@
+<h3>MD/CDK Table : </h3>
+<div class="container mat-elevation-z8">
+  <md-table #table [dataSource]="dataSource" mdSort>
+
+    <ng-container cdkColumnDef="userId">
+      <md-header-cell *cdkHeaderCellDef md-sort-header> ID </md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.id}} </md-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="progress">
+      <md-header-cell *cdkHeaderCellDef md-sort-header> Progress </md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.progress}}% </md-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="userName">
+      <md-header-cell *cdkHeaderCellDef md-sort-header> Name </md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.name}} </md-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="color">
+      <md-header-cell *cdkHeaderCellDef md-sort-header> Color </md-header-cell>
+      <md-cell *cdkCellDef="let row" [style.color]="row.color"> {{row.color}} </md-cell>
+    </ng-container>
+
+    <md-header-row *cdkHeaderRowDef="displayedColumns"></md-header-row>
+    <md-row *cdkRowDef="let row; columns: displayedColumns;"></md-row>
+
+  </md-table>
+</div>

@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
          MdToolbarModule, MdDialogModule, MdNativeDateModule, MdSlideToggleModule,
-         MdTooltipModule, MdSidenavModule, MaterialModule } from '@angular/material';
+         MdTooltipModule, MdSidenavModule, MdTableModule, MaterialModule } from '@angular/material';
 
+import { CdkTableModule } from '@angular/cdk';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PipesModule } from '../../pipes/pipes.module';
 
@@ -16,6 +17,7 @@ import { ChangeDetectionComponent } from './change/change-detection.component';
 import { ChangeDetailComponent } from './change/change-detail.component';
 import { VirtRealComponent } from './virtual-reality/virtreal.component';
 import { DialogComponent, DialogResultDialogComponent } from './dialog/dialog.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,15 @@ import { DialogComponent, DialogResultDialogComponent } from './dialog/dialog.co
     ChangeDetectionComponent,
     ChangeDetailComponent,
     VirtRealComponent,
-    DialogComponent, DialogResultDialogComponent
+    DialogComponent, DialogResultDialogComponent,
+    TableComponent
   ],
   imports: [
     CommonModule,
     MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
     MdToolbarModule, MdDialogModule, MdNativeDateModule, MdSlideToggleModule,
-    MdTooltipModule, MdSidenavModule, MaterialModule,
+    MdTooltipModule, MdSidenavModule, MdTableModule, MaterialModule,
+    CdkTableModule,
     FormsModule, ReactiveFormsModule,
     PipesModule,
     // MiscRoutingModule
@@ -41,7 +45,8 @@ import { DialogComponent, DialogResultDialogComponent } from './dialog/dialog.co
     ChangeDetectionComponent,
     ChangeDetailComponent,
     VirtRealComponent,
-    DialogComponent, DialogResultDialogComponent
+    DialogComponent, DialogResultDialogComponent,
+    TableComponent
   ]
 })
 
