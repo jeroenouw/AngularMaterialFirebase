@@ -7,7 +7,7 @@ import { NgForm } from '@angular/forms';
 import * as firebase from 'firebase';
 import { FileUploadModule } from 'primeng/primeng';
 
-import { User, Profile, DataStorageService, AuthService, AlertService, UserService } from '../shared';
+import { User, Profile, AuthService, AlertService, UserService } from '../shared';
 
 @Component({
   selector: 'app-profile-settings',
@@ -22,7 +22,7 @@ export class ProfileSettingsComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private dataStorageService: DataStorageService,
+    // private dataStorageService: DataStorageService,
     private authService: AuthService,
     private alertService: AlertService,
     private userService: UserService,
@@ -77,10 +77,12 @@ export class ProfileSettingsComponent implements OnInit {
     */
   }
 
+  /*
   onFetchData() {
     this.dataStorageService.getUser();
     this.alertService.showToaster('Data is refreshed');
   }
+  */
 
   onLogout() {
     this.authService.logout();

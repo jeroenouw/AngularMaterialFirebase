@@ -7,7 +7,7 @@ import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
          MaterialModule } from '@angular/material';
 import 'hammerjs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 // Modules
 import { MessagesModule } from './components/messages/messages.module';
@@ -62,7 +62,7 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule,
+    HttpClientModule,
     AppRoutingModule,
     MessagesModule,
     PipesModule,

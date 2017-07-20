@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import * as firebase from 'firebase';
 
-import { AuthService, AlertService, DataStorageService, UserService } from '../../services';
+import { AuthService, AlertService, UserService } from '../../services';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +14,6 @@ export class HeaderComponent {
   angularImage: string;
 
   constructor(
-    private dataStorageService: DataStorageService,
     private authService: AuthService,
     private alertService: AlertService,
     private userService: UserService

@@ -6,7 +6,8 @@
 ![logo](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmd.png "Logo")  
 
 # Angular 4 | Material Design | Firebase - Starter kit
-A full stack starter app containing [Angular 4](https://angular.io), [Material](https://material.io/) and [Firebase](https://firebase.google.com/).
+A full stack starter app containing [Angular 4](https://angular.io) (v5.0.0-beta.0/v4.3.1), [Material](https://material.io/) (v2.0.0-beta.8) and [Firebase](https://firebase.google.com/) (v4.1.3).
+
 
 ### Project is still in progress
 
@@ -24,7 +25,7 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 To build the project run `npm run dist`.
 
 ## Development
-For own projects please use different keys in app.component.ts:  
+For own projects please use different keys in `app.component.ts`:  
 ``` firebase.initializeApp({ ```   
 ```     // For other projects use different keys```  
 ```    apiKey: '[YOUR_KEY]',```  
@@ -34,6 +35,7 @@ For own projects please use different keys in app.component.ts:
 ```   storageBucket: '[YOUR_KEY]',```    
 ```  messagingSenderId: '[YOUR_KEY]'```  
 ```    });```  
+  
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ### Including in this project:
