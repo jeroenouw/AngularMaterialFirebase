@@ -1,7 +1,10 @@
 {
   "name": "ng4matfire",
+  "version": "0.0.1",
   "author": "Jeroen Ouwehand",
-  "version": "0.0.0",
+  "description": "Full stack starter app with Angular 4, Material Design and Firebase.",
+  "keywords": ["angular", "firebase", "material", "nosql", "oauth", "starter-template"],
+  "homepage": "https://github.com/jeroenouw/Angular4MaterialDesign",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -16,7 +19,6 @@
     "prodaot": "ng build --prod --aot",
     "i18n": "ng-xi18n"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^4.3.1",
     "@angular/cdk": "^2.0.0-beta.8",
