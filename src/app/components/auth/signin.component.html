@@ -3,6 +3,9 @@
 <!-- Progress bar -->
 <md-progress-bar *ngIf="loading" mode="indeterminate"></md-progress-bar>
 
+<!-- TEMPORARY -->
+<app-phone-signin></app-phone-signin>
+
 <md-card>  
   <h3>Social login</h3>
   <form (ngSubmit)="onSignInGoogle(g)" #g="ngForm">

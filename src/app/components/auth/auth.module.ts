@@ -11,11 +11,13 @@ import { UsersRouting } from './users.routing'
 // Components
 import { SignupComponent } from './signup.component';
 import { SigninComponent } from './signin.component';
+import { PhoneSigninComponent } from './phone-signin/phone-signin.component';
 
 @NgModule({
   declarations: [
     SignupComponent,
     SigninComponent,
+    PhoneSigninComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +33,8 @@ import { SigninComponent } from './signin.component';
   ],
   exports: [
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    PhoneSigninComponent
   ]
 })
 export class AuthModule {

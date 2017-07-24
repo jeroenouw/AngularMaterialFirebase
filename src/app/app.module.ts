@@ -26,7 +26,8 @@ import {
   DataStorageService,
   AlertService,
   AuthGuardService,
-  AuthService
+  AuthService,
+  WindowService
 } from './components/shared';
 
 // Main
@@ -77,7 +78,8 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     DataStorageService,
     AlertService,
     AuthGuardService,
-    AuthService
+    AuthService,
+    WindowService
   ],
   bootstrap: [AppComponent]
 })
