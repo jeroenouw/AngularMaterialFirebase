@@ -2,6 +2,7 @@ import * as firebase from 'firebase';
 import { Injectable } from '@angular/core';
 
 import { User, Profile } from '../models';
+import { AlertService } from './alert.service';
 
 @Injectable()
 export class UserService {
@@ -11,8 +12,7 @@ export class UserService {
   public image: any;
   public uid: any;
 
-    constructor() {
-
+    constructor(private alertService: AlertService) {
     }
 
     saveUserInfo(uid, name, email
@@ -40,8 +40,21 @@ export class UserService {
     }
 
     keepInTouch(email) {
+     this.alertService.showToaster('Your email is saved');
      return firebase.database().ref().child('touch/').push({
         email: email
+      });
+    }
+
+    contactFormSend(company, firstname, lastname, address, city, postal) {
+     this.alertService.showToaster('This contact form is saved');
+     return firebase.database().ref().child('contactform/').push({
+        company: company, 
+        firstname: firstname, 
+        lastname: lastname, 
+        address: address, 
+        city: city, 
+        postal: postal
       });
     }
 

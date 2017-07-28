@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase';
 
-import { WindowService, PhoneNumber } from '../../shared';
+import { WindowService, PhoneNumber, AuthService, AlertService } from '../../shared';
 
 @Component({
   selector: 'app-phone-signin',
@@ -10,8 +10,8 @@ import { WindowService, PhoneNumber } from '../../shared';
   styleUrls: ['./phone-signin.component.scss']
 })
 export class PhoneSigninComponent implements OnInit {
-
   phoneNumber = new PhoneNumber()
+  isAuthenticated = false;
 
   token: string;
   windowRef: any;
@@ -19,7 +19,11 @@ export class PhoneSigninComponent implements OnInit {
   currentUser: any;
 
   constructor(private win: WindowService,
-  private router: Router) { }
+              private router: Router,
+              private authService: AuthService,
+              private alertService: AlertService) { 
+      this.isAuthenticated = this.authService.isAuthenticated()
+  }
 
   ngOnInit() {
     this.windowRef = this.win.windowRef
@@ -34,6 +38,7 @@ export class PhoneSigninComponent implements OnInit {
     firebase.auth().signInWithPhoneNumber(num, appVerifier)
       .then(result => {
           this.windowRef.confirmationResult = result;
+          this.alertService.showToaster('Login code is send');
       })
       .catch( error => console.log(error) );
   }
@@ -41,16 +46,17 @@ export class PhoneSigninComponent implements OnInit {
   verifyLoginCode() {
     this.windowRef.confirmationResult
       .confirm(this.verificationCode)
-      .then( result => {
-        this.currentUser = result.user;
-      }) 
-      .then(response => {
-        this.router.navigate(['/']);
-        firebase.auth().currentUser.getIdToken()
-        .then(
-            (token: string) => this.token = token
-        );
-      }) 
+        .then((result) => {
+          const currentUser = result.user;
+        }) 
+        .then(response => {
+          this.router.navigate(['/']);
+          firebase.auth().currentUser.getIdToken()
+          .then(
+              (token: string) => this.token = token
+          );
+          this.alertService.showToaster('Login code is entered');
+        }) 
     .catch( error => console.log(error, "Incorrect code entered?"));
   }
 }

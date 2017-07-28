@@ -16,7 +16,6 @@ import { MiscComponent } from './misc.component';
 import { ChangeDetectionComponent } from './change/change-detection.component';
 import { ChangeDetailComponent } from './change/change-detail.component';
 import { VirtRealComponent } from './virtual-reality/virtreal.component';
-import { DialogComponent, DialogResultDialogComponent } from './dialog/dialog.component';
 import { TableComponent } from './table/table.component';
 
 @NgModule({
@@ -26,7 +25,6 @@ import { TableComponent } from './table/table.component';
     ChangeDetectionComponent,
     ChangeDetailComponent,
     VirtRealComponent,
-    DialogComponent, DialogResultDialogComponent,
     TableComponent
   ],
   imports: [
@@ -45,7 +43,6 @@ import { TableComponent } from './table/table.component';
     ChangeDetectionComponent,
     ChangeDetailComponent,
     VirtRealComponent,
-    DialogComponent, DialogResultDialogComponent,
     TableComponent
   ]
 })

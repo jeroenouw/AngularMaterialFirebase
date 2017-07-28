@@ -21,6 +21,5 @@ export class EmailMeComponent implements OnInit {
   onSubmit(form: NgForm) {
    const email = form.value.email;
    this.userService.keepInTouch(email);
-   this.alertService.showToaster('Your email is saved');
   }
 }

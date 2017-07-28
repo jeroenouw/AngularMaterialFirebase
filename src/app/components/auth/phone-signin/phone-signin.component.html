@@ -1,6 +1,6 @@
 <md-card>
   <div [hidden]="currentUser">
-    <h3>Phone Number login</h3>
+    <h3>Phone Number login</h3><h5>Currently only saving phonenumber to database, login in progress. (temporary place)</h5>
 
     <br/>+
     <md-input-container>
@@ -18,12 +18,14 @@
 
     <div id="recaptcha-container"></div><br/>
 
-    <button md-raised-button (click)="sendLoginCode()">SMS Text Login Code</button>
+    <button md-raised-button (click)="sendLoginCode()">SMS me the text login code</button>
 
     <div *ngIf="windowRef.confirmationResult">
       <hr>
-      <label for="code">Enter your Verification Code Here</label><br>
-      <input type="text" name="code" [(ngModel)]="verificationCode">
+      <h4>Enter your verification code here</h4><br>
+      <md-input-container>
+        <input mdInput type="text" name="code" [(ngModel)]="verificationCode">
+      </md-input-container>
 
       <button md-raised-button (click)="verifyLoginCode()">Verify</button>
     </div>

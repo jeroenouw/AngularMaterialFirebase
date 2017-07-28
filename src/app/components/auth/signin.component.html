@@ -3,9 +3,6 @@
 <!-- Progress bar -->
 <md-progress-bar *ngIf="loading" mode="indeterminate"></md-progress-bar>
 
-<!-- TEMPORARY -->
-<app-phone-signin></app-phone-signin>
-
 <md-card>  
   <h3>Social login</h3>
   <form (ngSubmit)="onSignInGoogle(g)" #g="ngForm">
@@ -46,7 +43,7 @@
       <button md-raised-button class="primary" type="submit" [disabled]="!f.valid">Login</button>
     </md-card-actions>
   </form>
-  <!-- TEMPORARY
+  <!-- TEMPORARY DISABLED DUE PROFILE PROBLEMS
   <hr />
 
   <h3>Anonymous login</h3>
@@ -56,3 +53,6 @@
   </md-card-actions>  
   -->
 </md-card>
+
+<!-- TEMPORARY PLACE -->
+<app-phone-signin></app-phone-signin>

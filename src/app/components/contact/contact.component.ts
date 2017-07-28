@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Contact } from '../shared';
 
+import { AlertService, UserService } from '../shared';
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -9,20 +11,22 @@ import { Contact } from '../shared';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() {
+  constructor(
+    private alertService: AlertService,
+    private userService: UserService) {
   }
 
   ngOnInit() {
   }
 
-  contact = new Contact('Google', 'Bob', 'David', 'Angularlane 4', 'LA', 'California', '3221HB');
-  submitted = false;
-  onSubmit() { this.submitted = true; }
-  active = true;
-  newContact() {
-    this.contact = new Contact('', '', '', '', '', '', '');
-    this.active = false;
-    setTimeout(() => this.active = true, 0);
+  onSubmit(form: NgForm) { 
+   const company = form.value.company;
+   const firstname = form.value.firstname;
+   const lastname = form.value.lastname;
+   const address = form.value.address;
+   const city = form.value.city;
+   const postal = form.value.postal;
+   this.userService.contactFormSend(company, firstname, lastname, address, city, postal);
   }
 
 }

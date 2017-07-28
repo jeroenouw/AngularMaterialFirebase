@@ -84,7 +84,6 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * MD Icon
 * MD Progress spinner
 * MD Progress bar
-* MD Dialog
 * MD Tooltip
 * MD Snackbar
 
@@ -94,16 +93,11 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 ## To Finish List (known issues)
 ### Auth
 * Cellphone authentication (optimizing)
-* Optimizing alerts
 * Google, Facebook, Twitter & Github signin/signup
 * Error messages: Email already exists, login failed, registration failed
 
-### Sending
-* Contact form send
-
 ### Profile
-* Dialog component
-* File uploading
+* Profile image uploading
 * Change settings
 * Messaging layout and functionality
 

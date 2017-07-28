@@ -1,6 +1,6 @@
-import * as firebase from 'firebase';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import * as firebase from 'firebase';
 
 import { AlertService } from './alert.service';
 import { UserService } from './user.service';
@@ -29,12 +29,13 @@ export class AuthService {
                     .then(
                         (token: string) => this.token = token
                     );
+                this.alertService.showToaster('Verification email is sent to you.');
                 this.userService.verificationUserEmail();
                 this.userService.saveUserInfo(firebase.auth().currentUser.uid, name, firebase.auth().currentUser.email);
                 }
             )
             .catch(
-                error => console.log(error)
+                error => console.log(error),
             );
     }
 
@@ -52,6 +53,7 @@ export class AuthService {
                     .then(
                         (token: string) => this.token = token
                     );
+                this.alertService.showToaster('Verification email is sent to you.');
                 this.userService.verificationUserEmail();
                 this.userService.saveUserInfo(firebase.auth().currentUser.uid, name, firebase.auth().currentUser.email);
                 }
@@ -71,6 +73,7 @@ export class AuthService {
                     .then(
                         (token: string) => this.token = token
                     );
+                this.alertService.showToaster('Verification email is sent to you.');
                 this.userService.verificationUserEmail();
                 this.userService.saveUserInfo(firebase.auth().currentUser.uid, name, firebase.auth().currentUser.email);
                 }
@@ -86,6 +89,7 @@ export class AuthService {
             .then((result) => {
                 const token = result.credential.accessToken;
                 const currentUser = result.user;
+                this.alertService.showToaster('Verification email is sent to you.');
                 this.userService.verificationUserEmail();
                 this.userService.saveUserInfo(firebase.auth().currentUser.uid, name, firebase.auth().currentUser.email);
             })
@@ -105,7 +109,7 @@ export class AuthService {
     signupUser(email: string, password: string) {
         firebase.auth().createUserWithEmailAndPassword(email, password)
              .then((result) => {
-                // this.alertService.signUpToaster,
+                this.alertService.showToaster('Verification email is sent to you.');
                 this.userService.verificationUserEmail();
                 this.userService.saveUserInfo(firebase.auth().currentUser.uid, name, email);
                 }
@@ -128,6 +132,7 @@ export class AuthService {
                     .then(
                         (token: string) => this.token = token
                     );
+                this.alertService.showToaster('Google login succesful');
                 }
             )
             .catch(
@@ -144,6 +149,7 @@ export class AuthService {
                     .then(
                         (token: string) => this.token = token
                     );
+                this.alertService.showToaster('Twitter login succesful');
                 }
             )
             .catch(
@@ -161,6 +167,7 @@ export class AuthService {
                     .then(
                         (token: string) => this.token = token
                     );
+                this.alertService.showToaster('Facebook login succesful');
                 }
             )
             .catch((error) => {
@@ -181,6 +188,7 @@ export class AuthService {
                     .then(
                         (token: string) => this.token = token
                     );
+                this.alertService.showToaster('Github login succesful');
                 }
             )
             .catch(
@@ -198,6 +206,7 @@ export class AuthService {
                     .then(
                         (token: string) => this.token = token
                     );
+                this.alertService.showToaster('Login succesful');
                 }
             )
             .catch(
@@ -217,6 +226,7 @@ export class AuthService {
                     .then(
                         (token: string) => this.token = token
                     ),
+                    this.alertService.showToaster('Anonymous login succesful');
                     console.log(currentUser);
                 })     
             }
