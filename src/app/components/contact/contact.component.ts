@@ -26,7 +26,8 @@ export class ContactComponent implements OnInit {
    const address = form.value.address;
    const city = form.value.city;
    const postal = form.value.postal;
-   this.userService.contactFormSend(company, firstname, lastname, address, city, postal);
+   const message = form.value.message;
+   this.userService.contactFormSend(company, firstname, lastname, address, city, postal, message);
   }
 
 }

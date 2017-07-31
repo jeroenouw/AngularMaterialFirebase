@@ -46,7 +46,7 @@ export class UserService {
       });
     }
 
-    contactFormSend(company, firstname, lastname, address, city, postal) {
+    contactFormSend(company, firstname, lastname, address, city, postal, message) {
      this.alertService.showToaster('This contact form is saved');
      return firebase.database().ref().child('contactform/').push({
         company: company, 
@@ -54,7 +54,8 @@ export class UserService {
         lastname: lastname, 
         address: address, 
         city: city, 
-        postal: postal
+        postal: postal,
+        message: message
       });
     }
 
