@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormBuilder, Validators, FormGroup  } from '@angular/forms';
 
-import { AlertService, UserService } from '../shared';
+import { UserService, EmailValidator } from '../shared';
 
 @Component({
   selector: 'app-email-me',
@@ -9,11 +9,15 @@ import { AlertService, UserService } from '../shared';
   styleUrls: ['./email-me.component.scss']
 })
 export class EmailMeComponent implements OnInit {
-  constructor(
-    private alertService: AlertService,
-    private userService: UserService) {
+  public form: FormGroup;
 
-    }
+  constructor(private userService: UserService,
+              public formBuilder: FormBuilder) 
+  {
+    this.form = formBuilder.group({
+      email: ['', Validators.compose([Validators.required, EmailValidator.isValid])]
+    });
+  }
 
   ngOnInit() {
   }

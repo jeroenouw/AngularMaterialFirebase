@@ -1,10 +1,13 @@
-<form class="form" (ngSubmit)="onSubmit(f)" #f="ngForm"> 
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm"> 
   <md-card>
     <h3>Keep in touch!</h3>
     <md-input-container class="full-width">
-      <input mdInput placeholder="Your Email" type="email" id="email" name="email" ngModel required>
+      <input mdInput formControlName="email" placeholder="Your Email" type="email" ngModel required>
     </md-input-container>
+    <div *ngIf="!form.controls.email.valid  && form.controls.email.dirty">
+      <p>Please enter a valid email.</p>
+    </div>
     <br />
-    <button md-raised-button class="primary" type="submit" [disabled]="f.invalid">Submit</button>
+    <button md-raised-button class="primary" type="submit" [disabled]="form.invalid">Submit</button>
   </md-card>
 </form>

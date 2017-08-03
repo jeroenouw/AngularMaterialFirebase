@@ -44,9 +44,9 @@ export class HeaderComponent {
 
   public menuItems: Array<Object> = [
     {
-      icon: 'photo_library',
-      title: 'Portfolio',
-      link: 'https://jerouw.nl'
+      icon: 'description',
+      title: 'Published packages',
+      link: 'https://www.npmjs.com/~jeroenouw'
     },
     {
       icon: 'link',
