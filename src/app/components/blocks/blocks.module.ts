@@ -1,8 +1,7 @@
 // Modules 3rd party
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-         MdToolbarModule, MdDialogModule, MaterialModule } from '@angular/material';
+import { MdButtonModule, MaterialModule } from '@angular/material';
 
 // Components
 import { CardBlockComponent } from './card-block/card-block.component';
@@ -19,8 +18,7 @@ import { ThirdBlockComponent } from './third-block/third-block.component';
   ],
   imports: [
     CommonModule,
-    MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-    MdToolbarModule, MdDialogModule, MaterialModule,
+    MdButtonModule, MaterialModule
   ],
   exports: [
     CardBlockComponent,

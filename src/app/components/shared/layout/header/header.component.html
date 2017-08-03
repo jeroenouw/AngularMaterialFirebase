@@ -76,7 +76,6 @@
 
     <ng-template #loggedin>
         <h4>(User: {{userEmail()}})</h4>
-        <!-- <md-icon>verified_user</md-icon> -->
        
         <button md-icon-button [mdMenuTriggerFor]="menu">
         <md-icon>more_vert</md-icon>
@@ -121,12 +120,6 @@
 
 <md-tab-group>
   <md-tab label="COMP">
-     <!-- <div id="content">
-        <md-card>
-          <h1>Home</h1>
-          <app-slide></app-slide>
-        </md-card>
-      </div>-->
   </md-tab>
 
   <md-tab label="MISC">
@@ -138,12 +131,9 @@
           <b>
           <a routerLink="/profile">Profile</a> <br/>
           <a routerLink="/profile-settings">Profile settings</a> <br/>
-          <!-- <a routerLink="/messages">Messages</a> <br/><br/> -->
           </b> 
 
           <button md-raised-button (click)="onLogout()">Logout</button>
-          <!-- <button md-button (click)="onFetchData()">Fetch users</button>
-          <button md-button (click)="onSaveData()">Save users</button> -->
         </md-card>
       </div>
   </md-tab>

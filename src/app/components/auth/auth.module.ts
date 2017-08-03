@@ -4,8 +4,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-         MdToolbarModule, MdDialogModule, MdProgressBarModule, MaterialModule } from '@angular/material';
+import { MdButtonModule, MdInputModule, MdProgressBarModule, MaterialModule } from '@angular/material';
 import { UsersRouting } from './users.routing'
 
 // Components
@@ -24,8 +23,7 @@ import { PhoneSigninComponent } from './phone-signin/phone-signin.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-    MdToolbarModule, MdDialogModule, MdProgressBarModule, MaterialModule,
+    MdButtonModule, MdInputModule, MdProgressBarModule, MaterialModule,
     UsersRouting
   ],
   providers: [

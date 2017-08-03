@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
       messagingSenderId: '136985605193'
     });
  
-      // See users and messages in console log
+      // See users, messages and keep in touch in console log
       const preUsers = document.getElementById('users')
       const dbRefUsers = firebase.database().ref().child('users');
       dbRefUsers.on('value', snap => console.log(snap.val()));

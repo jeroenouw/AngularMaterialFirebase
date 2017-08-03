@@ -44,7 +44,6 @@ const appRoutes: Routes = [
   { path: '**', component: PageNotFoundComponent }
 ];
 
-// Don't declare components here
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]

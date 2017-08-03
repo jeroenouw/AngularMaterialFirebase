@@ -11,8 +11,9 @@ import { UserService, EmailValidator } from '../shared';
 export class EmailMeComponent implements OnInit {
   public form: FormGroup;
 
-  constructor(private userService: UserService,
-              public formBuilder: FormBuilder) 
+  constructor(
+    private userService: UserService,
+    private formBuilder: FormBuilder) 
   {
     this.form = formBuilder.group({
       email: ['', Validators.compose([Validators.required, EmailValidator.isValid])]

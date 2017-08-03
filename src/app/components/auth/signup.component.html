@@ -32,11 +32,11 @@
   <form (ngSubmit)="onSignup(f)" #f="ngForm">
     <md-input-container class="full-width">
       <!--<label for ="email">Mail</label>-->
-      <input mdInput placeholder="Email" type="email" id="email" name="email" ngModel>
+      <input mdInput placeholder="Email" type="email" id="email" name="email" ngModel required>
     </md-input-container>
     <md-input-container class="form-group">
       <!--<label for ="password">Password</label>-->
-      <input mdInput placeholder="Password" type="password" id="password" name="password" ngModel>
+      <input mdInput placeholder="Password" type="password" id="password" name="password" ngModel required>
     </md-input-container>
     <md-card-actions class="button">
       <button md-raised-button class="primary" type="submit" [disabled]="!f.valid">Register</button>

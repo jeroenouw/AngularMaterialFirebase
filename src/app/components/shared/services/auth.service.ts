@@ -8,10 +8,12 @@ import { UserService } from './user.service';
 @Injectable()
 export class AuthService {
     token: string;
-    constructor(private router: Router,
-                private alertService: AlertService,
-                private userService: UserService
-                ) {
+
+    constructor(
+        private router: Router,
+        private alertService: AlertService,
+        private userService: UserService) 
+    {
 
     }
 

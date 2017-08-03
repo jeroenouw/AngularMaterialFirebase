@@ -6,7 +6,6 @@ export class Contact {
     public address: string,
     public city: string,
     public province: string,
-    public zipcode: string,
-
+    public zipcode: string
   ) {  }
 }

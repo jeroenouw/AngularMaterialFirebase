@@ -23,7 +23,6 @@ import {
   FooterComponent,
   HeaderComponent,
   UserService,
-  DataStorageService,
   AlertService,
   AuthGuardService,
   AuthService,
@@ -75,7 +74,6 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
   ],
   providers: [
     UserService,
-    DataStorageService,
     AlertService,
     AuthGuardService,
     AuthService,

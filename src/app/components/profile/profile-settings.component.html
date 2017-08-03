@@ -4,21 +4,6 @@
 
     <form class="form" (ngSubmit)="onUpdateUserInfo(sv)" #sv="ngForm">
 
-        <!-- <div class="form-group"> -->
-            <!-- <input mdInput placeholder="URL of profile picture" type="text" id="image" name="image" formControlName="image"> -->
-            <!-- Upload files in progress -->
-            <!-- <p-fileUpload md-raised-button name="users[]" id="image" formControlName="image" 
-            url="https://angular4materialdesign.firebaseio.com/users/' + uid + '/image" 
-            (onUpload)="onUpload($event)" accept="image/*" maxFileSize="1000000">
-                <ng-template pTemplate type="content">
-                    <ul *ngIf="uploadedFiles.length">
-                        <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
-                    </ul>
-                </ng-template>        
-            </p-fileUpload> -->
-            <!-- Upload files in progress -->
-        <!-- </div> -->
-
         <md-input-container class="form-group">
             <input mdInput placeholder="Username" type="displayName" id="displayName" name="displayName" ngModel>
         </md-input-container>
@@ -35,7 +20,7 @@
             <input mdInput placeholder="Password" type="password" id="password" name="password" ngModel>
         </md-input-container> -->
 
-        <hr />
+        <hr>
 
         <md-card-actions class="button">
             <button md-raised-button class="primary" (click)="onSaveData()">Save Settings</button>
