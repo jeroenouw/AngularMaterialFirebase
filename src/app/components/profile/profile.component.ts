@@ -3,7 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 import * as firebase from 'firebase';
 
-import { User, Profile, UserService } from '../shared';
+import { User, Profile, UserService, AlertService } from '../shared';
 
 @Component({
   selector: 'app-profile',
@@ -32,13 +32,14 @@ export class ProfileComponent implements OnInit {
   user: {uid: any};
 
   profileTitle: string = 'My profile';
-  profileBio: string = 'Here you can place your own personal bio text.';
+  // profileBio: string = 'Here you can place your own personal bio text.';
   fullImagePath: string;
 
   state: string = 'small';
 
   constructor(private route: ActivatedRoute,
-              private userService: UserService) { 
+              private userService: UserService,
+              private alertService: AlertService) { 
               this.fullImagePath = '/assets/img/mb-bg-04.png';
   }
 
@@ -66,6 +67,11 @@ export class ProfileComponent implements OnInit {
   userName() {
     this.userService.getUserProfileInformation();
     return firebase.auth().currentUser.displayName;
+  }
+
+  onPasswordReset() {
+    this.userService.sendUserPasswordResetEmail();
+    this.alertService.showToaster('Reset password is sent to your email');
   }
 
 }

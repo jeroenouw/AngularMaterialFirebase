@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormsModule, FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { Response } from '@angular/http';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormsModule, FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 import * as firebase from 'firebase';
-import { FileUploadModule } from 'primeng/primeng';
 
 import { User, Profile, AuthService, AlertService, UserService } from '../shared';
 

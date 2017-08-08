@@ -4,7 +4,7 @@
 
 md-card {
     width: 400px;
-    height: 550px;
+    height: 390px;
     margin: 100px auto;
 }
 
@@ -35,4 +35,8 @@ md-card-title {
 
 a:hover {
     text-decoration: none;
+}
+
+.button {
+    margin: 0 auto;
 }

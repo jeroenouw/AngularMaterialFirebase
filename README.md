@@ -47,14 +47,12 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * Misc page
 * 404 page
 * Save email (keep in touch)
-* Authentication (Email, Google, Twitter, Facebook, Github, Phonenumber and Anonymous)
+* Authentication (Email, Google, Twitter, Facebook and Github)
 * Verification email after signup
 * Auth Guard
 * Profile
 * Profile image animation
-* Profile settings
 * Password reset
-* Messaging system
 * Alerts
 * 360 view
 * Multiple pipes
@@ -87,18 +85,18 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 * MD Tooltip
 * MD Snackbar
 
-## To Do List
+## To Do List (development branch)
 * Make every component responsive
 
 ## To Finish List (known issues)
 ### Auth
-* Cellphone authentication (optimizing)
+* Cellphone and anonymous authentication (optimizing)
 * Google, Facebook, Twitter & Github signin/signup
 * Error messages: Email already exists, login failed, registration failed
 
 ### Profile
 * Profile image uploading
-* Change settings
+* Profile settings (change settings)
 * Messaging layout and functionality
 
 ### Tests
