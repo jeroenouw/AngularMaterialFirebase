@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { FormsModule, FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Response } from '@angular/http';
 import { NgForm } from '@angular/forms';
 
 import * as firebase from 'firebase';
-import { FileUploadModule } from 'primeng/primeng';
 
-import { User, Profile, AuthService, AlertService, UserService } from '../shared';
+import { Profile, AuthService, AlertService, UserService } from '../shared';
 
 @Component({
   selector: 'app-profile-settings',
@@ -15,17 +13,12 @@ import { User, Profile, AuthService, AlertService, UserService } from '../shared
   styleUrls: ['./profile-settings.component.scss']
 })
 export class ProfileSettingsComponent implements OnInit {
-  user: User = new User();
-  settingsForm: FormGroup;
-  errors: Object = {};
-  isSubmitting = false;
+  uid: any;
 
   constructor(
-    private router: Router,
     private authService: AuthService,
     private alertService: AlertService,
-    private userService: UserService,
-    private fb: FormBuilder) {
+    private userService: UserService) {
   }
 
   ngOnInit() {

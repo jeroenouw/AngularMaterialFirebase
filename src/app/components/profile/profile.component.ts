@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 import * as firebase from 'firebase';
 
@@ -30,10 +31,12 @@ export class ProfileComponent implements OnInit {
   profile: Profile;
   currentUser: User;
   user: {uid: any};
+  uid = firebase.auth().currentUser.uid;
 
-  profileTitle: string = 'My profile';
-  profileBio: string = 'Here you can place your own personal bio text.';
   fullImagePath: string;
+  profileTitle: string = 'My profile';
+  displayName: any;
+  bio: any;
 
   state: string = 'small';
 
@@ -52,6 +55,11 @@ export class ProfileComponent implements OnInit {
           this.user.uid = params['uid'];
         }
       );
+      
+    firebase.database().ref().child('users/' + this.uid).once('value').then((snap) => {
+      this.displayName  = snap.val().displayName, 
+      this.bio = snap.val().bio
+    });
   }
 
   animateImage() {

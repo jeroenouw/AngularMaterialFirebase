@@ -6,14 +6,14 @@
   <md-card-header>
     <md-card-title><h3>{{profileTitle}}</h3></md-card-title>
     <md-card-title><h4>{{userEmail()}}</h4>
-      <md-card-subtitle>({{userName()}})</md-card-subtitle>
+      <md-card-subtitle id="displayName" name="displayName" ngModel>({{userName()}})</md-card-subtitle>
       <md-card-subtitle>{{user.uid}}</md-card-subtitle>
     </md-card-title>
   </md-card-header>
 
   <hr />
 
-  <md-card-subtitle>{{profileBio}}</md-card-subtitle>
+  <md-card-subtitle id="bio" name="bio" ngModel>{{profileBio}}</md-card-subtitle>
 
       <a button md-icon-button href="/profile-settings">
       <md-icon class="settings">settings</md-icon>
