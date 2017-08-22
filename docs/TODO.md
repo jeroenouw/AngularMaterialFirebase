@@ -5,7 +5,7 @@ All improvements to this repo will first be done in the development branch.
 
 ## To Finish List (known issues)
 ### Auth
-* Cellphone and anonymous authentication (optimizing)
+* Cellphone authentication (optimizing)
 * Google, Facebook, Twitter & Github signin/signup
 * Error messages: Email already exists, login failed, registration failed
 

@@ -82,9 +82,11 @@
         </button>
         
         <md-menu #menu="mdMenu" >
+          
+          <!-- [routerLink]="['/profile', userUid(), userName()]" -->
           <a 
             md-menu-item 
-            [routerLink]="['/profile', userUid(), userName()]" 
+            routerLink="/profile" 
             [queryParams]="{profile: '1'}" >
             <md-icon class="profile">face</md-icon>
             <span>Profile</span>

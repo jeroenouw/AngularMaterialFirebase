@@ -7,7 +7,7 @@
 * Misc page
 * 404 page
 * Save email (keep in touch)
-* Authentication (Email, Google, Twitter, Facebook and Github)
+* Authentication (Anonymous, Email, Google, Twitter, Facebook and Github)
 * Verification email after signup
 * Auth Guard
 * Profile
