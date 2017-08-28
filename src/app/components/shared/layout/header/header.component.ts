@@ -14,7 +14,7 @@ export class HeaderComponent {
   angularImage: string;
 
   constructor(
-    private authService: AuthService,
+    public authService: AuthService,
     private alertService: AlertService,
     private userService: UserService
     ) {

@@ -27,7 +27,7 @@
     </md-card-actions>
   </form>
   
-  <hr />
+  <hr>
 
   <h3>Login</h3>
   <form (ngSubmit)="onSignin(f)" #f="ngForm">
@@ -47,13 +47,13 @@
   <hr>
 
   <h3>Anonymous login</h3>
+  <form (ngSubmit)="onSigninAnonymous(a)" #a="ngForm">
+    <md-card-actions class="button">
+      <button md-raised-button class="primary" type="submit">Login anonymously</button>
+    </md-card-actions> 
+  </form>
 
-  <md-card-actions class="button">
-  <button md-raised-button class="primary" (click)="onSigninAnonymous()">Login anonymously</button>
-  </md-card-actions>  
-  -->
 </md-card>
-
 <!-- TEMPORARY PLACE -->
 <!--
 <app-phone-signin></app-phone-signin>
