@@ -51,7 +51,7 @@ export class HeaderComponent {
     {
       icon: 'link',
       title: 'Fork on Github',
-      link: 'https://github.com/jeroenouw/Angular4MaterialDesign'
+      link: 'https://github.com/jeroenouw/AngularMaterialFirebase'
     },
   ];
 }
