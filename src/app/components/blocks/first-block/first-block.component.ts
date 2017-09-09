@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./first-block.component.scss']
 })
 export class FirstBlockComponent {
-  titleOne: string = 'Starter kit';
-  contentOne: string = 'Angular 4 | Material Design | Firebase (0Auth authentication and NoSQL database)';
+  titleOne = 'Starter kit';
+  contentOne = 'Angular 4 | Material Design | Firebase (0Auth authentication and NoSQL database)';
 
 }

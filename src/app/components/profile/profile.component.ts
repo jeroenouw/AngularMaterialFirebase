@@ -31,21 +31,21 @@ export class ProfileComponent implements OnInit {
   currentUser: User;
   user: {uid: any};
 
-  profileTitle: string = 'My profile';
+  profileTitle = 'My profile';
   // profileBio: string = 'Here you can place your own personal bio text.';
   fullImagePath: string;
 
-  state: string = 'small';
+  state = 'small';
 
   constructor(private route: ActivatedRoute,
               private userService: UserService,
-              private alertService: AlertService) { 
+              private alertService: AlertService) {
               this.fullImagePath = '/assets/img/mb-bg-04.png';
   }
 
   ngOnInit() {
     this.user = {
-      uid: this.route.snapshot.params['uid']       
+      uid: this.route.snapshot.params['uid']  
     };
     this.route.params
       .subscribe(

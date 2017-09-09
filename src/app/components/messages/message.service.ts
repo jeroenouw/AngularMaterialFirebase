@@ -15,7 +15,7 @@ export class MessageService {
     // this.messages = this.firebase.database.list('messages');
     // let messages = firebase.database().ref().child('messages/');
   }
- 
+
   sendMessage(message, text) {
       return firebase.database().ref().child('messages/' + message).push({
       message: text,

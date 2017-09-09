@@ -57,5 +57,5 @@ export class MessagesComponent implements OnInit, AfterViewChecked {
     this.messageService.sendMessage('', this.newMessage);
     this.newMessage = '';
   }
- 
+
 }
