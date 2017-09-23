@@ -8,9 +8,9 @@ if (environment.production) {
   enableProdMode();
 }
 
-// getTranslationProviders().then(providers => {
-//   const options = { providers };
-//   platformBrowserDynamic().bootstrapModule(AppModule, this.options);
-// });
+getTranslationProviders().then(providers => {
+  const options = { providers };
+  platformBrowserDynamic().bootstrapModule(AppModule, this.options);
+});
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+// platformBrowserDynamic().bootstrapModule(AppModule);
