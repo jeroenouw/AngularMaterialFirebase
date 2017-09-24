@@ -5,7 +5,7 @@
     <form class="form" (ngSubmit)="onUpdateUserInfo(sv)" #sv="ngForm">
 
         <md-input-container class="form-group">
-            <input mdInput placeholder="Username" type="displayName" id="displayName" name="displayName" ngModel required>
+            <input mdInput placeholder="Username" id="displayName" name="displayName" ngModel required>
         </md-input-container>
 
         <md-input-container class="form-group">
@@ -14,9 +14,9 @@
 
         <hr>
         
-        <!-- <md-card-actions class="button">
-            <button md-raised-button class="primary" (click)="onSaveData()">Save Settings</button>
-        </md-card-actions> --> 
+        <md-card-actions class="button">
+            <button md-raised-button class="primary" type="submit">Save Settings</button>
+        </md-card-actions> 
 
         <md-card-actions class="button">
             <button md-raised-button class="primary" (click)="onLogout()">Logout</button>
