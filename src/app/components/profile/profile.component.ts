@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
+
 import * as firebase from 'firebase';
 
 import { User, Profile, UserService, AlertService } from '../shared';
@@ -28,35 +28,23 @@ import { User, Profile, UserService, AlertService } from '../shared';
   ]
 })
 export class ProfileComponent implements OnInit {
-  profile: Profile;
-  currentUser: User;
-  user: {uid: any};
   uid = firebase.auth().currentUser.uid;
 
   fullImagePath: string;
   profileTitle: string = 'My profile';
-  displayName: any;
-  bio: any;
+  displayName: string = "Your username";
+  bio: any = "Your bio";
 
   state = 'small';
 
-  constructor(private route: ActivatedRoute,
-              private userService: UserService,
-              private alertService: AlertService) {
-              this.fullImagePath = '/assets/img/mb-bg-04.png';
+  constructor(
+    private route: ActivatedRoute,
+    private userService: UserService,
+    private alertService: AlertService) {
+    this.fullImagePath = '/assets/img/mb-bg-04.png';
   }
 
   ngOnInit() {
-    this.user = {
-      uid: this.route.snapshot.params['uid']  
-    };
-    this.route.params
-      .subscribe(
-        (params: Params) => {
-          this.user.uid = params['uid'];
-        }
-      );
-      
     firebase.database().ref().child('users/' + this.uid).once('value').then((snap) => {
       this.displayName  = snap.val().displayName, 
       this.bio = snap.val().bio
@@ -70,11 +58,6 @@ export class ProfileComponent implements OnInit {
   userEmail() {
     this.userService.getUserProfileInformation();
     return firebase.auth().currentUser.email;
-  }
-
-  userName() {
-    this.userService.getUserProfileInformation();
-    return firebase.auth().currentUser.displayName;
   }
 
   onPasswordReset() {

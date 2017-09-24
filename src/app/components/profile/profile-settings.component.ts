@@ -12,7 +12,9 @@ import { Profile, AuthService, AlertService, UserService } from '../shared';
   styleUrls: ['./profile-settings.component.scss']
 })
 export class ProfileSettingsComponent implements OnInit {
-  uid: any;
+  uid = firebase.auth().currentUser.uid; 
+  displayName: string = "Your username";
+  bio: any = "Your bio";
 
   constructor(
     private authService: AuthService,
@@ -21,7 +23,11 @@ export class ProfileSettingsComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
+    firebase.database().ref().child(`users/${this.uid}`).once('value').then((snap) => {
+      this.displayName = snap.val().displayName;
+      this.bio = snap.val().bio;
+    });
+  } 
 
   onPasswordReset() {
     this.userService.sendUserPasswordResetEmail();

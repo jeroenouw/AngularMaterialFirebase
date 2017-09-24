@@ -1,19 +1,17 @@
 <div class="profile">
   <md-card>
-    
     <div [@imageAnimation]='state' (click)="animateImage()" class="avatar"><img [src]="fullImagePath"></div>
-  
-  <md-card-header>
-    <md-card-title><h3>{{profileTitle}}</h3></md-card-title>
-    <md-card-title><h4>{{userEmail()}}</h4>
-      <md-card-subtitle id="displayName" name="displayName" ngModel>({{userName()}})</md-card-subtitle>
-      <md-card-subtitle>{{user.uid}}</md-card-subtitle>
-    </md-card-title>
-  </md-card-header>
 
-    <hr />
+    <md-card-header>
+      <md-card-title><h3>{{profileTitle}}</h3></md-card-title>
+      <md-card-title><h4>{{userEmail()}}</h4>
+        <md-card-subtitle>{{displayName}}</md-card-subtitle>
+      </md-card-title>
+    </md-card-header>
 
-    <!-- <md-card-subtitle>{{profileBio}}</md-card-subtitle> -->
+    <hr>
+    
+    <md-card-subtitle>{{bio}}</md-card-subtitle>
         
       <md-card-actions class="button">
           <button md-raised-button class="primary" (click)="onPasswordReset()">Reset my password</button>

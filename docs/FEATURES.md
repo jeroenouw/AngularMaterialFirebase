@@ -12,6 +12,7 @@
 * Auth Guard
 * Profile
 * Profile image animation
+* Profile settings
 * Password reset
 * Alerts
 * 360 view

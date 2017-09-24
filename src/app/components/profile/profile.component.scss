@@ -4,7 +4,7 @@
 
 md-card {
     width: 400px;
-    height: 390px;
+    height: 460px;
     margin: 100px auto;
 }
 
@@ -38,5 +38,7 @@ a:hover {
 }
 
 .button {
+    position: absolute;
+    bottom: 35px;
     margin: 0 auto;
 }
