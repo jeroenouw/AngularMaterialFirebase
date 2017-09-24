@@ -4,7 +4,7 @@ import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 import * as firebase from 'firebase';
 
-import { User, Profile, UserService } from '../shared';
+import { User, Profile, UserService, AlertService } from '../shared';
 
 @Component({
   selector: 'app-profile',
@@ -38,16 +38,17 @@ export class ProfileComponent implements OnInit {
   displayName: any;
   bio: any;
 
-  state: string = 'small';
+  state = 'small';
 
   constructor(private route: ActivatedRoute,
-              private userService: UserService) { 
+              private userService: UserService,
+              private alertService: AlertService) {
               this.fullImagePath = '/assets/img/mb-bg-04.png';
   }
 
   ngOnInit() {
     this.user = {
-      uid: this.route.snapshot.params['uid']       
+      uid: this.route.snapshot.params['uid']  
     };
     this.route.params
       .subscribe(
@@ -74,6 +75,11 @@ export class ProfileComponent implements OnInit {
   userName() {
     this.userService.getUserProfileInformation();
     return firebase.auth().currentUser.displayName;
+  }
+
+  onPasswordReset() {
+    this.userService.sendUserPasswordResetEmail();
+    this.alertService.showToaster('Reset password is sent to your email');
   }
 
 }

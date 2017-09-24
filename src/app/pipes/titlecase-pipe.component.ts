@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class TitleCasePipeComponent implements OnInit {
-   message = 'angular 4 material design';
+   message = 'angular material firebase';
   constructor() { }
 
   ngOnInit() {

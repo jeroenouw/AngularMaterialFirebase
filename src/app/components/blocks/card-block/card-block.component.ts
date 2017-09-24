@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-block.component.scss']
 })
 export class CardBlockComponent {
-  titleCard: string = 'Angular';
-  numberCard: number = 4;
-  subTitleCard: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisl ligula.';
-  contentCard: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisl ligula.';
+  titleCard = 'Angular';
+  numberCard = 4;
+  subTitleCard = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisl ligula.';
+  contentCard = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisl ligula.';
   angularImage: string;
 
   constructor() {

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { DataSource } from '@angular/cdk';
+import { DataSource } from '@angular/cdk/collections';
 import { MdSort } from '@angular/material';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
@@ -15,7 +15,7 @@ import 'rxjs/add/operator/map';
 })
 export class TableComponent implements OnInit {
   displayedColumns = ['userId', 'userName', 'progress', 'color'];
-  database = new database();
+  database = new DataBase();
   dataSource: dataSource | null;
 
   @ViewChild(MdSort) sort: MdSort;
@@ -24,7 +24,7 @@ export class TableComponent implements OnInit {
 
   ngOnInit() {
     this.dataSource = new dataSource(this.database, this.sort);
-  }  
+  }
 }
 
 // Local data
@@ -41,7 +41,7 @@ export interface UserData {
     color: string;
 }
 
-export class database {
+export class DataBase {
   // Stream that emits whenever the data has been modified
   dataChange: BehaviorSubject<UserData[]> = new BehaviorSubject<UserData[]>([]);
   get data(): UserData[] { return this.dataChange.value; }
@@ -75,43 +75,43 @@ export class database {
 
 // Data source to provide what data should be rendered in the table
 export class dataSource extends DataSource<any> {
-    constructor(private database: database, private sort: MdSort) {
+    constructor(private database: DataBase, private sort: MdSort) {
     super();
     }
-    
+
     connect(): Observable<UserData[]> {
     const displayDataChanges = [
         this.database.dataChange,
         this.sort.mdSortChange,
     ];
-    
+
     return Observable.merge(...displayDataChanges).map(() => {
         return this.getSortedData();
     });
     }
-    
+
     disconnect() {}
 
     // Sorting the database data
     getSortedData(): UserData[] {
     const data = this.database.data.slice();
-    if (!this.sort.active || this.sort.direction == '') { return data; }
-    
+    if (!this.sort.active || this.sort.direction === '') { return data; }
+
     return data.sort((a, b) => {
         let propertyA: number|string = '';
         let propertyB: number|string = '';
-    
+
         switch (this.sort.active) {
         case 'userId': [propertyA, propertyB] = [a.id, b.id]; break;
         case 'userName': [propertyA, propertyB] = [a.name, b.name]; break;
         case 'progress': [propertyA, propertyB] = [a.progress, b.progress]; break;
         case 'color': [propertyA, propertyB] = [a.color, b.color]; break;
         }
-    
-        let valueA = isNaN(+propertyA) ? propertyA : +propertyA;
-        let valueB = isNaN(+propertyB) ? propertyB : +propertyB;
-    
-        return (valueA < valueB ? -1 : 1) * (this.sort.direction == 'asc' ? 1 : -1);
+
+        const valueA = isNaN(+propertyA) ? propertyA : +propertyA;
+        const valueB = isNaN(+propertyB) ? propertyB : +propertyB;
+
+        return (valueA < valueB ? -1 : 1) * (this.sort.direction === 'asc' ? 1 : -1);
     });
     }
 }

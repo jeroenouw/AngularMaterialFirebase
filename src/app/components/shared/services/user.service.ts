@@ -49,11 +49,11 @@ export class UserService {
     contactFormSend(company, firstname, lastname, address, city, postal, message) {
      this.alertService.showToaster('This contact form is saved');
      return firebase.database().ref().child('contactform/').push({
-        company: company, 
-        firstname: firstname, 
-        lastname: lastname, 
-        address: address, 
-        city: city, 
+        company: company,
+        firstname: firstname,
+        lastname: lastname,
+        address: address,
+        city: city,
         postal: postal,
         message: message
       });
@@ -124,7 +124,7 @@ export class UserService {
               // Update successful.
             }, (error) => {
               // An error happened.
-            });   
+            });
     }
     */
 
@@ -140,14 +140,14 @@ export class UserService {
     /*
     updateUserPassword() {
         let newPassword = getASecureRandomPassword();
-        
+
         currentUser.updatePassword(getASecureRandomPassword).then(() => {
           // Update successful.
         }, (error) => {
           // An error happened.
         });
     }
-    */ 
+    */
 
     sendUserPasswordResetEmail() {
         firebase.auth().sendPasswordResetEmail(firebase.auth().currentUser.email).then(() => {

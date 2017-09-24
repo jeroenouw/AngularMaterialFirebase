@@ -11,14 +11,12 @@
     </md-card-title>
   </md-card-header>
 
-  <hr />
+    <hr />
 
-  <md-card-subtitle id="bio" name="bio" ngModel>{{profileBio}}</md-card-subtitle>
-
-      <a button md-icon-button href="/profile-settings">
-      <md-icon class="settings">settings</md-icon>
-      Edit profile settings
-      </a>
-      <!--[routerLink]="['/profile-settings']" [hidden]="!isUser" -->
+    <!-- <md-card-subtitle>{{profileBio}}</md-card-subtitle> -->
+        
+      <md-card-actions class="button">
+          <button md-raised-button class="primary" (click)="onPasswordReset()">Reset my password</button>
+      </md-card-actions> 
   </md-card>
 </div>

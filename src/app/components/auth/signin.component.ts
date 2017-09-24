@@ -9,7 +9,7 @@ import { AlertService, AuthService } from '../shared';
   styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
-  @Input() loading: boolean = false;
+  @Input() loading = false;
 
   constructor(
     private authService: AuthService,

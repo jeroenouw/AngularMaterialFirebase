@@ -82,24 +82,29 @@
         </button>
         
         <md-menu #menu="mdMenu" >
+          
+          <!-- [routerLink]="['/profile', userUid(), userName()]" -->
           <a 
             md-menu-item 
-            [routerLink]="['/profile', userUid(), userName()]" 
+            routerLink="/profile" 
             [queryParams]="{profile: '1'}" >
             <md-icon class="profile">face</md-icon>
             <span>Profile</span>
           </a>
-
+          
+          <!--
           <a md-menu-item routerLink="/messages">
             <md-icon class="messages">chat</md-icon>
             <span>Messages</span>
           </a>
+          -->
 
           <a md-menu-item *ngFor="let item of menuItems" href="{{item.link}}">
             <md-icon class="login">{{item.icon}}</md-icon>
             <span>{{item.title}}</span>
           </a>
-
+          
+          <!--
           <a 
             md-menu-item 
             routerLink="/profile-settings" 
@@ -108,6 +113,7 @@
             <md-icon class="settings">settings</md-icon>
             <span>Settings</span>
           </a>
+          -->
 
           <a md-menu-item (click)="onLogout()">
             <md-icon class="logout">lock_outline</md-icon>
@@ -125,15 +131,24 @@
   <md-tab label="MISC">
       <div id="content">
         <md-card>
-          <h1>Various components (temporary)</h1>
-          <h3>Misc</h3>
-          Other components: <br/>
-          <b>
-          <a routerLink="/profile">Profile</a> <br/>
-          <a routerLink="/profile-settings">Profile settings</a> <br/>
-          </b> 
+          <h1>Misc</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend metus vel imperdiet cursus. 
+              Donec tempor placerat nibh ac hendrerit. Nulla feugiat augue ac fringilla facilisis. Aenean eget nibh at quam egestas commodo. 
+              Maecenas dapibus nisl quis nulla tristique, vitae laoreet tellus convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+              In ultricies mattis rhoncus. Duis vestibulum tristique massa a fringilla. Suspendisse ut purus at massa elementum sollicitudin eu sit amet lacus.
+              Nullam sit amet nisi risus. In diam dui, aliquet a lectus eu, suscipit finibus lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+              Integer vitae facilisis felis, quis cursus velit. Suspendisse nec consectetur mauris, ut placerat ex. Duis eu consectetur eros. Nulla facilisi.
+          </p>
 
-          <button md-raised-button (click)="onLogout()">Logout</button>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend metus vel imperdiet cursus. 
+              Etiam pretium sem a metus tristique, ut luctus quam rutrum. Vivamus commodo venenatis nunc ut placerat.
+              Proin eleifend id dui sit amet imperdiet. Proin fringilla sit amet nunc sed consequat. Proin ac libero elit. 
+              Pellentesque magna purus, semper gravida porttitor nec, venenatis vitae urna. Nam luctus id eros eget convallis. 
+              Aliquam sem libero, mollis et leo id, semper finibus leo. Sed convallis leo ac tempor luctus. Integer metus arcu,
+              imperdiet nec tincidunt at, sodales nec nulla. Nam suscipit urna eu vulputate aliquet. Vestibulum consequat nisl vel erat congue sollicitudin.
+              Proin mattis ultrices blandit. Vivamus accumsan vulputate sem vel tincidunt. Etiam imperdiet imperdiet ante, sit amet suscipit tortor finibus maximus.
+              Maecenas euismod pulvinar lorem.
+          </p>
         </md-card>
       </div>
   </md-tab>

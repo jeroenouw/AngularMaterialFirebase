@@ -21,7 +21,7 @@ export class PhoneSigninComponent implements OnInit {
   constructor(private win: WindowService,
               private router: Router,
               private authService: AuthService,
-              private alertService: AlertService) { 
+              private alertService: AlertService) {
       this.isAuthenticated = this.authService.isAuthenticated()
   }
 
@@ -48,7 +48,7 @@ export class PhoneSigninComponent implements OnInit {
       .confirm(this.verificationCode)
         .then((result) => {
           const currentUser = result.user;
-        }) 
+        })
         .then(response => {
           this.router.navigate(['/']);
           firebase.auth().currentUser.getIdToken()
@@ -56,7 +56,7 @@ export class PhoneSigninComponent implements OnInit {
               (token: string) => this.token = token
           );
           this.alertService.showToaster('Login code is entered');
-        }) 
-    .catch( error => console.log(error, "Incorrect code entered?"));
+        })
+    .catch( error => console.log(error, 'Incorrect code entered?'));
   }
 }

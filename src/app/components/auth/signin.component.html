@@ -27,7 +27,7 @@
     </md-card-actions>
   </form>
   
-  <hr />
+  <hr>
 
   <h3>Login</h3>
   <form (ngSubmit)="onSignin(f)" #f="ngForm">
@@ -35,7 +35,7 @@
       <!--<label for ="email">Mail</label>-->
       <input mdInput placeholder="Email" type="email" id="email" name="email" ngModel required>
     </md-input-container>
-    <md-input-container class="form-group">
+    <md-input-container class="full-width">
       <!--<label for ="password">Password</label>-->
       <input mdInput placeholder="Password" type="password" id="password" name="password" ngModel required>
     </md-input-container>
@@ -43,16 +43,17 @@
       <button md-raised-button class="primary" type="submit" [disabled]="!f.valid">Login</button>
     </md-card-actions>
   </form>
-  <!-- TEMPORARY DISABLED DUE PROFILE PROBLEMS
-  <hr />
+
+  <hr>
 
   <h3>Anonymous login</h3>
+  <form (ngSubmit)="onSigninAnonymous(a)" #a="ngForm">
+    <md-card-actions class="button">
+      <button md-raised-button class="primary" type="submit">Login anonymously</button>
+    </md-card-actions> 
+  </form>
 
-  <md-card-actions class="button">
-  <button md-raised-button class="primary" (click)="onSigninAnonymous()">Login anonymously</button>
-  </md-card-actions>  
-  -->
 </md-card>
 
-<!-- TEMPORARY PLACE -->
+<!-- TEMPORARY PLACE, LOGIN NEEDS TO BE FIXED -->
 <app-phone-signin></app-phone-signin>

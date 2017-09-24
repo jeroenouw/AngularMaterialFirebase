@@ -10,5 +10,7 @@ if (environment.production) {
 
 getTranslationProviders().then(providers => {
   const options = { providers };
-  platformBrowserDynamic().bootstrapModule(AppModule, options);
+  platformBrowserDynamic().bootstrapModule(AppModule, this.options);
 });
+
+// platformBrowserDynamic().bootstrapModule(AppModule);

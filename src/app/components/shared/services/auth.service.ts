@@ -12,10 +12,7 @@ export class AuthService {
     constructor(
         private router: Router,
         private alertService: AlertService,
-        private userService: UserService) 
-    {
-
-    }
+        private userService: UserService) { }
 
     // Signup/register
     signUpWithGoogle() {
@@ -230,7 +227,7 @@ export class AuthService {
                     ),
                     this.alertService.showToaster('Anonymous login succesful');
                     console.log(currentUser);
-                })     
+                })
             }
         )
         .catch(

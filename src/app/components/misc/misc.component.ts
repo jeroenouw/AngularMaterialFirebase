@@ -7,6 +7,7 @@ import { MdDatepicker } from '@angular/material';
   styleUrls: ['./misc.component.scss']
 })
 export class MiscComponent implements OnInit {
+  answer: string;
 
   constructor() { }
 

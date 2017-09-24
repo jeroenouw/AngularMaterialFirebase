@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { Response } from '@angular/http';
-import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { NgForm, FormsModule, FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 import * as firebase from 'firebase';
 

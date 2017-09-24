@@ -4,6 +4,9 @@
 <div id="content">
   <md-card>
     <h1>Misc</h1>
+    <h4>Various components ready to use in your own project.</h4>
+    
+    <hr>
     
     <!-- Miscellaneous material components -->
     <h3>Two-way data binding :</h3>
@@ -13,17 +16,16 @@
 
     <md-toolbar>Repeat yourself : {{answer}}</md-toolbar>
 
-    <br/>
+    <hr>
 
     <h3>MD Datepicker : </h3>
-    <md-input-container>
+    <md-form-field>
       <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
-      <button mdSuffix [mdDatepickerToggle]="picker"></button>
-    </md-input-container>
+      <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+      <md-datepicker #picker></md-datepicker>
+    </md-form-field>
 
-    <md-datepicker #picker></md-datepicker>
-
-    <br/>
+    <hr>
 
     <h3>MD Sidenav : </h3>
     <md-sidenav-container class="container">
@@ -39,36 +41,36 @@
 
     </md-sidenav-container>
 
-    <br/>
+    <hr>
    
     <h3>MD Tooltip : </h3>
     <span mdTooltip="This is a tooltip">Hover me!</span>
 
-    <br/><br/>
+    <br/><hr>
 
     <h3>MD Slide toggle : </h3>
     <md-slide-toggle class="margin">
       Click me!
     </md-slide-toggle>
 
-    <br/><br/>
+    <br/><hr>
 
     <app-table></app-table>
     
-    <br/>
+    <hr>
 
     <!-- Pipes -->
     <app-change-detection></app-change-detection>
 
-    <br/>
+    <hr>
 
     <app-async-observable-pipe></app-async-observable-pipe>
 
-    <br/>
+    <hr>
     
     <app-json-pipe></app-json-pipe>
     
-    <br/>
+    <hr>
 
     <app-currency-pipe></app-currency-pipe>
 

@@ -1,6 +1,6 @@
 md-card {
   width: 400px;
-  height: 540px;
+  height: 580px;
   margin: 100px auto;
 }
 
@@ -13,6 +13,10 @@ md-spinner {
   height: 100px;
   margin: 20px auto 0 auto;
   z-index: 5;
+}
+
+.full-width {
+  width: 100%;
 }
 
 .button {
