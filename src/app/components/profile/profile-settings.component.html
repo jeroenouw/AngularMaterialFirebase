@@ -2,39 +2,31 @@
     <md-card> 
     <h3>My profile settings</h3>
 
-    <form class="form" (ngSubmit)="onUpdateUserInfo(sv)" #sv="ngForm">
+        <form class="form" (ngSubmit)="onUpdateUserInfo(sv)" #sv="ngForm">
 
-        <md-input-container class="form-group">
-            <input mdInput placeholder="Username" type="displayName" id="displayName" name="displayName" ngModel>
-        </md-input-container>
+            <md-input-container class="form-group">
+                <input mdInput placeholder="Username" id="displayName" name="displayName" [(ngModel)]="displayName" required>
+            </md-input-container>
 
-        <md-input-container class="form-group">
-            <textarea mdInput placeholder="Short Bio" rows="8" id="bio" name="bio" ngModel></textarea>
-        </md-input-container>
+            <md-input-container class="form-group">
+                <textarea mdInput placeholder="Short Bio" rows="6" id="bio" name="bio" [(ngModel)]="bio" required></textarea>
+            </md-input-container>
 
-        <!-- <md-input-container class="form-group">
-            <input mdInput placeholder="Email" type="email" id="email" name="email" ngModel>
-        </md-input-container>
+            <hr>
+            
+            <md-card-actions class="button">
+                <button md-raised-button class="primary" type="submit">Save Settings</button>
+            </md-card-actions> 
 
-        <md-input-container class="form-group">
-            <input mdInput placeholder="Password" type="password" id="password" name="password" ngModel>
-        </md-input-container> -->
+            <md-card-actions class="button">
+                <button md-raised-button class="primary" (click)="onLogout()">Logout</button>
+            </md-card-actions>   
+            
+            <md-card-actions class="button">
+                <button md-raised-button class="primary" (click)="onPasswordReset()">Reset Password</button>
+            </md-card-actions> 
 
-        <hr>
-        
-        <!-- <md-card-actions class="button">
-            <button md-raised-button class="primary" (click)="onSaveData()">Save Settings</button>
-        </md-card-actions> --> 
-
-        <md-card-actions class="button">
-            <button md-raised-button class="primary" (click)="onLogout()">Logout</button>
-        </md-card-actions>   
-
-    </form>
-
-    <md-card-actions class="button">
-        <button md-raised-button class="primary" (click)="onPasswordReset()">Reset Password</button>
-    </md-card-actions> 
+        </form>
 
     </md-card>
  </div>

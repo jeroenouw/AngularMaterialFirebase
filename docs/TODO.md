@@ -1,7 +1,7 @@
 All improvements to this repo will first be done in the development branch.
 
 ## To Do List 
-* Make every component responsive
+* Make every component responsive (flex-layout)
 
 ## To Finish List (known issues)
 ### Auth
@@ -11,7 +11,6 @@ All improvements to this repo will first be done in the development branch.
 
 ### Profile
 * Profile image uploading
-* Profile settings (change settings)
 * Messaging layout and functionality
 
 ### Tests

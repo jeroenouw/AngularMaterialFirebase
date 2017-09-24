@@ -4,7 +4,7 @@ import { NgForm, FormsModule, FormBuilder, FormGroup, ReactiveFormsModule } from
 
 import * as firebase from 'firebase';
 
-import { User, Profile, AuthService, AlertService, UserService } from '../shared';
+import { Profile, AuthService, AlertService, UserService } from '../shared';
 
 @Component({
   selector: 'app-profile-settings',
@@ -12,21 +12,22 @@ import { User, Profile, AuthService, AlertService, UserService } from '../shared
   styleUrls: ['./profile-settings.component.scss']
 })
 export class ProfileSettingsComponent implements OnInit {
-  user: User = new User();
-  settingsForm: FormGroup;
-  errors: Object = {};
-  isSubmitting = false;
+  uid = firebase.auth().currentUser.uid; 
+  displayName: string = "Your username";
+  bio: any = "Your bio";
 
   constructor(
-    private router: Router,
     private authService: AuthService,
     private alertService: AlertService,
-    private userService: UserService,
-    private fb: FormBuilder) {
+    private userService: UserService) {
   }
 
   ngOnInit() {
-  }
+    firebase.database().ref().child(`users/${this.uid}`).once('value').then((snap) => {
+      this.displayName = snap.val().displayName;
+      this.bio = snap.val().bio;
+    });
+  } 
 
   onPasswordReset() {
     this.userService.sendUserPasswordResetEmail();
