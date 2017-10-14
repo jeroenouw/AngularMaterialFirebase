@@ -24,18 +24,19 @@
 * Loading spinner and progress bar
 
 ## Material Design usage in this project:
-* MD Datepicker
-* MD Input
-* MD Slide toggle
-* MD Menu
-* MD Sidenav
-* MD Toolbar
-* MD Table
-* MD Card
-* MD Tabs
-* MD Buttons
-* MD Icon
-* MD Progress spinner
-* MD Progress bar
-* MD Tooltip
-* MD Snackbar
+* Mat Datepicker
+* Mat Input
+* Mat Slide toggle
+* Mat Menu
+* Mat Sidenav
+* Mat Toolbar
+* Mat Table
+* Mat Stepper
+* Mat Card
+* Mat Tabs
+* Mat Buttons
+* Mat Icon
+* Mat Progress spinner
+* Mat Progress bar
+* Mat Tooltip
+* Mat Snackbar

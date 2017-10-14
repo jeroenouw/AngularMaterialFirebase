@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MatButtonModule, MatCheckboxModule, MatInputModule, MatNativeDateModule, MatSlideToggleModule,
-         MatTooltipModule, MatSidenavModule, MatTableModule, MatCardModule, MatDatepickerModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatInputModule, MatNativeDateModule, 
+         MatSlideToggleModule, MatStepperModule, MatTooltipModule, MatSidenavModule, 
+         MatTableModule, MatCardModule, MatDatepickerModule } from '@angular/material';
 
 // import { CdkTableModule } from '@angular/cdk';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -16,6 +17,7 @@ import { ChangeDetectionComponent } from './change/change-detection.component';
 import { ChangeDetailComponent } from './change/change-detail.component';
 import { VirtRealComponent } from './virtual-reality/virtreal.component';
 import { TableComponent } from './table/table.component';
+import { StepperComponent } from './stepper/stepper.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,14 @@ import { TableComponent } from './table/table.component';
     ChangeDetectionComponent,
     ChangeDetailComponent,
     VirtRealComponent,
-    TableComponent
+    TableComponent,
+    StepperComponent
   ],
   imports: [
     CommonModule,
-    MatButtonModule, MatCheckboxModule, MatInputModule, MatNativeDateModule, MatSlideToggleModule,
-    MatTooltipModule, MatSidenavModule, MatTableModule, MatCardModule, MatDatepickerModule,
+    MatButtonModule, MatCheckboxModule, MatInputModule, MatNativeDateModule, 
+    MatSlideToggleModule, MatStepperModule, MatTooltipModule, MatSidenavModule, 
+    MatTableModule, MatCardModule, MatDatepickerModule,
     FormsModule, ReactiveFormsModule,
     PipesModule,
     // MiscRoutingModule
@@ -40,7 +44,8 @@ import { TableComponent } from './table/table.component';
     ChangeDetectionComponent,
     ChangeDetailComponent,
     VirtRealComponent,
-    TableComponent
+    TableComponent,
+    StepperComponent
   ]
 })
 
