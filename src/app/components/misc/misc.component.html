@@ -2,7 +2,7 @@
 <app-carousel></app-carousel>
 
 <div id="content">
-  <md-card>
+  <mat-card>
     <h1>Misc</h1>
     <h4>Various components ready to use in your own project.</h4>
     
@@ -10,52 +10,53 @@
     
     <!-- Miscellaneous material components -->
     <h3>Two-way data binding :</h3>
-    <md-input-container class="full-width">
-    <input mdInput placeholder="I am feeling good!" type="text" [(ngModel)]="answer"/>
-    </md-input-container>
+    <mat-input-container class="full-width">
+    <input matInput placeholder="I am feeling good!" type="text" [(ngModel)]="answer"/>
+    </mat-input-container>
 
-    <md-toolbar>Repeat yourself : {{answer}}</md-toolbar>
-
-    <hr>
-
-    <h3>MD Datepicker : </h3>
-    <md-form-field>
-      <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
-      <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
-      <md-datepicker #picker></md-datepicker>
-    </md-form-field>
+    <mat-toolbar>Repeat yourself : {{answer}}</mat-toolbar>
 
     <hr>
 
-    <h3>MD Sidenav : </h3>
-    <md-sidenav-container class="container">
-      <md-sidenav #sidenav class="sidenav">
+    <h3>mat Datepicker : </h3>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <hr>
+
+    <h3>mat Sidenav : </h3>
+    <mat-sidenav-container class="container">
+      <mat-sidenav #sidenav class="sidenav">
         This is the sidenav!
-      </md-sidenav>
+      </mat-sidenav>
 
       <div class="sidenav-content">
-        <button type="button" md-button (click)="sidenav.open()">
+        <button type="button" mat-button (click)="sidenav.open()">
           Open sidenav!
         </button>
       </div>
 
-    </md-sidenav-container>
+    </mat-sidenav-container>
 
     <hr>
    
-    <h3>MD Tooltip : </h3>
-    <span mdTooltip="This is a tooltip">Hover me!</span>
+    <h3>mat Tooltip : </h3>
+    <span matTooltip="This is a tooltip">Hover me!</span>
 
     <br/><hr>
 
-    <h3>MD Slide toggle : </h3>
-    <md-slide-toggle class="margin">
+    <h3>mat Slide toggle : </h3>
+    <mat-slide-toggle class="margin">
       Click me!
-    </md-slide-toggle>
+    </mat-slide-toggle>
 
     <br/><hr>
 
-    <app-table></app-table>
+    <!-- Temporary disabled -->
+    <!-- <app-table></app-table> -->
     
     <hr>
 
@@ -75,7 +76,7 @@
     <app-currency-pipe></app-currency-pipe>
 
 
-  </md-card>
+  </mat-card>
 </div>
 
 <!-- 360 virtual reality component -->

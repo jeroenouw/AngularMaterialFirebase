@@ -1,13 +1,13 @@
 <form class="form" [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm"> 
-  <md-card>
+  <mat-card>
     <h3>Keep in touch!</h3>
-    <md-input-container class="full-width">
-      <input mdInput formControlName="email" placeholder="Your Email" type="email" ngModel required>
-    </md-input-container>
+    <mat-input-container class="full-width">
+      <input matInput formControlName="email" placeholder="Your Email" type="email" ngModel required>
+    </mat-input-container>
     <div *ngIf="!form.controls.email.valid  && form.controls.email.dirty">
       <p>Please enter a valid email.</p>
     </div>
     <br />
-    <button md-raised-button class="primary" type="submit" [disabled]="form.invalid">Submit</button>
-  </md-card>
+    <button mat-raised-button class="primary" type="submit" [disabled]="form.invalid">Submit</button>
+  </mat-card>
 </form>

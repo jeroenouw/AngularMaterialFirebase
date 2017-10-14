@@ -1,33 +1,33 @@
  <div class="profile-settings">
-    <md-card> 
+    <mat-card> 
     <h3>My profile settings</h3>
 
         <form class="form" (ngSubmit)="onUpdateUserInfo(sv)" #sv="ngForm">
 
-            <md-input-container class="form-group">
-                <input mdInput placeholder="Username" id="displayName" name="displayName" [(ngModel)]="displayName" required>
-            </md-input-container>
+            <mat-input-container class="form-group">
+                <input matInput placeholder="Username" id="displayName" name="displayName" [(ngModel)]="displayName" required>
+            </mat-input-container>
 
-            <md-input-container class="form-group">
-                <textarea mdInput placeholder="Short Bio" rows="6" id="bio" name="bio" [(ngModel)]="bio" required></textarea>
-            </md-input-container>
+            <mat-input-container class="form-group">
+                <textarea matInput placeholder="Short Bio" rows="6" id="bio" name="bio" [(ngModel)]="bio" required></textarea>
+            </mat-input-container>
 
             <hr>
             
-            <md-card-actions class="button">
-                <button md-raised-button class="primary" type="submit">Save Settings</button>
-            </md-card-actions> 
+            <mat-card-actions class="button">
+                <button mat-raised-button class="primary" type="submit">Save Settings</button>
+            </mat-card-actions> 
 
-            <md-card-actions class="button">
-                <button md-raised-button class="primary" (click)="onLogout()">Logout</button>
-            </md-card-actions>   
+            <mat-card-actions class="button">
+                <button mat-raised-button class="primary" (click)="onLogout()">Logout</button>
+            </mat-card-actions>   
             
-            <md-card-actions class="button">
-                <button md-raised-button class="primary" (click)="onPasswordReset()">Reset Password</button>
-            </md-card-actions> 
+            <mat-card-actions class="button">
+                <button mat-raised-button class="primary" (click)="onPasswordReset()">Reset Password</button>
+            </mat-card-actions> 
 
         </form>
 
-    </md-card>
+    </mat-card>
  </div>
  

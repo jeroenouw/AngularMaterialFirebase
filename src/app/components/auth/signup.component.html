@@ -1,64 +1,64 @@
 <!-- Spinner -->
-<!-- <md-spinner *ngIf="loading" mode="indeterminate"></md-spinner> -->
-<md-progress-bar *ngIf="loading" mode="indeterminate"></md-progress-bar>
+<!-- <mat-spinner *ngIf="loading" mode="indeterminate"></mat-spinner> -->
+<mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
 
-<md-card>
+<mat-card>
   <h3>Social Sign up</h3>
   <form (ngSubmit)="onSignupGoogle(g)" #g="ngForm">
-    <md-card-actions class="button">
-      <!-- md-raised-button class="primary" -->
+    <mat-card-actions class="button">
+      <!-- mat-raised-button class="primary" -->
       <button class="btn btn-block btn-social btn-google" type="submit" [disabled]="!g.valid"><span class="fa fa-google"></span> Sign up with your Google Account</button>
-    </md-card-actions>
+    </mat-card-actions>
   </form>
   <form (ngSubmit)="onSignupTwitter(t)" #t="ngForm">
-    <md-card-actions class="button">
+    <mat-card-actions class="button">
       <button class="btn btn-block btn-social btn-twitter" type="submit" [disabled]="!t.valid"><span class="fa fa-twitter"></span> Sign up with your Twitter Account</button>
-    </md-card-actions>
+    </mat-card-actions>
   </form> 
   <form (ngSubmit)="onSignupFacebook(fb)" #fb="ngForm">
-    <md-card-actions class="button">
+    <mat-card-actions class="button">
       <button class="btn btn-block btn-social btn-facebook" type="submit" [disabled]="!fb.valid"><span class="fa fa-facebook"></span> Sign up with your Facebook Account</button>
-    </md-card-actions>
+    </mat-card-actions>
   </form>
   <form (ngSubmit)="onSignupGithub(gh)" #gh="ngForm">
-    <md-card-actions class="button">
+    <mat-card-actions class="button">
       <button class="btn btn-block btn-social btn-github" type="submit" [disabled]="!gh.valid"><span class="fa fa-github"></span> Sign up with your Github Account</button>
-    </md-card-actions>
+    </mat-card-actions>
   </form>
 
   <hr />
   <h3>Or sign up with your email</h3>
 
   <form (ngSubmit)="onSignup(f)" #f="ngForm">
-    <md-input-container class="full-width">
+    <mat-input-container class="full-width">
       <!--<label for ="email">Mail</label>-->
-      <input mdInput placeholder="Email" type="email" id="email" name="email" ngModel required>
-    </md-input-container>
-    <md-input-container class="full-width">
+      <input matInput placeholder="Email" type="email" id="email" name="email" ngModel required>
+    </mat-input-container>
+    <mat-input-container class="full-width">
       <!--<label for ="password">Password</label>-->
-      <input mdInput placeholder="Password" type="password" id="password" name="password" ngModel required>
-    </md-input-container>
-    <md-card-actions class="button">
-      <button md-raised-button class="primary" type="submit" [disabled]="!f.valid">Register</button>
-    </md-card-actions>
+      <input matInput placeholder="Password" type="password" id="password" name="password" ngModel required>
+    </mat-input-container>
+    <mat-card-actions class="button">
+      <button mat-raised-button class="primary" type="submit" [disabled]="!f.valid">Register</button>
+    </mat-card-actions>
   </form>
   <!--
     <form (ngSubmit)="onSignupCellphone(cp)" #cp="ngForm">
-    <md-input-container class="full-width">-->
+    <mat-input-container class="full-width">-->
       <!--<label for ="email">Mail</label>-->
-      <!--<input mdInput placeholder="phoneNumber" type="phoneNumber" id="phoneNumber" name="phoneNumber" ngModel>
-    </md-input-container>
-    <md-input-container class="form-group">-->
+      <!--<input matInput placeholder="phoneNumber" type="phoneNumber" id="phoneNumber" name="phoneNumber" ngModel>
+    </mat-input-container>
+    <mat-input-container class="form-group">-->
       <!--<label for ="password">Password</label>-->
-      <!--<input mdInput placeholder="appVerifier" type="appVerifier" id="appVerifier" name="appVerifier" ngModel>
-    </md-input-container>    
-    <md-input-container class="form-group">-->
+      <!--<input matInput placeholder="appVerifier" type="appVerifier" id="appVerifier" name="appVerifier" ngModel>
+    </mat-input-container>    
+    <mat-input-container class="form-group">-->
       <!--<label for ="password">Password</label>-->
-      <!--<input mdInput placeholder="code" type="code" id="code" name="code" ngModel>
-    </md-input-container>
-    <md-card-actions class="button">
-      <button md-raised-button class="primary" type="submit" [disabled]="!cp.valid">Cellphone</button>
-    </md-card-actions>
+      <!--<input matInput placeholder="code" type="code" id="code" name="code" ngModel>
+    </mat-input-container>
+    <mat-card-actions class="button">
+      <button mat-raised-button class="primary" type="submit" [disabled]="!cp.valid">Cellphone</button>
+    </mat-card-actions>
   </form>-->
  
-</md-card>
+</mat-card>

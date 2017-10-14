@@ -1,43 +1,43 @@
 <div id="content">
-  <md-card>
+  <mat-card>
     <h1>Contact us</h1>
       <form class="form" (ngSubmit)="onSubmit(c)" #c="ngForm" >
-      <md-input-container class="full-width">
-        <input mdInput placeholder="Company" id="company" name="company" value="Google" ngModel required>
-      </md-input-container>
+      <mat-input-container class="full-width">
+        <input matInput placeholder="Company" id="company" name="company" value="Google" ngModel required>
+      </mat-input-container>
 
       <table class="full-width" cellspacing="0"><tr>
-        <td><md-input-container class="full-width">
-          <input mdInput placeholder="First name" id="firstname" name="firstname" ngModel required>
-        </md-input-container></td>
-        <td><md-input-container class="full-width">
-          <input mdInput placeholder="Last name" id="lastname" name="lastname" ngModel required>
-        </md-input-container></td>
+        <td><mat-input-container class="full-width">
+          <input matInput placeholder="First name" id="firstname" name="firstname" ngModel required>
+        </mat-input-container></td>
+        <td><mat-input-container class="full-width">
+          <input matInput placeholder="Last name" id="lastname" name="lastname" ngModel required>
+        </mat-input-container></td>
       </tr></table>
 
       <p>
-        <md-input-container class="full-width">
-          <textarea mdInput placeholder="Address" value="Streetname 12a" id="address" name="address" ngModel required></textarea>
-        </md-input-container>
+        <mat-input-container class="full-width">
+          <textarea matInput placeholder="Address" value="Streetname 12a" id="address" name="address" ngModel required></textarea>
+        </mat-input-container>
       </p>
 
       <table class="full-width" cellspacing="0"><tr>
-        <td><md-input-container class="full-width">
-          <input mdInput placeholder="City" id="city" name="city" ngModel required>
-        </md-input-container></td>
-        <td><md-input-container class="full-width">
-          <input mdInput #postalCode maxlength="6" id="postal" name="postal" placeholder="Zip Code" value="2900TY" ngModel required>
-          <md-hint align="end">{{postalCode.value.length}} / 6</md-hint>
-        </md-input-container></td>
+        <td><mat-input-container class="full-width">
+          <input matInput placeholder="City" id="city" name="city" ngModel required>
+        </mat-input-container></td>
+        <td><mat-input-container class="full-width">
+          <input matInput #postalCode maxlength="6" id="postal" name="postal" placeholder="Zip Code" value="2900TY" ngModel required>
+          <mat-hint align="end">{{postalCode.value.length}} / 6</mat-hint>
+        </mat-input-container></td>
       </tr></table>      
       <p>
-        <md-input-container class="full-width">
-          <textarea mdInput placeholder="Your message" id="message" name="message" ngModel required></textarea>
-        </md-input-container>
+        <mat-input-container class="full-width">
+          <textarea matInput placeholder="Your message" id="message" name="message" ngModel required></textarea>
+        </mat-input-container>
       </p>
       <br />
-      <button md-raised-button type="submit" [disabled]="c.invalid">Submit</button>
+      <button mat-raised-button type="submit" [disabled]="c.invalid">Submit</button>
 
     </form>
-  </md-card>
+  </mat-card>
 </div>

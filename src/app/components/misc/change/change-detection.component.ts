@@ -6,8 +6,8 @@ import { Component, OnInit, KeyValueDiffers } from '@angular/core';
     <h3>
       Change Detection :
     </h3>
-    <button md-raised-button (click)="OnMutate()">Mutate</button>
-    <button md-raised-button (click)="OnChange()">Change</button>
+    <button mat-raised-button (click)="OnMutate()">Mutate</button>
+    <button mat-raised-button (click)="OnChange()">Change</button>
     <br/><br/>
     <pre class="source">{{change2 | json}}</pre>
     <app-change-detail [course]="change1"></app-change-detail>

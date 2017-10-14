@@ -1,59 +1,59 @@
 <!-- Spinner -->
-<!-- <md-spinner *ngIf="loading" mode="indeterminate"></md-spinner> -->
+<!-- <mat-spinner *ngIf="loading" mode="indeterminate"></mat-spinner> -->
 <!-- Progress bar -->
-<md-progress-bar *ngIf="loading" mode="indeterminate"></md-progress-bar>
+<mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
 
-<md-card>  
+<mat-card>  
   <h3>Social login</h3>
   <form (ngSubmit)="onSignInGoogle(g)" #g="ngForm">
-    <md-card-actions class="button">
-      <!-- md-raised-button class="primary" -->
+    <mat-card-actions class="button">
+      <!-- mat-raised-button class="primary" -->
       <button class="btn btn-block btn-social btn-google" type="submit" [disabled]="!g.valid"><span class="fa fa-google"></span> Login with your Google Account</button>
-    </md-card-actions>
+    </mat-card-actions>
   </form>
   <form (ngSubmit)="onSignInTwitter(t)" #t="ngForm">
-    <md-card-actions class="button">
+    <mat-card-actions class="button">
       <button class="btn btn-block btn-social btn-twitter" type="submit" [disabled]="!t.valid"><span class="fa fa-twitter"></span> Login with your Twitter Account</button>
-    </md-card-actions>
+    </mat-card-actions>
   </form>
   <form (ngSubmit)="onSignInFacebook(fb)" #fb="ngForm">
-    <md-card-actions class="button">
+    <mat-card-actions class="button">
       <button class="btn btn-block btn-social btn-facebook" type="submit" [disabled]="!fb.valid"><span class="fa fa-facebook"></span> Login with your Facebook Account</button>
-    </md-card-actions>
+    </mat-card-actions>
   </form>
   <form (ngSubmit)="onSignInGithub(gh)" #gh="ngForm">
-    <md-card-actions class="button">
+    <mat-card-actions class="button">
       <button class="btn btn-block btn-social btn-github" type="submit" [disabled]="!gh.valid"><span class="fa fa-github"></span> Login with your Github Account</button>
-    </md-card-actions>
+    </mat-card-actions>
   </form>
   
   <hr>
 
   <h3>Login</h3>
   <form (ngSubmit)="onSignin(f)" #f="ngForm">
-    <md-input-container class="full-width">
+    <mat-input-container class="full-width">
       <!--<label for ="email">Mail</label>-->
-      <input mdInput placeholder="Email" type="email" id="email" name="email" ngModel required>
-    </md-input-container>
-    <md-input-container class="full-width">
+      <input matInput placeholder="Email" type="email" id="email" name="email" ngModel required>
+    </mat-input-container>
+    <mat-input-container class="full-width">
       <!--<label for ="password">Password</label>-->
-      <input mdInput placeholder="Password" type="password" id="password" name="password" ngModel required>
-    </md-input-container>
-    <md-card-actions class="button">
-      <button md-raised-button class="primary" type="submit" [disabled]="!f.valid">Login</button>
-    </md-card-actions>
+      <input matInput placeholder="Password" type="password" id="password" name="password" ngModel required>
+    </mat-input-container>
+    <mat-card-actions class="button">
+      <button mat-raised-button class="primary" type="submit" [disabled]="!f.valid">Login</button>
+    </mat-card-actions>
   </form>
 
   <hr>
 
   <h3>Anonymous login</h3>
   <form (ngSubmit)="onSigninAnonymous(a)" #a="ngForm">
-    <md-card-actions class="button">
-      <button md-raised-button class="primary" type="submit">Login anonymously</button>
-    </md-card-actions> 
+    <mat-card-actions class="button">
+      <button mat-raised-button class="primary" type="submit">Login anonymously</button>
+    </mat-card-actions> 
   </form>
 
-</md-card>
+</mat-card>
 
 <!-- TEMPORARY PLACE, LOGIN NEEDS TO BE FIXED -->
 <app-phone-signin></app-phone-signin>

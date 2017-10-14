@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DataSource } from '@angular/cdk/collections';
-import { MdSort } from '@angular/material';
+import { MatSort } from '@angular/material';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 
@@ -18,7 +18,7 @@ export class TableComponent implements OnInit {
   database = new DataBase();
   dataSource: dataSource | null;
 
-  @ViewChild(MdSort) sort: MdSort;
+  @ViewChild(MatSort) sort: MatSort;
 
   constructor() { }
 
@@ -75,14 +75,14 @@ export class DataBase {
 
 // Data source to provide what data should be rendered in the table
 export class dataSource extends DataSource<any> {
-    constructor(private database: DataBase, private sort: MdSort) {
+    constructor(private database: DataBase, private sort: MatSort) {
     super();
     }
 
     connect(): Observable<UserData[]> {
     const displayDataChanges = [
         this.database.dataChange,
-        this.sort.mdSortChange,
+        this.sort.sortChange
     ];
 
     return Observable.merge(...displayDataChanges).map(() => {

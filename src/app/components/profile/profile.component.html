@@ -1,20 +1,20 @@
 <div class="profile">
-  <md-card>
+  <mat-card>
     <div [@imageAnimation]='state' (click)="animateImage()" class="avatar"><img [src]="fullImagePath"></div>
 
-    <md-card-header>
-      <md-card-title><h3>{{profileTitle}}</h3></md-card-title>
-      <md-card-title><h4>{{userEmail()}}</h4>
-        <md-card-subtitle>{{displayName}}</md-card-subtitle>
-      </md-card-title>
-    </md-card-header>
+    <mat-card-header>
+      <mat-card-title><h3>{{profileTitle}}</h3></mat-card-title>
+      <mat-card-title><h4>{{userEmail()}}</h4>
+        <mat-card-subtitle>{{displayName}}</mat-card-subtitle>
+      </mat-card-title>
+    </mat-card-header>
 
     <hr>
     
-    <md-card-subtitle>{{bio}}</md-card-subtitle>
+    <mat-card-subtitle>{{bio}}</mat-card-subtitle>
         
-      <md-card-actions class="button">
-          <button md-raised-button class="primary" (click)="onPasswordReset()">Reset my password</button>
-      </md-card-actions> 
-  </md-card>
+      <mat-card-actions class="button">
+          <button mat-raised-button class="primary" (click)="onPasswordReset()">Reset my password</button>
+      </mat-card-actions> 
+  </mat-card>
 </div>

@@ -1,37 +1,37 @@
-<md-card>
+<mat-card>
   <div [hidden]="currentUser">
     <h3>Phone Number login</h3><h5>Currently only saving phonenumber to database, login in progress. (temporary place)</h5>
 
     <br/>+
-    <md-input-container>
-      <input mdInput type="text" [(ngModel)]="phoneNumber.country" class="input" placeholder="31" maxlength="2">
-    </md-input-container>
-    <md-input-container>
-      <input mdInput type="text" [(ngModel)]="phoneNumber.area" class="input" placeholder="612" maxlength="3">
-    </md-input-container>
-    <md-input-container>
-      <input mdInput type="text" [(ngModel)]="phoneNumber.prefix" class="input" placeholder="345" maxlength="3">
-    </md-input-container>
-    <md-input-container>
-      <input mdInput type="text" [(ngModel)]="phoneNumber.line" class="input" placeholder="678" maxlength="4">
-    </md-input-container>
+    <mat-input-container>
+      <input matInput type="text" [(ngModel)]="phoneNumber.country" class="input" placeholder="31" maxlength="2">
+    </mat-input-container>
+    <mat-input-container>
+      <input matInput type="text" [(ngModel)]="phoneNumber.area" class="input" placeholder="612" maxlength="3">
+    </mat-input-container>
+    <mat-input-container>
+      <input matInput type="text" [(ngModel)]="phoneNumber.prefix" class="input" placeholder="345" maxlength="3">
+    </mat-input-container>
+    <mat-input-container>
+      <input matInput type="text" [(ngModel)]="phoneNumber.line" class="input" placeholder="678" maxlength="4">
+    </mat-input-container>
 
     <div id="recaptcha-container"></div><br/>
 
-    <button md-raised-button (click)="sendLoginCode()">SMS me the text login code</button>
+    <button mat-raised-button (click)="sendLoginCode()">SMS me the text login code</button>
 
     <div *ngIf="windowRef.confirmationResult">
       <hr>
       <h4>Enter your verification code here</h4><br>
-      <md-input-container>
-        <input mdInput type="text" name="code" [(ngModel)]="verificationCode">
-      </md-input-container>
+      <mat-input-container>
+        <input matInput type="text" name="code" [(ngModel)]="verificationCode">
+      </mat-input-container>
 
-      <button md-raised-button (click)="verifyLoginCode()">Verify</button>
+      <button mat-raised-button (click)="verifyLoginCode()">Verify</button>
     </div>
 
   </div>
-</md-card>
+</mat-card>
 
 <div *ngIf="currentUser">
   You have successfully logged in with your phone number!

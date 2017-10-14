@@ -2,8 +2,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-         MdToolbarModule, MdDialogModule, MaterialModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule,
+         MatToolbarModule, MatDialogModule} from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
 // Components
@@ -19,8 +19,8 @@ import { MessageService } from './message.service';
   imports: [
     CommonModule,
     BrowserModule,
-    MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-    MdToolbarModule, MdDialogModule, MaterialModule,
+    MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule,
+    MatToolbarModule, MatDialogModule, 
     FormsModule
   ],
   providers: [

@@ -9,7 +9,7 @@ import { Component, OnInit, Input,
       <h3>
         Change Detail :
       </h3>
-      <button md-raised-button (click)="OnDetectChanges()">DetectChanges</button>
+      <button mat-raised-button (click)="OnDetectChanges()">DetectChanges</button>
       <br /><br />
       <pre>{{ course | json }}</pre>
     </div>

@@ -1,62 +1,62 @@
 <!-- Sidenav -->
-  <md-sidenav mode="over" opened="false" #sidenav class="sidenav">
+  <mat-sidenav mode="over" opened="false" #sidenav class="sidenav">
 
   <img [src]="angularImage">
   
   <div class="menu-link">
-    <button md-button routerLink="/home" (click)="sidenav.close()">
-      <md-icon class="home">home</md-icon>
+    <button mat-button routerLink="/home" (click)="sidenav.close()">
+      <mat-icon class="home">home</mat-icon>
       <span>Home</span>
     </button>
 
-    <button md-button routerLink="/about" (click)="sidenav.close()">
-      <md-icon class="about">pageview</md-icon>
+    <button mat-button routerLink="/about" (click)="sidenav.close()">
+      <mat-icon class="about">pageview</mat-icon>
       <span>About</span>
     </button>
 
-    <button md-button routerLink="/contact" (click)="sidenav.close()">
-      <md-icon class="contact">email</md-icon>
+    <button mat-button routerLink="/contact" (click)="sidenav.close()">
+      <mat-icon class="contact">email</mat-icon>
       <span>Contact</span>
     </button>
 
-    <button md-button routerLink="/misc" (click)="sidenav.close()">
-      <md-icon class="misc">burst_mode</md-icon>
+    <button mat-button routerLink="/misc" (click)="sidenav.close()">
+      <mat-icon class="misc">burst_mode</mat-icon>
       <span>Misc</span>
     </button>
 
     <hr>
 
     <div *ngIf="!authService.isAuthenticated(); else logout">
-      <button md-button routerLink="/signup" (click)="sidenav.close()">
-        <md-icon class="signup">person_add</md-icon>
+      <button mat-button routerLink="/signup" (click)="sidenav.close()">
+        <mat-icon class="signup">person_add</mat-icon>
         <span>Signup</span>
       </button>
 
-      <button md-button routerLink="/login" (click)="sidenav.close()">
-        <md-icon class="login">lock_open</md-icon>
+      <button mat-button routerLink="/login" (click)="sidenav.close()">
+        <mat-icon class="login">lock_open</mat-icon>
         <span>Login</span>
       </button>
     </div>
 
     <ng-template #logout>          
-      <button md-button (click)="onLogout()" (click)="sidenav.close()">
-        <md-icon class="logout">lock_outline</md-icon>
+      <button mat-button (click)="onLogout()" (click)="sidenav.close()">
+        <mat-icon class="logout">lock_outline</mat-icon>
         <span>Logout</span>
       </button>
     </ng-template>
   </div>
 
-</md-sidenav>
+</mat-sidenav>
 
 <!-- Header -->
-<md-toolbar color="primary">
+<mat-toolbar color="primary">
  
   <span><a href="/"><app-titlecase-pipe></app-titlecase-pipe></a></span>
   
   <!-- Sidenav activate -->
   <div class="sidenav-content">
-    <button type="button" md-icon-button (click)="sidenav.toggle()">
-        <md-icon>menu</md-icon>
+    <button type="button" mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
     </button>
   </div>     
 
@@ -70,65 +70,65 @@
   <span class="spacer-light"></span>
 
     <div *ngIf="!authService.isAuthenticated(); else loggedin">
-      <a routerLink="/signup"><md-icon>person_add</md-icon></a>
-      <a routerLink="/login"><md-icon>lock_open</md-icon></a>
+      <a routerLink="/signup"><mat-icon>person_add</mat-icon></a>
+      <a routerLink="/login"><mat-icon>lock_open</mat-icon></a>
     </div>
 
     <ng-template #loggedin>
         <h4>(User: {{userEmail()}})</h4>
        
-        <button md-icon-button [mdMenuTriggerFor]="menu">
-        <md-icon>more_vert</md-icon>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
         </button>
         
-        <md-menu #menu="mdMenu" >
+        <mat-menu #menu="matMenu" >
           
           <!-- [routerLink]="['/profile', userUid(), userName()]" -->
           <a 
-            md-menu-item 
+            mat-menu-item 
             routerLink="/profile" 
             [queryParams]="{profile: '1'}" >
-            <md-icon class="profile">face</md-icon>
+            <mat-icon class="profile">face</mat-icon>
             <span>Profile</span>
           </a>
           
           <!--
-          <a md-menu-item routerLink="/messages">
-            <md-icon class="messages">chat</md-icon>
+          <a mat-menu-item routerLink="/messages">
+            <mat-icon class="messages">chat</mat-icon>
             <span>Messages</span>
           </a>
           -->
 
-          <a md-menu-item *ngFor="let item of menuItems" href="{{item.link}}">
-            <md-icon class="login">{{item.icon}}</md-icon>
+          <a mat-menu-item *ngFor="let item of menuItems" href="{{item.link}}">
+            <mat-icon class="login">{{item.icon}}</mat-icon>
             <span>{{item.title}}</span>
           </a>
 
           <a 
-            md-menu-item 
+            mat-menu-item 
             routerLink="/profile-settings" 
             [queryParams]="{profile: '1'}" 
             fragment="editProfile">
-            <md-icon class="settings">settings</md-icon>
+            <mat-icon class="settings">settings</mat-icon>
             <span>Settings</span>
           </a>
 
-          <a md-menu-item (click)="onLogout()">
-            <md-icon class="logout">lock_outline</md-icon>
+          <a mat-menu-item (click)="onLogout()">
+            <mat-icon class="logout">lock_outline</mat-icon>
             <span>Logout</span>
           </a>
-        </md-menu> 
+        </mat-menu> 
 
       </ng-template>
-</md-toolbar>
+</mat-toolbar>
 
-<md-tab-group>
-  <md-tab label="COMP">
-  </md-tab>
+<mat-tab-group>
+  <mat-tab label="COMP">
+  </mat-tab>
 
-  <md-tab label="MISC">
+  <mat-tab label="MISC">
       <div id="content">
-        <md-card>
+        <mat-card>
           <h1>Misc</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend metus vel imperdiet cursus. 
               Donec tempor placerat nibh ac hendrerit. Nulla feugiat augue ac fringilla facilisis. Aenean eget nibh at quam egestas commodo. 
@@ -147,8 +147,8 @@
               Proin mattis ultrices blandit. Vivamus accumsan vulputate sem vel tincidunt. Etiam imperdiet imperdiet ante, sit amet suscipit tortor finibus maximus.
               Maecenas euismod pulvinar lorem.
           </p>
-        </md-card>
+        </mat-card>
       </div>
-  </md-tab>
+  </mat-tab>
 
-</md-tab-group>
+</mat-tab-group>

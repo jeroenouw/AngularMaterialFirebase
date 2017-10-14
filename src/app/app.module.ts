@@ -1,10 +1,10 @@
 // Modules 3rd party
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-         MdToolbarModule, MdDialogModule, MdSidenavModule, MdNativeDateModule,
-         MaterialModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/aniMations';
+import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule, MatSnackBarModule,
+         MatToolbarModule, MatDialogModule, MatSidenavModule, MatNativeDateModule,
+         MatCardModule, MatIconModule } from '@angular/Material';
 import 'hammerjs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -57,9 +57,9 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
-    MdToolbarModule, MdDialogModule, MdSidenavModule, MdNativeDateModule,
-    MaterialModule,
+    MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule, MatSnackBarModule,
+    MatToolbarModule, MatDialogModule, MatSidenavModule, MatNativeDateModule,
+    MatCardModule, MatIconModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,

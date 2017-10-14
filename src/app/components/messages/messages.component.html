@@ -1,5 +1,5 @@
 <div id="content">
-  <md-card>
+  <mat-card>
     <h1>Messages</h1> <h4>(currently only passes messages to database, visible in console log)</h4>
         <div class="bs-example" id="messages">
           
@@ -14,11 +14,11 @@
           </div>
         </div>
         <div class="highlight">
-          <md-input-container class="full-width">
-            <textarea mdInput type="textarea" placeholder="Message here:" [(ngModel)]="newMessage" (keyup.enter)="sendMessage()"></textarea>
-          </md-input-container>
+          <mat-input-container class="full-width">
+            <textarea matInput type="textarea" placeholder="Message here:" [(ngModel)]="newMessage" (keyup.enter)="sendMessage()"></textarea>
+          </mat-input-container>
           <br />
-          <a md-raised-button class="send-message" (click)="sendMessage()">Send</a>
+          <a mat-raised-button class="send-message" (click)="sendMessage()">Send</a>
         </div>  
-  </md-card>
+  </mat-card>
 </div>
