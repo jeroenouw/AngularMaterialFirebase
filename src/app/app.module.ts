@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/aniMations';
 import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule, MatSnackBarModule,
          MatToolbarModule, MatDialogModule, MatSidenavModule, MatNativeDateModule,
-         MatCardModule, MatIconModule } from '@angular/Material';
+         MatCardModule, MatTabsModule, MatIconModule } from '@angular/Material';
 import 'hammerjs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -59,7 +59,7 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule, MatSnackBarModule,
     MatToolbarModule, MatDialogModule, MatSidenavModule, MatNativeDateModule,
-    MatCardModule, MatIconModule,
+    MatCardModule, MatTabsModule, MatIconModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
