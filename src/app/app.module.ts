@@ -5,7 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/aniMations';
 import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule, MatSnackBarModule,
          MatToolbarModule, MatDialogModule, MatSidenavModule, MatNativeDateModule,
          MatCardModule, MatTabsModule, MatIconModule } from '@angular/Material';
-import 'hammerjs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 

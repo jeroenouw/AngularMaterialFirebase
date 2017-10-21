@@ -32,6 +32,7 @@
 * Mat Toolbar
 * Mat Table
 * Mat Stepper
+* Mat Expansion panel
 * Mat Card
 * Mat Tabs
 * Mat Buttons

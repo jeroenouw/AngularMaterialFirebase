@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { MatButtonModule, MatCheckboxModule, MatInputModule, MatNativeDateModule, 
          MatSlideToggleModule, MatStepperModule, MatTooltipModule, MatSidenavModule, 
-         MatTableModule, MatCardModule, MatDatepickerModule } from '@angular/material';
+         MatTableModule, MatCardModule, MatDatepickerModule, MatExpansionModule,
+         MatIconModule } from '@angular/material';
 
 // import { CdkTableModule } from '@angular/cdk';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -18,6 +19,7 @@ import { ChangeDetailComponent } from './change/change-detail.component';
 import { VirtRealComponent } from './virtual-reality/virtreal.component';
 import { TableComponent } from './table/table.component';
 import { StepperComponent } from './stepper/stepper.component';
+import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +29,15 @@ import { StepperComponent } from './stepper/stepper.component';
     ChangeDetailComponent,
     VirtRealComponent,
     TableComponent,
-    StepperComponent
+    StepperComponent,
+    ExpansionPanelComponent
   ],
   imports: [
     CommonModule,
     MatButtonModule, MatCheckboxModule, MatInputModule, MatNativeDateModule, 
     MatSlideToggleModule, MatStepperModule, MatTooltipModule, MatSidenavModule, 
-    MatTableModule, MatCardModule, MatDatepickerModule,
+    MatTableModule, MatCardModule, MatDatepickerModule, MatExpansionModule,
+    MatIconModule,
     FormsModule, ReactiveFormsModule,
     PipesModule,
     // MiscRoutingModule
@@ -45,7 +49,8 @@ import { StepperComponent } from './stepper/stepper.component';
     ChangeDetailComponent,
     VirtRealComponent,
     TableComponent,
-    StepperComponent
+    StepperComponent,
+    ExpansionPanelComponent
   ]
 })
 

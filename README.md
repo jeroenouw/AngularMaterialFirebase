@@ -9,7 +9,7 @@
 ![logo](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmd.png "Logo")  
 
 # Angular 4 | Material Design | Firebase - Starter kit
-A full stack starter app containing [Angular 4](https://angular.io) (v4.4.5), [Material](https://material.io/) (v2.0.0-beta.12) and [Firebase](https://firebase.google.com/) (v4.5.1).
+A full stack starter app containing [Angular 4](https://angular.io) (v4.4.6), [Material](https://material.io/) (v2.0.0-beta.12) and [Firebase](https://firebase.google.com/) (v4.6.0).
 
 ## [Live demo](http://angular4.jerouw.nl) 
 ![loginpage](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmdprintscreen.png "Logo")  
