@@ -1,4 +1,4 @@
-[![demolive](https://img.shields.io/badge/demo-live-green.svg)](http://angular4.jerouw.nl/)
+[![demolive](https://img.shields.io/badge/demo-live-green.svg)](http://ngxmatfire.jerouw.nl/)
 [![npmversion](https://img.shields.io/npm/v/ngxmatfire.svg)]()
 [![npmlicense](https://img.shields.io/npm/l/ngxmatfire.svg)](https://github.com/jeroenouw/AngularMaterialFirebase/blob/master/LICENSE/)
 [![dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)](https://github.com/jeroenouw/AngularMaterialFirebase/blob/master/package.json)
@@ -8,10 +8,10 @@
 
 ![logo](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmd.png "Logo")  
 
-# Angular 4 | Material Design | Firebase - Starter kit
-A full stack starter app containing [Angular 4](https://angular.io) (v4.4.6), [Material](https://material.io/) (v2.0.0-beta.12) and [Firebase](https://firebase.google.com/) (v4.6.0).
+# Angular 5 | Material Design | Firebase - Starter kit
+A full stack starter app containing [Angular 5](https://angular.io), [Material](https://material.io/) and [Firebase](https://firebase.google.com/).
 
-## [Live demo](http://angular4.jerouw.nl) 
+## [Live demo](http://ngxmatfire.jerouw.nl) 
 ![loginpage](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmdprintscreen.png "Logo")  
 
 ## Quick start, Development & Production

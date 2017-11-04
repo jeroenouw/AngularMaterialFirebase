@@ -1,8 +1,8 @@
 ## Quick start
-First clone this repo: `git clone https://github.com/jeroenouw/Angular4MaterialDesign.git`.  
+First clone this repo: `git clone https://github.com/jeroenouw/AngularMaterialFirebase.git`.  
 Change directory to this project  
 Run `npm install` to install all the dependencies.  
-Run `npm start` or `ng serve` to run this project.  
+Run `npm start` to run this project. This will run with the AoT Compiler.    
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.  
 
 ## Development
@@ -22,7 +22,6 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 To build the development environment, run `npm run dist`.
 
 ## Production
-To build the default production environment, run `npm run prod`.  
-To build the production environment with Ahead-of-Time Compilation, run `npm run prod:aot`.  
-To build the production environment with reduced file size, run `npm run prod:opt` (Takes extra time to build).  
+To build the default production environment, run `npm run prod`. This will run with the AoT Compiler.   
+To build the production environment with reduced file size, run `npm run prod:opt` (Takes extra time to build with build optimizer).  
 

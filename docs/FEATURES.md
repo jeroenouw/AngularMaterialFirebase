@@ -1,5 +1,5 @@
 ## Features in this project:
-* Angular 4 front-end with Material Design
+* Angular 5 front-end with Material Design
 * Firebase back-end (0Auth authentication and NoSQL database)
 * Home page
 * About page
