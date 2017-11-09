@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule,
-         MatToolbarModule, MatDialogModule} from '@angular/material';
+         MatToolbarModule, MatDialogModule, MatCardModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
 // Components
@@ -20,7 +20,7 @@ import { MessageService } from './message.service';
     CommonModule,
     BrowserModule,
     MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule,
-    MatToolbarModule, MatDialogModule, 
+    MatToolbarModule, MatDialogModule, MatCardModule, MatCardModule,
     FormsModule
   ],
   providers: [
