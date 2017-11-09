@@ -1,7 +1,8 @@
 // Modules 3rd party
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule, MatCardModule } from '@angular/material';
+
+import { AppMaterialModule } from './../../app.material.module';
 
 // Components
 import { CardBlockComponent } from './card-block/card-block.component';
@@ -18,7 +19,7 @@ import { ThirdBlockComponent } from './third-block/third-block.component';
   ],
   imports: [
     CommonModule,
-    MatButtonModule, MatCardModule
+    AppMaterialModule
   ],
   exports: [
     CardBlockComponent,
