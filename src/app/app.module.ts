@@ -2,13 +2,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/aniMations';
-import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule, MatSnackBarModule,
-         MatToolbarModule, MatDialogModule, MatSidenavModule, MatNativeDateModule,
-         MatCardModule, MatTabsModule, MatIconModule } from '@angular/Material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 // Modules
+import { AppMaterialModule } from './app.material.module';
 import { MessagesModule } from './components/messages/messages.module';
 import { PipesModule } from './pipes/pipes.module';
 import { BlocksModule } from './components/blocks/blocks.module';
@@ -56,9 +54,7 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule, MatSnackBarModule,
-    MatToolbarModule, MatDialogModule, MatSidenavModule, MatNativeDateModule,
-    MatCardModule, MatTabsModule, MatIconModule,
+    AppMaterialModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,

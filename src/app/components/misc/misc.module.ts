@@ -34,8 +34,8 @@ import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.compo
   ],
   imports: [
     CommonModule,
-    MatButtonModule, MatCheckboxModule, MatInputModule, MatNativeDateModule, 
-    MatSlideToggleModule, MatStepperModule, MatTooltipModule, MatSidenavModule, 
+    MatButtonModule, MatCheckboxModule, MatInputModule, MatNativeDateModule,
+    MatSlideToggleModule, MatStepperModule, MatTooltipModule, MatSidenavModule,
     MatTableModule, MatCardModule, MatDatepickerModule, MatExpansionModule,
     MatIconModule,
     FormsModule, ReactiveFormsModule,
