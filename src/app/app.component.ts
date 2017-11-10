@@ -12,12 +12,12 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     firebase.initializeApp({
       // For other projects use different keys
-      apiKey: "AIzaSyDT4UnXVmliheMkO2iSAPWQpkf_LshPBZ0",
-      authDomain: "seanfurlongphotography.firebaseapp.com",
-      databaseURL: "https://seanfurlongphotography.firebaseio.com",
-      projectId: "seanfurlongphotography",
-      storageBucket: "seanfurlongphotography.appspot.com",
-      messagingSenderId: "31191153397"
+      apiKey: 'AIzaSyDT4UnXVmliheMkO2iSAPWQpkf_LshPBZ0',
+      authDomain: 'seanfurlongphotography.firebaseapp.com',
+      databaseURL: 'https://seanfurlongphotography.firebaseio.com',
+      projectId: 'seanfurlongphotography',
+      storageBucket: 'seanfurlongphotography.appspot.com',
+      messagingSenderId: '31191153397'
     });
  
     // See users, messages and keep in touch in console log
