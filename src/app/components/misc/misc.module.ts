@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MatButtonModule, MatCheckboxModule, MatInputModule, MatNativeDateModule, 
-         MatSlideToggleModule, MatStepperModule, MatTooltipModule, MatSidenavModule, 
-         MatTableModule, MatCardModule, MatDatepickerModule, MatExpansionModule,
-         MatIconModule } from '@angular/material';
+import { AppMaterialModule } from './../../app.material.module';
 
 // import { CdkTableModule } from '@angular/cdk';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -34,12 +31,9 @@ import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.compo
   ],
   imports: [
     CommonModule,
-    MatButtonModule, MatCheckboxModule, MatInputModule, MatNativeDateModule, 
-    MatSlideToggleModule, MatStepperModule, MatTooltipModule, MatSidenavModule, 
-    MatTableModule, MatCardModule, MatDatepickerModule, MatExpansionModule,
-    MatIconModule,
+    AppMaterialModule,
     FormsModule, ReactiveFormsModule,
-    PipesModule,
+    PipesModule
     // MiscRoutingModule
   ],
   exports: [

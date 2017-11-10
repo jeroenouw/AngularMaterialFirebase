@@ -4,9 +4,9 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MatButtonModule, MatInputModule, MatProgressBarModule,
-         MatCardModule, MatIconModule } from '@angular/material';
 import { UsersRouting } from './users.routing'
+
+import { AppMaterialModule } from './../../app.material.module';
 
 // Components
 import { SignupComponent } from './signup.component';
@@ -24,8 +24,7 @@ import { PhoneSigninComponent } from './phone-signin/phone-signin.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MatButtonModule, MatInputModule, MatProgressBarModule,
-    MatCardModule, MatIconModule, 
+    AppMaterialModule,
     UsersRouting
   ],
   providers: [

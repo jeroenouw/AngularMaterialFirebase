@@ -2,9 +2,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule,
-         MatToolbarModule, MatDialogModule} from '@angular/material';
 import { FormsModule } from '@angular/forms';
+
+import { AppMaterialModule } from './../../app.material.module';
 
 // Components
 import { MessagesComponent } from './messages.component';
@@ -19,8 +19,7 @@ import { MessageService } from './message.service';
   imports: [
     CommonModule,
     BrowserModule,
-    MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule,
-    MatToolbarModule, MatDialogModule, 
+    AppMaterialModule,
     FormsModule
   ],
   providers: [
