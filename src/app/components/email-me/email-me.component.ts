@@ -13,8 +13,7 @@ export class EmailMeComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private formBuilder: FormBuilder) 
-  {
+    private formBuilder: FormBuilder) {
     this.form = formBuilder.group({
       email: ['', Validators.compose([Validators.required, EmailValidator.isValid])]
     });

@@ -20,7 +20,7 @@ import { MessageService } from './message.service';
     CommonModule,
     BrowserModule,
     MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule,
-    MatToolbarModule, MatDialogModule, 
+    MatToolbarModule, MatDialogModule,
     FormsModule
   ],
   providers: [
