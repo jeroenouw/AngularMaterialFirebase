@@ -19,5 +19,4 @@ All improvements to this repo will first be done in the development branch.
 
 ### Other
 * i18n translations
-* Internal server error 500
 * 360 view only working on localhost
