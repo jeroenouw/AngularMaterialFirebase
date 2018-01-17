@@ -25,7 +25,7 @@ import { PhoneSigninComponent } from './phone-signin/phone-signin.component';
     FormsModule,
     HttpModule,
     MatButtonModule, MatInputModule, MatProgressBarModule,
-    MatCardModule, MatIconModule, 
+    MatCardModule, MatIconModule,
     UsersRouting
   ],
   providers: [
