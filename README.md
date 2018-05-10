@@ -8,8 +8,8 @@
 
 ![logo](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmd.png "Logo")  
 
-# Angular 5 | Material Design | Firebase - Starter kit
-A full stack starter app containing [Angular 5](https://angular.io), [Material](https://material.io/) and [Firebase](https://firebase.google.com/).
+# Angular 6 | Material Design | Firebase - Starter kit
+A full stack starter app containing [Angular 6](https://angular.io), [Material](https://material.io/) and [Firebase](https://firebase.google.com/).
 
 ## [Live demo](http://ngxmatfire.jerouw.nl) 
 ![loginpage](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmdprintscreen.png "Logo")  
@@ -27,4 +27,4 @@ A full stack starter app containing [Angular 5](https://angular.io), [Material](
 Want to file a bug, contribute some code, or improve documentation? Feel free to place an [issue](https://github.com/jeroenouw/AngularMaterialFirebase/issues).
 
 ## License
-[![npmlicense](https://img.shields.io/npm/l/ng4matfire.svg)](https://github.com/jeroenouw/AngularMaterialFirebase/blob/master/LICENSE/)
+[![npmlicense](https://img.shields.io/npm/l/ngxmatfire.svg)](https://github.com/jeroenouw/AngularMaterialFirebase/blob/master/LICENSE/)

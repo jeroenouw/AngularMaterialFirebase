@@ -2,9 +2,9 @@
   <mat-card>
     <h1>Messages</h1> <h4>(currently only passes messages to database, visible in console log)</h4>
         <div class="bs-example" id="messages">
-          
+
           <div *ngFor="let message of messages | async">
-            
+
             <div class="bubble" [class.you]="isYou(message.email)" [class.me]="isMe(message.email)">
               <p>{{ message.message }}</p>
               <div class="author">
@@ -13,12 +13,12 @@
             </div>
           </div>
         </div>
-        <div class="highlight">
+        <!-- <div class="highlight">
           <mat-input-container class="full-width">
             <textarea matInput type="textarea" placeholder="Message here:" [(ngModel)]="newMessage" (keyup.enter)="sendMessage()"></textarea>
           </mat-input-container>
           <br />
           <a mat-raised-button class="send-message" (click)="sendMessage()">Send</a>
-        </div>  
+        </div>   -->
   </mat-card>
 </div>

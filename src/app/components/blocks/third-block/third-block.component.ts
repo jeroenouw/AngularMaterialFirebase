@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./third-block.component.scss']
 })
 export class ThirdBlockComponent  {
-  titleThree = 'Angular 5';
+  titleThree = 'Angular 6';
   contentThree = 'Angular is a framework for building client applications in HTML and TypeScript that compiles to JavaScript.';
 
   titleFour = 'Material 2';
