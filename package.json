@@ -1,6 +1,6 @@
 {
   "name": "ngxmatfire",
-  "version": "1.0.12",
+  "version": "1.1.0",
   "author": "Jeroen Ouwehand",
   "description": "Full stack starter app with Angular 6, Material Design and Firebase.",
   "keywords": [
