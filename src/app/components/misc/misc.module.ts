@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MatButtonModule, MatCheckboxModule, MatInputModule, MatNativeDateModule,
@@ -51,6 +51,9 @@ import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.compo
     TableComponent,
     StepperComponent,
     ExpansionPanelComponent
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ]
 })
 

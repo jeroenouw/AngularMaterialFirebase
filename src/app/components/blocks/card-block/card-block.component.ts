@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CardBlockComponent {
   titleCard = 'Angular';
-  numberCard = 5;
+  numberCard = 6;
   subTitleCard = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisl ligula.';
   contentCard = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisl ligula.';
   angularImage: string;

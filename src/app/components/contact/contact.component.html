@@ -2,38 +2,38 @@
   <mat-card>
     <h1>Contact us</h1>
       <form class="form" (ngSubmit)="onSubmit(c)" #c="ngForm" >
-      <mat-input-container class="full-width">
+      <mat-form-field class="full-width">
         <input matInput placeholder="Company" id="company" name="company" value="Google" ngModel required>
-      </mat-input-container>
+      </mat-form-field>
 
       <table class="full-width" cellspacing="0"><tr>
-        <td><mat-input-container class="full-width">
+        <td><mat-form-field class="full-width">
           <input matInput placeholder="First name" id="firstname" name="firstname" ngModel required>
-        </mat-input-container></td>
-        <td><mat-input-container class="full-width">
+        </mat-form-field></td>
+        <td><mat-form-field class="full-width">
           <input matInput placeholder="Last name" id="lastname" name="lastname" ngModel required>
-        </mat-input-container></td>
+        </mat-form-field></td>
       </tr></table>
 
       <p>
-        <mat-input-container class="full-width">
+        <mat-form-field class="full-width">
           <textarea matInput placeholder="Address" value="Streetname 12a" id="address" name="address" ngModel required></textarea>
-        </mat-input-container>
+        </mat-form-field>
       </p>
 
       <table class="full-width" cellspacing="0"><tr>
-        <td><mat-input-container class="full-width">
+        <td><mat-form-field class="full-width">
           <input matInput placeholder="City" id="city" name="city" ngModel required>
-        </mat-input-container></td>
-        <td><mat-input-container class="full-width">
+        </mat-form-field></td>
+        <td><mat-form-field class="full-width">
           <input matInput #postalCode maxlength="6" id="postal" name="postal" placeholder="Zip Code" value="2900TY" ngModel required>
           <mat-hint align="end">{{postalCode.value.length}} / 6</mat-hint>
-        </mat-input-container></td>
+        </mat-form-field></td>
       </tr></table>      
       <p>
-        <mat-input-container class="full-width">
+        <mat-form-field class="full-width">
           <textarea matInput placeholder="Your message" id="message" name="message" ngModel required></textarea>
-        </mat-input-container>
+        </mat-form-field>
       </p>
       <br />
       <button mat-raised-button type="submit" [disabled]="c.invalid">Submit</button>

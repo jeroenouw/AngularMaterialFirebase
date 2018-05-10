@@ -3,7 +3,7 @@
 <!-- Progress bar -->
 <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
 
-<mat-card>  
+<mat-card>
   <h3>Social login</h3>
   <form (ngSubmit)="onSignInGoogle(g)" #g="ngForm">
     <mat-card-actions class="button">
@@ -26,19 +26,19 @@
       <button class="btn btn-block btn-social btn-github" type="submit" [disabled]="!gh.valid"><span class="fa fa-github"></span> Login with your Github Account</button>
     </mat-card-actions>
   </form>
-  
+
   <hr>
 
   <h3>Login</h3>
   <form (ngSubmit)="onSignin(f)" #f="ngForm">
-    <mat-input-container class="full-width">
+    <mat-form-field class="full-width">
       <!--<label for ="email">Mail</label>-->
       <input matInput placeholder="Email" type="email" id="email" name="email" ngModel required>
-    </mat-input-container>
-    <mat-input-container class="full-width">
+    </mat-form-field>
+    <mat-form-field class="full-width">
       <!--<label for ="password">Password</label>-->
       <input matInput placeholder="Password" type="password" id="password" name="password" ngModel required>
-    </mat-input-container>
+    </mat-form-field>
     <mat-card-actions class="button">
       <button mat-raised-button class="primary" type="submit" [disabled]="!f.valid">Login</button>
     </mat-card-actions>
@@ -50,7 +50,7 @@
   <form (ngSubmit)="onSigninAnonymous(a)" #a="ngForm">
     <mat-card-actions class="button">
       <button mat-raised-button class="primary" type="submit">Login anonymously</button>
-    </mat-card-actions> 
+    </mat-card-actions>
   </form>
 
 </mat-card>

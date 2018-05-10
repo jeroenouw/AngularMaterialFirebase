@@ -30,32 +30,32 @@
   <h3>Or sign up with your email</h3>
 
   <form (ngSubmit)="onSignup(f)" #f="ngForm">
-    <mat-input-container class="full-width">
+    <mat-form-field class="full-width">
       <!--<label for ="email">Mail</label>-->
       <input matInput placeholder="Email" type="email" id="email" name="email" ngModel required>
-    </mat-input-container>
-    <mat-input-container class="full-width">
+    </mat-form-field>
+    <mat-form-field class="full-width">
       <!--<label for ="password">Password</label>-->
       <input matInput placeholder="Password" type="password" id="password" name="password" ngModel required>
-    </mat-input-container>
+    </mat-form-field>
     <mat-card-actions class="button">
       <button mat-raised-button class="primary" type="submit" [disabled]="!f.valid">Register</button>
     </mat-card-actions>
   </form>
   <!--
     <form (ngSubmit)="onSignupCellphone(cp)" #cp="ngForm">
-    <mat-input-container class="full-width">-->
+    <mat-form-field class="full-width">-->
       <!--<label for ="email">Mail</label>-->
       <!--<input matInput placeholder="phoneNumber" type="phoneNumber" id="phoneNumber" name="phoneNumber" ngModel>
-    </mat-input-container>
-    <mat-input-container class="form-group">-->
+    </mat-form-field>
+    <mat-form-field class="form-group">-->
       <!--<label for ="password">Password</label>-->
       <!--<input matInput placeholder="appVerifier" type="appVerifier" id="appVerifier" name="appVerifier" ngModel>
-    </mat-input-container>    
-    <mat-input-container class="form-group">-->
+    </mat-form-field>    
+    <mat-form-field class="form-group">-->
       <!--<label for ="password">Password</label>-->
       <!--<input matInput placeholder="code" type="code" id="code" name="code" ngModel>
-    </mat-input-container>
+    </mat-form-field>
     <mat-card-actions class="button">
       <button mat-raised-button class="primary" type="submit" [disabled]="!cp.valid">Cellphone</button>
     </mat-card-actions>

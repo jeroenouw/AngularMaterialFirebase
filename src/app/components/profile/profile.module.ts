@@ -1,5 +1,5 @@
 // Modules 3rd party
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule,
          MatToolbarModule, MatCardModule, MatDialogModule } from '@angular/material';
@@ -23,6 +23,9 @@ import { ProfileSettingsComponent } from './profile-settings.component';
   exports: [
     ProfileComponent,
     ProfileSettingsComponent
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ]
 })
 export class ProfileModule {

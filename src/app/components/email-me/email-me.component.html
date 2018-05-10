@@ -1,9 +1,9 @@
 <form class="form" [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm"> 
   <mat-card>
     <h3>Keep in touch!</h3>
-    <mat-input-container class="full-width">
+    <mat-form-field class="full-width">
       <input matInput formControlName="email" placeholder="Your Email" type="email" ngModel required>
-    </mat-input-container>
+    </mat-form-field>
     <div *ngIf="!form.controls.email.valid  && form.controls.email.dirty">
       <p>Please enter a valid email.</p>
     </div>

@@ -28,7 +28,7 @@ export class ChangeDetectionComponent implements OnInit {
 
   OnMutate() {
     console.log('OnMutate');
-    this.change1.title = 'Learning Angular 5';
+    this.change1.title = 'Learning Angular 6';
     this.change1.author = 'Person A';
   }
 
