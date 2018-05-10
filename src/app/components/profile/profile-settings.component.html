@@ -4,13 +4,13 @@
 
         <form class="form" (ngSubmit)="onUpdateUserInfo(sv)" #sv="ngForm">
 
-            <mat-input-container class="form-group">
+            <mat-form-field class="form-group">
                 <input matInput placeholder="Username" id="displayName" name="displayName" [(ngModel)]="displayName" required>
-            </mat-input-container>
+            </mat-form-field>
 
-            <mat-input-container class="form-group">
+            <mat-form-field class="form-group">
                 <textarea matInput placeholder="Short Bio" rows="6" id="bio" name="bio" [(ngModel)]="bio" required></textarea>
-            </mat-input-container>
+            </mat-form-field>
 
             <hr>
             

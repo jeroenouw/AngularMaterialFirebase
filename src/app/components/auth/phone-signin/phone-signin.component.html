@@ -3,18 +3,18 @@
     <h3>Phone Number login</h3><h5>Currently only saving phonenumber to database, login in progress. (temporary place)</h5>
 
     <br/>+
-    <mat-input-container>
+    <mat-form-field>
       <input matInput type="text" [(ngModel)]="phoneNumber.country" class="input" placeholder="31" maxlength="2">
-    </mat-input-container>
-    <mat-input-container>
+    </mat-form-field>
+    <mat-form-field>
       <input matInput type="text" [(ngModel)]="phoneNumber.area" class="input" placeholder="612" maxlength="3">
-    </mat-input-container>
-    <mat-input-container>
+    </mat-form-field>
+    <mat-form-field>
       <input matInput type="text" [(ngModel)]="phoneNumber.prefix" class="input" placeholder="345" maxlength="3">
-    </mat-input-container>
-    <mat-input-container>
+    </mat-form-field>
+    <mat-form-field>
       <input matInput type="text" [(ngModel)]="phoneNumber.line" class="input" placeholder="678" maxlength="4">
-    </mat-input-container>
+    </mat-form-field>
 
     <div id="recaptcha-container"></div><br/>
 
@@ -23,9 +23,9 @@
     <div *ngIf="windowRef.confirmationResult">
       <hr>
       <h4>Enter your verification code here</h4><br>
-      <mat-input-container>
+      <mat-form-field>
         <input matInput type="text" name="code" [(ngModel)]="verificationCode">
-      </mat-input-container>
+      </mat-form-field>
 
       <button mat-raised-button (click)="verifyLoginCode()">Verify</button>
     </div>
