@@ -18,15 +18,15 @@
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --aot --open",
-    "ngtest2": "ng serve --aot && ngc --watch --diagnostics",
+    "start": "ng serve",
+    "ngtest2": "ng serve && ngc --watch --diagnostics",
     "test": "ng test",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
-    "e2e": "protractor",
-    "dist": "ng build --aot",
-    "prod": "ng build --prod --aot",
-    "prod:opt": "ng build --prod --aot --build-optimizer",
-    "prod:src": "ng build --prod --aot --sourcemaps",
+    "e2e": "ng e2e",
+    "lint": "ng lint",
+    "dist": "ng build",
+    "prod": "ng build --prod",
+    "prod:src": "ng build --prod --sourcemaps",
     "i18n": "ng-xi18n"
   },
   "dependencies": {
