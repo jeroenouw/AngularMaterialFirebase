@@ -7,6 +7,9 @@
 # dependencies
 /node_modules
 
+# compodoc documentation
+/documentation
+
 # IDEs and editors
 /.idea
 .project
@@ -30,9 +33,6 @@
 npm-debug.log
 testem.log
 /typings
-src/app/components/carousel/readme.md
-readme.txt
-todo.txt
 package-lock.json
 
 # e2e

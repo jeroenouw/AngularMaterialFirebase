@@ -1,6 +1,10 @@
-## Features in this project:
+# FEATURES
+
+## Features in this project
+
 * Angular 6 front-end with Material Design
 * Firebase back-end (0Auth authentication and NoSQL database)
+* Automated documentation (compodoc)
 * Home page
 * About page
 * Contact page
@@ -23,7 +27,8 @@
 * Back to top button
 * Loading spinner and progress bar
 
-## Material Design usage in this project:
+## Material Design usage in this project
+
 * Mat Datepicker
 * Mat Input
 * Mat Slide toggle

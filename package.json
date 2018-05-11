@@ -19,15 +19,17 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "ngtest2": "ng serve && ngc --watch --diagnostics",
     "test": "ng test",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "ng e2e",
     "lint": "ng lint",
     "dist": "ng build",
     "prod": "ng build --prod",
+    "prod:hashless": "ng build --prod --output-hashing none",
     "prod:src": "ng build --prod --sourcemaps",
-    "i18n": "ng-xi18n"
+    "compodoc:g": "compodoc -p src/tsconfig.app.json",
+    "compodoc:s": "compodoc -p src/tsconfig.app.json --serve",
+    "compodoc:w": "compodoc -p src/tsconfig.app.json --serve --watch"
   },
   "dependencies": {
     "@angular/animations": "^6.0.0",
@@ -43,7 +45,7 @@
     "@angular/platform-server": "^6.0.0",
     "@angular/router": "^6.0.0",
     "core-js": "^2.5.3",
-    "firebase": "^4.11.0",
+    "firebase": "^5.0.2",
     "hammerjs": "^2.0.8",
     "rxjs": "^6.1.0",
     "rxjs-compat": "^6.1.0",
@@ -55,6 +57,7 @@
     "@angular/cli": "^6.0.0",
     "@angular/compiler-cli": "^6.0.0",
     "@angular/language-service": "^6.0.0",
+    "@compodoc/compodoc": "^1.1.2",
     "@types/jasmine": "^2.8.7",
     "@types/node": "^10.0.3",
     "codelyzer": "^4.2.1",

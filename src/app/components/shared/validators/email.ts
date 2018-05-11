@@ -12,6 +12,5 @@ export class EmailValidator {
     return {
       'invalidEmail': true
     };
-
   }
 }

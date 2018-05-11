@@ -16,7 +16,7 @@ export class UserService {
   }
 
   saveUserInfo(uid, name, email
-  // uid, token, image, name, username, bio, email, password
+    // uid, token, image, name, username, bio, email, password
   ) {
     return firebase.database().ref().child('users/' + uid).set({
       name: name,
@@ -31,7 +31,7 @@ export class UserService {
       displayName: displayName,
       bio: bio
       // password: password
-    })
+    });
   }
 
   getAdmin() {
@@ -129,11 +129,11 @@ export class UserService {
   */
 
   verificationUserEmail() {
-      firebase.auth().currentUser.sendEmailVerification().then(() => {
-        // Email sent.
-      }, (error) => {
-        // An error happened.
-      });
+    firebase.auth().currentUser.sendEmailVerification().then(() => {
+      // Email sent.
+    }, (error) => {
+      // An error happened.
+    });
   }
 
   // Password
@@ -150,11 +150,11 @@ export class UserService {
   */
 
   sendUserPasswordResetEmail() {
-      firebase.auth().sendPasswordResetEmail(firebase.auth().currentUser.email).then(() => {
-        // Email sent.
-      }, (error) => {
-        // An error happened.
-      });
+    firebase.auth().sendPasswordResetEmail(firebase.auth().currentUser.email).then(() => {
+      // Email sent.
+    }, (error) => {
+      // An error happened.
+    });
   }
 
 }
