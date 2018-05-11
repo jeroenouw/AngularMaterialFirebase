@@ -34,7 +34,7 @@ import { AppRoutingModule,
          // routingComponents
          } from './app.routing';
 
-// Components
+// Other components
 import { HomeComponent } from './components/home/home.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ContactComponent } from './components/contact/contact.component';

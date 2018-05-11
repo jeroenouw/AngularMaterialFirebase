@@ -13,6 +13,24 @@ export class HeaderComponent {
   isAuthenticated = false;
   angularImage: string;
 
+  menuItems: Array<Object> = [
+    {
+      icon: 'description',
+      title: 'Medium @jeroenouw',
+      link: 'https://medium.com/@jeroenouw'
+    },
+    {
+      icon: 'archive',
+      title: 'Published packages',
+      link: 'https://www.npmjs.com/~jeroenouw'
+    },
+    {
+      icon: 'link',
+      title: 'Fork on Github',
+      link: 'https://github.com/jeroenouw/AngularMaterialFirebase'
+    },
+  ];
+
   constructor(
     public authService: AuthService,
     private alertService: AlertService,
@@ -41,17 +59,4 @@ export class HeaderComponent {
     this.authService.logout();
     this.alertService.showToaster('Logout succesful');
   }
-
-  public menuItems: Array<Object> = [
-    {
-      icon: 'description',
-      title: 'Published packages',
-      link: 'https://www.npmjs.com/~jeroenouw'
-    },
-    {
-      icon: 'link',
-      title: 'Fork on Github',
-      link: 'https://github.com/jeroenouw/AngularMaterialFirebase'
-    },
-  ];
 }
