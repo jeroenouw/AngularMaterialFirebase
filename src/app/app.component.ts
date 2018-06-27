@@ -1,5 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase';
+// For other projects use different keys
+
+const AppSettings = {
+	apiKey: 'AIzaSyBUYZcc_HKi1TckbZPpSjSkxyFvml3Is0A',
+	authDomain: 'angular4materialdesign.firebaseapp.com',
+	databaseURL: 'https://angular4materialdesign.firebaseio.com',
+	projectId: 'angular4materialdesign',
+	storageBucket: 'angular4materialdesign.appspot.com',
+	messagingSenderId: '136985605193'
+}
 
 @Component({
   selector: 'app-root',
@@ -9,16 +19,9 @@ import * as firebase from 'firebase';
 
 export class AppComponent implements OnInit {
 
-  ngOnInit() {
-    firebase.initializeApp({
-      // For other projects use different keys
-      apiKey: 'AIzaSyBUYZcc_HKi1TckbZPpSjSkxyFvml3Is0A',
-      authDomain: 'angular4materialdesign.firebaseapp.com',
-      databaseURL: 'https://angular4materialdesign.firebaseio.com',
-      projectId: 'angular4materialdesign',
-      storageBucket: 'angular4materialdesign.appspot.com',
-      messagingSenderId: '136985605193'
-    });
+  constructor() {
+	firebase.initializeApp(AppSettings);
+
 
     // See users, messages and keep in touch in console log
 
@@ -34,4 +37,5 @@ export class AppComponent implements OnInit {
     // const dbRefTouch = firebase.database().ref().child('touch');
     // dbRefTouch.on('value', snap => console.log(snap.val()));
   }
+  ngOnInit() {}
 }

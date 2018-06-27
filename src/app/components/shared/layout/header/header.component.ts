@@ -36,7 +36,7 @@ export class HeaderComponent {
     private alertService: AlertService,
     private userService: UserService
     ) {
-      this.isAuthenticated = this.authService.isAuthenticated(),
+      this.isAuthenticated = !this.authService.isAuthenticated(),
       this.angularImage = '/assets/img/angular2.png';
   }
 

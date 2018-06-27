@@ -10,7 +10,7 @@ import { WindowService, PhoneNumber, AuthService, AlertService } from '../../sha
   styleUrls: ['./phone-signin.component.scss']
 })
 export class PhoneSigninComponent implements OnInit {
-  phoneNumber = new PhoneNumber()
+  phoneNumber = new PhoneNumber();
   isAuthenticated = false;
 
   token: string;
@@ -22,14 +22,14 @@ export class PhoneSigninComponent implements OnInit {
               private router: Router,
               private authService: AuthService,
               private alertService: AlertService) {
-      this.isAuthenticated = this.authService.isAuthenticated()
+      this.isAuthenticated = !this.authService.isAuthenticated();
   }
 
   ngOnInit() {
-    this.windowRef = this.win.windowRef
-    this.windowRef.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container')
+    this.windowRef = this.win.windowRef;
+    this.windowRef.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
 
-    this.windowRef.recaptchaVerifier.render()
+    this.windowRef.recaptchaVerifier.render();
   }
 
   sendLoginCode() {

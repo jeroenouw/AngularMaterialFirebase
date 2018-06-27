@@ -19,7 +19,7 @@ export class AuthService {
     const providerGoogle = new firebase.auth.GoogleAuthProvider();
     return firebase.auth().signInWithPopup(providerGoogle)
       .then((result) => {
-        const token = result.credential.accessToken;
+        const token = (<any> result).credential.accessToken;
         const currentUser = result.user;
       })
       .then(response => {
@@ -42,9 +42,9 @@ export class AuthService {
     const providerTwitter = new firebase.auth.TwitterAuthProvider();
     return firebase.auth().signInWithPopup(providerTwitter)
       .then((result) => {
-        const token = result.credential.accessToken;
+        const token = (<any> result).credential.accessToken;
         const currentUser = result.user;
-        const secret = result.credential.secret;
+        const secret = (<any> result).credential.sec;
       })
       .then(response => {
         this.router.navigate(['/']);
@@ -86,8 +86,6 @@ export class AuthService {
     const providerGithub = new firebase.auth.GithubAuthProvider();
       return firebase.auth().signInWithPopup(providerGithub)
       .then((result) => {
-        const token = result.credential.accessToken;
-        const currentUser = result.user;
         this.alertService.showToaster('Verification email is sent to you.');
         this.userService.verificationUserEmail();
         this.userService.saveUserInfo(firebase.auth().currentUser.uid, name, firebase.auth().currentUser.email);
@@ -121,10 +119,6 @@ export class AuthService {
   signInWithGoogle() {
     const providerGoogle = new firebase.auth.GoogleAuthProvider();
     return firebase.auth().signInWithPopup(providerGoogle)
-      .then((result) => {
-        const token = result.credential.accessToken;
-        const currentUser = result.user;
-      })
       .then(response => {
         this.router.navigate(['/']);
         firebase.auth().currentUser.getIdToken()
@@ -142,7 +136,7 @@ export class AuthService {
   signInWithTwitter() {
     const providerTwitter = new firebase.auth.TwitterAuthProvider();
     return firebase.auth().signInWithPopup(providerTwitter)
-      .then(response => {
+      .then(() => {
         this.router.navigate(['/']);
         firebase.auth().currentUser.getIdToken()
           .then(
@@ -159,8 +153,7 @@ export class AuthService {
   signInWithFacebook() {
     const providerFacebook = new firebase.auth.FacebookAuthProvider();
     return firebase.auth().signInWithPopup(providerFacebook)
-      .then(
-        response => {
+      .then(() => {
           this.router.navigate(['/']);
           firebase.auth().currentUser.getIdToken()
             .then(
@@ -177,11 +170,7 @@ export class AuthService {
   signInWithGithub() {
     const providerGithub = new firebase.auth.GithubAuthProvider();
     return firebase.auth().signInWithPopup(providerGithub)
-      .then((result) => {
-        const token = result.credential.accessToken;
-        const currentUser = result.user;
-      })
-      .then(response => {
+      .then(() => {
         this.router.navigate(['/']);
         firebase.auth().currentUser.getIdToken()
           .then(
@@ -258,6 +247,6 @@ export class AuthService {
   }
 
   isAuthenticated() {
-    return this.token != null;
+    return firebase.auth().currentUser;
   }
 }
