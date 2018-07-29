@@ -9,7 +9,7 @@
 
 # Angular 6 | Material Design | Firebase - Starter kit
 
-A full stack starter app containing [Angular 6](https://angular.io), [Material](https://material.io/) and [Firebase](https://firebase.google.com/).
+A full stack starter app containing [Angular 6](https://angular.io), [Material](https://material.io/) and [Firebase](https://firebase.google.com/). See also: [AngularMaterialGo](https://github.com/jeroenouw/AngularMaterialGo)
 
 ## [Live demo](http://ngxmatfire.jerouw.nl)
 
