@@ -2,7 +2,7 @@
   <mat-card>
     <h3>Keep in touch!</h3>
     <mat-form-field class="full-width">
-      <input matInput formControlName="email" placeholder="Your Email" type="email" ngModel required>
+      <input matInput formControlName="email" placeholder="Your Email" type="email" required>
     </mat-form-field>
     <div *ngIf="!form.controls.email.valid  && form.controls.email.dirty">
       <p>Please enter a valid email.</p>

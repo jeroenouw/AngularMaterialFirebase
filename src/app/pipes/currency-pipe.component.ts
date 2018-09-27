@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   <h3>Currency Pipe :</h3>
   <div>
     <p>Angular: {{angularPrice | currency:'EUR':false}}</p>
-    <p>Angular 6: {{angular4Price | currency:'EUR':true:'4.2-2'}}</p>
+    <p>Angular 7: {{angular4Price | currency:'EUR':true:'4.2-2'}}</p>
   </div>
 </fieldset>`,
   styles: []
