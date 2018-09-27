@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import * as firebase from 'firebase';
+import * as firebase from 'firebase/app';
 
 import { WindowService, PhoneNumber, AuthService, AlertService } from '../../shared';
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import * as firebase from 'firebase';
+import * as firebase from 'firebase/app';
 
 import { AlertService } from './alert.service';
 import { UserService } from './user.service';
@@ -19,8 +19,8 @@ export class AuthService {
     const providerGoogle = new firebase.auth.GoogleAuthProvider();
     return firebase.auth().signInWithPopup(providerGoogle)
       .then((result) => {
-        const token = result.credential.accessToken;
-        const currentUser = result.user;
+        // const token = result.credential.accessToken;
+        // const currentUser = result.user;
       })
       .then(response => {
         this.router.navigate(['/']);
@@ -42,9 +42,9 @@ export class AuthService {
     const providerTwitter = new firebase.auth.TwitterAuthProvider();
     return firebase.auth().signInWithPopup(providerTwitter)
       .then((result) => {
-        const token = result.credential.accessToken;
+        // const token = result.credential.accessToken;
         const currentUser = result.user;
-        const secret = result.credential.secret;
+        // const secret = result.credential.secret;
       })
       .then(response => {
         this.router.navigate(['/']);
@@ -86,7 +86,7 @@ export class AuthService {
     const providerGithub = new firebase.auth.GithubAuthProvider();
       return firebase.auth().signInWithPopup(providerGithub)
       .then((result) => {
-        const token = result.credential.accessToken;
+        // const token = result.credential.accessToken;
         const currentUser = result.user;
         this.alertService.showToaster('Verification email is sent to you.');
         this.userService.verificationUserEmail();
@@ -122,7 +122,7 @@ export class AuthService {
     const providerGoogle = new firebase.auth.GoogleAuthProvider();
     return firebase.auth().signInWithPopup(providerGoogle)
       .then((result) => {
-        const token = result.credential.accessToken;
+        // const token = result.credential.accessToken;
         const currentUser = result.user;
       })
       .then(response => {
@@ -178,7 +178,7 @@ export class AuthService {
     const providerGithub = new firebase.auth.GithubAuthProvider();
     return firebase.auth().signInWithPopup(providerGithub)
       .then((result) => {
-        const token = result.credential.accessToken;
+        // const token = result.credential.accessToken;
         const currentUser = result.user;
       })
       .then(response => {
