@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import * as firebase from 'firebase/app';
+import * as firebase from 'firebase';
 
 import { AlertService } from './alert.service';
 import { UserService } from './user.service';
@@ -19,8 +19,6 @@ export class AuthService {
     const providerGoogle = new firebase.auth.GoogleAuthProvider();
     return firebase.auth().signInWithPopup(providerGoogle)
       .then((result) => {
-        // const token = result.credential.accessToken;
-        // const currentUser = result.user;
       })
       .then(response => {
         this.router.navigate(['/']);
@@ -42,9 +40,7 @@ export class AuthService {
     const providerTwitter = new firebase.auth.TwitterAuthProvider();
     return firebase.auth().signInWithPopup(providerTwitter)
       .then((result) => {
-        // const token = result.credential.accessToken;
         const currentUser = result.user;
-        // const secret = result.credential.secret;
       })
       .then(response => {
         this.router.navigate(['/']);
@@ -86,7 +82,6 @@ export class AuthService {
     const providerGithub = new firebase.auth.GithubAuthProvider();
       return firebase.auth().signInWithPopup(providerGithub)
       .then((result) => {
-        // const token = result.credential.accessToken;
         const currentUser = result.user;
         this.alertService.showToaster('Verification email is sent to you.');
         this.userService.verificationUserEmail();
@@ -122,8 +117,6 @@ export class AuthService {
     const providerGoogle = new firebase.auth.GoogleAuthProvider();
     return firebase.auth().signInWithPopup(providerGoogle)
       .then((result) => {
-        // const token = result.credential.accessToken;
-        const currentUser = result.user;
       })
       .then(response => {
         this.router.navigate(['/']);
@@ -178,8 +171,6 @@ export class AuthService {
     const providerGithub = new firebase.auth.GithubAuthProvider();
     return firebase.auth().signInWithPopup(providerGithub)
       .then((result) => {
-        // const token = result.credential.accessToken;
-        const currentUser = result.user;
       })
       .then(response => {
         this.router.navigate(['/']);
@@ -200,7 +191,6 @@ export class AuthService {
       .then(
         response => {
           this.router.navigate(['/']);
-          // firebase.auth().currentUser.getToken()
           firebase.auth().currentUser.getIdToken()
             .then(
               (token: string) => this.token = token
@@ -219,14 +209,11 @@ export class AuthService {
         response => {
           this.router.navigate(['/']);
           firebase.auth().onAuthStateChanged(currentUser => {
-            const isAnonymous = currentUser.isAnonymous;
-            const uid = currentUser.uid;
             firebase.auth().currentUser.getIdToken()
               .then(
                 (token: string) => this.token = token
               ),
               this.alertService.showToaster('Anonymous login succesful');
-            console.log(currentUser);
           });
         }
       )
@@ -240,8 +227,8 @@ export class AuthService {
     return firebase.auth().signOut()
       .then(
         response => {
-          this.router.navigate(['/home']);
           this.token = null;
+          this.router.navigate(['/home']);
         }
       )
       .catch(

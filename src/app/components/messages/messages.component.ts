@@ -1,4 +1,4 @@
-import * as firebase from 'firebase/app';
+import * as firebase from 'firebase';
 import { Component, OnInit, AfterViewChecked, ElementRef, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs/observable';
 import { FormsModule } from '@angular/forms';

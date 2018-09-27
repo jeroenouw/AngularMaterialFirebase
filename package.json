@@ -2,10 +2,10 @@
   "name": "ngxmatfire",
   "version": "1.1.2",
   "author": "Jeroen Ouwehand",
-  "description": "Full stack starter app with Angular 6, Material Design and Firebase.",
+  "description": "Full stack starter app with Angular 7, Material Design and Firebase.",
   "keywords": [
     "angular",
-    "angular 6",
+    "angular 7",
     "firebase",
     "material",
     "nosql",

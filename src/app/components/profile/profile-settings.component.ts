@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgForm, FormsModule, FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
-import * as firebase from 'firebase/app';
+import * as firebase from 'firebase';
 
 import { Profile, AuthService, AlertService, UserService } from '../shared';
 
