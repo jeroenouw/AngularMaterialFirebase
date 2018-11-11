@@ -2,7 +2,7 @@
 
 ## Features in this project
 
-* Angular 7 Beta front-end with Material Design
+* Angular 7 front-end with Material Design
 * Firebase back-end (0Auth authentication and NoSQL database)
 * Automated documentation (compodoc)
 * Home page
