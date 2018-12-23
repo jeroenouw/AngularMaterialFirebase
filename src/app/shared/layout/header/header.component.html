@@ -86,7 +86,7 @@
           <!-- [routerLink]="['/profile', userUid(), userName()]" -->
           <a
             mat-menu-item
-            routerLink="/profile"
+            [routerLink]="['/profile', userUid(), userName()]"
             [queryParams]="{profile: '1'}" >
             <mat-icon class="profile">face</mat-icon>
             <span>Profile</span>
