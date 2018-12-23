@@ -7,7 +7,7 @@ export class AlertService {
   constructor(private snackBar: MatSnackBar) {
   }
 
-  showToaster(msg: string) {
+  public showToaster(msg: string): void {
     this.snackBar.open(msg, null, {
       duration: 3000,
     });

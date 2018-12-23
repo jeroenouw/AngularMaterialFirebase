@@ -7,7 +7,7 @@ import { UserService } from './user.service';
 
 @Injectable()
 export class AuthService {
-  token: string;
+  public token: string;
 
   constructor(
     private router: Router,
@@ -15,7 +15,7 @@ export class AuthService {
     private userService: UserService) { }
 
   // Signup/register
-  signUpWithGoogle() {
+  public signUpWithGoogle(): Promise<void> {
     const providerGoogle = new firebase.auth.GoogleAuthProvider();
     return firebase.auth().signInWithPopup(providerGoogle)
       .then((result) => {
@@ -36,7 +36,7 @@ export class AuthService {
     );
   }
 
-  signUpWithTwitter() {
+  public signUpWithTwitter(): Promise<void>  {
     const providerTwitter = new firebase.auth.TwitterAuthProvider();
     return firebase.auth().signInWithPopup(providerTwitter)
       .then((result) => {
@@ -58,7 +58,7 @@ export class AuthService {
       );
   }
 
-  signUpWithFacebook() {
+  public signUpWithFacebook(): Promise<void>  {
     const providerFacebook = new firebase.auth.FacebookAuthProvider();
     return firebase.auth().signInWithPopup(providerFacebook)
       .then(
@@ -78,7 +78,7 @@ export class AuthService {
       );
   }
 
-  signUpWithGithub() {
+  public signUpWithGithub(): Promise<void> {
     const providerGithub = new firebase.auth.GithubAuthProvider();
       return firebase.auth().signInWithPopup(providerGithub)
       .then((result) => {
@@ -100,7 +100,7 @@ export class AuthService {
       );
   }
 
-  signupUser(email: string, password: string) {
+  public signupUser(email: string, password: string): Promise<void> {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
       .then((result) => {
         this.alertService.showToaster('Verification email is sent to you.');
@@ -113,7 +113,7 @@ export class AuthService {
   }
 
   // Signin/login
-  signInWithGoogle() {
+  public signInWithGoogle(): Promise<void> {
     const providerGoogle = new firebase.auth.GoogleAuthProvider();
     return firebase.auth().signInWithPopup(providerGoogle)
       .then((result) => {
@@ -132,7 +132,7 @@ export class AuthService {
       );
   }
 
-  signInWithTwitter() {
+  public signInWithTwitter(): Promise<void> {
     const providerTwitter = new firebase.auth.TwitterAuthProvider();
     return firebase.auth().signInWithPopup(providerTwitter)
       .then(response => {
@@ -149,7 +149,7 @@ export class AuthService {
       );
   }
 
-  signInWithFacebook() {
+  public signInWithFacebook(): Promise<void> {
     const providerFacebook = new firebase.auth.FacebookAuthProvider();
     return firebase.auth().signInWithPopup(providerFacebook)
       .then(
@@ -167,7 +167,7 @@ export class AuthService {
       );
   }
 
-  signInWithGithub() {
+  public signInWithGithub(): Promise<void> {
     const providerGithub = new firebase.auth.GithubAuthProvider();
     return firebase.auth().signInWithPopup(providerGithub)
       .then((result) => {
@@ -186,7 +186,7 @@ export class AuthService {
       );
   }
 
-  signinUser(email: string, password: string) {
+  public signinUser(email: string, password: string): Promise<void> {
     return firebase.auth().signInWithEmailAndPassword(email, password)
       .then(
         response => {
@@ -203,7 +203,7 @@ export class AuthService {
       );
   }
 
-  signInAnonymous() {
+  public signInAnonymous(): Promise<void> {
     return firebase.auth().signInAnonymously()
       .then(
         response => {
@@ -223,7 +223,7 @@ export class AuthService {
   }
 
   // Other
-  logout() {
+  public logout(): Promise<void> {
     return firebase.auth().signOut()
       .then(
         response => {
@@ -236,7 +236,7 @@ export class AuthService {
       );
   }
 
-  getIdToken() {
+  public getIdToken(): string {
     firebase.auth().currentUser.getIdToken()
       .then(
         (token: string) => this.token = token
@@ -244,7 +244,7 @@ export class AuthService {
     return this.token;
   }
 
-  isAuthenticated() {
+  public isAuthenticated(): boolean {
     return this.token != null;
   }
 }
