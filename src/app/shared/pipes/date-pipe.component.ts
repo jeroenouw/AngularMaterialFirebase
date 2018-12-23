@@ -6,8 +6,6 @@ import { Component } from '@angular/core';
         {{today | date:'d'}}-{{today | date:'M'}}-{{today | date:'y'}}
         <!--<p>A alternative, {{today | date:'medium'}}</p>-->
 `,
-  // styles: ['p {font-weight: bold; }']
-
 })
 export class DatePipeComponent {
   public today: number = Date.now();
