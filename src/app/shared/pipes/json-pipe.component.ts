@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-json-pipe',
@@ -15,5 +15,5 @@ import { Component, OnInit } from '@angular/core';
 `
 })
 export class JsonPipeComponent {
-  object: Object = {abc: 'test', def: 'test2', nested: {def: 3, numbers: [1, 2, 3, 4, 5]}};
+  public object: Object = {abc: 'test', def: 'test2', nested: {def: 3, numbers: [1, 2, 3, 4, 5]}};
 }

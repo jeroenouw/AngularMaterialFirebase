@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-year-pipe',
   template: `
       {{today | date:'y'}}
-`,
-// styles: ['']
+`
 })
 export class YearPipeComponent {
-  today: number = Date.now();
+  public today: number = Date.now();
 }

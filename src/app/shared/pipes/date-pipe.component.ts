@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-date-pipe',
@@ -10,5 +10,5 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class DatePipeComponent {
-  today: number = Date.now();
+  public today: number = Date.now();
 }

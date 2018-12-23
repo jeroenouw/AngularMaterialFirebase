@@ -2,10 +2,10 @@ import { FormControl } from '@angular/forms';
 
 export class EmailValidator {
 
-  static isValid (control: FormControl) {
-    const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/.test(control.value);
+  public static isValid (control: FormControl) {
+    const RegEx = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/.test(control.value);
 
-    if (re) {
+    if (RegEx) {
       return null;
     }
 

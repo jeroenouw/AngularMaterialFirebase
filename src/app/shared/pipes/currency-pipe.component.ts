@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-currency-pipe',
@@ -6,20 +6,13 @@ import { Component, OnInit } from '@angular/core';
   <h3>Currency Pipe :</h3>
   <div>
     <p>Angular: {{angularPrice | currency:'EUR':false}}</p>
-    <p>Angular 7: {{angular4Price | currency:'EUR':true:'4.2-2'}}</p>
+    <p>Angular 7: {{angular7Price | currency:'EUR':true:'4.2-2'}}</p>
   </div>
 </fieldset>`,
   styles: []
 })
-export class CurrencyPipeComponent implements OnInit {
-
-  angularPrice = 0.567;
-  angular4Price = 1.3743;
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
+export class CurrencyPipeComponent {
+  public angularPrice = 0.567;
+  public angular7Price = 1.3743;
 
 }
