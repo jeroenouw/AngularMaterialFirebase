@@ -2,9 +2,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-// Main
-import { AppComponent } from './app.component';
-
 // 404 page
 import { PageNotFoundComponent } from './components/not-found/not-found.component';
 
@@ -22,7 +19,7 @@ import { ProfileSettingsComponent } from './components/profile/profile-settings.
 import { MessagesComponent } from './components/messages/messages.component';
 
 // Protected
-import { AuthGuardService } from './components/shared';
+import { AuthGuardService } from '@shared';
 
 // Routing
 const appRoutes: Routes = [

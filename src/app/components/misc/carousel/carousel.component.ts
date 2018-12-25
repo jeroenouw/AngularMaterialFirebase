@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Image } from '../../shared';
+import { Image } from '@shared';
 
 @Component({
   selector: 'app-carousel',

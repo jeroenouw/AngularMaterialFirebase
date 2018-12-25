@@ -10,12 +10,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 // Modules
 import { MessagesModule } from './components/messages/messages.module';
-import { PipesModule } from './pipes/pipes.module';
 import { BlocksModule } from './components/blocks/blocks.module';
 import { AuthModule } from './components/auth/auth.module';
 import { BackgroundsModule } from './components/backgrounds/backgrounds.module';
 import { ProfileModule } from './components/profile/profile.module';
 import { MiscModule } from './components/misc/misc.module';
+import { PipesModule } from '@shared/pipes/pipes.module';
 
 // Shared
 import {
@@ -26,7 +26,7 @@ import {
   AuthGuardService,
   AuthService,
   WindowService
-} from './components/shared';
+} from '@shared';
 
 // Main
 import { AppComponent } from './app.component';

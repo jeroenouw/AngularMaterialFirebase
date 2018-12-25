@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Contact } from '../shared';
 
-import { AlertService, UserService } from '../shared';
+import { AlertService, UserService, Contact } from '@shared';
 
 @Component({
   selector: 'app-contact',
@@ -19,7 +18,7 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(form: NgForm) { 
+  onSubmit(form: NgForm) {
    const company = form.value.company;
    const firstname = form.value.firstname;
    const lastname = form.value.lastname;

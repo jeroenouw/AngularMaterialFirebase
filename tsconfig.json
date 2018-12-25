@@ -16,7 +16,15 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+		"paths": {
+			"@shared/*": [
+				"src/app/shared/*"
+			],
+			"@shared": [
+				"src/app/shared"
+			]
+    }
   },
   "angularCompilerOptions": {
     "enableIvy": true

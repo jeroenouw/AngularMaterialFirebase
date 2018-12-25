@@ -8,9 +8,7 @@ import { MatButtonModule, MatCheckboxModule, MatInputModule, MatNativeDateModule
 
 // import { CdkTableModule } from '@angular/cdk';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { PipesModule } from '../../pipes/pipes.module';
-
-// import { MiscRoutingModule } from './misc.routing';
+import { PipesModule } from '@shared/pipes/pipes.module';
 
 import { CarouselComponent } from './carousel/carousel.component';
 import { MiscComponent } from './misc.component';
@@ -39,8 +37,7 @@ import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.compo
     MatTableModule, MatCardModule, MatDatepickerModule, MatExpansionModule,
     MatIconModule, MatToolbarModule,
     FormsModule, ReactiveFormsModule,
-    PipesModule,
-    // MiscRoutingModule
+    PipesModule
   ],
   exports: [
     CarouselComponent,

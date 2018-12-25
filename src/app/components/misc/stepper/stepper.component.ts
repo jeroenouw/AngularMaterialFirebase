@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { EmailValidator } from '../../shared';
+import { EmailValidator } from '@shared';
 
 @Component({
   selector: 'app-stepper',

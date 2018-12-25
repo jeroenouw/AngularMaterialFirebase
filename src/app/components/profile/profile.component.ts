@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 
 import * as firebase from 'firebase';
 
-import { User, Profile, UserService, AlertService } from '../shared';
+import { UserService, AlertService } from '@shared';
 
 @Component({
   selector: 'app-profile',
@@ -28,39 +27,36 @@ import { User, Profile, UserService, AlertService } from '../shared';
   ]
 })
 export class ProfileComponent implements OnInit {
-  uid = firebase.auth().currentUser.uid;
+  public uid = firebase.auth().currentUser.uid;
 
-  fullImagePath: string;
-  profileTitle: string = 'My profile';
-  displayName: string = "Your username";
-  bio: any = "Your bio";
-
-  state = 'small';
+  public fullImagePath: string = '/assets/img/mb-bg-04.png';
+  public profileTitle: string = 'My profile';
+  public displayName: string = 'Your username';
+  public bio: any = 'Your bio';
+  public state: string = 'small';
 
   constructor(
-    private route: ActivatedRoute,
     private userService: UserService,
-    private alertService: AlertService) {
-    this.fullImagePath = '/assets/img/mb-bg-04.png';
-  }
+    private alertService: AlertService) {}
 
-  ngOnInit() {
-    firebase.database().ref().child('users/' + this.uid).once('value').then((snap) => {
-      this.displayName  = snap.val().displayName, 
+  public ngOnInit(): Promise<void> {
+    return firebase.database().ref().child('users/' + this.uid).once('value').then((snap) => {
+      this.displayName  = snap.val().displayName,
       this.bio = snap.val().bio
     });
   }
 
-  animateImage() {
-    this.state = (this.state === 'small' ? 'large' : 'small');
+  public animateImage(): string {
+    this.state === 'small' ? 'large' : 'small';
+    return this.state
   }
 
-  userEmail() {
+  public userEmail(): void {
     this.userService.getUserProfileInformation();
-    return firebase.auth().currentUser.email;
+    firebase.auth().currentUser.email;
   }
 
-  onPasswordReset() {
+  public onPasswordReset(): void {
     this.userService.sendUserPasswordResetEmail();
     this.alertService.showToaster('Reset password is sent to your email');
   }

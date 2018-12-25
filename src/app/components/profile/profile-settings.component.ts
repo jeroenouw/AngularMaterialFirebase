@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { NgForm, FormsModule, FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 import * as firebase from 'firebase';
 
-import { Profile, AuthService, AlertService, UserService } from '../shared';
+import { AuthService, AlertService, UserService } from '@shared';
 
 @Component({
   selector: 'app-profile-settings',
@@ -12,9 +11,9 @@ import { Profile, AuthService, AlertService, UserService } from '../shared';
   styleUrls: ['./profile-settings.component.scss']
 })
 export class ProfileSettingsComponent implements OnInit {
-  uid = firebase.auth().currentUser.uid;
-  displayName: string = "Your username";
-  bio: any = "Your bio";
+  public uid = firebase.auth().currentUser.uid;
+  public displayName: string = 'Your username';
+  public bio: any = 'Your bio';
 
   constructor(
     private authService: AuthService,
@@ -22,26 +21,26 @@ export class ProfileSettingsComponent implements OnInit {
     private userService: UserService) {
   }
 
-  ngOnInit() {
-    firebase.database().ref().child(`users/${this.uid}`).once('value').then((snap) => {
+  public ngOnInit(): Promise<void> {
+    return firebase.database().ref().child(`users/${this.uid}`).once('value').then((snap) => {
       this.displayName = snap.val().displayName;
       this.bio = snap.val().bio;
     });
   }
 
-  onPasswordReset() {
+  public onPasswordReset(): void {
     this.userService.sendUserPasswordResetEmail();
     this.alertService.showToaster('Reset password is sent to your email');
   }
 
-  onUpdateUserInfo(form: NgForm) {
+  public onUpdateUserInfo(form: NgForm): void {
     const displayName = form.value.displayName;
     const bio = form.value.bio;
     this.userService.updateUserInfo(firebase.auth().currentUser.uid, displayName, bio);
     this.alertService.showToaster('Your settings are saved');
   }
 
-  onLogout() {
+  public onLogout(): void {
     this.authService.logout();
     this.alertService.showToaster('Logout succesful');
   }

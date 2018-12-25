@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, Input, ViewChild } from '@angular/core';
-import { Scene } from '../../shared'
+import { Scene } from '@shared'
 
 declare let VRView: any;
 

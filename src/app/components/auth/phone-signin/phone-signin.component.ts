@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase';
 
-import { WindowService, PhoneNumber, AuthService, AlertService } from '../../shared';
+import { WindowService, PhoneNumber, AuthService, AlertService } from '@shared';
 
 @Component({
   selector: 'app-phone-signin',

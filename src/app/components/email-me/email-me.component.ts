@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm, FormBuilder, Validators, FormGroup  } from '@angular/forms';
 
-import { UserService, EmailValidator } from '../shared';
+import { UserService, EmailValidator } from '@shared';
 
 @Component({
   selector: 'app-email-me',
