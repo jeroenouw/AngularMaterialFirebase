@@ -23,9 +23,9 @@ A full stack starter app containing [Angular 7](https://angular.io), [Material](
 
 [Everything included in this project](https://github.com/jeroenouw/AngularMaterialFirebase/blob/master/docs/FEATURES.md)
 
-## Compodoc
+## Automated documentation
 
-[Generate technical documentation automatically](https://github.com/jeroenouw/AngularMaterialFirebase/blob/master/docs/COMPODOC.md)
+[Generate technical documentation automatically with Compodoc](https://github.com/jeroenouw/AngularMaterialFirebase/blob/master/docs/COMPODOC.md)
 
 ## Future updates
 

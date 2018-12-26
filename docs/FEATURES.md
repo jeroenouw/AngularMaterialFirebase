@@ -2,30 +2,32 @@
 
 ## Features in this project
 
-* Angular 7 front-end with Material Design
-* Firebase back-end (0Auth authentication and NoSQL database)
+* Angular 7 front-end  
+* Material Design
+* Firebase back-end (OAuth authentication and NoSQL database)
 * Automated documentation (compodoc)
 * Home page
 * About page
 * Contact page
 * Misc page
 * 404 page
+* Profile page
+* Profile settings page
+* Login page
+* Signup page
 * Save email (keep in touch)
 * Authentication (Anonymous, Email, Google, Twitter, Facebook and Github)
 * Verification email after signup
 * Auth Guard
-* Profile
 * Profile image animation
-* Profile settings
 * Password reset
 * Alerts
 * 360 view
 * Multiple pipes
+* Various components to use
 * Carousel
-* Translatations
-* Tests
 * Back to top button
-* Loading spinner and progress bar
+* Loading spinner and/or progress bar
 
 ## Material Design usage in this project
 
