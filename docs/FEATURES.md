@@ -31,20 +31,21 @@
 
 ## Material Design usage in this project
 
-* Mat Datepicker
-* Mat Input
-* Mat Slide toggle
-* Mat Menu
-* Mat Sidenav
-* Mat Toolbar
-* Mat Table
-* Mat Stepper
-* Mat Expansion panel
-* Mat Card
-* Mat Tabs
-* Mat Buttons
-* Mat Icon
-* Mat Progress spinner
-* Mat Progress bar
-* Mat Tooltip
-* Mat Snackbar
+* Datepicker
+* Input
+* Slide toggle
+* Menu
+* Sidenav
+* Toolbar
+* Table
+* Stepper
+* Expansion panel
+* Card
+* Tabs
+* Buttons
+* Icon
+* Progress spinner
+* Progress bar
+* Tooltip
+* Snackbar
+* Drag & drop

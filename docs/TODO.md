@@ -14,7 +14,6 @@ All improvements to this repo will first be done in a sub branch.
 * Cellphone authentication (optimizing)
 * Session
 * Google, Facebook, Twitter & Github signin/signup
-* Error messages (email already exists, login failed, registration failed)
 
 ### Profile
 

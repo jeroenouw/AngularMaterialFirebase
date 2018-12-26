@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class FirstBlockComponent {
   titleOne = 'Starter kit';
-  contentOne = 'Angular 7 | Material Design | Firebase (0Auth authentication and NoSQL database)';
+  contentOne = 'Angular 7 | Material Design | Firebase (OAuth authentication and NoSQL database)';
 
 }
