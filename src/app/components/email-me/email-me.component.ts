@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgForm, FormBuilder, Validators, FormGroup  } from '@angular/forms';
 
 import { UserService, EmailValidator } from '@shared';
@@ -8,22 +8,19 @@ import { UserService, EmailValidator } from '@shared';
   templateUrl: './email-me.component.html',
   styleUrls: ['./email-me.component.scss']
 })
-export class EmailMeComponent implements OnInit {
+export class EmailMeComponent {
   public form: FormGroup;
 
   constructor(
     private userService: UserService,
-    private formBuilder: FormBuilder) {
+    public formBuilder: FormBuilder) {
     this.form = formBuilder.group({
       email: ['', Validators.compose([Validators.required, EmailValidator.isValid])]
     });
   }
 
-  ngOnInit() {
-  }
-
-  onSubmit(form: NgForm) {
-   const email = form.value.email;
-   this.userService.keepInTouch(email);
+  public onSubmit(form: NgForm) {
+    const email = form.value.email;
+    return this.userService.keepInTouch(email);
   }
 }

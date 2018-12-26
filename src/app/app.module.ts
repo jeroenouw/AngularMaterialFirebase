@@ -9,11 +9,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 // Modules
-import { MessagesModule } from './components/messages/messages.module';
 import { BlocksModule } from './components/blocks/blocks.module';
-import { AuthModule } from './components/auth/auth.module';
+import { AuthModule } from './pages/auth/auth.module';
 import { BackgroundsModule } from './components/backgrounds/backgrounds.module';
-import { ProfileModule } from './components/profile/profile.module';
+import { ProfileModule } from './pages/profile/profile.module';
 import { MiscModule } from './components/misc/misc.module';
 import { PipesModule } from '@shared/pipes/pipes.module';
 
@@ -30,15 +29,15 @@ import {
 
 // Main
 import { AppComponent } from './app.component';
-import { AppRoutingModule,
-         // routingComponents
-         } from './app.routing';
+import { AppRoutingModule } from './app.routing';
 
-// Other components
-import { HomeComponent } from './components/home/home.component';
-import { AboutMeComponent } from './components/about-me/about-me.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { PageNotFoundComponent } from './components/not-found/not-found.component';
+// Pages
+import { HomeComponent } from './pages/home/home.component';
+import { AboutMeComponent } from './pages/about-me/about-me.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { PageNotFoundComponent } from './pages/not-found/not-found.component';
+
+// Components
 import { EmailMeComponent } from './components/email-me/email-me.component';
 
 @NgModule({
@@ -51,7 +50,6 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     FooterComponent,
     PageNotFoundComponent,
     EmailMeComponent
-    // routingComponents
   ],
   imports: [
     BrowserModule,
@@ -63,7 +61,6 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    MessagesModule,
     PipesModule,
     BlocksModule,
     AuthModule,

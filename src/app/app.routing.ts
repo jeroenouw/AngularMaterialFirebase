@@ -3,20 +3,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // 404 page
-import { PageNotFoundComponent } from './components/not-found/not-found.component';
+import { PageNotFoundComponent } from './pages/not-found/not-found.component';
 
 // Pages
-import { HomeComponent } from './components/home/home.component';
-import { AboutMeComponent } from './components/about-me/about-me.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { MiscComponent } from './components/misc/misc.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutMeComponent } from './pages/about-me/about-me.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { SignupComponent } from './pages/auth/signup.component';
+import { SigninComponent } from './pages/auth/signin.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ProfileSettingsComponent } from './pages/profile/profile-settings.component';
 
 // Components
-import { SignupComponent } from './components/auth/signup.component';
-import { SigninComponent } from './components/auth/signin.component';
-import { ProfileComponent } from './components/profile/profile.component';
-import { ProfileSettingsComponent } from './components/profile/profile-settings.component';
-import { MessagesComponent } from './components/messages/messages.component';
+import { MiscComponent } from './components/misc/misc.component';
 
 // Protected
 import { AuthGuardService } from '@shared';
@@ -30,7 +29,6 @@ const appRoutes: Routes = [
   { path: 'about', component: AboutMeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'misc', component: MiscComponent },
-  // { path: 'misc', loadChildren: './components/misc/misc.module#MiscModule' },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: SigninComponent },
 
@@ -38,7 +36,6 @@ const appRoutes: Routes = [
   // { path: 'profile/:uid/:name', component: ProfileComponent, canActivate: [AuthGuardService] },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService] },
   { path: 'profile-settings', component: ProfileSettingsComponent, canActivate: [AuthGuardService] },
-  { path: 'messages', component: MessagesComponent, canActivate: [AuthGuardService] },
   { path: '**', component: PageNotFoundComponent }
 ];
 

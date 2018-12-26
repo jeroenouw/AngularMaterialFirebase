@@ -86,18 +86,10 @@
           <!-- [routerLink]="['/profile', userUid(), userName()]" -->
           <a
             mat-menu-item
-            [routerLink]="['/profile', userUid(), userName()]"
-            [queryParams]="{profile: '1'}" >
+            [routerLink]="'/profile'">
             <mat-icon class="profile">face</mat-icon>
             <span>Profile</span>
           </a>
-
-          <!--
-          <a mat-menu-item routerLink="/messages">
-            <mat-icon class="messages">chat</mat-icon>
-            <span>Messages</span>
-          </a>
-          -->
 
           <a mat-menu-item *ngFor="let item of menuItems" href="{{item.link}}">
             <mat-icon class="login">{{item.icon}}</mat-icon>

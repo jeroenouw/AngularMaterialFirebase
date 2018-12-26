@@ -46,9 +46,8 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  public animateImage(): string {
-    this.state === 'small' ? 'large' : 'small';
-    return this.state
+  public animateImage(): void {
+    this.state = (this.state === 'small' ? 'large' : 'small');
   }
 
   public userEmail(): void {

@@ -9,11 +9,11 @@ import { AuthService, AlertService, UserService } from '../../services';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  title = '';
-  isAuthenticated = false;
-  angularImage: string;
+  public title: string = '';
+  public isAuthenticated: boolean = false;
+  public angularImage: string = '/assets/img/angular2.png';
 
-  menuItems: Array<Object> = [
+  public menuItems: Object[] = [
     {
       icon: 'description',
       title: 'Medium @jeroenouw',
@@ -36,27 +36,26 @@ export class HeaderComponent {
     private alertService: AlertService,
     private userService: UserService
     ) {
-      this.isAuthenticated = this.authService.isAuthenticated(),
-      this.angularImage = '/assets/img/angular2.png';
+      this.isAuthenticated = this.authService.isAuthenticated()
   }
 
-  userUid() {
+  public userUid(): string{
     this.userService.getUserProfileInformation();
     return firebase.auth().currentUser.uid;
   }
 
-  userEmail() {
+  public userEmail(): string {
     this.userService.getUserProfileInformation();
     return firebase.auth().currentUser.email;
   }
 
-  userName() {
+  public userName(): string {
     this.userService.getUserProfileInformation();
     return firebase.auth().currentUser.displayName;
   }
 
-  onLogout() {
-    this.authService.logout();
+  public onLogout(): Promise<void> {
     this.alertService.showToaster('Logout succesful');
+    return this.authService.logout();
   }
 }
