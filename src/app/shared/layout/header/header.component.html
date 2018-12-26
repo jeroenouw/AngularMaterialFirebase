@@ -1,0 +1,146 @@
+<!-- Sidenav -->
+  <mat-sidenav mode="over" opened="false" #sidenav class="sidenav">
+
+  <img [src]="angularImage">
+
+  <div class="menu-link">
+    <button mat-button routerLink="/home" (click)="sidenav.close()">
+      <mat-icon class="home">home</mat-icon>
+      <span>Home</span>
+    </button>
+
+    <button mat-button routerLink="/about" (click)="sidenav.close()">
+      <mat-icon class="about">pageview</mat-icon>
+      <span>About</span>
+    </button>
+
+    <button mat-button routerLink="/contact" (click)="sidenav.close()">
+      <mat-icon class="contact">email</mat-icon>
+      <span>Contact</span>
+    </button>
+
+    <button mat-button routerLink="/misc" (click)="sidenav.close()">
+      <mat-icon class="misc">burst_mode</mat-icon>
+      <span>Misc</span>
+    </button>
+
+    <hr>
+
+    <div *ngIf="!authService.isAuthenticated(); else logout">
+      <button mat-button routerLink="/signup" (click)="sidenav.close()">
+        <mat-icon class="signup">person_add</mat-icon>
+        <span>Signup</span>
+      </button>
+
+      <button mat-button routerLink="/login" (click)="sidenav.close()">
+        <mat-icon class="login">lock_open</mat-icon>
+        <span>Login</span>
+      </button>
+    </div>
+
+    <ng-template #logout>
+      <button mat-button (click)="onLogout()" (click)="sidenav.close()">
+        <mat-icon class="logout">lock_outline</mat-icon>
+        <span>Logout</span>
+      </button>
+    </ng-template>
+  </div>
+
+</mat-sidenav>
+
+<!-- Header -->
+<mat-toolbar color="primary">
+
+  <span><a href="/"><app-titlecase-pipe></app-titlecase-pipe></a></span>
+
+  <!-- Sidenav activate -->
+  <div class="sidenav-content">
+    <button type="button" mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
+  <!-- Menu -->
+  <span class="spacer"></span>
+
+  <div *ngIf="!authService.isAuthenticated();">
+    <app-date-pipe></app-date-pipe>
+  </div>
+
+  <span class="spacer-light"></span>
+
+    <div *ngIf="!authService.isAuthenticated(); else loggedin">
+      <a routerLink="/signup"><mat-icon>person_add</mat-icon></a>
+      <a routerLink="/login"><mat-icon>lock_open</mat-icon></a>
+    </div>
+
+    <ng-template #loggedin>
+        <h4>(User: {{userEmail()}})</h4>
+
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+        </button>
+
+        <mat-menu #menu="matMenu" >
+
+          <!-- [routerLink]="['/profile', userUid(), userName()]" -->
+          <a
+            mat-menu-item
+            [routerLink]="'/profile'">
+            <mat-icon class="profile">face</mat-icon>
+            <span>Profile</span>
+          </a>
+
+          <a mat-menu-item *ngFor="let item of menuItems" href="{{item.link}}">
+            <mat-icon class="login">{{item.icon}}</mat-icon>
+            <span>{{item.title}}</span>
+          </a>
+
+          <a
+            mat-menu-item
+            routerLink="/profile-settings"
+            [queryParams]="{profile: '1'}"
+            fragment="editProfile">
+            <mat-icon class="settings">settings</mat-icon>
+            <span>Settings</span>
+          </a>
+
+          <a mat-menu-item (click)="onLogout()">
+            <mat-icon class="logout">lock_outline</mat-icon>
+            <span>Logout</span>
+          </a>
+        </mat-menu>
+
+      </ng-template>
+</mat-toolbar>
+
+<mat-tab-group>
+  <mat-tab label="HOME TAB">
+  </mat-tab>
+
+  <mat-tab label="RANDOM TAB">
+      <div id="content">
+        <mat-card>
+          <h1>Random content</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend metus vel imperdiet cursus.
+              Donec tempor placerat nibh ac hendrerit. Nulla feugiat augue ac fringilla facilisis. Aenean eget nibh at quam egestas commodo.
+              Maecenas dapibus nisl quis nulla tristique, vitae laoreet tellus convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+              In ultricies mattis rhoncus. Duis vestibulum tristique massa a fringilla. Suspendisse ut purus at massa elementum sollicitudin eu sit amet lacus.
+              Nullam sit amet nisi risus. In diam dui, aliquet a lectus eu, suscipit finibus lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+              Integer vitae facilisis felis, quis cursus velit. Suspendisse nec consectetur mauris, ut placerat ex. Duis eu consectetur eros. Nulla facilisi.
+          </p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend metus vel imperdiet cursus.
+              Etiam pretium sem a metus tristique, ut luctus quam rutrum. Vivamus commodo venenatis nunc ut placerat.
+              Proin eleifend id dui sit amet imperdiet. Proin fringilla sit amet nunc sed consequat. Proin ac libero elit.
+              Pellentesque magna purus, semper gravida porttitor nec, venenatis vitae urna. Nam luctus id eros eget convallis.
+              Aliquam sem libero, mollis et leo id, semper finibus leo. Sed convallis leo ac tempor luctus. Integer metus arcu,
+              imperdiet nec tincidunt at, sodales nec nulla. Nam suscipit urna eu vulputate aliquet. Vestibulum consequat nisl vel erat congue sollicitudin.
+              Proin mattis ultrices blandit. Vivamus accumsan vulputate sem vel tincidunt. Etiam imperdiet imperdiet ante, sit amet suscipit tortor finibus maximus.
+              Maecenas euismod pulvinar lorem.
+          </p>
+        </mat-card>
+      </div>
+  </mat-tab>
+
+</mat-tab-group>

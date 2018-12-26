@@ -9,9 +9,9 @@ import * as firebase from 'firebase';
 
 export class AppComponent implements OnInit {
 
-  ngOnInit() {
+  public ngOnInit(): void {
     firebase.initializeApp({
-      // For other projects use different keys
+      // For your own projects use different keys
       apiKey: 'AIzaSyBUYZcc_HKi1TckbZPpSjSkxyFvml3Is0A',
       authDomain: 'angular4materialdesign.firebaseapp.com',
       databaseURL: 'https://angular4materialdesign.firebaseio.com',
@@ -20,15 +20,11 @@ export class AppComponent implements OnInit {
       messagingSenderId: '136985605193'
     });
 
-    // See users, messages and keep in touch in console log
+    // See users and keep in touch in console log
 
     // const preUsers = document.getElementById('users');
     // const dbRefUsers = firebase.database().ref().child('users');
     // dbRefUsers.on('value', snap => console.log(snap.val()));
-
-    // const preMessages = document.getElementById('messages');
-    // const dbRefMessages = firebase.database().ref().child('messages');
-    // dbRefMessages.on('value', snap => console.log(snap.val()));
 
     // const preTouch = document.getElementById('touch');
     // const dbRefTouch = firebase.database().ref().child('touch');

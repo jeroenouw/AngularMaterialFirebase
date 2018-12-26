@@ -7,6 +7,7 @@ Change directory to this project
 Run `npm install` to install all the dependencies.  
 Run `npm start` to run this project. This will run with the AoT Compiler.  
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.  
+Run `npm reset` if you want to install everything again.  
 
 ## Development
 
@@ -15,13 +16,13 @@ For own projects please use different keys in `src/app/app.component.ts`:
 ```typescript
 
 firebase.initializeApp({
-  // For other projects use different keys
-  apiKey: '[YOUR_KEY]',
-  authDomain: '[YOUR_KEY]',
-  databaseURL: '[YOUR_KEY]',
-  projectId: '[YOUR_KEY]',
-  storageBucket: '[YOUR_KEY]',
-  messagingSenderId: '[YOUR_KEY]'
+  // For your own projects use different keys
+  apiKey: 'YOUR_KEY',
+  authDomain: 'YOUR_DOMAIN',
+  databaseURL: 'YOUR_URL',
+  projectId: 'YOUR_ID',
+  storageBucket: 'YOUR_KEY',
+  messagingSenderId: 'YOUR_ID'
 });
 
 ```
@@ -34,4 +35,4 @@ To build the development environment, run `npm run dist`.
 
 To build the production environment, run `npm run prod`. This will run with the AoT Compiler.  
 To build the production environment without hashing in the files, run `npm run prod:hashless`. This will give packages without a hash.  
-To build the production environment with reduced file size, run `npm run prod:opt` (Takes extra time to build with build optimizer).  
+Also available: run `npm run prod:src`.

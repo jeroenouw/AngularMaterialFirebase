@@ -1,0 +1,25 @@
+<div cdkDropListGroup>
+  <div class="drag-drop-container">
+    <h4>To do</h4>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="todo"
+      class="drag-drop-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="drag-drop-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="drag-drop-container">
+    <h4>Done</h4>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="done"
+      class="drag-drop-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="drag-drop-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+</div>

@@ -4,22 +4,20 @@ All improvements to this repo will first be done in a sub branch.
 
 ## To Do List
 
-* Make every component responsive (@angular/flex-layout)
-* Add Bazel
-* Add Closure
+* Make every component responsive (@angular/flex-layout?)
+* Messaging
 
 ## To Finish List (known issues)
 
 ### Auth
 
 * Cellphone authentication (optimizing)
+* Session
 * Google, Facebook, Twitter & Github signin/signup
-* Error messages (email already exists, login failed, registration failed)
 
 ### Profile
 
 * Profile image uploading
-* Messaging layout and functionality
 
 ### Tests
 

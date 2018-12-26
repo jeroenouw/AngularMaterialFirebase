@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-background-slant',
-  templateUrl: './background-slant.component.html',
-  styleUrls: ['./background-slant.component.scss']
+  template: `<div class="background-slant"></div>`,
+  styles: [
+    `.background-slant {
+      position: relative;
+      overflow: hidden;
+      background-color: #673ab7;
+      transform: skew(0,-4deg);
+      -webkit-transform: skew(0,-4deg);
+      -ms-transform: skew(0,-4deg);
+      left: 0px;
+      right: 0px;
+      height: 520px;
+      z-index: 1;
+    }
+  `]
 })
-export class BackgroundSlantComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class BackgroundSlantComponent {}
