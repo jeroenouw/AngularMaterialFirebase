@@ -1,9 +1,8 @@
 [![demolive](https://img.shields.io/badge/demo-live-green.svg)](http://ngxmatfire.jerouw.nl/)
 [![npmversion](https://img.shields.io/npm/v/ngxmatfire.svg)]()
 [![npmlicense](https://img.shields.io/npm/l/ngxmatfire.svg)](https://github.com/jeroenouw/AngularMaterialFirebase/blob/master/LICENSE/)
-[![dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)](https://github.com/jeroenouw/AngularMaterialFirebase/blob/master/package.json)
 [![stars](https://img.shields.io/github/stars/jeroenouw/AngularMaterialFirebase.svg)](https://github.com/jeroenouw/AngularMaterialFirebase/stargazers)
-[![downloads](https://img.shields.io/npm/dy/ngxmatfire.svg)]()
+[![downloads](https://img.shields.io/npm/dt/ngxmatfire.svg)]()
 
 ![logo](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmd.png "Logo")
 
