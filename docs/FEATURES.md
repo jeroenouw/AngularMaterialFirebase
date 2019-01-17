@@ -16,7 +16,7 @@
 * Login page
 * Signup page
 * Save email (keep in touch)
-* Authentication (Anonymous, Email, Google, Twitter, Facebook and Github)
+* ngx-auth-firebaseui for authentication (Anonymous, Email, Google, Twitter, Facebook and Github)
 * Verification email after signup
 * Auth Guard
 * Profile image animation

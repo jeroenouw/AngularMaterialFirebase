@@ -20,7 +20,12 @@
             "polyfills": "src/polyfills.ts",
             "assets": [
               "src/assets",
-              "src/favicon.ico"
+              "src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "node_modules/ngx-auth-firebaseui/assets/",
+                "output": "./assets/"
+              }
             ],
             "styles": [
               "src/styles.scss"

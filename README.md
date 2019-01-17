@@ -23,7 +23,7 @@ A full stack starter app containing [Angular 7](https://angular.io), [Material](
 
 [Discover all the features in this project](https://github.com/jeroenouw/AngularMaterialFirebase/blob/master/docs/FEATURES.md)
 
-## Automated documentation
+## [Live automated documentation](http://ngxmatfire-docs.jerouw.nl)
 
 [Generate technical documentation automatically with Compodoc](https://github.com/jeroenouw/AngularMaterialFirebase/blob/master/docs/COMPODOC.md)
 

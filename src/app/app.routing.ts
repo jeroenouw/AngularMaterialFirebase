@@ -9,8 +9,7 @@ import { PageNotFoundComponent } from './pages/not-found/not-found.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { SignupComponent } from './pages/auth/signup.component';
-import { SigninComponent } from './pages/auth/signin.component';
+import { AuthComponent } from './pages/auth/auth.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProfileSettingsComponent } from './pages/profile/profile-settings.component';
 
@@ -29,8 +28,7 @@ const appRoutes: Routes = [
   { path: 'about', component: AboutMeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'misc', component: MiscComponent },
-  { path: 'signup', component: SignupComponent },
-  { path: 'login', component: SigninComponent },
+  { path: 'auth', component: AuthComponent },
 
   // Protected pages
   // { path: 'profile/:uid/:name', component: ProfileComponent, canActivate: [AuthGuardService] },
