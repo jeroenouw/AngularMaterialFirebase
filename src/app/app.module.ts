@@ -7,6 +7,7 @@ import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule, MatS
          MatCardModule, MatTabsModule, MatIconModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 
 // Modules
 import { BlocksModule } from './components/blocks/blocks.module';
@@ -66,7 +67,15 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     AuthModule,
     BackgroundsModule,
     ProfileModule,
-    MiscModule
+    MiscModule,
+    NgxAuthFirebaseUIModule.forRoot({
+      apiKey: 'AIzaSyBUYZcc_HKi1TckbZPpSjSkxyFvml3Is0A',
+      authDomain: 'angular4materialdesign.firebaseapp.com',
+      databaseURL: 'https://angular4materialdesign.firebaseio.com',
+      projectId: 'angular4materialdesign',
+      storageBucket: 'angular4materialdesign.appspot.com',
+      messagingSenderId: '136985605193'
+  })
   ],
   providers: [
     UserService,

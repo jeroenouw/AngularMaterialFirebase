@@ -70,8 +70,8 @@
   <span class="spacer-light"></span>
 
     <div *ngIf="!authService.isAuthenticated(); else loggedin">
-      <a routerLink="/signup"><mat-icon>person_add</mat-icon></a>
-      <a routerLink="/login"><mat-icon>lock_open</mat-icon></a>
+      <!-- <a routerLink="/signup"><mat-icon>person_add</mat-icon></a> -->
+      <a routerLink="/auth"><mat-icon>lock_open</mat-icon></a>
     </div>
 
     <ng-template #loggedin>
@@ -113,34 +113,3 @@
 
       </ng-template>
 </mat-toolbar>
-
-<mat-tab-group>
-  <mat-tab label="HOME TAB">
-  </mat-tab>
-
-  <mat-tab label="RANDOM TAB">
-      <div id="content">
-        <mat-card>
-          <h1>Random content</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend metus vel imperdiet cursus.
-              Donec tempor placerat nibh ac hendrerit. Nulla feugiat augue ac fringilla facilisis. Aenean eget nibh at quam egestas commodo.
-              Maecenas dapibus nisl quis nulla tristique, vitae laoreet tellus convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              In ultricies mattis rhoncus. Duis vestibulum tristique massa a fringilla. Suspendisse ut purus at massa elementum sollicitudin eu sit amet lacus.
-              Nullam sit amet nisi risus. In diam dui, aliquet a lectus eu, suscipit finibus lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              Integer vitae facilisis felis, quis cursus velit. Suspendisse nec consectetur mauris, ut placerat ex. Duis eu consectetur eros. Nulla facilisi.
-          </p>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend metus vel imperdiet cursus.
-              Etiam pretium sem a metus tristique, ut luctus quam rutrum. Vivamus commodo venenatis nunc ut placerat.
-              Proin eleifend id dui sit amet imperdiet. Proin fringilla sit amet nunc sed consequat. Proin ac libero elit.
-              Pellentesque magna purus, semper gravida porttitor nec, venenatis vitae urna. Nam luctus id eros eget convallis.
-              Aliquam sem libero, mollis et leo id, semper finibus leo. Sed convallis leo ac tempor luctus. Integer metus arcu,
-              imperdiet nec tincidunt at, sodales nec nulla. Nam suscipit urna eu vulputate aliquet. Vestibulum consequat nisl vel erat congue sollicitudin.
-              Proin mattis ultrices blandit. Vivamus accumsan vulputate sem vel tincidunt. Etiam imperdiet imperdiet ante, sit amet suscipit tortor finibus maximus.
-              Maecenas euismod pulvinar lorem.
-          </p>
-        </mat-card>
-      </div>
-  </mat-tab>
-
-</mat-tab-group>

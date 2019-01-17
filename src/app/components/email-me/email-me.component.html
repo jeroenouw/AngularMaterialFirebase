@@ -1,11 +1,11 @@
-<form class="form" [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm"> 
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
   <mat-card>
     <h3>Keep in touch!</h3>
     <mat-form-field class="full-width">
       <input matInput formControlName="email" placeholder="Your Email" type="email" required>
     </mat-form-field>
     <div *ngIf="!form.controls.email.valid  && form.controls.email.dirty">
-      <p>Please enter a valid email.</p>
+      Please enter a valid email.
     </div>
     <br />
     <button mat-raised-button class="primary" type="submit" [disabled]="form.invalid">Submit</button>

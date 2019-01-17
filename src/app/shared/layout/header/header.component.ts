@@ -54,7 +54,7 @@ export class HeaderComponent {
     return firebase.auth().currentUser.displayName;
   }
 
-  public onLogout(): Promise<void> {
+  public onLogout(): void {
     this.alertService.showToaster('Logout succesful');
     return this.authService.logout();
   }
