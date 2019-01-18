@@ -7,23 +7,23 @@ Change directory to this project
 Run `npm install` to install all the dependencies.  
 Run `npm start` to run this project. This will run with the AoT Compiler.  
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.  
-Run `npm reset` if you want to install everything again.  
+Run `npm reset` if you want to re-install everything.  
 
 ## Development
 
-For own projects please use different keys in `src/app/app.component.ts`:  
+For own projects please use different keys in `src/app/firebase.config.ts`:  
 
 ```typescript
 
-firebase.initializeApp({
-  // For your own projects use different keys
+export const firebaseKeys = {
+  // For your own projects please use different keys
   apiKey: 'YOUR_KEY',
   authDomain: 'YOUR_DOMAIN',
   databaseURL: 'YOUR_URL',
   projectId: 'YOUR_ID',
   storageBucket: 'YOUR_KEY',
   messagingSenderId: 'YOUR_ID'
-});
+}
 
 ```
 

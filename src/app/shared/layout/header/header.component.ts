@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import * as firebase from 'firebase';
 
-import { AuthService, AlertService, UserService } from '../../services';
+import { AuthService, AlertService } from '../../services';
 
 @Component({
   selector: 'app-header',
@@ -9,19 +9,33 @@ import { AuthService, AlertService, UserService } from '../../services';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  public title: string = '';
-  public isAuthenticated: boolean = false;
+  public isAuthenticated: string;
   public angularImage: string = '/assets/img/angular2.png';
 
   public menuItems: Object[] = [
     {
-      icon: 'description',
+      icon: 'library_books',
       title: 'Medium @jeroenouw',
       link: 'https://medium.com/@jeroenouw'
     },
     {
+      icon: 'description',
+      title: 'Generated docs',
+      link: 'http://ngxmatfire-docs.jerouw.nl/'
+    },
+    {
+      icon: 'description',
+      title: 'Features',
+      link: 'https://github.com/jeroenouw/AngularMaterialFirebase/blob/master/docs/FEATURES.md'
+    },
+    {
+      icon: 'flight_takeoff',
+      title: 'Quick start',
+      link: 'https://github.com/jeroenouw/AngularMaterialFirebase/blob/master/docs/DEVELOPER.md'
+    },
+    {
       icon: 'archive',
-      title: 'Published packages',
+      title: 'NPM packages',
       link: 'https://www.npmjs.com/~jeroenouw'
     },
     {
@@ -34,23 +48,19 @@ export class HeaderComponent {
   constructor(
     public authService: AuthService,
     private alertService: AlertService,
-    private userService: UserService
     ) {
       this.isAuthenticated = this.authService.isAuthenticated()
   }
 
-  public userUid(): string{
-    this.userService.getUserProfileInformation();
+  public userUid(): string {
     return firebase.auth().currentUser.uid;
   }
 
   public userEmail(): string {
-    this.userService.getUserProfileInformation();
     return firebase.auth().currentUser.email;
   }
 
   public userName(): string {
-    this.userService.getUserProfileInformation();
     return firebase.auth().currentUser.displayName;
   }
 

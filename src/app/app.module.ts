@@ -31,6 +31,7 @@ import {
 // Main
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
+import { firebaseKeys } from './firebase.config';
 
 // Pages
 import { HomeComponent } from './pages/home/home.component';
@@ -68,14 +69,7 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     BackgroundsModule,
     ProfileModule,
     MiscModule,
-    NgxAuthFirebaseUIModule.forRoot({
-      apiKey: 'AIzaSyBUYZcc_HKi1TckbZPpSjSkxyFvml3Is0A',
-      authDomain: 'angular4materialdesign.firebaseapp.com',
-      databaseURL: 'https://angular4materialdesign.firebaseio.com',
-      projectId: 'angular4materialdesign',
-      storageBucket: 'angular4materialdesign.appspot.com',
-      messagingSenderId: '136985605193'
-  })
+    NgxAuthFirebaseUIModule.forRoot(firebaseKeys)
   ],
   providers: [
     UserService,

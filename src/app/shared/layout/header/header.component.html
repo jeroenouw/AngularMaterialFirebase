@@ -27,14 +27,9 @@
     <hr>
 
     <div *ngIf="!authService.isAuthenticated(); else logout">
-      <button mat-button routerLink="/signup" (click)="sidenav.close()">
-        <mat-icon class="signup">person_add</mat-icon>
-        <span>Signup</span>
-      </button>
-
-      <button mat-button routerLink="/login" (click)="sidenav.close()">
+      <button mat-button routerLink="/auth" (click)="sidenav.close()">
         <mat-icon class="login">lock_open</mat-icon>
-        <span>Login</span>
+        <span>Auth</span>
       </button>
     </div>
 
@@ -69,47 +64,47 @@
 
   <span class="spacer-light"></span>
 
-    <div *ngIf="!authService.isAuthenticated(); else loggedin">
-      <!-- <a routerLink="/signup"><mat-icon>person_add</mat-icon></a> -->
-      <a routerLink="/auth"><mat-icon>lock_open</mat-icon></a>
-    </div>
+  <div *ngIf="!authService.isAuthenticated(); else loggedin">
+    <button type="button" routerLink="/auth" mat-icon-button>
+      <mat-icon>lock_open</mat-icon>
+    </button>
+  </div>
 
-    <ng-template #loggedin>
-        <h4>(User: {{userEmail()}})</h4>
 
-        <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon>more_vert</mat-icon>
-        </button>
+  <ng-template #loggedin>
+    <h4>Welcome</h4>
 
-        <mat-menu #menu="matMenu" >
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
 
-          <!-- [routerLink]="['/profile', userUid(), userName()]" -->
-          <a
-            mat-menu-item
-            [routerLink]="'/profile'">
-            <mat-icon class="profile">face</mat-icon>
-            <span>Profile</span>
-          </a>
+    <mat-menu #menu="matMenu" >
+      <a
+        mat-menu-item
+        [routerLink]="'/profile'">
+        <mat-icon class="profile">face</mat-icon>
+        <span>Profile</span>
+      </a>
 
-          <a mat-menu-item *ngFor="let item of menuItems" href="{{item.link}}">
-            <mat-icon class="login">{{item.icon}}</mat-icon>
-            <span>{{item.title}}</span>
-          </a>
+      <a mat-menu-item *ngFor="let item of menuItems" href="{{item.link}}" target="_blank">
+        <mat-icon class="login">{{item.icon}}</mat-icon>
+        <span>{{item.title}}</span>
+      </a>
 
-          <a
-            mat-menu-item
-            routerLink="/profile-settings"
-            [queryParams]="{profile: '1'}"
-            fragment="editProfile">
-            <mat-icon class="settings">settings</mat-icon>
-            <span>Settings</span>
-          </a>
+      <a
+        mat-menu-item
+        routerLink="/profile-settings"
+        [queryParams]="{profile: '1'}"
+        fragment="editProfile">
+        <mat-icon class="settings">settings</mat-icon>
+        <span>Settings</span>
+      </a>
 
-          <a mat-menu-item (click)="onLogout()">
-            <mat-icon class="logout">lock_outline</mat-icon>
-            <span>Logout</span>
-          </a>
-        </mat-menu>
+      <a mat-menu-item (click)="onLogout()">
+        <mat-icon class="logout">lock_outline</mat-icon>
+        <span>Logout</span>
+      </a>
+    </mat-menu>
 
-      </ng-template>
+  </ng-template>
 </mat-toolbar>

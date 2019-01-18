@@ -11,7 +11,7 @@ import { WindowService, PhoneNumber, AuthService, AlertService } from '@shared';
 })
 export class PhoneSigninComponent implements OnInit {
   phoneNumber = new PhoneNumber()
-  isAuthenticated = false;
+  isAuthenticated: string;
 
   token: string;
   windowRef: any;
