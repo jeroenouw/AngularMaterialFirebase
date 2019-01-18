@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase';
-
-import { AlertService } from './alert.service';
-import { UserService } from './user.service';
 
 @Injectable()
 export class AuthService {
@@ -11,18 +9,19 @@ export class AuthService {
 
   constructor(
     private router: Router,
-    private alertService: AlertService,
-    private userService: UserService) { }
+    private auth: AngularFireAuth) { }
 
   public onSuccess(): void {
+    sessionStorage.setItem('session-alive', 'true');
     this.token = 'some-temporary-token';
     this.router.navigate(['/']);
+    console.log('AUTH: ', this.auth);
   }
 
-  // Other
   public logout(): void {
+    sessionStorage.removeItem('session-alive');
     this.token = null;
-    this.router.navigate(['/home']);
+    this.router.navigate(['/']);
   }
 
   public getIdToken(): string {
@@ -33,13 +32,7 @@ export class AuthService {
     return this.token;
   }
 
-  public isAuthenticated(): boolean {
-    return this.token != null;
-  }
-
-  private verificationEmail(): void {
-    this.alertService.showToaster('Please check your inbox for a verification email.');
-    this.userService.verificationUserEmail();
-    this.userService.saveUserInfo(firebase.auth().currentUser.uid, name, firebase.auth().currentUser.email);
+  public isAuthenticated(): string {
+    return sessionStorage.getItem('session-alive');
   }
 }

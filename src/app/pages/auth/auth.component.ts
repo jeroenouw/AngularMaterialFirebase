@@ -9,7 +9,6 @@ import { AuthService } from '@shared';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent {
-  public loading: boolean = false;
 
   constructor(private authService: AuthService) {}
 
