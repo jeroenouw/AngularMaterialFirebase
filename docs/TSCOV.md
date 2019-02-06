@@ -1,6 +1,6 @@
 # tscov automated type coverage
 
-[Compodoc](https://github.com/jeroenouw/tscov) checks the type coverage of any TypeScript project.
+[tscov](https://github.com/jeroenouw/tscov) checks the type coverage of any TypeScript project.
 
 ## How to run
 
