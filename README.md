@@ -26,6 +26,10 @@ A full stack starter app containing [Angular 7](https://angular.io), [Material](
 
 [Generate technical documentation automatically with Compodoc](https://github.com/jeroenouw/AngularMaterialFirebase/blob/master/docs/COMPODOC.md)
 
+## Check your type coverage
+
+[See your type coverage with tscov](https://github.com/jeroenouw/AngularMaterialFirebase/blob/master/docs/TSCOV.md)
+
 ## Future updates
 
 [To do and finish list](https://github.com/jeroenouw/AngularMaterialFirebase/blob/master/docs/TODO.md)

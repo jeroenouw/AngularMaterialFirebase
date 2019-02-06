@@ -1,6 +1,6 @@
 {
   "name": "ngxmatfire",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "author": "Jeroen Ouwehand",
   "description": "Full stack starter app with Angular 7, Material Design and Firebase.",
   "keywords": [
@@ -31,9 +31,10 @@
     "compodoc:g": "compodoc -p src/tsconfig.app.json",
     "compodoc:s": "compodoc -p src/tsconfig.app.json --serve",
     "compodoc:w": "compodoc -p src/tsconfig.app.json --serve --watch",
+    "tscov": "tscov -m 90",
+    "tscov:d": "tscov --details",
     "link-upstream": "git remote add upstream https://github.com/jeroenouw/AngularMaterialFirebase",
-    "sync": "git fetch && git checkout master && git merge upstream/master && git push",
-    "tscov": "tscov -m 90"
+    "sync": "git fetch && git checkout master && git merge upstream/master && git push"
   },
   "dependencies": {
     "@angular/animations": "^7.1.0",
@@ -78,7 +79,7 @@
     "protractor": "^5.4.1",
     "rxjs-tslint": "^0.1.5",
     "ts-node": "^7.0.1",
-    "tscov": "^1.1.0",
+    "tscov": "^1.3.3",
     "tslint": "^5.12.0",
     "typescript": "^3.1.6",
     "webpack": "^4.28.2"
