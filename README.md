@@ -6,9 +6,9 @@
 
 ![logo](https://jerouw.nl/wp-content/uploads/2017/05/ngfbmd.png "Logo")
 
-# Angular 7 | Material Design | Firebase - Starter kit
+# Angular 8 beta | Material Design | Firebase - Starter kit
 
-A full stack starter app containing [Angular 7](https://angular.io), [Material](https://material.io/) and [Firebase](https://firebase.google.com/). See also: [AngularMaterialGo](https://github.com/jeroenouw/AngularMaterialGo)
+A full stack starter app containing [Angular 8 beta](https://angular.io), [Material](https://material.io/) and [Firebase](https://firebase.google.com/). See also: [AngularMaterialGo](https://github.com/jeroenouw/AngularMaterialGo)
 
 ## [Live demo](http://ngxmatfire.jerouw.nl)
 
