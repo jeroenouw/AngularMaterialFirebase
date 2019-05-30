@@ -2,7 +2,7 @@
 
 ## Features in this project
 
-* Angular 8 beta front-end  
+* Angular 8 front-end  
 * Material Design
 * Firebase back-end (OAuth authentication and NoSQL database)
 * Automated documentation (compodoc)
