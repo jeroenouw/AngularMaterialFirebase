@@ -18,7 +18,7 @@ export class TableComponent implements OnInit {
   database = new DataBase();
   dataSource: dataSource | null;
 
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   constructor() { }
 

@@ -11,7 +11,7 @@ declare let VRView: any;
 export class VirtRealComponent implements AfterViewInit {
 
   viewer: any;
-  @ViewChild('viewer') viewerElement: any;
+  @ViewChild('viewer', {static: true}) viewerElement: any;
 
   @Input() scenes: Scene;
   @Input() width: any;
