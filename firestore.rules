@@ -1,0 +1,60 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+  	
+    match /users/{userId} {
+      allow read, update, delete: if request.auth.uid == userId;
+      allow read: if request.auth.uid == "L0Nx0y4ivBTjiJLqcEHbllrzooB3";
+      allow create: if request.auth.uid != null;
+    }
+    
+    match /trainingen/{userId} {
+      allow read, update: if request.auth.uid == userId;
+      allow read: if request.auth.uid != null;
+      allow create: if request.auth.uid != null;
+      allow delete: if request.auth.uid == userId;
+    }
+  	
+    match /berichten/{berichtId} {
+      allow read, write: if request.auth.uid != null;
+    }
+    
+    match /aggregates/trainingDeclaraties {
+      allow read, update, delete: if request.auth.uid != null;
+    }
+    
+    match /aggregates/jeugdcommissie {
+      allow read, update, delete: if request.auth.uid != null;
+    }
+    
+    match /aggregates/teams {
+      allow read, update, delete: if request.auth.uid != null;
+    }
+    
+    match /trainersDeclaraties/{id} {
+      allow read, write: if true;
+    }
+    
+    match /_declaraties/{id} {
+      allow read, write, update, delete: if true;
+    }
+    
+    match /trainersDeclaraties {
+      allow read, write: if request.auth.uid != null;
+    }
+    
+    match /declaraties/{id} {
+      allow read, write: if true;
+    }
+    
+    match /trainerOverzicht/{userId} {
+      allow read, update: if request.auth.uid == userId;
+      allow read: if request.auth.uid == "L0Nx0y4ivBTjiJLqcEHbllrzooB3";
+      allow delete: if request.auth.uid == userId;
+    }
+    
+    match /teams/{teamId} {
+      allow create, read, update, delete: if request.auth.uid != null;
+    }
+  
+  }
+}

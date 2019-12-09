@@ -57,6 +57,7 @@
     "rxjs": "^6.5.0",
     "rxjs-compat": "^6.5.0",
     "ts-helpers": "*",
+    "typescript": "^3.4.5",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
